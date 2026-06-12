@@ -37,13 +37,41 @@
     @keyframes nebA{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(9%,7%) scale(1.28); } }
     @keyframes nebB{ 0%,100%{ transform:translate(0,0) scale(1.12); } 50%{ transform:translate(-10%,-6%) scale(0.9); } }
     @keyframes nebC{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(6%,-9%) scale(1.22); } }
+
+    /* ===================== RESPONSIVE (computadora · tablet · celular) ===================== */
+    /* TABLET y pantallas medianas (≤1024px) */
+    @media (max-width:1024px){
+      section{ padding-left:32px !important; padding-right:32px !important; }
+      .r-herogrid{ grid-template-columns:1fr !important; gap:40px !important; max-width:640px !important; }
+      .r-grid3{ grid-template-columns:repeat(2,1fr) !important; }
+      .r-grid6{ grid-template-columns:repeat(3,1fr) !important; }
+    }
+    /* CELULAR (≤680px) */
+    @media (max-width:680px){
+      section{ padding-left:20px !important; padding-right:20px !important; }
+      .r-nav{ padding:14px 20px !important; }
+      .r-navlinks{ gap:14px !important; }
+      .r-navlinks a{ display:none !important; }
+      .r-navlinks button{ padding:9px 16px !important; font-size:12.5px !important; }
+      .r-herogrid{ padding-left:20px !important; padding-right:20px !important; gap:30px !important; }
+      .r-band{ grid-template-columns:1fr !important; gap:24px !important; }
+      .r-band > div{ border-left:none !important; border-right:none !important; }
+      .r-grid3{ grid-template-columns:1fr !important; }
+      .r-grid6{ grid-template-columns:repeat(2,1fr) !important; }
+      .r-rail{ padding-left:20px !important; padding-right:20px !important; }
+    }
+    /* CELULAR pequeño (≤400px) */
+    @media (max-width:400px){
+      .r-navlinks button{ display:none !important; }
+      .r-grid6{ grid-template-columns:repeat(2,1fr) !important; }
+    }
   </style>
 </helmet>
 
 <div style="position:relative; background:#0D1B2A; color:#FAF8F5; overflow-x:hidden; font-family:'Manrope',sans-serif;">
 
   <!-- ===================== NAV ===================== -->
-  <nav style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; backdrop-filter:blur(18px) saturate(1.2); -webkit-backdrop-filter:blur(18px) saturate(1.2); background:linear-gradient(180deg,rgba(13,27,42,0.72),rgba(13,27,42,0.28)); border-bottom:1px solid rgba(212,160,23,0.12);">
+  <nav class="r-nav" style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; backdrop-filter:blur(18px) saturate(1.2); -webkit-backdrop-filter:blur(18px) saturate(1.2); background:linear-gradient(180deg,rgba(13,27,42,0.72),rgba(13,27,42,0.28)); border-bottom:1px solid rgba(212,160,23,0.12);">
     <div style="display:flex; align-items:center; gap:13px; cursor:pointer;" onClick="{{ goTop }}">
       <svg viewBox="0 0 120 120" width="34" height="34" aria-hidden="true">
         <g fill="none" stroke="#D4A017" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
@@ -64,7 +92,7 @@
         <span style="font-size:9.5px; letter-spacing:0.34em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600; margin-top:2px; white-space:nowrap;">Psicología · Operaciones · PM</span>
       </div>
     </div>
-    <div style="display:flex; align-items:center; gap:34px;">
+    <div class="r-navlinks" style="display:flex; align-items:center; gap:34px;">
       <a style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goAbout }}">Sobre mí</a>
       <a style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goServices }}">Servicios</a>
       <a style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goWellness }}">Bienestar</a>
@@ -89,7 +117,7 @@
     <!-- faint psi monogram -->
     <div style="position:absolute; right:6%; top:50%; transform:translateY(-50%); font-family:'Spectral',serif; font-size:46vh; line-height:1; color:rgba(212,160,23,0.045); pointer-events:none; user-select:none;">Ψ</div>
 
-    <div style="position:relative; z-index:5; width:100%; max-width:1280px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;">
+    <div class="r-herogrid" style="position:relative; z-index:5; width:100%; max-width:1280px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;">
       <!-- left: copy -->
       <div>
         <div style="display:inline-flex; align-items:center; gap:10px; padding:7px 16px; border-radius:999px; border:1px solid rgba(212,160,23,0.3); background:rgba(212,160,23,0.06); margin-bottom:30px;">
@@ -140,7 +168,7 @@
 
   <!-- ===================== ANCHOR BAND ===================== -->
   <section style="position:relative; background:#0b1726; border-top:1px solid rgba(212,160,23,0.1); border-bottom:1px solid rgba(212,160,23,0.1); padding:54px 48px;">
-    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; text-align:center;">
+    <div class="r-band" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; text-align:center;">
       <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .8s, transform .8s;">
         <div style="font-family:'Spectral',serif; font-style:italic; font-size:25px; color:#D4A017; margin-bottom:8px;">Claridad</div>
         <div style="font-size:14px; color:rgba(250,248,245,0.6); letter-spacing:0.01em;">para planificar</div>
@@ -164,7 +192,7 @@
         <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,52px); line-height:1.08; letter-spacing:-0.015em; margin:18px 0 20px;">Mi diferenciador no es ser psicóloga.</h2>
         <p style="font-size:18px; line-height:1.7; color:rgba(13,27,42,0.7); max-width:620px;">Es combinar psicología clínica con operaciones, liderazgo y project management. Esa intersección entiende a la persona detrás del KPI — y construye sistemas humanos que sí entregan.</p>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+      <div class="r-grid3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
         <!-- pillar card -->
         <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
           <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">01</div>
@@ -281,7 +309,7 @@
       </div>
     </div>
     <!-- horizontal rail -->
-    <div ref="{{ timelineRef }}" style="display:flex; gap:18px; overflow-x:auto; padding:40px 48px 30px; scroll-snap-type:x proximity;">
+    <div ref="{{ timelineRef }}" class="r-rail" style="display:flex; gap:18px; overflow-x:auto; padding:40px 48px 30px; scroll-snap-type:x proximity;">
       <!-- stage template repeated -->
       <div data-stage="0" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(212,160,23,0.4); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
         <div style="font-family:'Spectral',serif; font-size:14px; color:#D4A017; letter-spacing:0.1em; margin-bottom:auto;">01</div>
@@ -502,7 +530,7 @@
       </div>
 
       <!-- wellness category teasers -->
-      <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:70px;">
+      <div class="r-grid6" style="display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:70px;">
         <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Ansiedad</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Meditación</div></div>
         <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .05s, transform .6s .05s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Autoestima</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Meditación</div></div>
         <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .1s, transform .6s .1s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Dormir mejor</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Nocturno</div></div>
