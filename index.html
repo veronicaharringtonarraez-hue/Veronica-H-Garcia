@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verónica H. Garcia — Psicología · Operaciones · PM</title>
+<meta name="description" content="An immersive personal brand platform blending psychology, wellbeing, mindfulness, AI, learning, and human-centered leadership.">
+<meta property="og:title" content="Verónica H. Garcia">
+<meta property="og:description" content="Psychology, wellbeing, mindfulness, AI, learning, and human-centered leadership.">
+<meta property="og:image" content="assets/veronica.jpg">
+<meta property="og:type" content="website">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html{ scroll-behavior:smooth; }
+    body{ background:#0D1B2A; font-family:'Manrope',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+    ::selection{ background:rgba(212,160,23,0.28); color:#FAF8F5; }
+    ::-webkit-scrollbar{ height:8px; width:10px; }
+    ::-webkit-scrollbar-track{ background:rgba(13,27,42,0.4); }
+    ::-webkit-scrollbar-thumb{ background:rgba(212,160,23,0.35); border-radius:8px; }
+    @keyframes auroraDrift{ 0%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(6%,-4%) scale(1.18); } 100%{ transform:translate(0,0) scale(1); } }
+    @keyframes auroraDrift2{ 0%{ transform:translate(0,0) scale(1.1); } 50%{ transform:translate(-7%,5%) scale(0.95); } 100%{ transform:translate(0,0) scale(1.1); } }
+    @keyframes owlBreathe{ 0%,100%{ transform:scale(1) translateY(0); } 50%{ transform:scale(1.035) translateY(-2px); } }
+    @keyframes owlBlink{ 0%,92%,100%{ transform:scaleY(1); } 95%,97%{ transform:scaleY(0.08); } }
+    @keyframes glowPulse{ 0%,100%{ opacity:0.5; } 50%{ opacity:0.95; } }
+    @keyframes floatBob{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-9px); } }
+    @keyframes scrollDot{ 0%{ transform:translateY(0); opacity:0; } 30%{ opacity:1; } 80%{ transform:translateY(14px); opacity:0; } 100%{ opacity:0; } }
+    @keyframes shimmer{ 0%{ background-position:-200% 0; } 100%{ background-position:200% 0; } }
+    @keyframes bgFloat{ 0%,100%{ transform:scale(1.02) translate(0,0); } 50%{ transform:scale(1.1) translate(-1.5%,1.5%); } }
+    @keyframes nebA{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(9%,7%) scale(1.28); } }
+    @keyframes nebB{ 0%,100%{ transform:translate(0,0) scale(1.12); } 50%{ transform:translate(-10%,-6%) scale(0.9); } }
+    @keyframes nebC{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(6%,-9%) scale(1.22); } }
+  </style>
+</helmet>
+
+<div style="position:relative; background:#0D1B2A; color:#FAF8F5; overflow-x:hidden; font-family:'Manrope',sans-serif;">
+
+  <!-- ===================== NAV ===================== -->
+  <nav style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; backdrop-filter:blur(18px) saturate(1.2); -webkit-backdrop-filter:blur(18px) saturate(1.2); background:linear-gradient(180deg,rgba(13,27,42,0.72),rgba(13,27,42,0.28)); border-bottom:1px solid rgba(212,160,23,0.12);">
+    <div style="display:flex; align-items:center; gap:13px; cursor:pointer;" onClick="{{ goTop }}">
+      <svg viewBox="0 0 120 120" width="34" height="34" aria-hidden="true">
+        <g fill="none" stroke="#D4A017" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60 16 C32 16 23 40 25 63 C27 92 44 104 60 104 C76 104 93 92 95 63 C97 40 88 16 60 16 Z"></path>
+          <path d="M31 27 L42 41"></path>
+          <path d="M89 27 L78 41"></path>
+          <path d="M60 42 C49 42 43 50 43 60"></path>
+          <path d="M60 42 C71 42 77 50 77 60"></path>
+          <circle cx="43" cy="61" r="11"></circle>
+          <circle cx="77" cy="61" r="11"></circle>
+        </g>
+        <path d="M60 66 L55 76 L65 76 Z" fill="#D4A017"></path>
+        <circle cx="43" cy="61" r="4.4" fill="#D4A017"></circle>
+        <circle cx="77" cy="61" r="4.4" fill="#D4A017"></circle>
+      </svg>
+      <div style="display:flex; flex-direction:column; line-height:1.05;">
+        <span style="font-family:'Spectral',serif; font-size:17px; font-weight:500; letter-spacing:0.02em; color:#FAF8F5;">Verónica H. Garcia</span>
+        <span style="font-size:9.5px; letter-spacing:0.34em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600; margin-top:2px; white-space:nowrap;">Psicología · Operaciones · PM</span>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:34px;">
+      <a style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goAbout }}">Sobre mí</a>
+      <a style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goServices }}">Servicios</a>
+      <a style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goWellness }}">Bienestar</a>
+      <button style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.02em; color:#0D1B2A; background:#D4A017; border:none; padding:10px 20px; border-radius:999px; cursor:pointer; box-shadow:0 6px 22px rgba(212,160,23,0.32); transition:transform .25s, box-shadow .25s;" style-hover="transform:translateY(-2px); box-shadow:0 10px 30px rgba(212,160,23,0.45);" onClick="{{ goContact }}">Agendar consulta</button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section style="position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden;">
+    <!-- living nebula background -->
+    <div style="position:absolute; inset:-8%; background-image:url('assets/nebula-bg.png'); background-size:cover; background-position:50% center; animation:bgFloat 36s ease-in-out infinite;"></div>
+    <!-- drifting aurora color fields (each color moves independently) -->
+    <div style="position:absolute; inset:-25%; mix-blend-mode:screen; pointer-events:none; background:radial-gradient(36% 30% at 32% 30%, rgba(70,160,220,0.55), transparent 70%); filter:blur(34px); animation:nebA 26s ease-in-out infinite;"></div>
+    <div style="position:absolute; inset:-25%; mix-blend-mode:screen; pointer-events:none; background:radial-gradient(32% 26% at 60% 42%, rgba(212,160,23,0.42), transparent 68%); filter:blur(40px); animation:nebB 33s ease-in-out infinite;"></div>
+    <div style="position:absolute; inset:-25%; mix-blend-mode:screen; pointer-events:none; background:radial-gradient(40% 34% at 48% 72%, rgba(96,186,236,0.4), transparent 70%); filter:blur(44px); animation:nebC 22s ease-in-out infinite;"></div>
+    <div style="position:absolute; inset:-25%; mix-blend-mode:screen; pointer-events:none; background:radial-gradient(28% 24% at 74% 64%, rgba(230,178,60,0.3), transparent 70%); filter:blur(38px); animation:nebA 29s ease-in-out infinite reverse;"></div>
+    <!-- legibility veil -->
+    <div style="position:absolute; inset:0; background:linear-gradient(102deg, rgba(7,15,27,0.93) 0%, rgba(8,17,31,0.76) 35%, rgba(10,21,35,0.42) 66%, rgba(10,21,35,0.56) 100%);"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(9,19,33,0.42) 0%, transparent 24%, transparent 70%, #0b1726 100%);"></div>
+    <div style="position:absolute; inset:0; pointer-events:none; mix-blend-mode:screen; background:radial-gradient(30% 42% at 58% 44%, rgba(212,160,23,0.16), transparent 72%); animation:glowPulse 9s ease-in-out infinite;"></div>
+    <canvas ref="{{ canvasRef }}" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none; opacity:0.9;"></canvas>
+    <!-- faint psi monogram -->
+    <div style="position:absolute; right:6%; top:50%; transform:translateY(-50%); font-family:'Spectral',serif; font-size:46vh; line-height:1; color:rgba(212,160,23,0.045); pointer-events:none; user-select:none;">Ψ</div>
+
+    <div style="position:relative; z-index:5; width:100%; max-width:1280px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;">
+      <!-- left: copy -->
+      <div>
+        <div style="display:inline-flex; align-items:center; gap:10px; padding:7px 16px; border-radius:999px; border:1px solid rgba(212,160,23,0.3); background:rgba(212,160,23,0.06); margin-bottom:30px;">
+          <span style="width:6px; height:6px; border-radius:50%; background:#D4A017; box-shadow:0 0 10px #D4A017;"></span>
+          <span style="font-size:11.5px; letter-spacing:0.26em; text-transform:uppercase; color:rgba(234,219,200,0.92); font-weight:600;">Psychologist · Operations · Project Management</span>
+        </div>
+        <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(46px,6.4vw,90px); line-height:0.98; letter-spacing:-0.02em; color:#FAF8F5; margin-bottom:22px;">Verónica<br><span style="color:#EADBC8;">H. Garcia</span></h1>
+        <p style="font-family:'Spectral',serif; font-style:italic; font-weight:300; font-size:clamp(20px,2.3vw,30px); color:#D4A017; letter-spacing:0.005em; margin-bottom:20px;">Bridging People, Processes &amp; Purpose</p>
+        <p style="font-size:clamp(15px,1.25vw,18px); line-height:1.65; color:rgba(250,248,245,0.74); max-width:480px; margin-bottom:38px;">Conecto personas, procesos y propósito para generar impacto significativo y resultados sostenibles. Psicología clínica con la disciplina de las operaciones y el liderazgo humano.</p>
+        <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+          <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:#D4A017; border:none; padding:15px 30px; border-radius:999px; cursor:pointer; box-shadow:0 10px 34px rgba(212,160,23,0.36); transition:transform .3s, box-shadow .3s;" style-hover="transform:translateY(-3px); box-shadow:0 16px 44px rgba(212,160,23,0.5);" onClick="{{ goContact }}">Agendar consulta</button>
+          <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.22); padding:15px 28px; border-radius:999px; cursor:pointer; backdrop-filter:blur(8px); transition:background .3s, border-color .3s, transform .3s;" style-hover="background:rgba(250,248,245,0.1); border-color:rgba(250,248,245,0.4); transform:translateY(-3px);" onClick="{{ goWellness }}">Explorar recursos</button>
+        </div>
+        <div style="display:flex; align-items:center; gap:26px; margin-top:48px;">
+          <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Claridad</span>
+          <span style="width:5px; height:5px; border-radius:50%; background:rgba(234,219,200,0.4);"></span>
+          <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Compasión</span>
+          <span style="width:5px; height:5px; border-radius:50%; background:rgba(234,219,200,0.4);"></span>
+          <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Impacto</span>
+        </div>
+      </div>
+      <!-- right: portrait + owl -->
+      <div style="position:relative; display:flex; justify-content:center; align-items:center;">
+        <div style="position:absolute; width:118%; height:118%; border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.16), transparent 60%); filter:blur(20px);"></div>
+        <div style="position:relative; width:min(380px,80%); aspect-ratio:4/5; border-radius:26px; padding:1px; background:linear-gradient(160deg, rgba(212,160,23,0.55), rgba(234,219,200,0.12) 40%, rgba(212,160,23,0.2)); box-shadow:0 40px 90px rgba(0,0,0,0.5);">
+          <div style="width:100%; height:100%; border-radius:25px; overflow:hidden; background:linear-gradient(165deg,#13294a,#0d1b2a);">
+            <img src="assets/veronica.jpg" alt="Verónica H. Garcia" style="width:100%; height:100%; object-fit:cover; object-position:50% 26%; display:block;">
+          </div>
+        </div>
+        <!-- floating owl glass badge -->
+        <div style="position:absolute; bottom:-22px; right:-6px; display:flex; align-items:center; gap:12px; padding:12px 18px 12px 14px; border-radius:18px; background:rgba(13,27,42,0.55); border:1px solid rgba(212,160,23,0.28); backdrop-filter:blur(14px); box-shadow:0 18px 44px rgba(0,0,0,0.45); animation:floatBob 6s ease-in-out infinite;">
+          <span style="width:44px; height:44px; border-radius:50%; overflow:hidden; flex:0 0 auto; border:2px solid rgba(212,160,23,0.6); box-shadow:0 4px 14px rgba(0,0,0,0.4); animation:owlBreathe 5s ease-in-out infinite; transform-origin:center;"><img src="assets/owl.jpg" alt="Lechuza" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
+          <div style="line-height:1.2;">
+            <div style="font-family:'Spectral',serif; font-size:14px; color:#FAF8F5;">Costa Rica</div>
+            <div style="font-size:10.5px; letter-spacing:0.08em; color:rgba(234,219,200,0.7);">ES + EN · UTC−6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scroll cue -->
+    <div style="position:absolute; bottom:26px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; z-index:5;">
+      <div style="width:24px; height:38px; border:1.5px solid rgba(234,219,200,0.4); border-radius:14px; display:flex; justify-content:center; padding-top:7px;">
+        <div style="width:4px; height:8px; border-radius:4px; background:#D4A017; animation:scrollDot 2.1s ease-in-out infinite;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ANCHOR BAND ===================== -->
+  <section style="position:relative; background:#0b1726; border-top:1px solid rgba(212,160,23,0.1); border-bottom:1px solid rgba(212,160,23,0.1); padding:54px 48px;">
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; text-align:center;">
+      <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .8s, transform .8s;">
+        <div style="font-family:'Spectral',serif; font-style:italic; font-size:25px; color:#D4A017; margin-bottom:8px;">Claridad</div>
+        <div style="font-size:14px; color:rgba(250,248,245,0.6); letter-spacing:0.01em;">para planificar</div>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .8s .12s, transform .8s .12s; border-left:1px solid rgba(234,219,200,0.12); border-right:1px solid rgba(234,219,200,0.12);">
+        <div style="font-family:'Spectral',serif; font-style:italic; font-size:25px; color:#D4A017; margin-bottom:8px;">Compasión</div>
+        <div style="font-size:14px; color:rgba(250,248,245,0.6); letter-spacing:0.01em;">para liderar</div>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .8s .24s, transform .8s .24s;">
+        <div style="font-family:'Spectral',serif; font-style:italic; font-size:25px; color:#D4A017; margin-bottom:8px;">Impacto</div>
+        <div style="font-size:14px; color:rgba(250,248,245,0.6); letter-spacing:0.01em;">que perdura</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTERSECTION (light) ===================== -->
+  <section id="about" style="position:relative; background:linear-gradient(180deg,#FAF8F5,#F3EEE6); color:#0D1B2A; padding:120px 48px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s; max-width:760px; margin-bottom:64px;">
+        <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#6B4E3D; font-weight:600;">La intersección que me define</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,52px); line-height:1.08; letter-spacing:-0.015em; margin:18px 0 20px;">Mi diferenciador no es ser psicóloga.</h2>
+        <p style="font-size:18px; line-height:1.7; color:rgba(13,27,42,0.7); max-width:620px;">Es combinar psicología clínica con operaciones, liderazgo y project management. Esa intersección entiende a la persona detrás del KPI — y construye sistemas humanos que sí entregan.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+        <!-- pillar card -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">01</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Psicología clínica</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Comprensión profunda del comportamiento, la motivación y el bienestar.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .08s, transform .7s .08s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">02</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Liderazgo humano</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Decisiones que cuidan a las personas sin perder de vista el negocio.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .16s, transform .7s .16s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">03</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Operaciones</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Procesos que funcionan en la práctica, no solo en el papel.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .04s, transform .7s .04s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">04</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Project management</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Ejecución por fases, hitos claros y entrega real.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .12s, transform .7s .12s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">05</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Capacitación</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Diseño de aprendizaje que cambia conducta, no solo conocimiento.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .2s, transform .7s .2s; background:#0D1B2A; border:1px solid rgba(212,160,23,0.3); border-radius:20px; padding:30px 28px; color:#FAF8F5;">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.16); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#D4A017;">06</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px; color:#FAF8F5;">Productividad sostenible</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(250,248,245,0.66);">Resultados sin quemar al equipo — ni a una misma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VALORES (light) ===================== -->
+  <section style="position:relative; background:#FAF8F5; color:#0D1B2A; padding:112px 48px; overflow:hidden;">
+    <div style="position:absolute; left:-40px; top:60px; width:200px; height:300px; opacity:0.5; pointer-events:none;">
+      <svg viewBox="0 0 120 200" fill="none" stroke="#D4A017" stroke-width="1.1" stroke-linecap="round">
+        <path d="M70 4 C40 50 30 110 54 196"></path>
+        <path d="M56 40 C36 44 26 36 22 24 C40 22 52 30 56 40Z" fill="rgba(212,160,23,0.18)"></path>
+        <path d="M52 72 C32 76 22 68 18 56 C36 54 48 62 52 72Z" fill="rgba(212,160,23,0.18)"></path>
+        <path d="M52 104 C72 108 82 100 86 88 C68 86 56 94 52 104Z" fill="rgba(212,160,23,0.18)"></path>
+        <path d="M50 140 C30 144 20 136 16 124 C34 122 46 130 50 140Z" fill="rgba(212,160,23,0.18)"></path>
+      </svg>
+    </div>
+    <div style="position:relative; max-width:1180px; margin:0 auto; text-align:center;">
+      <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .8s, transform .8s; margin-bottom:60px;">
+        <svg viewBox="0 0 90 70" width="62" height="48" style="margin:0 auto 22px; display:block;" fill="none">
+          <path d="M24 18 A24 24 0 0 1 66 18" stroke="#D4A017" stroke-width="1.6" stroke-dasharray="1.6 5.4" stroke-linecap="round"></path>
+          <g stroke="#0D1B2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path d="M45 30 C42 25 33 25 31 31 C26 30 22 35 25 39 C22 42 24 48 29 47 C30 51 37 52 41 49 L45 49"></path>
+            <path d="M45 30 C48 25 57 25 59 31 C64 30 68 35 65 39 C68 42 66 48 61 47 C60 51 53 52 49 49 L45 49"></path>
+            <path d="M45 30 L45 49"></path>
+          </g>
+          <path d="M41 54 C36 54 32 51 31 46 C37 45 41 49 41 54Z" fill="#D4A017"></path>
+          <path d="M49 54 C54 54 58 51 59 46 C53 45 49 49 49 54Z" fill="#D4A017"></path>
+        </svg>
+        <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#6B4E3D; font-weight:600;">Lo que me sostiene</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,50px); line-height:1.08; letter-spacing:-0.015em; margin:16px 0 0;">Cinco valores, en todo lo que hago.</h2>
+      </div>
+      <div style="display:flex; justify-content:center; align-items:stretch; flex-wrap:wrap; gap:0;">
+        <!-- Empatía -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s, transform .6s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center; border-right:1px solid rgba(107,78,61,0.16);">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 19c-2.5-3.5-9-3-9 2 0 4 5 7 9 9.5 4-2.5 9-5.5 9-9.5 0-5-6.5-5.5-9-2Z"></path><path d="M11 30l5.5 5.5c.8.8 1.8 1.2 2.9 1.2H29c2.2 0 2.2-3.2 0-3.2h-6"></path><path d="M37 30l-5.5 5.5"></path></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Empatía</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">La persona, antes que el rol.</p>
+        </div>
+        <!-- Integridad -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s .07s, transform .6s .07s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center; border-right:1px solid rgba(107,78,61,0.16);">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v9c0 9-6 14.5-14 17.5C16 34.5 10 29 10 20v-9l14-5Z"></path><path d="M17.5 23l4.5 4.5 9-10"></path></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Integridad</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">Lo público y lo privado coinciden.</p>
+        </div>
+        <!-- Compromiso -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s .14s, transform .6s .14s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center; border-right:1px solid rgba(107,78,61,0.16);">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="15"></circle><circle cx="24" cy="24" r="9"></circle><circle cx="24" cy="24" r="3" fill="#D4A017" stroke="none"></circle></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Compromiso</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">Hacerme cargo del resultado.</p>
+        </div>
+        <!-- Colaboración -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s .21s, transform .6s .21s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center; border-right:1px solid rgba(107,78,61,0.16);">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="19" cy="24" r="9"></circle><circle cx="29" cy="24" r="9"></circle></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Colaboración</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">El trabajo serio se hace en equipo.</p>
+        </div>
+        <!-- Bienestar -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s .28s, transform .6s .28s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center;">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 13c3.5 4.5 3.5 10 0 14.5-3.5-4.5-3.5-10 0-14.5Z"></path><path d="M24 27.5c-4.5-2.5-10.5-1.5-14 2 2.5 4.5 8.5 6.5 14 4.5"></path><path d="M24 27.5c4.5-2.5 10.5-1.5 14 2-2.5 4.5-8.5 6.5-14 4.5"></path><path d="M24 32v3.5"></path></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Bienestar</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">El resultado, nunca a costa de la persona.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE (dark, immersive) ===================== -->
+  <section style="position:relative; background:radial-gradient(120% 90% at 50% 0%, #14304f 0%, #0D1B2A 55%); padding:110px 0 120px;">
+    <div style="max-width:1180px; margin:0 auto; padding:0 48px;">
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s; max-width:680px; margin-bottom:18px;">
+        <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Sobre mí · Línea de vida</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,50px); line-height:1.08; letter-spacing:-0.015em; margin:16px 0 14px; color:#FAF8F5;">Una trayectoria que conecta disciplinas.</h2>
+        <p style="font-size:16.5px; line-height:1.65; color:rgba(250,248,245,0.66);">Del servicio a la estrategia. Cada etapa sumó una forma distinta de entender a las personas y a los sistemas. Toca una etapa para abrirla.</p>
+      </div>
+    </div>
+    <!-- horizontal rail -->
+    <div ref="{{ timelineRef }}" style="display:flex; gap:18px; overflow-x:auto; padding:40px 48px 30px; scroll-snap-type:x proximity;">
+      <!-- stage template repeated -->
+      <div data-stage="0" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(212,160,23,0.4); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:#D4A017; letter-spacing:0.1em; margin-bottom:auto;">01</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:#D4A017; box-shadow:0 0 14px #D4A017; margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Servicio y voluntariado</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:80px; opacity:1; overflow:hidden; transition:max-height .4s, opacity .4s;">El punto de partida: ayudar antes de tener un título que lo nombrara.</p>
+      </div>
+      <div data-stage="1" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">02</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Misión de servicio</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Trabajo de campo que enseñó a escuchar contextos, no solo personas.</p>
+      </div>
+      <div data-stage="2" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">03</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Formación en psicología</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Base científica del comportamiento, la motivación y el bienestar.</p>
+      </div>
+      <div data-stage="3" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">04</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Atención clínica</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Acompañamiento individual: ansiedad, autoestima y procesos de cambio.</p>
+      </div>
+      <div data-stage="4" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">05</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">CAPSICOV</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Atención psicológica en contexto de crisis: cuidar a escala.</p>
+      </div>
+      <div data-stage="5" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">06</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Liderazgo de equipos</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Decisiones que cuidan a las personas sin perder el negocio.</p>
+      </div>
+      <div data-stage="6" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">07</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Coordinación de operaciones</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Procesos que sostienen al equipo y al resultado a la vez.</p>
+      </div>
+      <div data-stage="7" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">08</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Programas de capacitación</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Aprendizaje con base científica y entregables claros.</p>
+      </div>
+      <div data-stage="8" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">09</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Inteligencia artificial</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">IA aplicada a la productividad y al pensamiento crítico.</p>
+      </div>
+      <div data-stage="9" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">10</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Marca personal</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Conectar todo: personas, procesos y propósito.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES (beige light) ===================== -->
+  <section id="services" style="position:relative; background:linear-gradient(180deg,#EADBC8,#F3EEE6); color:#0D1B2A; padding:120px 48px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s; margin-bottom:56px; max-width:780px;">
+        <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#6B4E3D; font-weight:600;">Mis servicios</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,52px); line-height:1.08; letter-spacing:-0.015em; margin:18px 0 18px;">Psicología, liderazgo y desarrollo humano.</h2>
+        <p style="font-size:18px; line-height:1.65; color:rgba(13,27,42,0.7);">Acompaño a personas, familias y organizaciones a construir bienestar, fortalecer relaciones y desarrollar su máximo potencial.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;">
+        <!-- 01 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">01</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Psicología clínica y bienestar emocional</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Adolescentes, adultos, parejas y familias en procesos de crecimiento y fortalecimiento emocional.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Gestión emocional</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Ansiedad y estrés</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Autoestima</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Resiliencia</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Duelo y pérdidas</span>
+          </div>
+        </div>
+        <!-- 02 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .06s, transform .7s .06s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">02</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Intervención en crisis</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Apoyo en momentos de alta carga emocional y cambios que afectan el bienestar.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Crisis emocionales</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Separación / divorcio</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Estrés agudo</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Cambios de vida</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Planes de afrontamiento</span>
+          </div>
+        </div>
+        <!-- 03 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .12s, transform .7s .12s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">03</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Adicciones y recuperación familiar</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Acompañamiento a personas y familias afectadas por procesos adictivos.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Educación sobre adicciones</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Codependencia</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Límites saludables</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Apoyo a familiares</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Redes de apoyo</span>
+          </div>
+        </div>
+        <!-- 04 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">04</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Terapia para adolescentes</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Una etapa de cambios emocionales, sociales y académicos, acompañada de cerca.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Identidad</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Autoestima</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Regulación emocional</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Presión académica</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Proyecto de vida</span>
+          </div>
+        </div>
+        <!-- 05 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .06s, transform .7s .06s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">05</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Terapia de pareja</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Fortalecer el vínculo, mejorar la comunicación y enfrentar desafíos con salud.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Comunicación</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Resolución de conflictos</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Reconstruir confianza</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Vínculo emocional</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Nuevas etapas</span>
+          </div>
+        </div>
+        <!-- 06 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .12s, transform .7s .12s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">06</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Terapia familiar</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Mejorar la convivencia y el bienestar de todo el sistema familiar.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Conflictos familiares</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Comunicación</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Crianza y parentalidad</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Dinámicas familiares</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Vínculos</span>
+          </div>
+        </div>
+        <!-- 07 — differentiator, navy -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#0D1B2A; color:#FAF8F5; border-radius:22px; padding:32px 30px; border:1px solid rgba(212,160,23,0.34); display:flex; flex-direction:column; box-shadow:0 18px 44px rgba(13,27,42,0.18);">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+            <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017;">07</div>
+            <span style="width:24px; height:24px; border-radius:50%; overflow:hidden; border:1.5px solid rgba(212,160,23,0.6);"><img src="assets/owl.jpg" alt="" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px; color:#FAF8F5;">Psicología aplicada al liderazgo y la vida profesional</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(250,248,245,0.66); margin-bottom:20px;">La intersección única entre psicología, liderazgo, operaciones y desarrollo humano.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Prevención del burnout</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Bienestar laboral</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Inteligencia emocional</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Liderazgo humano</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Gestión del cambio</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Productividad sostenible</span>
+          </div>
+        </div>
+        <!-- 08 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .06s, transform .7s .06s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">08</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Capacitación y desarrollo humano</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Talleres para empresas, instituciones y grupos.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Inteligencia emocional</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Liderazgo</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Comunicación asertiva</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Manejo del estrés</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Trabajo en equipo</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">IA aplicada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WELLNESS CENTER (deep navy, contemplative) ===================== -->
+  <section id="wellness" style="position:relative; background:radial-gradient(120% 120% at 50% 20%, #102a45 0%, #0a1525 60%, #070f1c 100%); padding:120px 48px; overflow:hidden;">
+    <div style="position:absolute; width:50vw; height:50vw; left:50%; top:42%; transform:translate(-50%,-50%); border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.12), transparent 60%); filter:blur(30px); pointer-events:none;"></div>
+    <div style="position:relative; max-width:1080px; margin:0 auto; text-align:center;">
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s;">
+        <span style="font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Centro de Bienestar</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:300; font-size:clamp(32px,4.4vw,56px); line-height:1.1; letter-spacing:-0.01em; margin:18px auto 16px; color:#FAF8F5; max-width:680px;">Un cambio de ritmo. Aquí el sitio respira contigo.</h2>
+        <p style="font-size:16.5px; line-height:1.7; color:rgba(250,248,245,0.62); max-width:520px; margin:0 auto 50px;">Elige un patrón y deja que el círculo te guíe. Inhala, sostén, exhala. Sin prisa.</p>
+      </div>
+
+      <!-- breathing orb -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:34px;">
+        <div style="position:relative; width:300px; height:300px; display:flex; align-items:center; justify-content:center;">
+          <div style="position:absolute; inset:0; border-radius:50%; border:1px solid rgba(212,160,23,0.18);"></div>
+          <div style="position:absolute; inset:30px; border-radius:50%; border:1px solid rgba(212,160,23,0.12);"></div>
+          <div ref="{{ orbRef }}" style="width:170px; height:170px; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(212,160,23,0.9), rgba(212,160,23,0.35) 55%, rgba(212,160,23,0.08) 100%); box-shadow:0 0 60px rgba(212,160,23,0.4), inset 0 0 40px rgba(255,255,255,0.15); transform:scale(0.62); transition:none; display:flex; align-items:center; justify-content:center;">
+            <span ref="{{ orbCountRef }}" style="font-family:'Spectral',serif; font-size:46px; color:#0D1B2A; font-weight:500;"></span>
+          </div>
+        </div>
+        <div ref="{{ orbLabelRef }}" style="font-family:'Spectral',serif; font-style:italic; font-size:26px; color:#EADBC8; min-height:34px;">Listo cuando tú lo estés</div>
+
+        <!-- pattern selector -->
+        <div ref="{{ patternsRef }}" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+          <button data-pat="4-4-4" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:#0D1B2A; background:#D4A017; border:1px solid #D4A017; padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 4 · 4</button>
+          <button data-pat="4-7-8" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 7 · 8</button>
+          <button data-pat="Box" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">Box breathing</button>
+        </div>
+
+        <button onClick="{{ toggleBreath }}" style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:transparent; border:1px solid rgba(212,160,23,0.5); padding:14px 40px; border-radius:999px; cursor:pointer; transition:all .3s; letter-spacing:0.02em;" style-hover="background:rgba(212,160,23,0.12); border-color:#D4A017;"><span ref="{{ breathBtnRef }}">Comenzar</span></button>
+
+        <p style="font-size:12.5px; color:rgba(250,248,245,0.4); letter-spacing:0.06em; margin-top:6px;">Las meditaciones guiadas serán narradas por Verónica.</p>
+      </div>
+
+      <!-- wellness category teasers -->
+      <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:70px;">
+        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Ansiedad</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Meditación</div></div>
+        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .05s, transform .6s .05s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Autoestima</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Meditación</div></div>
+        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .1s, transform .6s .1s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Dormir mejor</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Nocturno</div></div>
+        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .15s, transform .6s .15s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relajación</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Jardín guiado</div></div>
+        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .2s, transform .6s .2s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Claridad mental</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Enfoque</div></div>
+        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .25s, transform .6s .25s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resiliencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Imaginería</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT / CTA ===================== -->
+  <section id="contact" style="position:relative; background:#0D1B2A; padding:110px 48px 60px; overflow:hidden;">
+    <div style="position:absolute; right:-8vw; top:-6vw; width:40vw; height:40vw; border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.12), transparent 62%); filter:blur(40px); pointer-events:none;"></div>
+    <div style="position:relative; max-width:900px; margin:0 auto; text-align:center;">
+      <svg viewBox="0 0 120 120" width="52" height="52" style="margin-bottom:26px; animation:owlBreathe 5s ease-in-out infinite; transform-origin:center;" aria-hidden="true">
+        <g fill="none" stroke="#D4A017" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60 16 C32 16 23 40 25 63 C27 92 44 104 60 104 C76 104 93 92 95 63 C97 40 88 16 60 16 Z"></path>
+          <path d="M31 27 L42 41"></path><path d="M89 27 L78 41"></path>
+          <path d="M60 42 C49 42 43 50 43 60"></path><path d="M60 42 C71 42 77 50 77 60"></path>
+          <circle cx="43" cy="61" r="11"></circle><circle cx="77" cy="61" r="11"></circle>
+        </g>
+        <path d="M60 66 L55 76 L65 76 Z" fill="#D4A017"></path>
+        <circle cx="43" cy="61" r="4.4" fill="#D4A017"></circle><circle cx="77" cy="61" r="4.4" fill="#D4A017"></circle>
+      </svg>
+      <h2 style="font-family:'Spectral',serif; font-weight:300; font-size:clamp(34px,4.6vw,58px); line-height:1.08; letter-spacing:-0.015em; color:#FAF8F5; margin-bottom:18px;">Conversemos sobre tu próximo paso.</h2>
+      <p style="font-size:17px; line-height:1.65; color:rgba(250,248,245,0.66); max-width:520px; margin:0 auto 40px;">Una conversación de 25 minutos para ver si tiene sentido seguir conversando. Sin compromiso.</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:#D4A017; border:none; padding:16px 36px; border-radius:999px; cursor:pointer; box-shadow:0 12px 38px rgba(212,160,23,0.38); transition:transform .3s, box-shadow .3s;" style-hover="transform:translateY(-3px); box-shadow:0 18px 48px rgba(212,160,23,0.52);">Agendar consulta</button>
+        <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.22); padding:16px 32px; border-radius:999px; cursor:pointer; transition:all .3s;" style-hover="background:rgba(250,248,245,0.1); border-color:rgba(250,248,245,0.4);">Escribir un correo</button>
+      </div>
+    </div>
+    <div style="max-width:1180px; margin:80px auto 0; padding-top:34px; border-top:1px solid rgba(250,248,245,0.1); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <svg viewBox="0 0 120 120" width="26" height="26" aria-hidden="true">
+          <g fill="none" stroke="#D4A017" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 16 C32 16 23 40 25 63 C27 92 44 104 60 104 C76 104 93 92 95 63 C97 40 88 16 60 16 Z"></path>
+            <circle cx="43" cy="61" r="11"></circle><circle cx="77" cy="61" r="11"></circle>
+          </g>
+          <circle cx="43" cy="61" r="4.4" fill="#D4A017"></circle><circle cx="77" cy="61" r="4.4" fill="#D4A017"></circle>
+        </svg>
+        <span style="font-family:'Spectral',serif; font-size:15px; color:rgba(250,248,245,0.85);">Verónica H. Garcia</span>
+      </div>
+      <span style="font-size:12.5px; color:rgba(250,248,245,0.4); letter-spacing:0.04em;">Personas · Procesos · Propósito — Costa Rica · ES + EN</span>
+    </div>
+  </section>
+
+  <!-- ===================== FLOATING OWL ASSISTANT ===================== -->
+  <button onClick="{{ goWellness }}" title="Hola, soy tu guía. ¿Exploramos un ejercicio de respiración?" style="position:fixed; bottom:24px; right:24px; z-index:60; width:74px; height:74px; border-radius:50%; border:none; padding:0; cursor:pointer; background:transparent; animation:floatBob 6s ease-in-out infinite; transition:transform .3s;" style-hover="transform:scale(1.08);">
+    <span style="position:absolute; inset:-8px; border-radius:50%; border:1.5px solid rgba(212,160,23,0.5); animation:glowPulse 3.4s ease-in-out infinite;"></span>
+    <span style="position:absolute; inset:0; border-radius:50%; overflow:hidden; box-shadow:0 14px 32px rgba(0,0,0,0.55); border:2px solid rgba(212,160,23,0.7); display:block;"><img src="assets/owl.jpg" alt="Asistente Lechuza" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
+    <span style="position:absolute; bottom:3px; right:3px; width:14px; height:14px; border-radius:50%; background:#1F8A5B; border:2.5px solid #0D1B2A;"></span>
+  </button>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  canvasRef = React.createRef();
+  timelineRef = React.createRef();
+  orbRef = React.createRef();
+  orbCountRef = React.createRef();
+  orbLabelRef = React.createRef();
+  patternsRef = React.createRef();
+  breathBtnRef = React.createRef();
+
+  componentDidMount() {
+    this.initConstellation();
+    this.initReveal();
+    this.breathPattern = '4-4-4';
+    this.breathRunning = false;
+  }
+
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._braf) cancelAnimationFrame(this._braf);
+  }
+
+  // ---------- smooth scroll ----------
+  scrollToId(id) {
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: 'smooth' });
+  }
+
+  // ---------- fluid cosmos (flow field + light trails + dust) ----------
+  initConstellation() {
+    const canvas = this.canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let w = 0, h = 0, dpr = 1;
+    const resize = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const r = canvas.getBoundingClientRect();
+      w = r.width; h = r.height;
+      canvas.width = Math.max(1, w * dpr); canvas.height = Math.max(1, h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener('resize', resize);
+
+    // light-trail particles advected by an organic wave field (liquid gold lines)
+    const flow = [];
+    const FN = Math.max(70, Math.min(140, Math.floor((w * h) / 11000)));
+    for (let i = 0; i < FN; i++) {
+      flow.push({ x: Math.random() * w, y: Math.random() * h, life: Math.random() * 220 + 70, gold: Math.random() < 0.6, spd: Math.random() * 0.6 + 0.55 });
+    }
+    // floating light dust + golden constellations
+    const dust = [];
+    const DN = Math.max(30, Math.min(72, Math.floor((w * h) / 24000)));
+    for (let i = 0; i < DN; i++) {
+      dust.push({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - 0.5) * 0.16, vy: (Math.random() - 0.5) * 0.16, r: Math.random() * 1.5 + 0.5, gold: Math.random() < 0.5 });
+    }
+
+    const mouse = { x: -9999, y: -9999 };
+    const onMove = (e) => { const r = canvas.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; };
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseout', () => { mouse.x = -9999; mouse.y = -9999; });
+
+    let t = 0;
+    const field = (x, y) => (Math.sin(x * 0.0016 + t * 0.15) + Math.cos(y * 0.0018 - t * 0.12) + Math.sin((x + y) * 0.0011 + t * 0.1)) * 1.04;
+
+    const tick = () => {
+      t += 0.016;
+      // fade previous frame on a transparent canvas → glowing trails over the nebula
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillStyle = 'rgba(0,0,0,0.052)';
+      ctx.fillRect(0, 0, w, h);
+      ctx.globalCompositeOperation = 'lighter';
+
+      // light trails
+      for (const p of flow) {
+        const a = field(p.x, p.y) * Math.PI;
+        let nx = p.x + Math.cos(a) * p.spd * 1.4;
+        let ny = p.y + Math.sin(a) * p.spd * 1.4;
+        const dx = nx - mouse.x, dy = ny - mouse.y, d2 = dx * dx + dy * dy;
+        if (d2 < 22000 && d2 > 0.01) { const d = Math.sqrt(d2), f = (1 - d / 148) * 0.7; nx += (dx / d) * f; ny += (dy / d) * f; }
+        ctx.strokeStyle = p.gold ? 'rgba(216,164,30,0.17)' : 'rgba(96,186,236,0.13)';
+        ctx.lineWidth = p.gold ? 1.1 : 0.8;
+        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(nx, ny); ctx.stroke();
+        p.x = nx; p.y = ny; p.life--;
+        if (p.life <= 0 || p.x < -20 || p.x > w + 20 || p.y < -20 || p.y > h + 20) {
+          p.x = Math.random() * w; p.y = Math.random() * h; p.life = Math.random() * 220 + 70;
+        }
+      }
+
+      // dust motion + cursor reaction
+      for (const p of dust) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < -10) p.x = w + 10; if (p.x > w + 10) p.x = -10;
+        if (p.y < -10) p.y = h + 10; if (p.y > h + 10) p.y = -10;
+        const dx = p.x - mouse.x, dy = p.y - mouse.y, d2 = dx * dx + dy * dy;
+        if (d2 < 14000 && d2 > 0.01) { const d = Math.sqrt(d2), f = (14000 - d2) / 14000 * 0.5; p.x += (dx / d) * f; p.y += (dy / d) * f; }
+      }
+      // golden constellations
+      for (let i = 0; i < dust.length; i++) {
+        for (let j = i + 1; j < dust.length; j++) {
+          const a = dust[i], b = dust[j];
+          const dx = a.x - b.x, dy = a.y - b.y, dd = Math.sqrt(dx * dx + dy * dy);
+          if (dd < 116) {
+            const al = (1 - dd / 116) * 0.22;
+            ctx.strokeStyle = (a.gold || b.gold) ? 'rgba(212,160,23,' + al + ')' : 'rgba(150,200,235,' + (al * 0.8) + ')';
+            ctx.lineWidth = 0.6;
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+          }
+        }
+      }
+      for (const p of dust) {
+        const dxm = p.x - mouse.x, dym = p.y - mouse.y, dm = Math.sqrt(dxm * dxm + dym * dym);
+        if (dm < 150) { ctx.strokeStyle = 'rgba(212,160,23,' + ((1 - dm / 150) * 0.32) + ')'; ctx.lineWidth = 0.6; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.gold ? 'rgba(216,164,30,0.7)' : 'rgba(200,225,245,0.55)';
+        ctx.fill();
+      }
+      this._raf = requestAnimationFrame(tick);
+    };
+    tick();
+  }
+
+  // ---------- reveal on scroll ----------
+  initReveal() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!('IntersectionObserver' in window) || !els.length) {
+      els.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'translateY(0)';
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => io.observe(el));
+  }
+
+  // ---------- timeline ----------
+  pickStage = (e) => {
+    const root = this.timelineRef.current;
+    if (!root) return;
+    const card = e.currentTarget;
+    Array.from(root.children).forEach(ch => {
+      const active = ch === card;
+      ch.style.background = active ? 'rgba(212,160,23,0.08)' : 'rgba(250,248,245,0.04)';
+      ch.style.borderColor = active ? 'rgba(212,160,23,0.5)' : 'rgba(250,248,245,0.1)';
+      const num = ch.querySelector('div');
+      if (num) num.style.color = active ? '#D4A017' : 'rgba(212,160,23,0.7)';
+      const dot = ch.querySelectorAll('div')[1];
+      if (dot) { dot.style.background = active ? '#D4A017' : 'rgba(234,219,200,0.4)'; dot.style.boxShadow = active ? '0 0 14px #D4A017' : 'none'; }
+      const desc = ch.querySelector('[data-desc]');
+      if (desc) { desc.style.maxHeight = active ? '80px' : '0px'; desc.style.opacity = active ? '1' : '0'; }
+    });
+  };
+
+  // ---------- breathing ----------
+  patterns = {
+    '4-4-4': [['Inhala', 4, 1], ['Sostén', 4, 1], ['Exhala', 4, 0.62]],
+    '4-7-8': [['Inhala', 4, 1], ['Sostén', 7, 1], ['Exhala', 8, 0.62]],
+    'Box':   [['Inhala', 4, 1], ['Sostén', 4, 1], ['Exhala', 4, 0.62], ['Vacío', 4, 0.62]]
+  };
+
+  pickPattern = (e) => {
+    const key = e.currentTarget.getAttribute('data-pat');
+    this.breathPattern = key;
+    const root = this.patternsRef.current;
+    if (root) {
+      Array.from(root.children).forEach(btn => {
+        const active = btn.getAttribute('data-pat') === key;
+        btn.style.background = active ? '#D4A017' : 'rgba(250,248,245,0.05)';
+        btn.style.color = active ? '#0D1B2A' : 'rgba(250,248,245,0.8)';
+        btn.style.borderColor = active ? '#D4A017' : 'rgba(250,248,245,0.18)';
+      });
+    }
+    if (this.breathRunning) this.startBreathLoop();
+  };
+
+  toggleBreath = () => {
+    if (this.breathRunning) {
+      this.stopBreath();
+    } else {
+      this.startBreathLoop();
+    }
+  };
+
+  startBreathLoop() {
+    this.breathRunning = true;
+    if (this.breathBtnRef.current) this.breathBtnRef.current.textContent = 'Detener';
+    this._breathStart = performance.now();
+    const orb = this.orbRef.current, label = this.orbLabelRef.current, count = this.orbCountRef.current;
+    const loop = () => {
+      if (!this.breathRunning) return;
+      const seq = this.patterns[this.breathPattern];
+      const total = seq.reduce((s, p) => s + p[1], 0);
+      let t = ((performance.now() - this._breathStart) / 1000) % total;
+      let idx = 0, acc = 0;
+      for (let i = 0; i < seq.length; i++) { if (t < acc + seq[i][1]) { idx = i; break; } acc += seq[i][1]; }
+      const phase = seq[idx];
+      const lt = t - acc;
+      const prevScale = idx === 0 ? seq[seq.length - 1][2] : seq[idx - 1][2];
+      const targetScale = phase[2];
+      const k = Math.min(1, lt / phase[1]);
+      const ease = 0.5 - 0.5 * Math.cos(Math.PI * k);
+      const scale = prevScale + (targetScale - prevScale) * ease;
+      if (orb) orb.style.transform = 'scale(' + scale.toFixed(3) + ')';
+      if (label) label.textContent = phase[0];
+      if (count) count.textContent = String(Math.ceil(phase[1] - lt));
+      this._braf = requestAnimationFrame(loop);
+    };
+    loop();
+  }
+
+  stopBreath() {
+    this.breathRunning = false;
+    if (this._braf) cancelAnimationFrame(this._braf);
+    if (this.breathBtnRef.current) this.breathBtnRef.current.textContent = 'Comenzar';
+    if (this.orbLabelRef.current) this.orbLabelRef.current.textContent = 'Listo cuando tú lo estés';
+    if (this.orbCountRef.current) this.orbCountRef.current.textContent = '';
+    if (this.orbRef.current) { this.orbRef.current.style.transition = 'transform 1s ease'; this.orbRef.current.style.transform = 'scale(0.62)'; setTimeout(() => { if (this.orbRef.current) this.orbRef.current.style.transition = 'none'; }, 1000); }
+  }
+
+  renderVals() {
+    return {
+      canvasRef: this.canvasRef,
+      timelineRef: this.timelineRef,
+      orbRef: this.orbRef,
+      orbCountRef: this.orbCountRef,
+      orbLabelRef: this.orbLabelRef,
+      patternsRef: this.patternsRef,
+      breathBtnRef: this.breathBtnRef,
+      pickStage: this.pickStage,
+      pickPattern: this.pickPattern,
+      toggleBreath: this.toggleBreath,
+      goTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+      goAbout: () => this.scrollToId('about'),
+      goServices: () => this.scrollToId('services'),
+      goWellness: () => this.scrollToId('wellness'),
+      goContact: () => this.scrollToId('contact')
+    };
+  }
+}
+</script>
+</body>
+</html>
