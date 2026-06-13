@@ -863,7 +863,7 @@ class Component extends DCLogic {
 
   // ---------- agendar consulta (reservas reales vía Google Apps Script) ----------
   openBooking = () => {
-    if (!BOOKING_API) { this.scrollToId('contact'); return; }
+    this._localMode = !BOOKING_API;
     this._ensureBookingUI();
     this._bkOverlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
@@ -887,6 +887,7 @@ class Component extends DCLogic {
         + ".bk-head h3{font-family:Spectral,serif;font-weight:500;font-size:22px;margin:0 0 4px}"
         + '.bk-head p{font-size:12.5px;color:rgba(250,248,245,.6);margin:0 0 18px}'
         + '.bk-msg{padding:26px 4px;text-align:center;color:rgba(250,248,245,.7);font-size:14px;line-height:1.5}'
+        + '.bk-hint{font-size:12.5px;color:rgba(250,248,245,.62);background:rgba(212,160,23,.08);border:1px solid rgba(212,160,23,.22);border-radius:10px;padding:9px 12px;margin-bottom:16px;line-height:1.4}'
         + '.bk-days{display:flex;flex-direction:column;gap:16px}'
         + '.bk-dlabel{font-size:12px;letter-spacing:.04em;text-transform:capitalize;color:#D4A017;font-weight:600;margin-bottom:9px}'
         + '.bk-times{display:flex;flex-wrap:wrap;gap:8px}'
@@ -919,6 +920,15 @@ class Component extends DCLogic {
   }
 
   async _loadSlots() {
+    if (this._localMode) {
+      this._slots = this._localSlots();
+      if (!this._slots.length) {
+        this._bkBody.innerHTML = '<div class="bk-msg">No hay horarios próximos disponibles.<br>Escríbeme por WhatsApp y lo coordinamos.</div>';
+        return;
+      }
+      this._renderDays();
+      return;
+    }
     this._bkBody.innerHTML = '<div class="bk-msg">Cargando disponibilidad…</div>';
     try {
       const r = await fetch(BOOKING_API + '?action=slots');
@@ -934,6 +944,39 @@ class Component extends DCLogic {
     }
   }
 
+  // Horarios generados en el navegador desde tu disponibilidad recurrente
+  // (hora de Costa Rica, UTC−6 sin horario de verano). Se usa mientras no haya
+  // BOOKING_API: la persona elige y se va a WhatsApp a confirmar.
+  _localSlots() {
+    // 0=Dom 1=Lun 2=Mar 3=Mié 4=Jue 5=Vie 6=Sáb
+    const SCHEDULE = { 1: [[11, 20]], 2: [[11, 20]], 3: [[16, 20]], 4: [[16, 20]], 5: [[11, 20]], 6: [[10, 20]] };
+    const TZ = 'America/Costa_Rica';
+    const pad = (n) => (n < 10 ? '0' + n : '' + n);
+    const dayFmt = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' });
+    const lead = Date.now() + 2 * 3600000;
+    const base = new Date(dayFmt.format(new Date()) + 'T00:00:00-06:00');
+    const out = [];
+    for (let d = 0; d < 21; d++) {
+      const ymd = dayFmt.format(new Date(base.getTime() + d * 86400000));
+      const dow = new Date(ymd + 'T12:00:00-06:00').getUTCDay();
+      const wins = SCHEDULE[dow];
+      if (!wins) continue;
+      wins.forEach((w) => {
+        for (let h = w[0]; h < w[1]; h++) {
+          const start = new Date(ymd + 'T' + pad(h) + ':00:00-06:00');
+          if (start.getTime() > lead) out.push(start.toISOString());
+        }
+      });
+    }
+    return out;
+  }
+
+  _whatsappBook(iso) {
+    const when = new Date(iso).toLocaleString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: 'America/Costa_Rica' });
+    const msg = encodeURIComponent('Hola Verónica 👋, me gustaría agendar una sesión de 1 hora el ' + when + '. ¿Está disponible ese horario?');
+    window.open('https://wa.me/50670773517?text=' + msg, '_blank', 'noopener');
+  }
+
   _renderDays() {
     const TZ = 'America/Costa_Rica';
     const byDay = {};
@@ -941,7 +984,7 @@ class Component extends DCLogic {
       const key = new Date(iso).toLocaleDateString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', timeZone: TZ });
       (byDay[key] = byDay[key] || []).push(iso);
     });
-    let html = '<div class="bk-days">';
+    let html = (this._localMode ? '<div class="bk-hint">Elige un horario y te llevo a WhatsApp para confirmarlo.</div>' : '') + '<div class="bk-days">';
     Object.keys(byDay).forEach((day) => {
       html += '<div class="bk-day"><div class="bk-dlabel">' + day + '</div><div class="bk-times">';
       byDay[day].forEach((iso) => {
@@ -953,7 +996,10 @@ class Component extends DCLogic {
     html += '</div>';
     this._bkBody.innerHTML = html;
     this._bkBody.querySelectorAll('.bk-slot').forEach((b) =>
-      b.addEventListener('click', () => this._renderForm(b.getAttribute('data-iso'))));
+      b.addEventListener('click', () => {
+        const iso = b.getAttribute('data-iso');
+        if (this._localMode) this._whatsappBook(iso); else this._renderForm(iso);
+      }));
   }
 
   _renderForm(iso) {
