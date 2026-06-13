@@ -615,6 +615,9 @@
     </div>
   </section>
 
+  <!-- contenedor del modal de reservas (lo llena el JS) -->
+  <div ref="{{ bookingRef }}"></div>
+
   <!-- ===================== FLOATING OWL ASSISTANT ===================== -->
   <button onClick="{{ goWellness }}" title="Hola, soy tu guía. ¿Exploramos un ejercicio de respiración?" style="position:fixed; bottom:24px; right:24px; z-index:60; width:74px; height:74px; border-radius:50%; border:none; padding:0; cursor:pointer; background:transparent; animation:floatBob 6s ease-in-out infinite; transition:transform .3s;" style-hover="transform:scale(1.08);">
     <span style="position:absolute; inset:-8px; border-radius:50%; border:1.5px solid rgba(212,160,23,0.5); animation:glowPulse 3.4s ease-in-out infinite;"></span>
@@ -626,12 +629,12 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 /* ============================================================================
-   AGENDAR CITAS — Página de reservas de Google Calendar ("Veronica CAPSICOV")
-   Pega entre las comillas el enlace público de tu Appointment Schedule
-   (algo como "https://calendar.app.google/XXXXXXXXXXXX"). Mientras esté vacío,
-   el botón "Agendar consulta" lleva a la sección de contacto (WhatsApp).
+   AGENDAR CITAS — Conexión con Google Calendar (calendario "Rachel" / CAPSICOV)
+   Pega entre las comillas la URL de tu app web de Google Apps Script
+   (la que termina en /exec — ver carpeta /booking del repo). Mientras esté
+   vacía, el botón "Agendar consulta" lleva a la sección de contacto (WhatsApp).
    ============================================================================ */
-const AGENDA_URL = "";
+const BOOKING_API = "";
 
 class Component extends DCLogic {
   canvasRef = React.createRef();
@@ -641,6 +644,7 @@ class Component extends DCLogic {
   orbLabelRef = React.createRef();
   patternsRef = React.createRef();
   breathBtnRef = React.createRef();
+  bookingRef = React.createRef();
 
   componentDidMount() {
     this.initConstellation();
@@ -857,6 +861,142 @@ class Component extends DCLogic {
     if (this.orbRef.current) { this.orbRef.current.style.transition = 'transform 1s ease'; this.orbRef.current.style.transform = 'scale(0.62)'; setTimeout(() => { if (this.orbRef.current) this.orbRef.current.style.transition = 'none'; }, 1000); }
   }
 
+  // ---------- agendar consulta (reservas reales vía Google Apps Script) ----------
+  openBooking = () => {
+    if (!BOOKING_API) { this.scrollToId('contact'); return; }
+    this._ensureBookingUI();
+    this._bkOverlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    this._loadSlots();
+  };
+
+  _closeBooking = () => {
+    if (this._bkOverlay) this._bkOverlay.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  _ensureBookingUI() {
+    if (this._bkOverlay) return;
+    if (!document.getElementById('bk-style')) {
+      const st = document.createElement('style');
+      st.id = 'bk-style';
+      st.textContent =
+        '.bk-overlay{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(7,15,27,.66);backdrop-filter:blur(4px);padding:20px}'
+        + '.bk-panel{position:relative;width:100%;max-width:440px;max-height:86vh;overflow:auto;background:#0f2138;border:1px solid rgba(212,160,23,.3);border-radius:20px;padding:24px;color:#FAF8F5;font-family:Manrope,system-ui,sans-serif;box-shadow:0 30px 80px rgba(0,0,0,.55)}'
+        + '.bk-x{position:absolute;top:10px;right:14px;background:transparent;border:none;color:rgba(250,248,245,.6);font-size:26px;line-height:1;cursor:pointer}'
+        + ".bk-head h3{font-family:Spectral,serif;font-weight:500;font-size:22px;margin:0 0 4px}"
+        + '.bk-head p{font-size:12.5px;color:rgba(250,248,245,.6);margin:0 0 18px}'
+        + '.bk-msg{padding:26px 4px;text-align:center;color:rgba(250,248,245,.7);font-size:14px;line-height:1.5}'
+        + '.bk-days{display:flex;flex-direction:column;gap:16px}'
+        + '.bk-dlabel{font-size:12px;letter-spacing:.04em;text-transform:capitalize;color:#D4A017;font-weight:600;margin-bottom:9px}'
+        + '.bk-times{display:flex;flex-wrap:wrap;gap:8px}'
+        + '.bk-slot{font-family:Manrope,sans-serif;font-size:13px;color:#FAF8F5;background:rgba(250,248,245,.05);border:1px solid rgba(212,160,23,.35);border-radius:10px;padding:8px 13px;cursor:pointer;transition:all .2s}'
+        + '.bk-slot:hover{background:#D4A017;color:#0D1B2A;border-color:#D4A017}'
+        + '.bk-back{background:transparent;border:none;color:rgba(250,248,245,.6);font-size:13px;cursor:pointer;padding:0;margin-bottom:14px}'
+        + ".bk-when{font-family:Spectral,serif;font-size:16px;color:#D4A017;margin-bottom:16px;text-transform:capitalize}"
+        + '.bk-l{display:block;font-size:12px;color:rgba(250,248,245,.7);margin-bottom:12px}'
+        + '.bk-i{display:block;width:100%;margin-top:5px;background:rgba(250,248,245,.06);border:1px solid rgba(250,248,245,.18);border-radius:9px;padding:10px 12px;color:#FAF8F5;font-family:Manrope,sans-serif;font-size:14px;box-sizing:border-box}'
+        + '.bk-i:focus{outline:none;border-color:#D4A017}'
+        + '.bk-confirm{width:100%;margin-top:6px;font-family:Manrope,sans-serif;font-weight:600;font-size:15px;color:#0D1B2A;background:#D4A017;border:none;border-radius:999px;padding:13px;cursor:pointer}'
+        + '.bk-confirm:disabled{opacity:.6;cursor:default}'
+        + '.bk-err{color:#ffb4a8;font-size:13px;margin-top:10px;min-height:16px}'
+        + ".bk-ok{text-align:center;padding:26px 6px;font-family:Spectral,serif;font-size:21px;color:#D4A017}"
+        + '.bk-ok span{display:block;margin-top:8px;font-family:Manrope,sans-serif;font-size:13.5px;color:rgba(250,248,245,.72)}';
+      document.head.appendChild(st);
+    }
+    const host = (this.bookingRef && this.bookingRef.current) || document.body;
+    const ov = document.createElement('div');
+    ov.className = 'bk-overlay';
+    ov.innerHTML =
+      '<div class="bk-panel"><button class="bk-x" aria-label="Cerrar">×</button>'
+      + '<div class="bk-head"><h3>Agendar consulta</h3><p>Sesiones de 1 hora · Costa Rica (UTC−6)</p></div>'
+      + '<div class="bk-body"></div></div>';
+    host.appendChild(ov);
+    this._bkOverlay = ov;
+    this._bkBody = ov.querySelector('.bk-body');
+    ov.querySelector('.bk-x').addEventListener('click', this._closeBooking);
+    ov.addEventListener('click', (e) => { if (e.target === ov) this._closeBooking(); });
+  }
+
+  async _loadSlots() {
+    this._bkBody.innerHTML = '<div class="bk-msg">Cargando disponibilidad…</div>';
+    try {
+      const r = await fetch(BOOKING_API + '?action=slots');
+      const data = await r.json();
+      if (!data.ok || !data.slots || !data.slots.length) {
+        this._bkBody.innerHTML = '<div class="bk-msg">No hay horarios disponibles por ahora.<br>Escríbeme por WhatsApp y lo coordinamos.</div>';
+        return;
+      }
+      this._slots = data.slots;
+      this._renderDays();
+    } catch (e) {
+      this._bkBody.innerHTML = '<div class="bk-msg">No se pudo cargar la disponibilidad.<br>Intenta de nuevo o escríbeme por WhatsApp.</div>';
+    }
+  }
+
+  _renderDays() {
+    const TZ = 'America/Costa_Rica';
+    const byDay = {};
+    this._slots.forEach((iso) => {
+      const key = new Date(iso).toLocaleDateString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', timeZone: TZ });
+      (byDay[key] = byDay[key] || []).push(iso);
+    });
+    let html = '<div class="bk-days">';
+    Object.keys(byDay).forEach((day) => {
+      html += '<div class="bk-day"><div class="bk-dlabel">' + day + '</div><div class="bk-times">';
+      byDay[day].forEach((iso) => {
+        const t = new Date(iso).toLocaleTimeString('es-CR', { hour: '2-digit', minute: '2-digit', timeZone: TZ });
+        html += '<button class="bk-slot" data-iso="' + iso + '">' + t + '</button>';
+      });
+      html += '</div></div>';
+    });
+    html += '</div>';
+    this._bkBody.innerHTML = html;
+    this._bkBody.querySelectorAll('.bk-slot').forEach((b) =>
+      b.addEventListener('click', () => this._renderForm(b.getAttribute('data-iso'))));
+  }
+
+  _renderForm(iso) {
+    const when = new Date(iso).toLocaleString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: 'America/Costa_Rica' });
+    this._bkBody.innerHTML =
+      '<button class="bk-back">← Cambiar horario</button>'
+      + '<div class="bk-when">' + when + ' · 1 hora</div>'
+      + '<label class="bk-l">Nombre<input class="bk-i" id="bk-name" autocomplete="name"></label>'
+      + '<label class="bk-l">Correo<input class="bk-i" id="bk-email" type="email" autocomplete="email"></label>'
+      + '<label class="bk-l">WhatsApp / teléfono<input class="bk-i" id="bk-phone" autocomplete="tel"></label>'
+      + '<label class="bk-l">Motivo (opcional)<textarea class="bk-i" id="bk-note" rows="2"></textarea></label>'
+      + '<button class="bk-confirm">Confirmar cita</button>'
+      + '<div class="bk-err"></div>';
+    this._bkBody.querySelector('.bk-back').addEventListener('click', () => this._renderDays());
+    this._bkBody.querySelector('.bk-confirm').addEventListener('click', () => this._submit(iso));
+  }
+
+  async _submit(iso) {
+    const g = (id) => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    const name = g('bk-name'), email = g('bk-email'), phone = g('bk-phone'), note = g('bk-note');
+    const err = this._bkBody.querySelector('.bk-err');
+    if (!name || !email) { err.textContent = 'Por favor completa tu nombre y correo.'; return; }
+    const btn = this._bkBody.querySelector('.bk-confirm');
+    btn.disabled = true; btn.textContent = 'Agendando…';
+    try {
+      const r = await fetch(BOOKING_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ action: 'book', start: iso, name: name, email: email, phone: phone, note: note })
+      });
+      const data = await r.json();
+      if (data.ok) {
+        this._bkBody.innerHTML = '<div class="bk-ok">✓ ¡Cita confirmada!<span>Te llegará la invitación a tu correo. Nos vemos pronto.</span></div>';
+      } else {
+        err.textContent = data.error || 'Ese horario ya no está disponible. Elige otro.';
+        btn.disabled = false; btn.textContent = 'Confirmar cita';
+      }
+    } catch (e) {
+      err.textContent = 'No se pudo agendar. Intenta de nuevo.';
+      btn.disabled = false; btn.textContent = 'Confirmar cita';
+    }
+  }
+
   renderVals() {
     return {
       canvasRef: this.canvasRef,
@@ -874,10 +1014,8 @@ class Component extends DCLogic {
       goServices: () => this.scrollToId('services'),
       goWellness: () => this.scrollToId('wellness'),
       goContact: () => this.scrollToId('contact'),
-      openBooking: () => {
-        if (AGENDA_URL && /^https?:\/\//.test(AGENDA_URL)) window.open(AGENDA_URL, '_blank', 'noopener');
-        else this.scrollToId('contact');
-      },
+      bookingRef: this.bookingRef,
+      openBooking: this.openBooking,
       openWhatsApp: () => window.open('https://wa.me/50670773517', '_blank', 'noopener')
     };
   }
