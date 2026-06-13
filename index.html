@@ -39,21 +39,35 @@
     @keyframes nebC{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(6%,-9%) scale(1.22); } }
 
     /* ===================== RESPONSIVE (computadora · tablet · celular) ===================== */
+    /* Hero: el nombre+lema ocupan la columna izquierda; el retrato abarca ambas filas (escritorio) */
+    .r-herogrid{ grid-template-areas:"head media" "rest media" !important; row-gap:0 !important; column-gap:56px !important; }
+    .r-herohead{ grid-area:head; }
+    .r-heromedia{ grid-area:media; }
+    .r-herorest{ grid-area:rest; }
     /* TABLET y pantallas medianas (≤1024px) */
     @media (max-width:1024px){
       section{ padding-left:32px !important; padding-right:32px !important; }
-      .r-herogrid{ grid-template-columns:1fr !important; gap:40px !important; max-width:640px !important; }
+      .r-herogrid{ grid-template-columns:1fr !important; grid-template-areas:"head" "rest" "media" !important; row-gap:30px !important; column-gap:0 !important; max-width:600px !important; }
       .r-grid3{ grid-template-columns:repeat(2,1fr) !important; }
       .r-grid6{ grid-template-columns:repeat(3,1fr) !important; }
     }
-    /* CELULAR (≤680px) */
+    /* CELULAR (≤680px) — foto más pequeña, 50/50 con el nombre y el lema */
     @media (max-width:680px){
       section{ padding-left:20px !important; padding-right:20px !important; }
       .r-nav{ padding:14px 20px !important; }
       .r-navlinks{ gap:14px !important; }
       .r-navlinks a{ display:none !important; }
       .r-navlinks button{ padding:9px 16px !important; font-size:12.5px !important; }
-      .r-herogrid{ padding-left:20px !important; padding-right:20px !important; gap:30px !important; }
+      .r-herogrid{ grid-template-columns:1.05fr 0.95fr !important;
+        grid-template-areas:"head media" "rest rest" !important;
+        column-gap:16px !important; row-gap:18px !important; align-items:center !important;
+        padding-left:20px !important; padding-right:20px !important; }
+      .r-herobadge{ display:none !important; }
+      .r-heroname{ font-size:30px !important; line-height:1.02 !important; margin-bottom:12px !important; }
+      .r-herolema{ font-size:14px !important; margin-bottom:0 !important; }
+      .r-heroportrait{ width:100% !important; }
+      .r-owlbadge{ display:none !important; }
+      .r-herovalues{ flex-wrap:wrap !important; gap:8px 14px !important; margin-top:28px !important; }
       .r-band{ grid-template-columns:1fr !important; gap:24px !important; }
       .r-band > div{ border-left:none !important; border-right:none !important; }
       .r-grid3{ grid-template-columns:1fr !important; }
@@ -119,19 +133,21 @@
 
     <div class="r-herogrid" style="position:relative; z-index:5; width:100%; max-width:1280px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;">
       <!-- left: copy -->
-      <div>
-        <div style="display:inline-flex; align-items:center; gap:10px; padding:7px 16px; border-radius:999px; border:1px solid rgba(212,160,23,0.3); background:rgba(212,160,23,0.06); margin-bottom:30px;">
+      <div class="r-herohead">
+        <div class="r-herobadge" style="display:inline-flex; align-items:center; gap:10px; padding:7px 16px; border-radius:999px; border:1px solid rgba(212,160,23,0.3); background:rgba(212,160,23,0.06); margin-bottom:30px;">
           <span style="width:6px; height:6px; border-radius:50%; background:#D4A017; box-shadow:0 0 10px #D4A017;"></span>
           <span style="font-size:11.5px; letter-spacing:0.26em; text-transform:uppercase; color:rgba(234,219,200,0.92); font-weight:600;">Psychologist · Operations · Project Management</span>
         </div>
-        <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(46px,6.4vw,90px); line-height:0.98; letter-spacing:-0.02em; color:#FAF8F5; margin-bottom:22px;">Verónica<br><span style="color:#EADBC8;">H. Garcia</span></h1>
-        <p style="font-family:'Spectral',serif; font-style:italic; font-weight:300; font-size:clamp(20px,2.3vw,30px); color:#D4A017; letter-spacing:0.005em; margin-bottom:20px;">Bridging People, Processes &amp; Purpose</p>
+        <h1 class="r-heroname" style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(46px,6.4vw,90px); line-height:0.98; letter-spacing:-0.02em; color:#FAF8F5; margin-bottom:22px;">Verónica<br><span style="color:#EADBC8;">H. Garcia</span></h1>
+        <p class="r-herolema" style="font-family:'Spectral',serif; font-style:italic; font-weight:300; font-size:clamp(20px,2.3vw,30px); color:#D4A017; letter-spacing:0.005em; margin-bottom:20px;">Bridging People, Processes &amp; Purpose</p>
+      </div>
+      <div class="r-herorest">
         <p style="font-size:clamp(15px,1.25vw,18px); line-height:1.65; color:rgba(250,248,245,0.74); max-width:480px; margin-bottom:38px;">Conecto personas, procesos y propósito para generar impacto significativo y resultados sostenibles. Psicología clínica con la disciplina de las operaciones y el liderazgo humano.</p>
         <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
           <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:#D4A017; border:none; padding:15px 30px; border-radius:999px; cursor:pointer; box-shadow:0 10px 34px rgba(212,160,23,0.36); transition:transform .3s, box-shadow .3s;" style-hover="transform:translateY(-3px); box-shadow:0 16px 44px rgba(212,160,23,0.5);" onClick="{{ goContact }}">Agendar consulta</button>
           <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.22); padding:15px 28px; border-radius:999px; cursor:pointer; backdrop-filter:blur(8px); transition:background .3s, border-color .3s, transform .3s;" style-hover="background:rgba(250,248,245,0.1); border-color:rgba(250,248,245,0.4); transform:translateY(-3px);" onClick="{{ goWellness }}">Explorar recursos</button>
         </div>
-        <div style="display:flex; align-items:center; gap:26px; margin-top:48px;">
+        <div class="r-herovalues" style="display:flex; align-items:center; gap:26px; margin-top:48px;">
           <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Claridad</span>
           <span style="width:5px; height:5px; border-radius:50%; background:rgba(234,219,200,0.4);"></span>
           <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Compasión</span>
@@ -140,15 +156,15 @@
         </div>
       </div>
       <!-- right: portrait + owl -->
-      <div style="position:relative; display:flex; justify-content:center; align-items:center;">
+      <div class="r-heromedia" style="position:relative; display:flex; justify-content:center; align-items:center;">
         <div style="position:absolute; width:118%; height:118%; border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.16), transparent 60%); filter:blur(20px);"></div>
-        <div style="position:relative; width:min(380px,80%); aspect-ratio:4/5; border-radius:26px; padding:1px; background:linear-gradient(160deg, rgba(212,160,23,0.55), rgba(234,219,200,0.12) 40%, rgba(212,160,23,0.2)); box-shadow:0 40px 90px rgba(0,0,0,0.5);">
+        <div class="r-heroportrait" style="position:relative; width:min(380px,80%); aspect-ratio:4/5; border-radius:26px; padding:1px; background:linear-gradient(160deg, rgba(212,160,23,0.55), rgba(234,219,200,0.12) 40%, rgba(212,160,23,0.2)); box-shadow:0 40px 90px rgba(0,0,0,0.5);">
           <div style="width:100%; height:100%; border-radius:25px; overflow:hidden; background:linear-gradient(165deg,#13294a,#0d1b2a);">
             <img src="assets/veronica.jpg" alt="Verónica H. Garcia" style="width:100%; height:100%; object-fit:cover; object-position:50% 26%; display:block;">
           </div>
         </div>
         <!-- floating owl glass badge -->
-        <div style="position:absolute; bottom:-22px; right:-6px; display:flex; align-items:center; gap:12px; padding:12px 18px 12px 14px; border-radius:18px; background:rgba(13,27,42,0.55); border:1px solid rgba(212,160,23,0.28); backdrop-filter:blur(14px); box-shadow:0 18px 44px rgba(0,0,0,0.45); animation:floatBob 6s ease-in-out infinite;">
+        <div class="r-owlbadge" style="position:absolute; bottom:-22px; right:-6px; display:flex; align-items:center; gap:12px; padding:12px 18px 12px 14px; border-radius:18px; background:rgba(13,27,42,0.55); border:1px solid rgba(212,160,23,0.28); backdrop-filter:blur(14px); box-shadow:0 18px 44px rgba(0,0,0,0.45); animation:floatBob 6s ease-in-out infinite;">
           <span style="width:44px; height:44px; border-radius:50%; overflow:hidden; flex:0 0 auto; border:2px solid rgba(212,160,23,0.6); box-shadow:0 4px 14px rgba(0,0,0,0.4); animation:owlBreathe 5s ease-in-out infinite; transform-origin:center;"><img src="assets/owl.jpg" alt="Lechuza" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
           <div style="line-height:1.2;">
             <div style="font-family:'Spectral',serif; font-size:14px; color:#FAF8F5;">Costa Rica</div>
