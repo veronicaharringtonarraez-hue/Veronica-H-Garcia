@@ -591,14 +591,22 @@
         <p style="font-size:12.5px; color:rgba(250,248,245,0.4); letter-spacing:0.06em; margin-top:6px;">Las meditaciones guiadas serán narradas por Verónica.</p>
       </div>
 
+      <!-- video destacado del Centro de Bienestar (lo inyecta el JS si hay YOUTUBE.featured) -->
+      <div ref="{{ ytFeaturedRef }}" style="display:none; margin-top:64px;"></div>
+
       <!-- wellness category teasers -->
       <div class="r-grid6" style="display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:70px;">
-        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Ansiedad</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Meditación</div></div>
-        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .05s, transform .6s .05s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Autoestima</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Meditación</div></div>
-        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .1s, transform .6s .1s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Dormir mejor</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Nocturno</div></div>
-        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .15s, transform .6s .15s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relajación</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Jardín guiado</div></div>
-        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .2s, transform .6s .2s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Claridad mental</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Enfoque</div></div>
-        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .25s, transform .6s .25s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resiliencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Imaginería</div></div>
+        <div data-yt="ansiedad" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s 0s, transform .6s 0s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Ansiedad</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
+        <div data-yt="autoestima" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .05s, transform .6s .05s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Autoestima</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
+        <div data-yt="dormir" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .1s, transform .6s .1s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Dormir mejor</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
+        <div data-yt="relajacion" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .15s, transform .6s .15s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relajación</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
+        <div data-yt="claridad" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .2s, transform .6s .2s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Claridad mental</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
+        <div data-yt="resiliencia" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .25s, transform .6s .25s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resiliencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
+      </div>
+      <div style="margin-top:34px; text-align:center;">
+        <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#FF4D4D" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31.2 31.2 0 000 12a31.2 31.2 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31.2 31.2 0 0024 12a31.2 31.2 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"></path></svg>
+          Ver mi canal de YouTube</button>
       </div>
     </div>
   </section>
@@ -641,6 +649,26 @@
    ============================================================================ */
 const BOOKING_API = "";
 
+/* ============================================================================
+   YOUTUBE — Canal, video destacado y listas de reproducción (playlists) del
+   Centro de Bienestar. Pega cada enlace cuando lo crees:
+     - channel:  URL de tu canal, p.ej. "https://www.youtube.com/@TuCanal"
+     - featured: ID o URL de un video para incrustarlo arriba (opcional)
+     - cada tema: URL de su playlist (carpeta de videos)
+   Si un tema está vacío, su botón lleva al canal; si el canal también está
+   vacío, el botón muestra "Próximamente".
+   ============================================================================ */
+const YOUTUBE = {
+  channel:     "",
+  featured:    "",
+  ansiedad:    "",
+  autoestima:  "",
+  dormir:      "",
+  relajacion:  "",
+  claridad:    "",
+  resiliencia: ""
+};
+
 class Component extends DCLogic {
   canvasRef = React.createRef();
   timelineRef = React.createRef();
@@ -650,10 +678,12 @@ class Component extends DCLogic {
   patternsRef = React.createRef();
   breathBtnRef = React.createRef();
   bookingRef = React.createRef();
+  ytFeaturedRef = React.createRef();
 
   componentDidMount() {
     this.initConstellation();
     this.initReveal();
+    this._initYouTube();
     this.breathPattern = '4-4-4';
     this.breathRunning = false;
   }
@@ -1048,6 +1078,46 @@ class Component extends DCLogic {
     }
   }
 
+  // ---------- YouTube: canal, video destacado y playlists por tema ----------
+  _ytId(s) {
+    if (!s) return '';
+    s = String(s).trim();
+    if (/^[\w-]{11}$/.test(s)) return s;
+    const m = s.match(/[?&]v=([\w-]{11})/) || s.match(/youtu\.be\/([\w-]{11})/) || s.match(/embed\/([\w-]{11})/);
+    return m ? m[1] : '';
+  }
+
+  _initYouTube() {
+    const host = this.ytFeaturedRef && this.ytFeaturedRef.current;
+    if (!host) return;
+    const id = this._ytId(YOUTUBE.featured);
+    if (!id) { host.style.display = 'none'; return; }
+    host.innerHTML =
+      '<div style="text-align:center; margin-bottom:22px;">'
+      + '<span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Mira mis videos</span></div>'
+      + '<div style="position:relative; width:100%; max-width:760px; margin:0 auto; aspect-ratio:16/9; border-radius:18px; overflow:hidden; border:1px solid rgba(212,160,23,0.25); box-shadow:0 24px 60px rgba(0,0,0,0.45);">'
+      + '<iframe src="https://www.youtube.com/embed/' + id + '" title="Video del Centro de Bienestar" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe></div>';
+    host.style.display = 'block';
+  }
+
+  openYT = (e) => {
+    const tile = e.currentTarget;
+    const key = tile.getAttribute('data-yt');
+    const url = ((YOUTUBE[key] || '').trim()) || ((YOUTUBE.channel || '').trim());
+    if (url) { window.open(url, '_blank', 'noopener'); return; }
+    const sub = tile.querySelector('div:last-child');
+    if (sub && !sub._soon) {
+      sub._soon = sub.textContent;
+      sub.textContent = 'Próximamente';
+      setTimeout(() => { if (sub._soon) { sub.textContent = sub._soon; sub._soon = null; } }, 1600);
+    }
+  };
+
+  openChannel = () => {
+    const url = (YOUTUBE.channel || '').trim();
+    if (url) window.open(url, '_blank', 'noopener');
+  };
+
   renderVals() {
     return {
       canvasRef: this.canvasRef,
@@ -1067,7 +1137,10 @@ class Component extends DCLogic {
       goContact: () => this.scrollToId('contact'),
       bookingRef: this.bookingRef,
       openBooking: this.openBooking,
-      openWhatsApp: () => window.open('https://wa.me/50670773517', '_blank', 'noopener')
+      openWhatsApp: () => window.open('https://wa.me/50670773517', '_blank', 'noopener'),
+      openYT: this.openYT,
+      openChannel: this.openChannel,
+      ytFeaturedRef: this.ytFeaturedRef
     };
   }
 }
