@@ -267,13 +267,14 @@
       <div ref="{{ ytFeaturedRef }}" style="display:none; margin-top:64px;"></div>
 
       <!-- wellness category teasers -->
-      <div class="r-grid6" style="display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:70px;">
-        <div data-yt="ansiedad" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s 0s, transform .6s 0s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Ansiedad</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
-        <div data-yt="autoestima" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .05s, transform .6s .05s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Autoestima</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
-        <div data-yt="dormir" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .1s, transform .6s .1s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Dormir mejor</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
-        <div data-yt="relajacion" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .15s, transform .6s .15s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relajación</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
-        <div data-yt="claridad" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .2s, transform .6s .2s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Claridad mental</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
-        <div data-yt="resiliencia" onClick="{{ openYT }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s .25s, transform .6s .25s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resiliencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">▶ Ver videos</div></div>
+      <div class="r-grid6" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:12px; margin-top:70px;">
+        <div data-yt="ansiedad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Ansiedad</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="autoestima" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Autoestima</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="dormir" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Dormir mejor</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="relajacion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relajación</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="claridad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Claridad mental</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resiliencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="adicciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Manejo de adicciones</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -649,6 +650,13 @@
 
   </div>
 
+  <!-- ===================== TEMA (detalle de bienestar, dinámico) ===================== -->
+  <div class="pg" data-page="tema" style="display:none;">
+    <section style="position:relative; background:radial-gradient(120% 120% at 50% 18%, #102a45 0%, #0a1525 60%, #070f1c 100%); color:#FAF8F5; padding:118px 24px 90px; min-height:100vh;">
+      <div ref="{{ temaRef }}" style="max-width:760px; margin:0 auto;"></div>
+    </section>
+  </div>
+
   <!-- ===================== PIE / FOOTER ===================== -->
   <section style="position:relative; background:#0D1B2A; padding:44px 48px 60px; border-top:1px solid rgba(250,248,245,0.1);">
     <div style="max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
@@ -697,14 +705,142 @@ const BOOKING_API = "";
    vacío, el botón muestra "Próximamente".
    ============================================================================ */
 const YOUTUBE = {
-  channel:     "",
+  channel:     "https://www.youtube.com/@VeronicaH.Garcia",
   featured:    "",
   ansiedad:    "",
   autoestima:  "",
   dormir:      "",
   relajacion:  "",
   claridad:    "",
-  resiliencia: ""
+  resiliencia: "",
+  adicciones:  ""
+};
+
+/* ============================================================================
+   SPOTIFY — Narraciones de imaginería por tema. Pega los enlaces cuando crees
+   tu canal/playlists. Si un tema está vacío, el botón usa el canal; si el canal
+   también está vacío, el botón no aparece todavía.
+   ============================================================================ */
+const SPOTIFY = {
+  channel:     "",
+  ansiedad:    "",
+  autoestima:  "",
+  dormir:      "",
+  relajacion:  "",
+  claridad:    "",
+  resiliencia: "",
+  adicciones:  ""
+};
+
+/* ============================================================================
+   CONTENIDO DEL CENTRO DE BIENESTAR — texto en la voz de Verónica.
+   Edita libremente títulos, técnicas e información de cada tema.
+   ============================================================================ */
+const TOPICS = {
+  ansiedad: {
+    title: 'Ansiedad', tag: 'Calma para tu sistema nervioso',
+    intro: 'La ansiedad no es tu enemiga: es tu cuerpo intentando protegerte. Aquí no buscamos eliminarla de golpe, sino aprender a escucharla y a calmarla con cariño, paso a paso.',
+    blocks: [
+      { h: 'Cuando la sientas ahora', list: [
+        'Respiración 4·7·8: inhala 4, sostén 7, exhala 8. Repite 4 veces y avísale a tu cuerpo que está a salvo.',
+        'Anclaje 5-4-3-2-1: nombra 5 cosas que ves, 4 que tocas, 3 que oyes, 2 que hueles y 1 que saboreas.',
+        'Pon una mano en el pecho y otra en el abdomen; respira lento hacia la mano de abajo.' ] },
+      { h: 'Para tu día a día', list: [
+        'Cuida tu sueño y baja la cafeína: el cuerpo cansado se asusta más fácil.',
+        'Mueve el cuerpo a diario, aunque sea una caminata: la ansiedad necesita salida.',
+        'Escribe lo que sientes: lo que se nombra deja de gobernarte en secreto.' ] }
+    ],
+    closing: 'Si la ansiedad te limita o aparece muy seguido, no tienes que sostenerlo en soledad. Estoy aquí para acompañarte.'
+  },
+  autoestima: {
+    title: 'Autoestima', tag: 'Tu valor no se negocia',
+    intro: 'Tu valor no depende de lo que logras, de cómo te ves o de quién te aprueba. Trabajar la autoestima es volver a casa: reconciliarte contigo y tratarte con el respeto que mereces.',
+    blocks: [
+      { h: 'Para empezar hoy', list: [
+        'Háblate como le hablarías a alguien que amas: cambia "soy un desastre" por "estoy aprendiendo".',
+        'Cada noche, reconoce 3 cosas que hiciste bien, por pequeñas que parezcan.',
+        'Poner un límite amable también es cuidarte: decir "no" a otros muchas veces es decirte "sí" a ti.' ] },
+      { h: 'Para mirar más profundo', list: [
+        'Identifica la voz crítica que te habla: muchas veces no es tuya, la aprendiste.',
+        'Reconoce tus logros sin minimizarlos con un "pero".',
+        'Rodéate de personas que te suman, no que te apagan.' ] }
+    ],
+    closing: 'Reconstruir la autoestima toma tiempo y compañía. Si quieres, caminamos ese proceso juntos.'
+  },
+  dormir: {
+    title: 'Dormir mejor', tag: 'Descanso que repara',
+    intro: 'Dormir bien no es un lujo: es la base de tu salud emocional. Cuando descansas, tu mente regula mejor lo que sientes y el día pesa menos.',
+    blocks: [
+      { h: 'Tu ritual para la noche', list: [
+        'Apaga pantallas de 30 a 60 minutos antes: la luz azul le dice a tu cerebro que aún es de día.',
+        'Crea un ritual suave: luz tenue, té sin cafeína, respiración lenta.',
+        'Acuéstate y levántate a horas parecidas, también los fines de semana.' ] },
+      { h: 'Si no logras dormir', list: [
+        'No pelees con la cama: si llevas 20 minutos despierto, levántate y haz algo tranquilo.',
+        'Escribe lo que te da vueltas para vaciar la mente en papel.',
+        'Respiración 4·7·8 para bajar las revoluciones del cuerpo.' ] }
+    ],
+    closing: 'Si el insomnio se vuelve constante, hay mucho que podemos trabajar juntos. Escríbeme.'
+  },
+  relajacion: {
+    title: 'Relajación', tag: 'Soltar la tensión',
+    intro: 'Tu cuerpo guarda lo que la mente no alcanza a procesar. Relajarte no es no hacer nada: es darte permiso de soltar y volver a ti.',
+    blocks: [
+      { h: 'Técnicas para soltar', list: [
+        'Relajación muscular progresiva: tensa y suelta cada grupo de músculos, de los pies a la cabeza.',
+        'Respiración en caja: inhala 4, sostén 4, exhala 4, sostén 4.',
+        'Visualización: imagina un lugar seguro y quédate ahí unos minutos.' ] },
+      { h: 'Crea pausas reales', list: [
+        'Programa micro-pausas de 2 minutos durante tu día.',
+        'Baja los hombros y suelta la mandíbula: solemos tensarlos sin darnos cuenta.' ] }
+    ],
+    closing: 'En el Centro de Bienestar tienes el círculo de respiración para practicar ahora mismo.'
+  },
+  claridad: {
+    title: 'Claridad mental', tag: 'Enfoque y calma',
+    intro: 'Cuando la mente está saturada, todo se siente urgente. La claridad no llega exigiéndote más, sino ordenando lo que cargas.',
+    blocks: [
+      { h: 'Para ordenar la mente', list: [
+        'Vacía la cabeza en una lista: saca a papel todo lo pendiente.',
+        'Elige solo 3 prioridades para hoy; el resto puede esperar.',
+        'Trabaja por bloques: 25 minutos de enfoque y 5 de descanso.' ] },
+      { h: 'Para sostener el enfoque', list: [
+        'Silencia notificaciones mientras haces algo importante.',
+        'Una cosa a la vez: la multitarea cansa y confunde.',
+        'Descansa de verdad; la mente clara también necesita pausa.' ] }
+    ],
+    closing: 'Si la niebla mental viene del estrés o el agotamiento, lo revisamos juntos.'
+  },
+  resiliencia: {
+    title: 'Resiliencia', tag: 'Fuerza que se cultiva',
+    intro: 'Ser resiliente no es no caer ni aguantarlo todo. Es aprender a sostenerte, pedir ayuda y volver a levantarte con más sabiduría que antes.',
+    blocks: [
+      { h: 'Para fortalecerte', list: [
+        'Nombra lo que sí está en tus manos y suelta lo que no.',
+        'Recuerda otras veces en que saliste adelante: ya tienes recursos.',
+        'Apóyate en tu red; pedir ayuda también es fortaleza.' ] },
+      { h: 'Para cuidar tu base', list: [
+        'Cuida lo básico: sueño, comida, movimiento y vínculos.',
+        'Date permiso de sentir; las emociones también informan.',
+        'Celebra los pequeños avances, no solo las grandes metas.' ] }
+    ],
+    closing: 'La resiliencia se cultiva, y se cultiva mejor en compañía. Aquí estoy.'
+  },
+  adicciones: {
+    title: 'Manejo de adicciones', tag: 'Recuperación con dignidad',
+    intro: 'Hablar de adicciones desde el juicio nunca sana. Aquí lo hacemos desde la comprensión: muchas veces la adicción es un intento de calmar un dolor. Recuperarte es posible, y no tienes que hacerlo en soledad.',
+    blocks: [
+      { h: 'Primeros pasos', list: [
+        'Reconocer es el inicio: nombrar lo que pasa, sin vergüenza.',
+        'Identifica tus disparadores (lugares, emociones, personas) y prepara un plan para cada uno.',
+        'Construye una red de apoyo: nadie se recupera del todo en soledad.' ] },
+      { h: 'Para la persona y su familia', list: [
+        'Pon límites saludables sin culpa: cuidarte también ayuda a la otra persona.',
+        'Aprende sobre la codependencia; a veces la familia también necesita sanar.',
+        'Una recaída no borra tu avance: es parte del camino, no el final.' ] }
+    ],
+    closing: 'Acompaño a personas y familias en procesos de adicción y recuperación, con respeto y sin juicios. Si lo estás viviendo, escríbeme: hay salida.'
+  }
 };
 
 class Component extends DCLogic {
@@ -717,6 +853,7 @@ class Component extends DCLogic {
   breathBtnRef = React.createRef();
   bookingRef = React.createRef();
   ytFeaturedRef = React.createRef();
+  temaRef = React.createRef();
 
   componentDidMount() {
     this.initConstellation();
@@ -741,13 +878,21 @@ class Component extends DCLogic {
   // ---------- navegación por páginas (pestañas) ----------
   _pages = ['inicio', 'about', 'servicios', 'empresas'];
 
-  goPage = (name, anchorId) => {
-    if (this._pages.indexOf(name) < 0) name = 'inicio';
-    document.querySelectorAll('.pg').forEach((p) => {
-      p.style.display = (p.getAttribute('data-page') === name) ? '' : 'none';
-    });
+  _showPage(name) {
+    document.querySelectorAll('.pg').forEach((p) => { p.style.display = (p.getAttribute('data-page') === name) ? '' : 'none'; });
     const shown = document.querySelector('.pg[data-page="' + name + '"]');
     if (shown) shown.querySelectorAll('[data-reveal]').forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; });
+  }
+
+  _setActiveNav(name) {
+    document.querySelectorAll('[data-nav]').forEach((a) => {
+      a.style.color = (a.getAttribute('data-nav') === name) ? '#FAF8F5' : 'rgba(250,248,245,0.78)';
+    });
+  }
+
+  goPage = (name, anchorId) => {
+    if (this._pages.indexOf(name) < 0) name = 'inicio';
+    this._showPage(name);
     this._setActiveNav(name);
     if (('#' + name) !== location.hash) { try { history.replaceState(null, '', '#' + name); } catch (e) {} }
     if (anchorId) {
@@ -757,20 +902,58 @@ class Component extends DCLogic {
     window.scrollTo({ top: 0, behavior: 'auto' });
   };
 
-  _setActiveNav(name) {
-    document.querySelectorAll('[data-nav]').forEach((a) => {
-      a.style.color = (a.getAttribute('data-nav') === name) ? '#FAF8F5' : 'rgba(250,248,245,0.78)';
+  openTopic = (arg) => {
+    const key = (typeof arg === 'string') ? arg : (arg && arg.currentTarget && arg.currentTarget.getAttribute('data-yt'));
+    if (!key || !TOPICS[key]) return;
+    const host = this.temaRef && this.temaRef.current;
+    if (!host) return;
+    host.innerHTML = this._topicHTML(key);
+    const back = host.querySelector('[data-back]'); if (back) back.onclick = () => this.goPage('inicio', 'wellness');
+    const book = host.querySelector('[data-book]'); if (book) book.onclick = () => this.openBooking();
+    const yt = host.querySelector('[data-yt-btn]'); if (yt) yt.onclick = () => { const u = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
+    const sp = host.querySelector('[data-sp-btn]'); if (sp) sp.onclick = () => { const u = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
+    this._showPage('tema');
+    this._setActiveNav('');
+    try { history.replaceState(null, '', '#bienestar-' + key); } catch (e) {}
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  };
+
+  _topicHTML(key) {
+    const d = TOPICS[key]; if (!d) return '';
+    const ytUrl = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim();
+    const spUrl = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim();
+    let h = '';
+    h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">← Volver al Centro de Bienestar</button>';
+    h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">Centro de Bienestar</div>';
+    h += '<h2 style="font-family:Spectral,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:12px 0 6px;color:#FAF8F5;">' + d.title + '</h2>';
+    if (d.tag) h += '<p style="font-family:Spectral,serif;font-style:italic;font-size:19px;color:#D4A017;margin-bottom:20px;">' + d.tag + '</p>';
+    if (d.intro) h += '<p style="font-size:16.5px;line-height:1.7;color:rgba(250,248,245,0.82);margin-bottom:4px;">' + d.intro + '</p>';
+    (d.blocks || []).forEach((b) => {
+      h += '<h3 style="font-family:Spectral,serif;font-weight:500;font-size:20px;color:#FAF8F5;margin:26px 0 10px;">' + b.h + '</h3>';
+      if (b.p) h += '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.74);margin-bottom:6px;">' + b.p + '</p>';
+      if (b.list) { h += '<ul style="list-style:none;padding:0;margin:0;">'; b.list.forEach((it) => { h += '<li style="position:relative;padding-left:22px;margin-bottom:10px;font-size:15px;line-height:1.6;color:rgba(250,248,245,0.8);"><span style="position:absolute;left:0;top:1px;color:#D4A017;">◆</span>' + it + '</li>'; }); h += '</ul>'; }
     });
+    if (d.closing) h += '<div style="margin-top:28px;padding:18px 20px;border-left:3px solid #D4A017;background:rgba(212,160,23,0.07);border-radius:8px;font-size:15.5px;line-height:1.6;color:#EADBC8;">' + d.closing + '</div>';
+    h += '<div style="margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;">';
+    h += '<button data-book style="font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#0D1B2A;background:#D4A017;border:none;padding:14px 26px;border-radius:999px;cursor:pointer;">Agendar consulta</button>';
+    if (ytUrl) h += '<button data-yt-btn style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(255,77,77,0.10);border:1px solid rgba(255,77,77,0.45);padding:14px 22px;border-radius:999px;cursor:pointer;">▶ Ver en YouTube</button>';
+    if (spUrl) h += '<button data-sp-btn style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(29,185,84,0.14);border:1px solid rgba(29,185,84,0.5);padding:14px 22px;border-radius:999px;cursor:pointer;">♪ Escuchar narración</button>';
+    h += '<a href="https://wa.me/50670773517" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.45);padding:14px 22px;border-radius:999px;text-decoration:none;">WhatsApp</a>';
+    h += '</div>';
+    h += '<p style="margin-top:26px;font-size:12px;line-height:1.6;color:rgba(250,248,245,0.45);">Esta información es una guía de autocuidado y no sustituye una consulta profesional. Si estás en crisis o en riesgo, busca ayuda de inmediato.</p>';
+    return h;
   }
 
   _initRouter() {
-    let initial = (location.hash || '').replace('#', '');
-    if (this._pages.indexOf(initial) < 0) initial = 'inicio';
-    if (initial === 'inicio') this._setActiveNav('inicio');
-    else this.goPage(initial);
+    const initial = (location.hash || '').replace('#', '');
+    if (initial.indexOf('bienestar-') === 0) this.openTopic(initial.slice('bienestar-'.length));
+    else if (this._pages.indexOf(initial) >= 0 && initial !== 'inicio') this.goPage(initial);
+    else this._setActiveNav('inicio');
     window.addEventListener('hashchange', () => {
-      const n = (location.hash || '').replace('#', '');
-      if (this._pages.indexOf(n) >= 0) this.goPage(n);
+      const hsh = (location.hash || '').replace('#', '');
+      if (hsh.indexOf('bienestar-') === 0) this.openTopic(hsh.slice('bienestar-'.length));
+      else if (this._pages.indexOf(hsh) >= 0) this.goPage(hsh);
+      else this.goPage('inicio');
     });
   }
 
@@ -1215,6 +1398,8 @@ class Component extends DCLogic {
       bookingRef: this.bookingRef,
       openBooking: this.openBooking,
       openWhatsApp: () => window.open('https://wa.me/50670773517', '_blank', 'noopener'),
+      openTopic: this.openTopic,
+      temaRef: this.temaRef,
       openYT: this.openYT,
       openChannel: this.openChannel,
       ytFeaturedRef: this.ytFeaturedRef
