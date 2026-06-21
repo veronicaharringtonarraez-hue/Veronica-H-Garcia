@@ -280,6 +280,7 @@
         <div data-yt="claridad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Claridad mental</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resiliencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="adicciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Manejo de adicciones</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="relaciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relaciones interpersonales</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -845,6 +846,92 @@ const TOPICS = {
         'Una recaída no borra tu avance: es parte del camino, no el final.' ] }
     ],
     closing: 'Acompaño a personas y familias en procesos de adicción y recuperación, con respeto y sin juicios. Si lo estás viviendo, escríbeme: hay salida.'
+  },
+
+  relaciones: {
+    title: 'Relaciones interpersonales', tag: 'Vínculos que sostienen',
+    intro: 'Somos seres de vínculo: nuestras relaciones nos sostienen, nos retan y nos enseñan quiénes somos. Cuidarlas no es evitar el conflicto, sino aprender a estar presentes — con honestidad, límites y ternura. Elige el vínculo que quieres trabajar.',
+    children: ['pareja', 'padres', 'amistades']
+  },
+  pareja: {
+    title: 'Relaciones de pareja', parent: 'relaciones', tag: 'Construir un nosotros sano',
+    intro: 'Una relación sana no es una sin problemas, sino una donde ambos se sienten escuchados y seguros para resolverlos. El amor se cuida con presencia, no con perfección.',
+    blocks: [
+      { h: 'Para cuidar el vínculo', list: [
+        'Hablen desde el "yo siento" y no desde el "tú siempre": baja la defensa y abre la conversación.',
+        'Escucha para comprender, no para responder; a veces la otra persona solo necesita sentirse vista.',
+        'Cuiden los pequeños gestos de cada día: la cercanía se construye en lo cotidiano.' ] },
+      { h: 'Cuando hay conflicto', list: [
+        'Pidan una pausa si la emoción se desborda y retomen cuando ambos estén en calma.',
+        'Discutan el problema, no a la persona: el objetivo es entenderse, no ganar.',
+        'Reparen después de una discusión; reconectar también es parte del amor.' ] }
+    ],
+    closing: 'Si sienten que el mismo conflicto se repite o que la distancia crece, la terapia de pareja puede ayudarles a reencontrarse. Escríbeme.'
+  },
+  padres: {
+    title: 'Padres e hijos', parent: 'relaciones', tag: 'Criar y acompañar con presencia',
+    intro: 'Criar no viene con manual, y cada etapa nos pide algo distinto. No se trata de ser un padre o una madre perfecta, sino de estar presente. Elige la etapa que estás viviendo.',
+    children: ['padres-0-11', 'padres-12-20', 'padres-mayores']
+  },
+  'padres-0-11': {
+    title: 'Hijos de 0 a 11 años', parent: 'padres', tag: 'Primeros años: seguridad y vínculo',
+    intro: 'En la infancia se construye la base emocional de toda la vida. Tu hijo no necesita un padre perfecto: necesita uno presente, que lo haga sentir seguro y amado tal como es.',
+    blocks: [
+      { h: 'Para acompañar esta etapa', list: [
+        'Valida lo que siente antes de corregir: "veo que estás enojado" abre más que "no llores".',
+        'Pon límites con cariño y firmeza: los límites también son una forma de amor y de seguridad.',
+        'Dedica tiempo de juego sin pantallas; tu atención plena vale más que cualquier juguete.' ] },
+      { h: 'Para el día a día', list: [
+        'Cuida las rutinas de sueño y comidas: la previsibilidad les da calma.',
+        'Nombra las emociones para que aprendan a entenderlas.',
+        'Cuídate tú también: un cuidador descansado regula mejor.' ] }
+    ],
+    closing: 'Si la crianza te sobrepasa o tu hijo muestra señales que te preocupan, no estás solo en esto. Conversémoslo.'
+  },
+  'padres-12-20': {
+    title: 'Hijos de 12 a 20 años', parent: 'padres', tag: 'Adolescencia: presencia sin invadir',
+    intro: 'La adolescencia no es una guerra que ganar, es una etapa que acompañar. Tu hijo está construyendo su identidad y, aunque te aleje a ratos, sigue necesitando saber que estás ahí.',
+    blocks: [
+      { h: 'Para sostener el vínculo', list: [
+        'Escucha sin sermonear: si sienten juicio, dejan de contarte.',
+        'Respeta su privacidad y, a la vez, mantén límites claros y acordados.',
+        'Interésate por su mundo (su música, sus amigos) sin invadirlo.' ] },
+      { h: 'Cuando hay distancia o conflicto', list: [
+        'Elige tus batallas: no todo merece convertirse en pelea.',
+        'Valida su autonomía mientras lo acompañas a decidir.',
+        'Mantén la puerta abierta: "cuando quieras hablar, aquí estoy".' ] }
+    ],
+    closing: 'Si notas señales de ansiedad, aislamiento o cambios fuertes, buscar apoyo a tiempo marca la diferencia. Escríbeme.'
+  },
+  'padres-mayores': {
+    title: 'Padres adultos mayores', parent: 'padres', tag: 'Cuidar a quien nos cuidó',
+    intro: 'Acompañar a un padre o una madre que envejece remueve muchas cosas: amor, cansancio, culpa, roles que cambian. Cuidar con amor también incluye cuidarte a ti.',
+    blocks: [
+      { h: 'Para acompañarlos', list: [
+        'Respeta su autonomía y sus decisiones mientras sea posible; envejecer no es perder dignidad.',
+        'Ten paciencia con los nuevos ritmos: muchas veces solo necesitan ser escuchados.',
+        'Conversen los temas importantes a tiempo, con calma y cariño.' ] },
+      { h: 'Para cuidarte tú', list: [
+        'Pide y reparte la ayuda: cuidar no debería recaer en una sola persona.',
+        'Pon límites sin culpa; agotarte no ayuda a nadie.',
+        'Date permiso de sentir el duelo de los cambios, aunque sigan aquí.' ] }
+    ],
+    closing: 'Si sientes el peso del cuidado o emociones difíciles de sostener, tú también mereces acompañamiento. Aquí estoy.'
+  },
+  amistades: {
+    title: 'Amistades', parent: 'relaciones', tag: 'Amistades que nutren',
+    intro: 'Las amistades son la familia que elegimos. Una buena amistad no se mide por el tiempo que llevan, sino por cómo te sientes contigo cuando estás con esa persona.',
+    blocks: [
+      { h: 'Para cultivar amistades sanas', list: [
+        'Cultiva los vínculos que te suman y te dejan en paz, no los que te drenan.',
+        'Sé el amigo que te gustaría tener: presencia, escucha y honestidad.',
+        'Cuida los detalles: un mensaje a tiempo mantiene viva la cercanía.' ] },
+      { h: 'Cuando una amistad duele', list: [
+        'Está bien poner límites o tomar distancia de lo que te hace daño.',
+        'No toda amistad es para siempre, y soltar también puede ser sano.',
+        'Habla las cosas con honestidad antes de dejar que crezcan en silencio.' ] }
+    ],
+    closing: 'Si te cuesta crear o sostener vínculos, o la soledad te pesa, podemos trabajarlo juntos. Escríbeme.'
   }
 };
 
@@ -912,8 +999,15 @@ class Component extends DCLogic {
     if (!key || !TOPICS[key]) return;
     const host = this.temaRef && this.temaRef.current;
     if (!host) return;
+    if (!document.getElementById('tm-style')) {
+      const st = document.createElement('style'); st.id = 'tm-style';
+      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important}';
+      document.head.appendChild(st);
+    }
     host.innerHTML = this._topicHTML(key);
-    const back = host.querySelector('[data-back]'); if (back) back.onclick = () => this.goPage('inicio', 'wellness');
+    const back = host.querySelector('[data-back]');
+    if (back) back.onclick = () => { const p = TOPICS[key].parent; if (p) this.openTopic(p); else this.goPage('inicio', 'wellness'); };
+    host.querySelectorAll('[data-go]').forEach((c) => { c.onclick = () => this.openTopic(c.getAttribute('data-go')); });
     const book = host.querySelector('[data-book]'); if (book) book.onclick = () => this.openBooking();
     const yt = host.querySelector('[data-yt-btn]'); if (yt) yt.onclick = () => { const u = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
     const sp = host.querySelector('[data-sp-btn]'); if (sp) sp.onclick = () => { const u = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
@@ -925,14 +1019,27 @@ class Component extends DCLogic {
 
   _topicHTML(key) {
     const d = TOPICS[key]; if (!d) return '';
+    const isLeaf = !d.children;
     const ytUrl = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim();
     const spUrl = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim();
+    const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Volver a ' + TOPICS[d.parent].title) : '← Volver al Centro de Bienestar';
     let h = '';
-    h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">← Volver al Centro de Bienestar</button>';
+    h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
     h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">Centro de Bienestar</div>';
     h += '<h2 style="font-family:Spectral,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:12px 0 6px;color:#FAF8F5;">' + d.title + '</h2>';
     if (d.tag) h += '<p style="font-family:Spectral,serif;font-style:italic;font-size:19px;color:#D4A017;margin-bottom:20px;">' + d.tag + '</p>';
     if (d.intro) h += '<p style="font-size:16.5px;line-height:1.7;color:rgba(250,248,245,0.82);margin-bottom:4px;">' + d.intro + '</p>';
+    if (d.children) {
+      h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:26px;">';
+      d.children.forEach((ck) => {
+        const c = TOPICS[ck]; if (!c) return;
+        h += '<div class="tm-card" data-go="' + ck + '" style="padding:22px 20px;border-radius:16px;background:rgba(250,248,245,0.04);border:1px solid rgba(212,160,23,0.28);">'
+          + '<h3 style="font-family:Spectral,serif;font-weight:500;font-size:18px;color:#FAF8F5;margin:0 0 6px;">' + c.title + '</h3>'
+          + (c.tag ? '<p style="font-size:13px;line-height:1.5;color:rgba(250,248,245,0.6);margin:0 0 10px;">' + c.tag + '</p>' : '')
+          + '<span style="font-size:12px;letter-spacing:0.08em;color:#D4A017;font-weight:600;">Ver →</span></div>';
+      });
+      h += '</div>';
+    }
     (d.blocks || []).forEach((b) => {
       h += '<h3 style="font-family:Spectral,serif;font-weight:500;font-size:20px;color:#FAF8F5;margin:26px 0 10px;">' + b.h + '</h3>';
       if (b.p) h += '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.74);margin-bottom:6px;">' + b.p + '</p>';
@@ -941,11 +1048,11 @@ class Component extends DCLogic {
     if (d.closing) h += '<div style="margin-top:28px;padding:18px 20px;border-left:3px solid #D4A017;background:rgba(212,160,23,0.07);border-radius:8px;font-size:15.5px;line-height:1.6;color:#EADBC8;">' + d.closing + '</div>';
     h += '<div style="margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;">';
     h += '<button data-book style="font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#0D1B2A;background:#D4A017;border:none;padding:14px 26px;border-radius:999px;cursor:pointer;">Agendar consulta</button>';
-    if (ytUrl) h += '<button data-yt-btn style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(255,77,77,0.10);border:1px solid rgba(255,77,77,0.45);padding:14px 22px;border-radius:999px;cursor:pointer;">▶ Ver en YouTube</button>';
-    if (spUrl) h += '<button data-sp-btn style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(29,185,84,0.14);border:1px solid rgba(29,185,84,0.5);padding:14px 22px;border-radius:999px;cursor:pointer;">♪ Escuchar narración</button>';
+    if (isLeaf && ytUrl) h += '<button data-yt-btn style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(255,77,77,0.10);border:1px solid rgba(255,77,77,0.45);padding:14px 22px;border-radius:999px;cursor:pointer;">▶ Ver en YouTube</button>';
+    if (isLeaf && spUrl) h += '<button data-sp-btn style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(29,185,84,0.14);border:1px solid rgba(29,185,84,0.5);padding:14px 22px;border-radius:999px;cursor:pointer;">♪ Escuchar narración</button>';
     h += '<a href="https://wa.me/50670773517" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.45);padding:14px 22px;border-radius:999px;text-decoration:none;">WhatsApp</a>';
     h += '</div>';
-    h += '<p style="margin-top:26px;font-size:12px;line-height:1.6;color:rgba(250,248,245,0.45);">Esta información es una guía de autocuidado y no sustituye una consulta profesional. Si estás en crisis o en riesgo, busca ayuda de inmediato.</p>';
+    if (isLeaf) h += '<p style="margin-top:26px;font-size:12px;line-height:1.6;color:rgba(250,248,245,0.45);">Esta información es una guía de autocuidado y no sustituye una consulta profesional. Si estás en crisis o en riesgo, busca ayuda de inmediato.</p>';
     return h;
   }
 
