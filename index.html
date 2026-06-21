@@ -653,6 +653,14 @@
         <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:#D4A017; border:none; padding:15px 32px; border-radius:999px; cursor:pointer; box-shadow:0 12px 38px rgba(212,160,23,0.28); transition:transform .3s, box-shadow .3s;" style-hover="transform:translateY(-3px); box-shadow:0 18px 48px rgba(212,160,23,0.4);" onClick="{{ openBooking }}">Agendar una llamada</button>
         <a href="https://wa.me/50670773517?text=Hola%20Ver%C3%B3nica%2C%20me%20interesa%20un%20taller%20para%20mi%20empresa%20u%20organizaci%C3%B3n." target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:rgba(37,211,102,0.14); border:1px solid rgba(37,211,102,0.5); padding:15px 28px; border-radius:999px; text-decoration:none; transition:all .3s;" style-hover="background:rgba(37,211,102,0.24);">Solicitar propuesta por WhatsApp</a>
       </div>
+      <div data-yt="liderazgo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .7s, transform .7s; margin-top:30px; background:#0D1B2A; border:1px solid rgba(212,160,23,0.3); border-radius:22px; padding:32px 30px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:22px; flex-wrap:wrap;" style-hover="border-color:rgba(212,160,23,0.6);">
+        <div style="max-width:640px;">
+          <span style="font-size:12px; letter-spacing:0.26em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Preparación para líderes</span>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:23px; color:#FAF8F5; margin:10px 0 8px;">Habilidades blandas para ganarte a las personas y liderar equipos efectivos</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(250,248,245,0.66);">Una guía práctica para quienes lideran o se preparan para liderar: confianza, comunicación, equipos y la inteligencia emocional que sostiene todo.</p>
+        </div>
+        <span style="font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#0D1B2A; background:#D4A017; padding:13px 24px; border-radius:999px; white-space:nowrap;">Abrir guía →</span>
+      </div>
     </div>
   </section>
 
@@ -972,6 +980,62 @@ const TOPICS = {
         'Descansar no es perder el tiempo: es lo que te permite sostenerte.' ] }
     ],
     closing: 'Si la autoexigencia te está agotando o te cuesta parar, podemos construir juntos un ritmo más amable y sostenible. Escríbeme.'
+  },
+
+  liderazgo: {
+    title: 'Preparación para líderes', tag: 'Habilidades blandas para liderar con humanidad',
+    backPage: 'empresas', backName: 'Empresas',
+    intro: 'Liderar no es tener autoridad: es ganarte la confianza de las personas y sacar lo mejor de cada una. Las habilidades técnicas te abren la puerta, pero son las habilidades blandas las que te convierten en alguien a quien la gente quiere seguir. Elige por dónde empezar.',
+    children: ['lider-personas', 'lider-equipos', 'lider-ie']
+  },
+  'lider-personas': {
+    title: 'Ganarte a las personas', parent: 'liderazgo', tag: 'La confianza se gana, no se exige',
+    intro: 'La gente no sigue a quien grita más fuerte, sigue a quien la hace sentir vista y respetada. Ganarte a las personas no es manipular ni caer bien a todos: es construir confianza siendo coherente, cercano y humano.',
+    blocks: [
+      { h: 'Para construir confianza', list: [
+        'Escucha de verdad: pregunta y deja espacio antes de dar tu opinión.',
+        'Sé coherente: que tus actos confirmen tus palabras; la confianza se cae con la incoherencia.',
+        'Reconoce el mérito ajeno en público y corrige en privado.' ] },
+      { h: 'Para conectar de verdad', list: [
+        'Interésate por la persona, no solo por su tarea: recuerda lo que le importa.',
+        'Comunica con claridad y respeto, incluso cuando el mensaje es difícil.',
+        'Admite tus errores; la vulnerabilidad bien manejada genera respeto, no debilidad.' ] }
+    ],
+    closing: 'Ganarte a las personas es un trabajo diario de coherencia y empatía. Si quieres desarrollarlo con método, podemos trabajarlo juntos.'
+  },
+  'lider-equipos': {
+    title: 'Liderar equipos efectivos', parent: 'liderazgo', tag: 'Resultados sin quemar a la gente',
+    intro: 'Un equipo efectivo no es uno donde todos están de acuerdo, sino uno donde hay claridad, confianza y propósito. Tu trabajo como líder no es hacerlo todo, sino crear las condiciones para que tu equipo brille.',
+    blocks: [
+      { h: 'Para dar dirección', list: [
+        'Da claridad: que cada persona sepa qué se espera de ella y por qué importa.',
+        'Define prioridades; un equipo sin foco se agota haciendo de todo.',
+        'Conecta las tareas con un propósito: la gente da más cuando entiende el para qué.' ] },
+      { h: 'Para hacer crecer al equipo', list: [
+        'Delega con confianza y acompaña sin controlar cada paso.',
+        'Da retroalimentación clara, a tiempo y con respeto; el feedback es un regalo, no un castigo.',
+        'Cuida el bienestar del equipo: el agotamiento nunca es sostenible.' ] },
+      { h: 'Para sostener los resultados', list: [
+        'Celebra los logros, no solo señales lo que falta.',
+        'Toma decisiones a tiempo, incluso con información incompleta.',
+        'Predica con el ejemplo: el equipo imita lo que el líder hace, no lo que dice.' ] }
+    ],
+    closing: 'Liderar equipos se aprende y se entrena. Si lideras o te estás preparando para hacerlo, conversémoslo.'
+  },
+  'lider-ie': {
+    title: 'Inteligencia emocional del líder', parent: 'liderazgo', tag: 'Tu calma también es liderazgo',
+    intro: 'No puedes liderar a otros si no sabes liderarte a ti. La inteligencia emocional es la base del liderazgo humano: tu manera de manejar la presión, las emociones y los vínculos marca el clima de todo tu equipo.',
+    blocks: [
+      { h: 'Para liderarte a ti', list: [
+        'Reconoce lo que sientes antes de reaccionar: nombrar la emoción te devuelve el control.',
+        'Cuida tu energía y tu descanso; un líder agotado contagia tensión.',
+        'Conoce tus disparadores para no decidir desde la rabia o el miedo.' ] },
+      { h: 'Para sostener al equipo', list: [
+        'Regula tu reacción en momentos de presión; tu calma tranquiliza al equipo.',
+        'Practica la empatía: entender no es lo mismo que ceder.',
+        'Crea un ambiente seguro donde se pueda hablar sin miedo a represalias.' ] }
+    ],
+    closing: 'La inteligencia emocional se entrena, y transforma por completo cómo lideras. Si quieres desarrollarla, escríbeme.'
   }
 };
 
@@ -1046,7 +1110,7 @@ class Component extends DCLogic {
     }
     host.innerHTML = this._topicHTML(key);
     const back = host.querySelector('[data-back]');
-    if (back) back.onclick = () => { const p = TOPICS[key].parent; if (p) this.openTopic(p); else this.goPage('inicio', 'wellness'); };
+    if (back) back.onclick = () => { const tp = TOPICS[key]; if (tp.parent) this.openTopic(tp.parent); else if (tp.backPage) this.goPage(tp.backPage); else this.goPage('inicio', 'wellness'); };
     host.querySelectorAll('[data-go]').forEach((c) => { c.onclick = () => this.openTopic(c.getAttribute('data-go')); });
     const book = host.querySelector('[data-book]'); if (book) book.onclick = () => this.openBooking();
     const yt = host.querySelector('[data-yt-btn]'); if (yt) yt.onclick = () => { const u = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
@@ -1062,7 +1126,7 @@ class Component extends DCLogic {
     const isLeaf = !d.children;
     const ytUrl = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim();
     const spUrl = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim();
-    const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Volver a ' + TOPICS[d.parent].title) : '← Volver al Centro de Bienestar';
+    const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Volver a ' + TOPICS[d.parent].title) : (d.backName ? ('← Volver a ' + d.backName) : '← Volver al Centro de Bienestar');
     let h = '';
     h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
     h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">Centro de Bienestar</div>';
