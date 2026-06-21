@@ -283,6 +283,10 @@
         <div data-yt="relaciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relaciones interpersonales</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="estancamiento" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Sentirse estancado</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="equilibrio" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Equilibrio y autoexigencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="duelo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Duelo y pérdidas</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="vocacional" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Orientación vocacional</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="estres" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Estrés y sus niveles</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="culpa" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">La culpa</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -779,7 +783,18 @@ const TOPICS = {
       { h: 'Para mirar más profundo', list: [
         'Identifica la voz crítica que te habla: muchas veces no es tuya, la aprendiste.',
         'Reconoce tus logros sin minimizarlos con un "pero".',
-        'Rodéate de personas que te suman, no que te apagan.' ] }
+        'Rodéate de personas que te suman, no que te apagan.' ] },
+      { h: 'Habilidades para la Vida (OMS)', p: 'Conocerte es el primer paso para amarte. La Organización Mundial de la Salud propone diez habilidades para la vida que nos ayudan a entendernos y a relacionarnos mejor con nosotros mismos y con los demás:', list: [
+        'Autoconocimiento',
+        'Empatía',
+        'Comunicación asertiva',
+        'Relaciones interpersonales',
+        'Toma de decisiones',
+        'Manejo de problemas y conflictos',
+        'Pensamiento creativo',
+        'Pensamiento crítico',
+        'Manejo de emociones y sentimientos',
+        'Manejo de las tensiones y el estrés' ] }
     ],
     closing: 'Reconstruir la autoestima toma tiempo y compañía. Si quieres, caminamos ese proceso juntos.'
   },
@@ -1036,6 +1051,263 @@ const TOPICS = {
         'Crea un ambiente seguro donde se pueda hablar sin miedo a represalias.' ] }
     ],
     closing: 'La inteligencia emocional se entrena, y transforma por completo cómo lideras. Si quieres desarrollarla, escríbeme.'
+  },
+
+  duelo: {
+    title: 'Duelo y pérdidas', tag: 'Honrar lo que se fue',
+    intro: 'El duelo no es solo por la muerte: es la respuesta natural ante cualquier pérdida importante. No hay una forma correcta ni un tiempo exacto para vivirlo. Aquí no buscamos "superarlo" rápido, sino aprender a transitarlo con respeto por lo que sentimos. Elige el tipo de pérdida que estás viviendo.',
+    children: ['duelo-fallecimiento', 'duelo-perdidas']
+  },
+  'duelo-fallecimiento': {
+    title: 'Duelo por fallecimiento de un ser querido', parent: 'duelo', tag: 'Cuando la muerte nos separa',
+    intro: 'Perder a alguien que amamos deja un vacío que nadie más puede llenar. El duelo es el precio del amor, y llorar a quien se fue también es una forma de honrarlo. Date permiso de sentir, a tu ritmo. Elige a quién estás despidiendo.',
+    children: ['duelo-hijo', 'duelo-conyuge', 'duelo-amigo', 'duelo-embarazo', 'duelo-mascota']
+  },
+  'duelo-perdidas': {
+    title: 'Pérdidas significativas (no relacionadas a la muerte)', parent: 'duelo', tag: 'Duelos que pocas veces se nombran',
+    intro: 'No todas las pérdidas tienen que ver con la muerte y, aun así, duelen profundamente. Perder un trabajo, una relación, la salud o un proyecto de vida también merece ser llorado. Que otros no lo vean como un duelo no significa que no lo sea. Elige la pérdida que estás atravesando.',
+    children: ['duelo-no-hijos', 'duelo-despido', 'duelo-negocio', 'duelo-oportunidad', 'duelo-estudios', 'duelo-anos', 'duelo-relacion', 'duelo-control', 'duelo-matrimonio', 'duelo-finanzas', 'duelo-desastre', 'duelo-extremidad', 'duelo-enfermedad']
+  },
+  'duelo-hijo': {
+    title: 'Perder un hijo', parent: 'duelo-fallecimiento', tag: 'El dolor que no tiene nombre',
+    intro: 'No existe una palabra para quien pierde a un hijo, porque rompe el orden natural de la vida. No tienes que ser fuerte ni encontrarle sentido. Solo necesitas permiso para sentir y manos que te sostengan.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete sentir todo lo que llega: rabia, culpa, vacío. Nada de eso te hace mal padre o mala madre.',
+      'No te apures: el duelo de un hijo no se "supera", se aprende a vivir con él.',
+      'Habla de tu hijo y nombra su recuerdo; seguir amándolo también es sanar.',
+      'Apóyate en quien no te exija estar bien.' ] } ],
+    closing: 'Perder a un hijo es de los dolores más profundos que existen. No tienes que cargarlo en soledad; acompañarte en esto es un honor. Escríbeme.'
+  },
+  'duelo-conyuge': {
+    title: 'Perder a tu cónyuge', parent: 'duelo-fallecimiento', tag: 'Cuando se va tu compañero de vida',
+    intro: 'Perder a tu pareja es perder también los planes, la rutina y el futuro que imaginaban juntos. Es aprender a vivir en una vida que ya no se parece a la que conocías. Ir paso a paso está bien.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete extrañar y, a la vez, seguir viviendo; ambas cosas pueden convivir.',
+      'No te exijas decisiones grandes mientras el dolor está fresco.',
+      'Apóyate en tu red y acepta la ayuda que te ofrezcan.',
+      'Honra su recuerdo a tu manera, sin que nadie te marque el tiempo.' ] } ],
+    closing: 'Reconstruir la vida sin tu compañero toma tiempo y compañía. Cuando estés listo, aquí estoy. Escríbeme.'
+  },
+  'duelo-amigo': {
+    title: 'Perder a un amigo', parent: 'duelo-fallecimiento', tag: 'Un vínculo que también deja huella',
+    intro: 'La muerte de un amigo se llora distinto, porque el mundo a veces no lo reconoce como un duelo "grande". Pero un amigo es testigo de tu vida, y su ausencia se siente. Tu dolor es válido.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Date permiso de llorarlo, aunque otros minimicen la pérdida.',
+      'Comparte recuerdos con quienes también lo querían.',
+      'Honra lo que te dejó: lo que aprendieron y rieron juntos sigue contigo.' ] } ],
+    closing: 'Perder a un amigo deja un vacío real. Si te cuesta sostenerlo, podemos hablarlo. Escríbeme.'
+  },
+  'duelo-embarazo': {
+    title: 'Perder un embarazo', parent: 'duelo-fallecimiento', tag: 'Un amor que ya existía',
+    intro: 'Perder un embarazo es perder un hijo soñado, un futuro que ya habías empezado a amar. Es un duelo real, aunque el mundo muchas veces lo silencie. No estás exagerando, y no estás solo.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete llorar esta pérdida; tu dolor no necesita justificación.',
+      'No cargues con la culpa: no fue tu falla.',
+      'Date espacio y tiempo; sanar el cuerpo y el corazón llevan ritmos distintos.',
+      'Si lo necesitas, ponle nombre o un gesto de despedida a lo que perdiste.' ] } ],
+    closing: 'El duelo perinatal duele en silencio con demasiada frecuencia. Aquí tu dolor tiene espacio y nombre. Escríbeme.'
+  },
+  'duelo-mascota': {
+    title: 'Perder una mascota', parent: 'duelo-fallecimiento', tag: 'También eran familia',
+    intro: 'Quien nunca ha amado a un animal quizá no lo entienda, pero tú sabes que una mascota es familia. Su partida deja un silencio enorme en casa. Tu duelo es completamente válido.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'No te avergüences de tu dolor; el amor que sentías era real.',
+      'Permítete despedirte a tu manera y honrar su recuerdo.',
+      'Respeta tu proceso, aunque otros no lo entiendan.' ] } ],
+    closing: 'Perder a un compañero animal duele de verdad. Si lo necesitas, conversémoslo. Escríbeme.'
+  },
+  'duelo-no-hijos': {
+    title: 'No poder tener hijos', parent: 'duelo-perdidas', tag: 'El duelo de un sueño',
+    intro: 'No poder tener hijos es un duelo silencioso: lloras a un hijo que nunca llegó y a una vida que imaginabas. Es una pérdida real, aunque no haya un funeral ni palabras para nombrarla.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete sentir la tristeza, la rabia y el vacío sin juzgarte.',
+      'Pon límites a preguntas o comentarios que duelen.',
+      'Date permiso de replantear tu proyecto de vida a tu tiempo.',
+      'No cargues culpa por algo que no elegiste.' ] } ],
+    closing: 'Este duelo merece ser reconocido y acompañado. Si lo estás viviendo, escríbeme.'
+  },
+  'duelo-despido': {
+    title: 'Ser despedido del trabajo', parent: 'duelo-perdidas', tag: 'No eres tu empleo',
+    intro: 'Perder el trabajo sacude más que el ingreso: toca tu identidad, tu rutina y tu sentido de utilidad. Es normal sentir miedo, enojo o vergüenza. Tu valor no se fue con ese puesto.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete sentir el golpe antes de exigirte "reinventarte" de inmediato.',
+      'Separa lo que pasó de quién eres: un despido no define tu valía.',
+      'Cuida tu rutina y tu red mientras buscas el siguiente paso.' ] } ],
+    closing: 'Recuperar el rumbo después de un despido es posible, y no tienes que hacerlo solo. Escríbeme.'
+  },
+  'duelo-negocio': {
+    title: 'Perder un negocio', parent: 'duelo-perdidas', tag: 'Cuando se cae lo que construiste',
+    intro: 'Cerrar un negocio es despedir un sueño en el que pusiste tiempo, dinero y corazón. Duele como una pérdida, porque lo es. Que un proyecto fracase no te convierte en un fracaso.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Date permiso de hacer el duelo antes de "ver el aprendizaje".',
+      'Separa el resultado del negocio de tu valor como persona.',
+      'Rescata lo aprendido cuando estés listo, sin castigarte por lo que no funcionó.' ] } ],
+    closing: 'Levantarte después de perder un proyecto lleva tiempo y acompañamiento. Aquí estoy. Escríbeme.'
+  },
+  'duelo-oportunidad': {
+    title: 'Perder una oportunidad', parent: 'duelo-perdidas', tag: 'El duelo de lo que pudo ser',
+    intro: 'Dejar ir una oportunidad —un trabajo, un viaje, una posibilidad— también duele. A veces lo que más pesa es el "¿y si...?". Sentir esa pérdida no es debilidad, es humano.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete lamentar lo que no fue, sin quedarte atrapado ahí.',
+      'Distingue lo que estaba en tus manos de lo que no.',
+      'Abre los ojos a las puertas que siguen abiertas, a tu ritmo.' ] } ],
+    closing: 'Si la sensación de oportunidad perdida te pesa mucho, podemos trabajarlo. Escríbeme.'
+  },
+  'duelo-estudios': {
+    title: 'Perder materias o un ciclo escolar', parent: 'duelo-perdidas', tag: 'Un tropiezo no es el final',
+    intro: 'Reprobar materias o un año puede sentirse como un fracaso enorme, sobre todo cuando te exiges mucho. Pero un tropiezo académico no mide tu inteligencia ni tu futuro. Es un capítulo, no la historia completa.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete la frustración sin convertirla en castigo.',
+      'Pide ayuda: a veces el problema no es la capacidad, sino el método, el contexto o el ánimo.',
+      'Replantea tu plan con metas realistas y pasos pequeños.' ] } ],
+    closing: 'Si el peso académico te está afectando emocionalmente, conversémoslo. Escríbeme.'
+  },
+  'duelo-anos': {
+    title: 'Sentir que perdiste años', parent: 'duelo-perdidas', tag: 'Tu historia no fue en vano',
+    intro: 'Mirar atrás y sentir que "perdiste años" en una relación, un trabajo o una etapa duele profundamente. Pero ese tiempo también te formó. No empiezas de cero: empiezas con todo lo que aprendiste.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete lamentar el tiempo, sin reescribir todo como un error.',
+      'Rescata lo que ese período te dejó, aunque haya dolido.',
+      'Pon tu energía en el presente, que es donde sí puedes elegir.' ] } ],
+    closing: 'Resignificar el pasado es un proceso, y se hace mejor acompañado. Escríbeme.'
+  },
+  'duelo-relacion': {
+    title: 'Perder una relación', parent: 'duelo-perdidas', tag: 'Soltar a quien amaste',
+    intro: 'El fin de una relación es un duelo, aunque la persona siga viva. Lloras los planes, la complicidad y la versión de ti que existía en ese vínculo. Sanar no es olvidar, es aprender a estar en paz.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Date permiso de extrañar sin volver a lo que te hacía daño.',
+      'Evita decisiones impulsivas mientras la herida está abierta.',
+      'Reconstruye tu vida y tus vínculos poco a poco.' ] } ],
+    closing: 'Reconstruirte después de una ruptura toma tiempo. Si lo necesitas, te acompaño. Escríbeme.'
+  },
+  'duelo-control': {
+    title: 'Perder el control y la libertad', parent: 'duelo-perdidas', tag: 'Cuando la vida deja de sentirse tuya',
+    intro: 'Hay momentos —una crisis, una enfermedad, una circunstancia que no elegiste— en que sientes que perdiste el control de tu vida. Esa sensación de impotencia es agotadora, y merece ser atendida.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Distingue lo que sí está en tus manos, aunque sea pequeño, y empieza ahí.',
+      'Suelta con conciencia lo que no puedes cambiar; resistirte agota más.',
+      'Crea pequeñas rutinas que te devuelvan sensación de orden.' ] } ],
+    closing: 'Recuperar la sensación de control se trabaja paso a paso. Aquí estoy para acompañarte. Escríbeme.'
+  },
+  'duelo-matrimonio': {
+    title: 'Perder un matrimonio', parent: 'duelo-perdidas', tag: 'El duelo de un divorcio',
+    intro: 'Un divorcio es el duelo de una vida construida en pareja: la casa, la rutina, los sueños compartidos. Aunque haya sido la mejor decisión, igual duele. Date permiso de llorarlo.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete sentir el duelo aunque tú hayas decidido terminar.',
+      'Cuida tu identidad fuera del rol de esposo o esposa.',
+      'Si hay hijos, protégelos del conflicto y busca apoyo para todos.' ] } ],
+    closing: 'Rehacer la vida después de un matrimonio toma tiempo y compañía. Escríbeme.'
+  },
+  'duelo-finanzas': {
+    title: 'Perder la casa o el carro por una crisis financiera', parent: 'duelo-perdidas', tag: 'Perder bienes, no tu valor',
+    intro: 'Perder tu casa, tu carro o tu estabilidad económica golpea la seguridad y también el orgullo. Sentir miedo, vergüenza o enojo es normal. Tu valor no está en lo que tienes, sino en quién eres.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Permítete el duelo sin sumarle vergüenza; pasarla mal no es un fracaso moral.',
+      'Enfócate en pasos concretos y pequeños para estabilizarte.',
+      'Pide ayuda y orientación; no tienes que resolverlo en silencio.' ] } ],
+    closing: 'Más allá de lo material, lo que sostiene es tu fortaleza y tu red. Si lo necesitas, conversémoslo. Escríbeme.'
+  },
+  'duelo-desastre': {
+    title: 'Perder la casa por un desastre natural', parent: 'duelo-perdidas', tag: 'Cuando lo pierdes todo de golpe',
+    intro: 'Un desastre natural se lleva en minutos lo que tomó años construir, y deja una mezcla de miedo, shock y dolor. Perder tu hogar es perder recuerdos y seguridad. Lo que sientes es una reacción normal a algo anormal.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Atiende primero lo básico y seguro; el cuerpo necesita estabilidad antes que respuestas.',
+      'Permítete sentir el shock y el duelo; no te exijas estar bien de inmediato.',
+      'Apóyate en tu comunidad y en la ayuda disponible; reconstruir es más liviano acompañado.' ] } ],
+    closing: 'Después de una pérdida así, el cuerpo y la mente también necesitan reconstruirse. Aquí estoy para acompañarte. Escríbeme.'
+  },
+  'duelo-extremidad': {
+    title: 'Perder una extremidad', parent: 'duelo-perdidas', tag: 'Reconciliarte con tu cuerpo',
+    intro: 'Perder una parte de tu cuerpo es un duelo profundo: cambias tu manera de moverte, de verte y de habitar el mundo. Tienes derecho a llorar lo que perdiste mientras aprendes a reconocerte de nuevo.',
+    blocks: [ { h: 'Para transitarlo', list: [
+      'Date permiso de hacer el duelo de tu cuerpo anterior, sin apurarte a "ser positivo".',
+      'Ve a tu ritmo en la adaptación; cada pequeño logro cuenta.',
+      'Apóyate en tu red y en acompañamiento profesional para el cuerpo y la mente.' ] } ],
+    closing: 'Reconciliarte con tu cuerpo y tu nueva vida es un proceso que mereces no atravesar solo. Escríbeme.'
+  },
+  'duelo-enfermedad': {
+    title: 'Perder la salud por una enfermedad crónica o crítica', parent: 'duelo-perdidas', tag: 'Duelo por la vida que conocías',
+    intro: 'Recibir un diagnóstico que cambia tu vida es vivir un duelo: lloras la salud, la rutina y los planes que dabas por seguros. Hacer el duelo de la vida que tenías no es rendirte; es darte permiso de sentir para poder adaptarte.',
+    blocks: [
+      { h: 'Para transitarlo', list: [
+        'Permítete sentir el miedo, la rabia y la tristeza; son parte del proceso, no debilidad.',
+        'Aprende sobre tu condición a tu ritmo, sin saturarte.',
+        'Construye una red de apoyo (familia, equipo médico, terapia) y apóyate en ella.',
+        'Encuentra sentido y momentos de calidad dentro de lo posible.' ] },
+      { h: 'Algunas condiciones que acompaño', list: [
+        'Cáncer',
+        'Diabetes',
+        'Enfermedades autoinmunes (lupus, artritis reumatoide)',
+        'Enfermedad renal o cardíaca crónica',
+        'Esclerosis múltiple, Parkinson o Alzheimer',
+        'VIH',
+        'Fibromialgia y dolor crónico' ] }
+    ],
+    closing: 'Acompaño a personas que enfrentan diagnósticos que cambian la vida. No tienes que sostenerlo en soledad. Escríbeme.'
+  },
+
+  vocacional: {
+    title: 'Orientación vocacional', tag: 'Descubrir qué quieres y para qué eres bueno',
+    intro: 'Elegir a qué dedicar tu vida puede dar vértigo, sobre todo con la presión de "acertar". Pero la vocación no se encuentra de un golpe: se descubre explorando, probando y conociéndote. No se trata solo de qué carrera estudiar, sino de qué vida quieres construir.',
+    blocks: [
+      { h: 'Para conocerte mejor', list: [
+        'Observa qué actividades te hacen perder la noción del tiempo: ahí suele haber pistas.',
+        'Identifica para qué te buscan los demás; tus fortalezas a veces las ven antes que tú.',
+        'Distingue lo que de verdad disfrutas de lo que crees que "deberías" querer.' ] },
+      { h: 'Para explorar tu camino', list: [
+        'Investiga y prueba: cursos, voluntariados o conversar con quien ya hace lo que te atrae.',
+        'Busca el punto donde se cruzan lo que disfrutas, en lo que eres bueno y lo que el mundo necesita.',
+        'Recuerda que elegir no es para siempre: puedes ajustar el rumbo sin empezar de cero.' ] },
+      { h: 'Para decidir con calma', list: [
+        'Separa tu voz de las expectativas de tu familia o tu entorno.',
+        'Piensa en el estilo de vida que quieres, no solo en el título.',
+        'Date permiso de no tenerlo todo claro hoy; la claridad también llega caminando.' ] }
+    ],
+    closing: 'Si quieres descubrir tus fortalezas y elegir un camino que puedas disfrutar y vivir con gusto, podemos trabajarlo con herramientas y acompañamiento. Escríbeme.'
+  },
+
+  estres: {
+    title: 'Estrés y sus niveles', tag: 'Reconocerlo para poder cuidarlo',
+    intro: 'El estrés no es malo en sí mismo: es la respuesta natural de tu cuerpo ante una demanda. En su justa medida te impulsa; cuando se sostiene demasiado tiempo, empieza a desgastarte. Reconocer en qué nivel estás es el primer paso para cuidarte.',
+    blocks: [
+      { h: 'Los niveles del estrés', list: [
+        'Estrés positivo (eustrés): te activa y te ayuda a rendir ante un reto puntual.',
+        'Estrés agudo: una reacción intensa pero breve ante una situación concreta.',
+        'Estrés agudo episódico: el estrés agudo que se repite una y otra vez.',
+        'Estrés crónico: una tensión constante y sostenida que desgasta cuerpo y mente.',
+        'Agotamiento (burnout): el punto donde el estrés crónico te deja sin energía ni motivación.' ] },
+      { h: 'Señales de alerta', list: [
+        'Cuerpo: tensión, dolores de cabeza, insomnio, fatiga, malestar digestivo.',
+        'Mente: irritabilidad, dificultad para concentrarte, pensamientos acelerados.',
+        'Conducta: aislarte, descuidar tu alimentación o explotar con facilidad.' ] },
+      { h: 'Para manejarlo', list: [
+        'Identifica tus fuentes de estrés y lo que sí puedes ajustar.',
+        'Usa la respiración y las pausas para bajar la activación del cuerpo.',
+        'Cuida el sueño, el movimiento y tus límites; no son lujos, son sostén.',
+        'Pide ayuda a tiempo: el estrés crónico no se resuelve solo aguantando.' ] }
+    ],
+    closing: 'Si el estrés se volvió constante o sientes que llegaste al agotamiento, no tienes que aguantarlo en silencio. Conversémoslo. Escríbeme.'
+  },
+  culpa: {
+    title: 'La culpa', tag: 'Que la culpa enseñe, no que te castigue',
+    intro: 'La culpa, en su justa medida, es una brújula: nos avisa cuando actuamos contra nuestros valores y nos impulsa a reparar. El problema aparece cuando es tan baja que no nos deja reconocer el error, o tan alta que sigue doliendo aunque ya hayas enmendado. Y a veces cargamos una culpa que ni siquiera es nuestra.',
+    blocks: [
+      { h: 'Los niveles de la culpa', list: [
+        'Culpa óptima: te ayuda a reconocer el error y te motiva a cambiar y reparar. Es sana.',
+        'Culpa baja: no te deja ver el daño ni asumir tu parte; te impide aprender y crecer.',
+        'Culpa alta: te genera malestar incluso después de disculparte y enmendar; ya no enseña, solo castiga.' ] },
+      { h: 'Para manejarla con salud', list: [
+        'Pregúntate si hiciste un daño real o si solo estás siendo duro contigo.',
+        'Si fue real: reconoce, repara y discúlpate; eso es responsabilidad, no castigo.',
+        'Cuando ya reparaste, permítete soltar: seguir cargándola no repara más, solo te desgasta.',
+        'Cambia el "soy mala persona" por "cometí un error y lo estoy corrigiendo".' ] },
+      { h: 'Soltar la culpa ajena', list: [
+        'Reconoce qué es tuyo y qué no: no eres responsable de las decisiones ni de las emociones de otros.',
+        'A veces nos hacen creer que su malestar recae sobre nosotros; esa es una culpa que no nos pertenece.',
+        'Poner límites no te hace culpable; cuidarte no es egoísmo.',
+        'Devuelve con cariño la responsabilidad a quien le corresponde.' ] }
+    ],
+    closing: 'Si la culpa te pesa de más, o cargas una que no es tuya, podemos trabajar juntos para soltarla y vivir más en paz. Escríbeme.'
   }
 };
 
