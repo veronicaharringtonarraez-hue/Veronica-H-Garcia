@@ -304,6 +304,7 @@
         <div data-yt="habitos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Hábitos y metas</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="empleo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Búsqueda de empleo</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="violencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Situaciones de violencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="pnl" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Programación Neurolingüística</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -1475,6 +1476,26 @@ const TOPICS = {
         'Busca apoyo y, si corresponde, asesoría legal.' ] }
     ],
     closing: 'Si vives violencia digital, no estás solo. Puedo acompañarte emocionalmente; si hay amenazas a tu seguridad, busca asesoría legal. Escríbeme.'
+  },
+
+  pnl: {
+    title: `Programación Neurolingüística (PNL)`, tag: `Cambia tu lenguaje para cambiar tu vida`,
+    intro: `La Programación Neurolingüística estudia cómo tus pensamientos, tu lenguaje y tus patrones aprendidos moldean lo que vives. La buena noticia es que todo eso se puede reaprender: cuando cambias cómo te hablas y cómo interpretas, cambias cómo te sientes y cómo actúas.`,
+    blocks: [
+      { h: `Cómo te hablas importa`, list: [
+        `Observa tu diálogo interno: las palabras que repites construyen tu realidad.`,
+        `Cambia el "no puedo" por "todavía no sé cómo"; el lenguaje abre o cierra puertas.`,
+        `Sustituye el "tengo que" por "elijo", y recupera tu sentido de decisión.` ] },
+      { h: `Reencuadrar (cambiar el marco)`, list: [
+        `Ante un problema, pregúntate: ¿de qué otra forma podría ver esto?`,
+        `Busca el aprendizaje o la intención positiva detrás de lo que pasa.`,
+        `Un mismo hecho cambia de peso según el significado que le das.` ] },
+      { h: `Anclar tus recursos`, list: [
+        `Recuerda un momento en que te sentiste capaz y conecta con esa sensación antes de un reto.`,
+        `Visualiza con detalle cómo quieres responder; la mente ensaya y el cuerpo aprende.`,
+        `Pequeños gestos (una respiración, una postura) pueden anclar calma o confianza.` ] }
+    ],
+    closing: `La PNL es una herramienta de cambio, no magia: funciona mejor acompañada y aplicada a tu historia. Si quieres trabajarla, escríbeme.`
   }
 };
 

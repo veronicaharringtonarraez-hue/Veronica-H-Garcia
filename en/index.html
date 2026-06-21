@@ -304,6 +304,7 @@
         <div data-yt="habitos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Habits and goals</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="empleo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Job searching</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="violencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Situations of violence</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="pnl" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Neuro-Linguistic Programming</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -1451,6 +1452,26 @@ const TOPICS = {
         `Create a safe environment where people can speak without fear of reprisal.` ] }
     ],
     closing: `Emotional intelligence is trained, and it completely transforms how you lead. If you want to develop it, write to me.`
+  },
+
+  pnl: {
+    title: `Neuro-Linguistic Programming (NLP)`, tag: `Change your language to change your life`,
+    intro: `Neuro-Linguistic Programming studies how your thoughts, your language and your learned patterns shape what you live. The good news is that all of it can be relearned: when you change how you speak to yourself and how you interpret, you change how you feel and how you act.`,
+    blocks: [
+      { h: `How you speak to yourself matters`, list: [
+        `Notice your inner dialogue: the words you repeat build your reality.`,
+        `Swap "I cannot" for "I do not know how yet"; language opens or closes doors.`,
+        `Replace "I have to" with "I choose", and reclaim your sense of decision.` ] },
+      { h: `Reframing (changing the frame)`, list: [
+        `Facing a problem, ask yourself: in what other way could I see this?`,
+        `Look for the lesson or the positive intention behind what happens.`,
+        `The same fact changes weight depending on the meaning you give it.` ] },
+      { h: `Anchoring your resources`, list: [
+        `Recall a moment when you felt capable and connect with that feeling before a challenge.`,
+        `Visualize in detail how you want to respond; the mind rehearses and the body learns.`,
+        `Small gestures (a breath, a posture) can anchor calm or confidence.` ] }
+    ],
+    closing: `NLP is a tool for change, not magic: it works best accompanied and applied to your story. If you want to work on it, write to me.`
   }
 };
 
