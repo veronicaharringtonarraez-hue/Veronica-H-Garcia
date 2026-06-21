@@ -287,6 +287,7 @@
         <div data-yt="vocacional" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Orientación vocacional</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="estres" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Estrés y sus niveles</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="culpa" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">La culpa</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="habitos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Hábitos y metas</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -1308,6 +1309,28 @@ const TOPICS = {
         'Devuelve con cariño la responsabilidad a quien le corresponde.' ] }
     ],
     closing: 'Si la culpa te pesa de más, o cargas una que no es tuya, podemos trabajar juntos para soltarla y vivir más en paz. Escríbeme.'
+  },
+
+  habitos: {
+    title: 'Hábitos y metas', tag: 'Avanzar sin pelearte contigo',
+    intro: 'Cumplir tus metas no depende de tener más fuerza de voluntad, sino de construir hábitos y sistemas que te hagan el camino más fácil. Los cambios que duran no nacen de la exigencia, sino de pasos pequeños y constantes que sí puedes mantener.',
+    blocks: [
+      { h: 'Para fijar metas que sí logras', list: [
+        'Hazlas claras y concretas: en vez de "quiero estar bien", define "voy a caminar 20 minutos al día".',
+        'Divídelas en pasos pequeños; el primero debe ser tan fácil que no puedas decir que no.',
+        'Conecta cada meta con un para qué que te importe de verdad.',
+        'Mide el avance, no la perfección.' ] },
+      { h: 'Para construir hábitos que duren', list: [
+        'Ancla el hábito nuevo a uno que ya tienes (por ejemplo, respirar hondo después de lavarte los dientes).',
+        'Empieza ridículamente pequeño: mejor 5 minutos diarios que una hora una sola vez.',
+        'Cuida tu entorno: ponle fácil lo que quieres hacer y difícil lo que quieres evitar.',
+        'La constancia vale más que la intensidad; un día que falles no rompe el proceso.' ] },
+      { h: 'Cuando pierdes la motivación', list: [
+        'No esperes a tener ganas: la acción suele venir antes que la motivación.',
+        'Celebra los pequeños logros; reconocerte sostiene el cambio.',
+        'Si te caes, vuelve sin castigarte: procura no fallar dos veces seguidas.' ] }
+    ],
+    closing: 'Si te cuesta sostener tus hábitos o sientes que tus metas te sobrepasan, podemos diseñar juntos un plan realista y amable contigo. Escríbeme.'
   }
 };
 
