@@ -281,6 +281,8 @@
         <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resiliencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="adicciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Manejo de adicciones</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="relaciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relaciones interpersonales</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="estancamiento" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Sentirse estancado</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="equilibrio" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Equilibrio y autoexigencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -932,6 +934,44 @@ const TOPICS = {
         'Habla las cosas con honestidad antes de dejar que crezcan en silencio.' ] }
     ],
     closing: 'Si te cuesta crear o sostener vínculos, o la soledad te pesa, podemos trabajarlo juntos. Escríbeme.'
+  },
+
+  estancamiento: {
+    title: 'Cuando sientes que no avanzas', tag: 'Tu ritmo no es un retraso',
+    intro: 'Sentir que no avanzas no significa que estés fallando. Muchas veces el crecimiento es invisible: pasa por dentro antes de notarse por fuera. Compararte con el camino de otros solo nubla el tuyo, porque nadie vive tu historia ni tus tiempos.',
+    blocks: [
+      { h: 'Para reencontrar tu avance', list: [
+        'Mira hacia atrás, no solo hacia los demás: compárate con quien eras antes, no con quien es otro.',
+        'Reconoce los avances pequeños; muchos pasos chiquitos también son camino.',
+        'Define qué es progreso para ti, no según la vara de nadie más.' ] },
+      { h: 'Cuando llega la comparación', list: [
+        'Recuerda que ves el resultado de otros, no su proceso ni sus luchas.',
+        'Limita lo que consumes en redes si te deja sintiéndote menos.',
+        'Convierte la comparación en información: lo que admiras te muestra lo que deseas.' ] },
+      { h: 'Para volver a moverte', list: [
+        'Da hoy un paso pequeño y concreto; la acción, aunque mínima, rompe el estancamiento.',
+        'Sé paciente y amable contigo: presionarte rara vez te impulsa, más bien te paraliza.' ] }
+    ],
+    closing: 'Si la sensación de estancamiento viene con desánimo o se queda mucho tiempo, no tienes que descifrarlo en soledad. Conversémoslo.'
+  },
+  equilibrio: {
+    title: 'Equilibrio en una vida atareada', tag: 'Ser justo contigo también es avanzar',
+    intro: 'Si te exiges al máximo, lo das todo y aun así sientes que nunca es suficiente, quiero recordarte algo: tu valor no se mide por lo productivo que eres. Querer hacerlo todo, perfecto y ya, no siempre es disciplina; muchas veces es una forma de tratarte con dureza.',
+    blocks: [
+      { h: 'Para soltar la autoexigencia', list: [
+        'Háblate con la misma amabilidad con la que tratarías a alguien que amas.',
+        'Cambia el "tengo que hacerlo todo" por "elijo lo que de verdad importa hoy".',
+        'Lo suficientemente bueno también está bien; la perfección suele costarte la paz.' ] },
+      { h: 'Para recuperar el equilibrio', list: [
+        'Pon límites a tu tiempo y aprende a decir "no" sin culpa.',
+        'Agenda el descanso como agendas tus tareas: no es un premio, es una necesidad.',
+        'Delega y pide ayuda; no tienes que sostenerlo todo tú.' ] },
+      { h: 'Para cada día', list: [
+        'Haz pausas reales, sin pantallas; tu mente también necesita respirar.',
+        'Celebra lo que sí hiciste, en vez de castigarte por lo que faltó.',
+        'Descansar no es perder el tiempo: es lo que te permite sostenerte.' ] }
+    ],
+    closing: 'Si la autoexigencia te está agotando o te cuesta parar, podemos construir juntos un ritmo más amable y sostenible. Escríbeme.'
   }
 };
 
