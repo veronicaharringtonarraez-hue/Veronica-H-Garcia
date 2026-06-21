@@ -1297,7 +1297,7 @@ const TOPICS = {
     title: `Addressing situations of violence`, tag: `It is not your fault, and you are not alone`,
     intro: `Living through any kind of violence leaves deep marks, and taking the step to seek help takes great courage. I want you to read this clearly: violence is never the fault of the person who receives it, and you deserve to live free of fear. Here you will find guidance to recognize and address it, in a safe and non-judgmental space. Choose the type of situation you are living.`,
     children: ['violencia-pareja', 'violencia-familiar', 'violencia-psicologica', 'violencia-sexual', 'violencia-laboral', 'violencia-digital'],
-    closing: `If you are in immediate danger, call 911. In Costa Rica, the INAMU line 1147 assists women in situations of violence. Your safety comes first.`
+    closing: `Your safety comes first.`
   },
   'violencia-pareja': {
     title: `Violence in the relationship`, parent: 'violencia', tag: `Love does not hurt`,
@@ -1314,7 +1314,7 @@ const TOPICS = {
         `Keep trusted people close and a plan for your safety.`,
         `Seek professional and legal support; you deserve to live without fear.` ] }
     ],
-    closing: `Your safety comes first. I can support you in your emotional process; if there is immediate danger, call 911 (or 1147 of INAMU in Costa Rica). Write to me.`
+    closing: `Your safety comes first. I can support you in your emotional process; if there is immediate danger, seek emergency help. Write to me.`
   },
   'violencia-familiar': {
     title: `Family violence`, parent: 'violencia', tag: `Home should be a safe place`,
@@ -1330,7 +1330,7 @@ const TOPICS = {
         `Document what happens if it is safe to do so.`,
         `Remember there are institutions that can help you protect yourself.` ] }
     ],
-    closing: `If someone is in danger, call 911. I can support you in the emotional process of these situations. Write to me.`
+    closing: `I can support you in the emotional process of these situations. Write to me.`
   },
   'violencia-psicologica': {
     title: `Psychological and emotional violence`, parent: 'violencia', tag: `The wounds that are not seen also hurt`,
@@ -1362,7 +1362,7 @@ const TOPICS = {
         `When you can, seek psychological support to heal at your own pace.`,
         `Lean on trusted people; you do not have to carry it in silence.` ] }
     ],
-    closing: `Healing from sexual violence is possible, with support and in your own time. If you are in danger, call 911. I can support you in your process. Write to me.`
+    closing: `Healing from sexual violence is possible, with support and in your own time. I can support you in your process. Write to me.`
   },
   'violencia-laboral': {
     title: `Workplace violence and harassment`, parent: 'violencia', tag: `Work should not cost you your dignity`,
@@ -1395,7 +1395,7 @@ const TOPICS = {
         `Do not blame yourself; the responsibility is of the one who assaults.`,
         `Seek support and, if appropriate, legal advice.` ] }
     ],
-    closing: `If you are experiencing digital violence, you are not alone. I can support you emotionally; if there are threats to your safety, seek legal advice and call 911 if it is urgent. Write to me.`
+    closing: `If you are experiencing digital violence, you are not alone. I can support you emotionally; if there are threats to your safety, seek legal advice. Write to me.`
   },
   liderazgo: {
     title: `Leadership preparation`, tag: `Soft skills to lead with humanity`,
@@ -1454,6 +1454,19 @@ const TOPICS = {
   }
 };
 
+const EMERG = {
+  CR:['911','INAMU 1147'], US:['911','1-800-799-7233'], MX:['911','911'], ES:['112','016'],
+  AR:['911','144'], CO:['123','155'], CL:['133','1455'], PE:['105','100'], EC:['911',''], BO:['911',''],
+  UY:['911','0800 4141'], PY:['911',''], VE:['911',''], BR:['190','180'], PA:['911',''], GT:['110',''],
+  DO:['911',''], HN:['911',''], SV:['911',''], NI:['118',''], PR:['911',''],
+  PT:['112','800 202 148'], IT:['112','1522'], FR:['112','3919'], DE:['112','116 016'],
+  GB:['999','0808 2000 247'], IE:['112','1800 341 900'], CA:['911',''], AU:['000','1800 737 732'],
+  CN:['110','12338'], KR:['112','1366'], JP:['110','#8008'], IN:['112','181'],
+  CH:['112',''], AT:['112',''], NL:['112',''], BE:['112',''], SE:['112',''], NO:['112',''],
+  DK:['112',''], FI:['112',''], PL:['112',''], GR:['112',''], RO:['112',''], NZ:['111','']
+};
+const T_EMERG = { danger: 'If you are in immediate danger', call: 'call', help: 'Helpline:', local: 'your local emergency number' };
+
 class Component extends DCLogic {
   canvasRef = React.createRef();
   timelineRef = React.createRef();
@@ -1471,6 +1484,7 @@ class Component extends DCLogic {
     this.initReveal();
     this._initYouTube();
     this._initRouter();
+    this._detectCountry();
     this.breathPattern = '4-4-4';
     this.breathRunning = false;
   }
@@ -1587,6 +1601,23 @@ class Component extends DCLogic {
     window.scrollTo({ top: 0, behavior: 'auto' });
   };
 
+  _detectCountry() {
+    try {
+      fetch('https://ipapi.co/country/').then((r) => (r.ok ? r.text() : '')).then((c) => {
+        c = (c || '').trim().toUpperCase();
+        if (/^[A-Z]{2}$/.test(c)) this._cc = c;
+      }).catch(() => {});
+    } catch (e) {}
+  }
+
+  _emergHTML() {
+    const e = EMERG[this._cc] || null;
+    let txt;
+    if (e && e[0]) txt = T_EMERG.danger + ', ' + T_EMERG.call + ' ' + e[0] + (e[1] ? (' \u00b7 ' + T_EMERG.help + ' ' + e[1]) : '') + '.';
+    else txt = T_EMERG.danger + ', ' + T_EMERG.call + ' ' + T_EMERG.local + '.';
+    return '<div style="margin-bottom:22px;padding:12px 16px;border-radius:10px;background:rgba(176,0,32,0.16);border:1px solid rgba(255,120,120,0.55);color:#ffd9d3;font-size:13.5px;line-height:1.5;">\u26a0\ufe0f ' + txt + '</div>';
+  }
+
   _topicHTML(key) {
     const d = TOPICS[key]; if (!d) return '';
     const isLeaf = !d.children;
@@ -1595,6 +1626,7 @@ class Component extends DCLogic {
     const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Back to ' + TOPICS[d.parent].title) : (d.backName ? ('← Back to ' + d.backName) : '← Back to the Wellness Center');
     let h = '';
     h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
+    if (key.indexOf('violencia') === 0) h += this._emergHTML();
     h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">Wellness Center</div>';
     h += '<h2 style="font-family:Spectral,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:12px 0 6px;color:#FAF8F5;">' + d.title + '</h2>';
     if (d.tag) h += '<p style="font-family:Spectral,serif;font-style:italic;font-size:19px;color:#D4A017;margin-bottom:20px;">' + d.tag + '</p>';

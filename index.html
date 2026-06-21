@@ -1376,7 +1376,7 @@ const TOPICS = {
     title: 'Abordaje de situaciones de violencia', tag: 'No es tu culpa, y no estás solo',
     intro: 'Vivir cualquier tipo de violencia deja huellas profundas, y dar el paso de buscar ayuda requiere mucha valentía. Quiero que lo leas con claridad: la violencia nunca es culpa de quien la recibe, y mereces vivir libre de miedo. Aquí encontrarás orientación para reconocerla y abordarla, en un espacio seguro y sin juicios. Elige el tipo de situación que estás viviendo.',
     children: ['violencia-pareja', 'violencia-familiar', 'violencia-psicologica', 'violencia-sexual', 'violencia-laboral', 'violencia-digital'],
-    closing: 'Si estás en peligro inmediato, llama al 911. En Costa Rica, la línea 1147 del INAMU atiende a mujeres en situación de violencia. Tu seguridad es lo primero.'
+    closing: 'Tu seguridad es lo primero.'
   },
   'violencia-pareja': {
     title: 'Violencia en la pareja', parent: 'violencia', tag: 'El amor no duele',
@@ -1393,7 +1393,7 @@ const TOPICS = {
         'Ten cerca a personas de confianza y un plan para tu seguridad.',
         'Busca apoyo profesional y legal; mereces vivir sin miedo.' ] }
     ],
-    closing: 'Tu seguridad es lo primero. Puedo acompañarte en tu proceso emocional; si hay peligro inmediato, llama al 911 (o al 1147 del INAMU en Costa Rica). Escríbeme.'
+    closing: 'Tu seguridad es lo primero. Puedo acompañarte en tu proceso emocional; si hay peligro inmediato, busca ayuda de emergencia. Escríbeme.'
   },
   'violencia-familiar': {
     title: 'Violencia familiar', parent: 'violencia', tag: 'El hogar debería ser un lugar seguro',
@@ -1409,7 +1409,7 @@ const TOPICS = {
         'Documenta lo que ocurre si es seguro hacerlo.',
         'Recuerda que existen instituciones que pueden ayudarte a protegerte.' ] }
     ],
-    closing: 'Si hay alguien en peligro, llama al 911. Puedo acompañarte en el proceso emocional de estas situaciones. Escríbeme.'
+    closing: 'Puedo acompañarte en el proceso emocional de estas situaciones. Escríbeme.'
   },
   'violencia-psicologica': {
     title: 'Violencia psicológica y emocional', parent: 'violencia', tag: 'Las heridas que no se ven también duelen',
@@ -1441,7 +1441,7 @@ const TOPICS = {
         'Cuando puedas, busca acompañamiento psicológico para sanar a tu ritmo.',
         'Apóyate en personas de confianza; no tienes que cargarlo en silencio.' ] }
     ],
-    closing: 'Sanar de la violencia sexual es posible, con apoyo y a tu tiempo. Si estás en peligro, llama al 911. Puedo acompañarte en tu proceso. Escríbeme.'
+    closing: 'Sanar de la violencia sexual es posible, con apoyo y a tu tiempo. Puedo acompañarte en tu proceso. Escríbeme.'
   },
   'violencia-laboral': {
     title: 'Violencia laboral y acoso', parent: 'violencia', tag: 'Trabajar no debería costarte tu dignidad',
@@ -1474,9 +1474,22 @@ const TOPICS = {
         'No te culpes; la responsabilidad es de quien agrede.',
         'Busca apoyo y, si corresponde, asesoría legal.' ] }
     ],
-    closing: 'Si vives violencia digital, no estás solo. Puedo acompañarte emocionalmente; si hay amenazas a tu seguridad, busca asesoría legal y llama al 911 si es urgente. Escríbeme.'
+    closing: 'Si vives violencia digital, no estás solo. Puedo acompañarte emocionalmente; si hay amenazas a tu seguridad, busca asesoría legal. Escríbeme.'
   }
 };
+
+const EMERG = {
+  CR:['911','INAMU 1147'], US:['911','1-800-799-7233'], MX:['911','911'], ES:['112','016'],
+  AR:['911','144'], CO:['123','155'], CL:['133','1455'], PE:['105','100'], EC:['911',''], BO:['911',''],
+  UY:['911','0800 4141'], PY:['911',''], VE:['911',''], BR:['190','180'], PA:['911',''], GT:['110',''],
+  DO:['911',''], HN:['911',''], SV:['911',''], NI:['118',''], PR:['911',''],
+  PT:['112','800 202 148'], IT:['112','1522'], FR:['112','3919'], DE:['112','116 016'],
+  GB:['999','0808 2000 247'], IE:['112','1800 341 900'], CA:['911',''], AU:['000','1800 737 732'],
+  CN:['110','12338'], KR:['112','1366'], JP:['110','#8008'], IN:['112','181'],
+  CH:['112',''], AT:['112',''], NL:['112',''], BE:['112',''], SE:['112',''], NO:['112',''],
+  DK:['112',''], FI:['112',''], PL:['112',''], GR:['112',''], RO:['112',''], NZ:['111','']
+};
+const T_EMERG = { danger: 'Si estás en peligro inmediato', call: 'llama al', help: 'Línea de ayuda:', local: 'tu número local de emergencias' };
 
 class Component extends DCLogic {
   canvasRef = React.createRef();
@@ -1495,6 +1508,7 @@ class Component extends DCLogic {
     this.initReveal();
     this._initYouTube();
     this._initRouter();
+    this._detectCountry();
     this.breathPattern = '4-4-4';
     this.breathRunning = false;
   }
@@ -1611,6 +1625,23 @@ class Component extends DCLogic {
     window.scrollTo({ top: 0, behavior: 'auto' });
   };
 
+  _detectCountry() {
+    try {
+      fetch('https://ipapi.co/country/').then((r) => (r.ok ? r.text() : '')).then((c) => {
+        c = (c || '').trim().toUpperCase();
+        if (/^[A-Z]{2}$/.test(c)) this._cc = c;
+      }).catch(() => {});
+    } catch (e) {}
+  }
+
+  _emergHTML() {
+    const e = EMERG[this._cc] || null;
+    let txt;
+    if (e && e[0]) txt = T_EMERG.danger + ', ' + T_EMERG.call + ' ' + e[0] + (e[1] ? (' \u00b7 ' + T_EMERG.help + ' ' + e[1]) : '') + '.';
+    else txt = T_EMERG.danger + ', ' + T_EMERG.call + ' ' + T_EMERG.local + '.';
+    return '<div style="margin-bottom:22px;padding:12px 16px;border-radius:10px;background:rgba(176,0,32,0.16);border:1px solid rgba(255,120,120,0.55);color:#ffd9d3;font-size:13.5px;line-height:1.5;">\u26a0\ufe0f ' + txt + '</div>';
+  }
+
   _topicHTML(key) {
     const d = TOPICS[key]; if (!d) return '';
     const isLeaf = !d.children;
@@ -1619,6 +1650,7 @@ class Component extends DCLogic {
     const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Volver a ' + TOPICS[d.parent].title) : (d.backName ? ('← Volver a ' + d.backName) : '← Volver al Centro de Bienestar');
     let h = '';
     h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
+    if (key.indexOf('violencia') === 0) h += this._emergHTML();
     h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">Centro de Bienestar</div>';
     h += '<h2 style="font-family:Spectral,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:12px 0 6px;color:#FAF8F5;">' + d.title + '</h2>';
     if (d.tag) h += '<p style="font-family:Spectral,serif;font-style:italic;font-size:19px;color:#D4A017;margin-bottom:20px;">' + d.tag + '</p>';
