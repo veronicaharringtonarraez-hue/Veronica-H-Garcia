@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1524,7 +1524,7 @@ class Component extends DCLogic {
   // ---------- idioma (traducciones por IA, guardadas por versión) ----------
   _langs = [['es', 'Español'], ['en', 'English'], ['pt', 'Português'], ['it', 'Italiano'], ['fr', 'Français'], ['zh-CN', '中文 (简体)'], ['ko', '한국어'], ['ja', '日本語']];
   // Idiomas con traducción curada disponible (se irán sumando conforme se traducen).
-  _availableLangs = ['es'];
+  _availableLangs = ['es', 'en'];
   _lang = 'es';
 
   openLang = (e) => {
@@ -1561,11 +1561,15 @@ class Component extends DCLogic {
     });
   }
 
+  _langUrl(code) {
+    const toRoot = (this._lang === 'es') ? './' : '../';
+    return (code === 'es') ? toRoot : (toRoot + code + '/');
+  }
+
   _setLang(code) {
     if (this._availableLangs.indexOf(code) < 0) return; // traducción en preparación
-    this._lang = code;
-    // Cuando existan las versiones traducidas (TOPICS + textos), se aplican aquí.
-    if (this._langMenu) this._langMenu.style.display = 'none';
+    if (code === this._lang) { if (this._langMenu) this._langMenu.style.display = 'none'; return; }
+    location.href = this._langUrl(code);
   }
 
   goPage = (name, anchorId) => {
