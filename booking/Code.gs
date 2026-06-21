@@ -69,7 +69,8 @@ function doPost(e) {
       + 'Nombre: ' + d.name + '\n'
       + 'Correo: ' + d.email + '\n'
       + 'WhatsApp/Tel: ' + (d.phone || '-') + '\n'
-      + 'Motivo: ' + (d.note || '-');
+      + 'Motivo: ' + (d.note || '-')
+      + (d.topic ? ('\nSección de interés: ' + d.topic) : '');
     CalendarApp.getCalendarById(RACHEL_CAL).createEvent(
       BOOKING_PREFIX + d.name, start, end,
       { description: desc, guests: d.email, sendInvites: true }

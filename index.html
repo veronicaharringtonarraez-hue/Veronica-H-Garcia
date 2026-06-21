@@ -1537,7 +1537,7 @@ class Component extends DCLogic {
     const back = host.querySelector('[data-back]');
     if (back) back.onclick = () => { const tp = TOPICS[key]; if (tp.parent) this.openTopic(tp.parent); else if (tp.backPage) this.goPage(tp.backPage); else this.goPage('inicio', 'wellness'); };
     host.querySelectorAll('[data-go]').forEach((c) => { c.onclick = () => this.openTopic(c.getAttribute('data-go')); });
-    const book = host.querySelector('[data-book]'); if (book) book.onclick = () => this.openBooking();
+    const book = host.querySelector('[data-book]'); if (book) book.onclick = () => this.openBooking(key);
     const yt = host.querySelector('[data-yt-btn]'); if (yt) yt.onclick = () => { const u = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
     const sp = host.querySelector('[data-sp-btn]'); if (sp) sp.onclick = () => { const u = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
     this._showPage('tema');
@@ -1796,13 +1796,32 @@ class Component extends DCLogic {
   }
 
   // ---------- agendar consulta (reservas reales vía Google Apps Script) ----------
-  openBooking = () => {
+  openBooking = (ctx) => {
+    this._bookingTopic = (typeof ctx === 'string' && TOPICS[ctx]) ? ctx : null;
     this._localMode = !BOOKING_API;
     this._ensureBookingUI();
     this._bkOverlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     this._loadSlots();
   };
+
+  // Pista (frase/afirmación) según la sección desde la que se agenda.
+  // En temas sensibles la pista es discreta (sin nombrar la sección).
+  _topicHint(key) {
+    const d = TOPICS[key]; if (!d) return '';
+    const discreet = {
+      'adicciones': 'Busco apoyo para recuperar el control de algo que me sobrepasa.',
+      'violencia': 'Estoy viviendo una situación que me hace sentir inseguro y quiero hablarlo.',
+      'violencia-pareja': 'Mi relación me está haciendo sentir con miedo y necesito orientación.',
+      'violencia-familiar': 'En mi entorno cercano vivo situaciones que me lastiman.',
+      'violencia-psicologica': 'Me siento constantemente menospreciado y quiero recuperar mi claridad.',
+      'violencia-sexual': 'Viví una experiencia muy difícil y necesito un espacio seguro para sanar.',
+      'violencia-laboral': 'Mi ambiente de trabajo está afectando mi bienestar.',
+      'violencia-digital': 'Estoy viviendo acoso o amenazas en línea y necesito apoyo.'
+    };
+    if (discreet[key]) return discreet[key];
+    return d.hint || ('Me interesa trabajar: ' + d.title + (d.tag ? (' — «' + d.tag + '».') : '.'));
+  }
 
   _closeBooking = () => {
     if (this._bkOverlay) this._bkOverlay.style.display = 'none';
@@ -1907,8 +1926,10 @@ class Component extends DCLogic {
 
   _whatsappBook(iso) {
     const when = new Date(iso).toLocaleString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: 'America/Costa_Rica' });
-    const msg = encodeURIComponent('Hola Verónica 👋, me gustaría agendar una sesión de 1 hora el ' + when + '. ¿Está disponible ese horario?');
-    window.open('https://wa.me/50670773517?text=' + msg, '_blank', 'noopener');
+    let txt = 'Hola Verónica 👋, me gustaría agendar una sesión de 1 hora el ' + when + '.';
+    if (this._bookingTopic) { const hint = this._topicHint(this._bookingTopic); if (hint) txt += ' ' + hint; }
+    txt += ' ¿Está disponible ese horario?';
+    window.open('https://wa.me/50670773517?text=' + encodeURIComponent(txt), '_blank', 'noopener');
   }
 
   _renderDays() {
@@ -1938,13 +1959,14 @@ class Component extends DCLogic {
 
   _renderForm(iso) {
     const when = new Date(iso).toLocaleString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: 'America/Costa_Rica' });
+    const noteVal = this._bookingTopic ? this._topicHint(this._bookingTopic) : '';
     this._bkBody.innerHTML =
       '<button class="bk-back">← Cambiar horario</button>'
       + '<div class="bk-when">' + when + ' · 1 hora</div>'
       + '<label class="bk-l">Nombre<input class="bk-i" id="bk-name" autocomplete="name"></label>'
       + '<label class="bk-l">Correo<input class="bk-i" id="bk-email" type="email" autocomplete="email"></label>'
       + '<label class="bk-l">WhatsApp / teléfono<input class="bk-i" id="bk-phone" autocomplete="tel"></label>'
-      + '<label class="bk-l">Motivo (opcional)<textarea class="bk-i" id="bk-note" rows="2"></textarea></label>'
+      + '<label class="bk-l">Motivo (opcional)<textarea class="bk-i" id="bk-note" rows="2">' + noteVal + '</textarea></label>'
       + '<button class="bk-confirm">Confirmar cita</button>'
       + '<div class="bk-err"></div>';
     this._bkBody.querySelector('.bk-back').addEventListener('click', () => this._renderDays());
@@ -1962,7 +1984,7 @@ class Component extends DCLogic {
       const r = await fetch(BOOKING_API, {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify({ action: 'book', start: iso, name: name, email: email, phone: phone, note: note })
+        body: JSON.stringify({ action: 'book', start: iso, name: name, email: email, phone: phone, note: note, topic: this._bookingTopic || '' })
       });
       const data = await r.json();
       if (data.ok) {
