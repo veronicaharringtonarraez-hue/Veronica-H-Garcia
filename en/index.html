@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verónica H. Garcia — Psychology · Operations · PM</title>
+<meta name="description" content="An immersive personal brand platform blending psychology, wellbeing, mindfulness, AI, learning, and human-centered leadership.">
+<meta property="og:title" content="Verónica H. Garcia">
+<meta property="og:description" content="Psychology, wellbeing, mindfulness, AI, learning, and human-centered leadership.">
+<meta property="og:image" content="../assets/veronica.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#0D1B2A">
+<style>
+  .lang-menu { position:fixed; z-index:300; display:none; background:#0f2138; border:1px solid rgba(212,160,23,.35); border-radius:12px; padding:6px; box-shadow:0 18px 50px rgba(0,0,0,.5); min-width:190px; max-height:70vh; overflow:auto; }
+  .lang-menu button { display:block; width:100%; text-align:left; background:transparent; border:none; color:#FAF8F5; font:14px/1 Manrope,system-ui,sans-serif; padding:10px 12px; border-radius:8px; cursor:pointer; }
+  .lang-menu button:hover:not(:disabled) { background:rgba(212,160,23,.15); }
+  .lang-menu button.on { color:#D4A017; font-weight:600; }
+  .lang-menu button:disabled { color:rgba(250,248,245,.4); cursor:default; }
+</style>
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html{ scroll-behavior:smooth; }
+    body{ background:#0D1B2A; font-family:'Manrope',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+    ::selection{ background:rgba(212,160,23,0.28); color:#FAF8F5; }
+    ::-webkit-scrollbar{ height:8px; width:10px; }
+    ::-webkit-scrollbar-track{ background:rgba(13,27,42,0.4); }
+    ::-webkit-scrollbar-thumb{ background:rgba(212,160,23,0.35); border-radius:8px; }
+    @keyframes auroraDrift{ 0%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(6%,-4%) scale(1.18); } 100%{ transform:translate(0,0) scale(1); } }
+    @keyframes auroraDrift2{ 0%{ transform:translate(0,0) scale(1.1); } 50%{ transform:translate(-7%,5%) scale(0.95); } 100%{ transform:translate(0,0) scale(1.1); } }
+    @keyframes owlBreathe{ 0%,100%{ transform:scale(1) translateY(0); } 50%{ transform:scale(1.035) translateY(-2px); } }
+    @keyframes owlBlink{ 0%,92%,100%{ transform:scaleY(1); } 95%,97%{ transform:scaleY(0.08); } }
+    @keyframes glowPulse{ 0%,100%{ opacity:0.5; } 50%{ opacity:0.95; } }
+    @keyframes floatBob{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-9px); } }
+    @keyframes scrollDot{ 0%{ transform:translateY(0); opacity:0; } 30%{ opacity:1; } 80%{ transform:translateY(14px); opacity:0; } 100%{ opacity:0; } }
+    @keyframes shimmer{ 0%{ background-position:-200% 0; } 100%{ background-position:200% 0; } }
+    @keyframes bgFloat{ 0%,100%{ transform:scale(1.02) translate(0,0); } 50%{ transform:scale(1.1) translate(-1.5%,1.5%); } }
+    @keyframes nebA{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(9%,7%) scale(1.28); } }
+    @keyframes nebB{ 0%,100%{ transform:translate(0,0) scale(1.12); } 50%{ transform:translate(-10%,-6%) scale(0.9); } }
+    @keyframes nebC{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(6%,-9%) scale(1.22); } }
+
+    /* ===================== RESPONSIVE (computadora · tablet · celular) ===================== */
+    /* Hero: el nombre+lema ocupan la columna izquierda; el retrato abarca ambas filas (escritorio) */
+    .r-herogrid{ grid-template-areas:"head media" "rest media" !important; row-gap:0 !important; column-gap:56px !important; }
+    .r-herohead{ grid-area:head; }
+    .r-heromedia{ grid-area:media; }
+    .r-herorest{ grid-area:rest; }
+    /* TABLET y pantallas medianas (≤1024px) */
+    @media (max-width:1024px){
+      section{ padding-left:32px !important; padding-right:32px !important; }
+      .r-herogrid{ grid-template-columns:1fr !important; grid-template-areas:"head" "rest" "media" !important; row-gap:30px !important; column-gap:0 !important; max-width:600px !important; }
+      .r-grid3{ grid-template-columns:repeat(2,1fr) !important; }
+      .r-grid6{ grid-template-columns:repeat(3,1fr) !important; }
+    }
+    /* CELULAR (≤680px) — foto más pequeña, 50/50 con el nombre y el lema */
+    @media (max-width:680px){
+      section{ padding-left:20px !important; padding-right:20px !important; }
+      .r-nav{ flex-wrap:wrap !important; padding:12px 16px !important; }
+      .r-navlinks{ width:100% !important; gap:18px !important; overflow-x:auto !important; justify-content:flex-start !important; padding-top:10px !important; }
+      .r-navlinks a{ font-size:13px !important; white-space:nowrap !important; flex:0 0 auto !important; }
+      .r-navlinks button{ padding:9px 16px !important; font-size:12.5px !important; flex:0 0 auto !important; }
+      .r-herogrid{ grid-template-columns:1.05fr 0.95fr !important;
+        grid-template-areas:"head media" "rest rest" !important;
+        column-gap:16px !important; row-gap:18px !important; align-items:center !important;
+        padding-left:20px !important; padding-right:20px !important; }
+      .r-herobadge{ display:none !important; }
+      .r-heroname{ font-size:30px !important; line-height:1.02 !important; margin-bottom:12px !important; }
+      .r-herolema{ font-size:14px !important; margin-bottom:0 !important; }
+      .r-heroportrait{ width:100% !important; }
+      .r-heromedia{ flex-direction:column !important; }
+      .r-owlbadge{ position:static !important; bottom:auto !important; right:auto !important; margin-top:14px !important; }
+      .r-herovalues{ flex-wrap:wrap !important; gap:8px 14px !important; margin-top:28px !important; }
+      .r-band{ grid-template-columns:1fr !important; gap:24px !important; }
+      .r-band > div{ border-left:none !important; border-right:none !important; }
+      .r-grid3{ grid-template-columns:1fr !important; }
+      .r-grid6{ grid-template-columns:repeat(2,1fr) !important; }
+      .r-rail{ padding-left:20px !important; padding-right:20px !important; }
+    }
+    /* CELULAR pequeño (≤400px) */
+    @media (max-width:400px){
+      .r-navlinks{ gap:14px !important; }
+      .r-grid6{ grid-template-columns:repeat(2,1fr) !important; }
+    }
+  </style>
+</helmet>
+
+<div style="position:relative; background:#0D1B2A; color:#FAF8F5; overflow-x:hidden; font-family:'Manrope',sans-serif;">
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="r-nav" style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; backdrop-filter:blur(18px) saturate(1.2); -webkit-backdrop-filter:blur(18px) saturate(1.2); background:linear-gradient(180deg,rgba(13,27,42,0.72),rgba(13,27,42,0.28)); border-bottom:1px solid rgba(212,160,23,0.12);">
+    <div style="display:flex; align-items:center; gap:13px; cursor:pointer;" onClick="{{ goInicio }}">
+      <svg viewBox="0 0 120 120" width="34" height="34" aria-hidden="true">
+        <g fill="none" stroke="#D4A017" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60 16 C32 16 23 40 25 63 C27 92 44 104 60 104 C76 104 93 92 95 63 C97 40 88 16 60 16 Z"></path>
+          <path d="M31 27 L42 41"></path>
+          <path d="M89 27 L78 41"></path>
+          <path d="M60 42 C49 42 43 50 43 60"></path>
+          <path d="M60 42 C71 42 77 50 77 60"></path>
+          <circle cx="43" cy="61" r="11"></circle>
+          <circle cx="77" cy="61" r="11"></circle>
+        </g>
+        <path d="M60 66 L55 76 L65 76 Z" fill="#D4A017"></path>
+        <circle cx="43" cy="61" r="4.4" fill="#D4A017"></circle>
+        <circle cx="77" cy="61" r="4.4" fill="#D4A017"></circle>
+      </svg>
+      <div style="display:flex; flex-direction:column; line-height:1.05;">
+        <span style="font-family:'Spectral',serif; font-size:17px; font-weight:500; letter-spacing:0.02em; color:#FAF8F5;">Verónica H. Garcia</span>
+        <span style="font-size:9.5px; letter-spacing:0.34em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600; margin-top:2px; white-space:nowrap;">Psychology · Operations · PM</span>
+      </div>
+    </div>
+    <div class="r-navlinks" style="display:flex; align-items:center; gap:26px;">
+      <a data-nav="inicio" style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goInicio }}">Home</a>
+      <a data-nav="about" style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goAbout }}">About</a>
+      <a data-nav="servicios" style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goServices }}">Services</a>
+      <a data-nav="empresas" style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goEmpresas }}">Companies</a>
+      <button style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.02em; color:#0D1B2A; background:#D4A017; border:none; padding:10px 20px; border-radius:999px; cursor:pointer; box-shadow:0 6px 22px rgba(212,160,23,0.32); transition:transform .25s, box-shadow .25s;" style-hover="transform:translateY(-2px); box-shadow:0 10px 30px rgba(212,160,23,0.45);" onClick="{{ openBooking }}">Book</button>
+    </div>
+  </nav>
+
+  <div class="pg" data-page="inicio">
+  <!-- ===================== HERO ===================== -->
+  <section style="position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden;">
+    <!-- living nebula background -->
+    <div style="position:absolute; inset:-8%; background-image:url('../assets/nebula-bg.png'); background-size:cover; background-position:50% center; animation:bgFloat 36s ease-in-out infinite;"></div>
+    <!-- drifting aurora color fields (each color moves independently) -->
+    <div style="position:absolute; inset:-25%; mix-blend-mode:screen; pointer-events:none; background:radial-gradient(36% 30% at 32% 30%, rgba(70,160,220,0.55), transparent 70%); filter:blur(34px); animation:nebA 26s ease-in-out infinite;"></div>
+    <div style="position:absolute; inset:-25%; mix-blend-mode:screen; pointer-events:none; background:radial-gradient(32% 26% at 60% 42%, rgba(212,160,23,0.42), transparent 68%); filter:blur(40px); animation:nebB 33s ease-in-out infinite;"></div>
+    <div style="position:absolute; inset:-25%; mix-blend-mode:screen; pointer-events:none; background:radial-gradient(40% 34% at 48% 72%, rgba(96,186,236,0.4), transparent 70%); filter:blur(44px); animation:nebC 22s ease-in-out infinite;"></div>
+    <div style="position:absolute; inset:-25%; mix-blend-mode:screen; pointer-events:none; background:radial-gradient(28% 24% at 74% 64%, rgba(230,178,60,0.3), transparent 70%); filter:blur(38px); animation:nebA 29s ease-in-out infinite reverse;"></div>
+    <!-- legibility veil -->
+    <div style="position:absolute; inset:0; background:linear-gradient(102deg, rgba(7,15,27,0.93) 0%, rgba(8,17,31,0.76) 35%, rgba(10,21,35,0.42) 66%, rgba(10,21,35,0.56) 100%);"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(9,19,33,0.42) 0%, transparent 24%, transparent 70%, #0b1726 100%);"></div>
+    <div style="position:absolute; inset:0; pointer-events:none; mix-blend-mode:screen; background:radial-gradient(30% 42% at 58% 44%, rgba(212,160,23,0.16), transparent 72%); animation:glowPulse 9s ease-in-out infinite;"></div>
+    <canvas ref="{{ canvasRef }}" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none; opacity:0.9;"></canvas>
+    <!-- faint psi monogram -->
+    <div style="position:absolute; right:6%; top:50%; transform:translateY(-50%); font-family:'Spectral',serif; font-size:46vh; line-height:1; color:rgba(212,160,23,0.045); pointer-events:none; user-select:none;">Ψ</div>
+
+    <div class="r-herogrid" style="position:relative; z-index:5; width:100%; max-width:1280px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;">
+      <!-- left: copy -->
+      <div class="r-herohead">
+        <div class="r-herobadge" style="display:inline-flex; align-items:center; gap:10px; padding:7px 16px; border-radius:999px; border:1px solid rgba(212,160,23,0.3); background:rgba(212,160,23,0.06); margin-bottom:30px;">
+          <span style="width:6px; height:6px; border-radius:50%; background:#D4A017; box-shadow:0 0 10px #D4A017;"></span>
+          <span style="font-size:11.5px; letter-spacing:0.26em; text-transform:uppercase; color:rgba(234,219,200,0.92); font-weight:600;">Psychologist · Operations · Project Management</span>
+        </div>
+        <h1 class="r-heroname" style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(46px,6.4vw,90px); line-height:0.98; letter-spacing:-0.02em; color:#FAF8F5; margin-bottom:22px;">Verónica<br><span style="color:#EADBC8;">H. Garcia</span></h1>
+        <p class="r-herolema" style="font-family:'Spectral',serif; font-style:italic; font-weight:300; font-size:clamp(20px,2.3vw,30px); color:#D4A017; letter-spacing:0.005em; margin-bottom:20px;">Bridging People, Processes &amp; Purpose</p>
+      </div>
+      <div class="r-herorest">
+        <p style="font-size:clamp(15px,1.25vw,18px); line-height:1.65; color:rgba(250,248,245,0.74); max-width:480px; margin-bottom:38px;">I connect people, processes and purpose to create meaningful impact and sustainable results. Clinical psychology with the discipline of operations and human leadership.</p>
+        <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+          <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:#D4A017; border:none; padding:15px 30px; border-radius:999px; cursor:pointer; box-shadow:0 10px 34px rgba(212,160,23,0.36); transition:transform .3s, box-shadow .3s;" style-hover="transform:translateY(-3px); box-shadow:0 16px 44px rgba(212,160,23,0.5);" onClick="{{ openBooking }}">Book a consultation</button>
+          <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.22); padding:15px 28px; border-radius:999px; cursor:pointer; backdrop-filter:blur(8px); transition:background .3s, border-color .3s, transform .3s;" style-hover="background:rgba(250,248,245,0.1); border-color:rgba(250,248,245,0.4); transform:translateY(-3px);" onClick="{{ goWellness }}">Explore resources</button>
+        </div>
+        <div class="r-herovalues" style="display:flex; align-items:center; gap:26px; margin-top:48px;">
+          <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Clarity</span>
+          <span style="width:5px; height:5px; border-radius:50%; background:rgba(234,219,200,0.4);"></span>
+          <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Compassion</span>
+          <span style="width:5px; height:5px; border-radius:50%; background:rgba(234,219,200,0.4);"></span>
+          <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Impact</span>
+        </div>
+      </div>
+      <!-- right: portrait + owl -->
+      <div class="r-heromedia" style="position:relative; display:flex; justify-content:center; align-items:center;">
+        <div style="position:absolute; width:118%; height:118%; border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.16), transparent 60%); filter:blur(20px);"></div>
+        <div class="r-heroportrait" style="position:relative; width:min(380px,80%); aspect-ratio:4/5; border-radius:26px; padding:1px; background:linear-gradient(160deg, rgba(212,160,23,0.55), rgba(234,219,200,0.12) 40%, rgba(212,160,23,0.2)); box-shadow:0 40px 90px rgba(0,0,0,0.5);">
+          <div style="width:100%; height:100%; border-radius:25px; overflow:hidden; background:linear-gradient(165deg,#13294a,#0d1b2a);">
+            <img src="../assets/veronica.jpg" alt="Verónica H. Garcia" style="width:100%; height:100%; object-fit:cover; object-position:50% 26%; display:block;">
+          </div>
+        </div>
+        <!-- floating owl glass badge -->
+        <div class="r-owlbadge" style="position:absolute; bottom:-22px; right:-6px; display:flex; align-items:center; gap:12px; padding:12px 18px 12px 14px; border-radius:18px; background:rgba(13,27,42,0.55); border:1px solid rgba(212,160,23,0.28); backdrop-filter:blur(14px); box-shadow:0 18px 44px rgba(0,0,0,0.45); animation:floatBob 6s ease-in-out infinite;">
+          <span style="width:44px; height:44px; border-radius:50%; overflow:hidden; flex:0 0 auto; border:2px solid rgba(212,160,23,0.6); box-shadow:0 4px 14px rgba(0,0,0,0.4); animation:owlBreathe 5s ease-in-out infinite; transform-origin:center;"><img src="../assets/owl.jpg" alt="Lechuza" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
+          <div style="line-height:1.2;">
+            <div style="font-family:'Spectral',serif; font-size:14px; color:#FAF8F5;">Costa Rica</div>
+            <div style="font-size:10.5px; letter-spacing:0.08em; color:rgba(234,219,200,0.7);">ES + EN · UTC−6</div>
+          </div>
+          <button data-langbtn onClick="{{ openLang }}" title="Cambiar idioma / Change language" class="notranslate" translate="no" style="display:flex; align-items:center; gap:5px; flex:0 0 auto; background:rgba(212,160,23,0.16); border:1px solid rgba(212,160,23,0.45); color:#FAF8F5; font-family:'Manrope',sans-serif; font-size:11px; font-weight:600; padding:6px 9px; border-radius:999px; cursor:pointer;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"></path></svg>
+            Language</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- scroll cue -->
+    <div style="position:absolute; bottom:26px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; z-index:5;">
+      <div style="width:24px; height:38px; border:1.5px solid rgba(234,219,200,0.4); border-radius:14px; display:flex; justify-content:center; padding-top:7px;">
+        <div style="width:4px; height:8px; border-radius:4px; background:#D4A017; animation:scrollDot 2.1s ease-in-out infinite;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO (lo primero despues de la portada) ===================== -->
+  <section id="contact" style="position:relative; background:#0D1B2A; padding:92px 48px; overflow:hidden;">
+    <div style="position:absolute; right:-8vw; top:-6vw; width:40vw; height:40vw; border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.12), transparent 62%); filter:blur(40px); pointer-events:none;"></div>
+    <div style="position:relative; max-width:900px; margin:0 auto; text-align:center;">
+      <svg viewBox="0 0 120 120" width="52" height="52" style="margin-bottom:26px; animation:owlBreathe 5s ease-in-out infinite; transform-origin:center;" aria-hidden="true">
+        <g fill="none" stroke="#D4A017" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60 16 C32 16 23 40 25 63 C27 92 44 104 60 104 C76 104 93 92 95 63 C97 40 88 16 60 16 Z"></path>
+          <path d="M31 27 L42 41"></path><path d="M89 27 L78 41"></path>
+          <path d="M60 42 C49 42 43 50 43 60"></path><path d="M60 42 C71 42 77 50 77 60"></path>
+          <circle cx="43" cy="61" r="11"></circle><circle cx="77" cy="61" r="11"></circle>
+        </g>
+        <path d="M60 66 L55 76 L65 76 Z" fill="#D4A017"></path>
+        <circle cx="43" cy="61" r="4.4" fill="#D4A017"></circle><circle cx="77" cy="61" r="4.4" fill="#D4A017"></circle>
+      </svg>
+      <span style="display:block; font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600; margin-bottom:14px;">I am here for you</span>
+      <h2 style="font-family:'Spectral',serif; font-weight:300; font-size:clamp(34px,4.6vw,58px); line-height:1.08; letter-spacing:-0.015em; color:#FAF8F5; margin-bottom:18px;">Take the first step. Here, I listen.</h2>
+      <p style="font-size:17px; line-height:1.7; color:rgba(250,248,245,0.74); max-width:560px; margin:0 auto 40px;">What matters most to me is to listen to you and walk with you through your process of change. In a safe, non-judgmental space, I offer you tools to care for your well-being. Your story matters, and you deserve to feel that someone truly listens. Write to me — this is your space.</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:#D4A017; border:none; padding:16px 36px; border-radius:999px; cursor:pointer; box-shadow:0 12px 38px rgba(212,160,23,0.38); transition:transform .3s, box-shadow .3s;" style-hover="transform:translateY(-3px); box-shadow:0 18px 48px rgba(212,160,23,0.52);" onClick="{{ openBooking }}">Book a consultation</button>
+        <a href="https://wa.me/50670773517" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:rgba(37,211,102,0.12); border:1px solid rgba(37,211,102,0.45); padding:16px 28px; border-radius:999px; cursor:pointer; text-decoration:none; transition:all .3s;" style-hover="background:rgba(37,211,102,0.2); border-color:rgba(37,211,102,0.75);">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="#25D366" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+          Message me on WhatsApp</a>
+      </div>
+
+      <!-- contacto directo: teléfono (WhatsApp) + QR -->
+      <div style="margin:46px auto 0; max-width:540px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:30px;">
+        <a href="https://wa.me/50670773517" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:14px; text-decoration:none;">
+          <span style="width:50px; height:50px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 22px rgba(37,211,102,0.35); flex:0 0 auto;">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="#0D1B2A" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+          </span>
+          <span style="display:flex; flex-direction:column; line-height:1.25; text-align:left;">
+            <span style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Message me on WhatsApp</span>
+            <span style="font-family:'Spectral',serif; font-size:23px; color:#FAF8F5;">+506 7077-3517</span>
+          </span>
+        </a>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <div style="width:128px; height:128px; border-radius:16px; background:#FAF8F5; padding:9px; box-shadow:0 14px 36px rgba(0,0,0,0.4); border:1px solid rgba(212,160,23,0.3);">
+            <img src="../assets/whatsapp-qr.png" alt="Código QR de WhatsApp de Verónica H. Garcia" style="width:100%; height:100%; display:block;">
+          </div>
+          <span style="font-size:11.5px; letter-spacing:0.06em; color:rgba(250,248,245,0.55);">Scan me on WhatsApp</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WELLNESS CENTER (deep navy, contemplative) ===================== -->
+  <section id="wellness" style="position:relative; background:radial-gradient(120% 120% at 50% 20%, #102a45 0%, #0a1525 60%, #070f1c 100%); padding:120px 48px; overflow:hidden;">
+    <div style="position:absolute; width:50vw; height:50vw; left:50%; top:42%; transform:translate(-50%,-50%); border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.12), transparent 60%); filter:blur(30px); pointer-events:none;"></div>
+    <div style="position:relative; max-width:1080px; margin:0 auto; text-align:center;">
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s;">
+        <span style="font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Wellness Center</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:300; font-size:clamp(32px,4.4vw,56px); line-height:1.1; letter-spacing:-0.01em; margin:18px auto 16px; color:#FAF8F5; max-width:680px;">A change of pace. Here the site breathes with you.</h2>
+        <p style="font-size:16.5px; line-height:1.7; color:rgba(250,248,245,0.62); max-width:520px; margin:0 auto 50px;">Choose a pattern and let the circle guide you. Inhale, hold, exhale. No rush.</p>
+      </div>
+
+      <!-- breathing orb -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:34px;">
+        <div style="position:relative; width:300px; height:300px; display:flex; align-items:center; justify-content:center;">
+          <div style="position:absolute; inset:0; border-radius:50%; border:1px solid rgba(212,160,23,0.18);"></div>
+          <div style="position:absolute; inset:30px; border-radius:50%; border:1px solid rgba(212,160,23,0.12);"></div>
+          <div ref="{{ orbRef }}" style="width:170px; height:170px; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(212,160,23,0.9), rgba(212,160,23,0.35) 55%, rgba(212,160,23,0.08) 100%); box-shadow:0 0 60px rgba(212,160,23,0.4), inset 0 0 40px rgba(255,255,255,0.15); transform:scale(0.62); transition:none; display:flex; align-items:center; justify-content:center;">
+            <span ref="{{ orbCountRef }}" style="font-family:'Spectral',serif; font-size:46px; color:#0D1B2A; font-weight:500;"></span>
+          </div>
+        </div>
+        <div ref="{{ orbLabelRef }}" style="font-family:'Spectral',serif; font-style:italic; font-size:26px; color:#EADBC8; min-height:34px;">Whenever you are ready</div>
+
+        <!-- pattern selector -->
+        <div ref="{{ patternsRef }}" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+          <button data-pat="4-4-4" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:#0D1B2A; background:#D4A017; border:1px solid #D4A017; padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 4 · 4</button>
+          <button data-pat="4-7-8" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 7 · 8</button>
+          <button data-pat="Box" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">Box breathing</button>
+        </div>
+
+        <button onClick="{{ toggleBreath }}" style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:transparent; border:1px solid rgba(212,160,23,0.5); padding:14px 40px; border-radius:999px; cursor:pointer; transition:all .3s; letter-spacing:0.02em;" style-hover="background:rgba(212,160,23,0.12); border-color:#D4A017;"><span ref="{{ breathBtnRef }}">Start</span></button>
+
+        <p style="font-size:12.5px; color:rgba(250,248,245,0.4); letter-spacing:0.06em; margin-top:6px;">The guided meditations will be narrated by Verónica.</p>
+      </div>
+
+      <!-- video destacado del Wellness Center (lo inyecta el JS si hay YOUTUBE.featured) -->
+      <div ref="{{ ytFeaturedRef }}" style="display:none; margin-top:64px;"></div>
+
+      <!-- wellness category teasers -->
+      <div class="r-grid6" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:12px; margin-top:70px;">
+        <div data-yt="ansiedad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Anxiety</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="autoestima" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Self-esteem</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="dormir" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Better sleep</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="relajacion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relaxation</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="claridad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Mental clarity</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resilience</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="adicciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Managing addiction</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="relaciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Interpersonal relationships</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="estancamiento" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Feeling stuck</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="equilibrio" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Balance &amp; self-demand</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="duelo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Grief and loss</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="vocacional" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Career guidance</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="estres" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Stress and its levels</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="culpa" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Guilt</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="habitos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Habits and goals</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="empleo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Job searching</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="violencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Situations of violence</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+      </div>
+      <div style="margin-top:34px; text-align:center;">
+        <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#FF4D4D" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31.2 31.2 0 000 12a31.2 31.2 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31.2 31.2 0 0024 12a31.2 31.2 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"></path></svg>
+          View my YouTube channel</button>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <div class="pg" data-page="about" style="display:none;">
+  <!-- ===================== ANCHOR BAND ===================== -->
+  <section style="position:relative; background:#0b1726; border-top:1px solid rgba(212,160,23,0.1); border-bottom:1px solid rgba(212,160,23,0.1); padding:96px 48px 54px;">
+    <div class="r-band" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; text-align:center;">
+      <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .8s, transform .8s;">
+        <div style="font-family:'Spectral',serif; font-style:italic; font-size:25px; color:#D4A017; margin-bottom:8px;">Clarity</div>
+        <div style="font-size:14px; color:rgba(250,248,245,0.6); letter-spacing:0.01em;">to plan</div>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .8s .12s, transform .8s .12s; border-left:1px solid rgba(234,219,200,0.12); border-right:1px solid rgba(234,219,200,0.12);">
+        <div style="font-family:'Spectral',serif; font-style:italic; font-size:25px; color:#D4A017; margin-bottom:8px;">Compassion</div>
+        <div style="font-size:14px; color:rgba(250,248,245,0.6); letter-spacing:0.01em;">to lead</div>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .8s .24s, transform .8s .24s;">
+        <div style="font-family:'Spectral',serif; font-style:italic; font-size:25px; color:#D4A017; margin-bottom:8px;">Impact</div>
+        <div style="font-size:14px; color:rgba(250,248,245,0.6); letter-spacing:0.01em;">that lasts</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTERSECTION (light) ===================== -->
+  <section id="about" style="position:relative; background:linear-gradient(180deg,#FAF8F5,#F3EEE6); color:#0D1B2A; padding:120px 48px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s; max-width:760px; margin-bottom:64px;">
+        <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#6B4E3D; font-weight:600;">The intersection that defines me</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,52px); line-height:1.08; letter-spacing:-0.015em; margin:18px 0 20px;">My difference is not being a psychologist.</h2>
+        <p style="font-size:18px; line-height:1.7; color:rgba(13,27,42,0.7); max-width:620px;">It is combining clinical psychology with operations, leadership and project management. That intersection understands the person behind the KPI — and builds human systems that actually deliver.</p>
+      </div>
+      <div class="r-grid3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+        <!-- pillar card -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">01</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Clinical psychology</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">A deep understanding of behavior, motivation and well-being.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .08s, transform .7s .08s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">02</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Human leadership</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Decisions that care for people without losing sight of the business.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .16s, transform .7s .16s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">03</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Operations</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Processes that work in practice, not only on paper.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .04s, transform .7s .04s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">04</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Project management</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Phased execution, clear milestones and real delivery.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .12s, transform .7s .12s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:30px 28px; box-shadow:0 2px 0 rgba(107,78,61,0.04);">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#6B4E3D;">05</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px;">Training</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Learning design that changes behavior, not only knowledge.</p>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .2s, transform .7s .2s; background:#0D1B2A; border:1px solid rgba(212,160,23,0.3); border-radius:20px; padding:30px 28px; color:#FAF8F5;">
+          <div style="width:42px; height:42px; border-radius:12px; background:rgba(212,160,23,0.16); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Spectral',serif; font-size:19px; color:#D4A017;">06</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin-bottom:9px; color:#FAF8F5;">Sustainable productivity</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(250,248,245,0.66);">Results without burning out the team — or yourself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VALORES (light) ===================== -->
+  <section style="position:relative; background:#FAF8F5; color:#0D1B2A; padding:112px 48px; overflow:hidden;">
+    <div style="position:absolute; left:-40px; top:60px; width:200px; height:300px; opacity:0.5; pointer-events:none;">
+      <svg viewBox="0 0 120 200" fill="none" stroke="#D4A017" stroke-width="1.1" stroke-linecap="round">
+        <path d="M70 4 C40 50 30 110 54 196"></path>
+        <path d="M56 40 C36 44 26 36 22 24 C40 22 52 30 56 40Z" fill="rgba(212,160,23,0.18)"></path>
+        <path d="M52 72 C32 76 22 68 18 56 C36 54 48 62 52 72Z" fill="rgba(212,160,23,0.18)"></path>
+        <path d="M52 104 C72 108 82 100 86 88 C68 86 56 94 52 104Z" fill="rgba(212,160,23,0.18)"></path>
+        <path d="M50 140 C30 144 20 136 16 124 C34 122 46 130 50 140Z" fill="rgba(212,160,23,0.18)"></path>
+      </svg>
+    </div>
+    <div style="position:relative; max-width:1180px; margin:0 auto; text-align:center;">
+      <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .8s, transform .8s; margin-bottom:60px;">
+        <svg viewBox="0 0 90 70" width="62" height="48" style="margin:0 auto 22px; display:block;" fill="none">
+          <path d="M24 18 A24 24 0 0 1 66 18" stroke="#D4A017" stroke-width="1.6" stroke-dasharray="1.6 5.4" stroke-linecap="round"></path>
+          <g stroke="#0D1B2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path d="M45 30 C42 25 33 25 31 31 C26 30 22 35 25 39 C22 42 24 48 29 47 C30 51 37 52 41 49 L45 49"></path>
+            <path d="M45 30 C48 25 57 25 59 31 C64 30 68 35 65 39 C68 42 66 48 61 47 C60 51 53 52 49 49 L45 49"></path>
+            <path d="M45 30 L45 49"></path>
+          </g>
+          <path d="M41 54 C36 54 32 51 31 46 C37 45 41 49 41 54Z" fill="#D4A017"></path>
+          <path d="M49 54 C54 54 58 51 59 46 C53 45 49 49 49 54Z" fill="#D4A017"></path>
+        </svg>
+        <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#6B4E3D; font-weight:600;">What sustains me</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,50px); line-height:1.08; letter-spacing:-0.015em; margin:16px 0 0;">Five values, in everything I do.</h2>
+      </div>
+      <div style="display:flex; justify-content:center; align-items:stretch; flex-wrap:wrap; gap:0;">
+        <!-- Empatía -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s, transform .6s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center; border-right:1px solid rgba(107,78,61,0.16);">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 19c-2.5-3.5-9-3-9 2 0 4 5 7 9 9.5 4-2.5 9-5.5 9-9.5 0-5-6.5-5.5-9-2Z"></path><path d="M11 30l5.5 5.5c.8.8 1.8 1.2 2.9 1.2H29c2.2 0 2.2-3.2 0-3.2h-6"></path><path d="M37 30l-5.5 5.5"></path></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Empathy</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">The person, before the role.</p>
+        </div>
+        <!-- Integridad -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s .07s, transform .6s .07s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center; border-right:1px solid rgba(107,78,61,0.16);">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v9c0 9-6 14.5-14 17.5C16 34.5 10 29 10 20v-9l14-5Z"></path><path d="M17.5 23l4.5 4.5 9-10"></path></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Integrity</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">What is public and private match.</p>
+        </div>
+        <!-- Compromiso -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s .14s, transform .6s .14s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center; border-right:1px solid rgba(107,78,61,0.16);">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="15"></circle><circle cx="24" cy="24" r="9"></circle><circle cx="24" cy="24" r="3" fill="#D4A017" stroke="none"></circle></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Commitment</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">Owning the outcome.</p>
+        </div>
+        <!-- Colaboración -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s .21s, transform .6s .21s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center; border-right:1px solid rgba(107,78,61,0.16);">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="19" cy="24" r="9"></circle><circle cx="29" cy="24" r="9"></circle></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Collaboration</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">Serious work is done as a team.</p>
+        </div>
+        <!-- Bienestar -->
+        <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .6s .28s, transform .6s .28s; flex:1 1 200px; max-width:230px; padding:14px 26px; display:flex; flex-direction:column; align-items:center;">
+          <div style="width:66px; height:66px; border-radius:50%; border:1px solid rgba(212,160,23,0.5); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#0D1B2A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 13c3.5 4.5 3.5 10 0 14.5-3.5-4.5-3.5-10 0-14.5Z"></path><path d="M24 27.5c-4.5-2.5-10.5-1.5-14 2 2.5 4.5 8.5 6.5 14 4.5"></path><path d="M24 27.5c4.5-2.5 10.5-1.5 14 2-2.5 4.5-8.5 6.5-14 4.5"></path><path d="M24 32v3.5"></path></svg>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; letter-spacing:0.02em; margin-bottom:9px;">Well-being</h3>
+          <p style="font-size:13px; line-height:1.5; color:rgba(13,27,42,0.6);">Results, never at the cost of the person.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE (dark, immersive) ===================== -->
+  <section style="position:relative; background:radial-gradient(120% 90% at 50% 0%, #14304f 0%, #0D1B2A 55%); padding:110px 0 120px;">
+    <div style="max-width:1180px; margin:0 auto; padding:0 48px;">
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s; max-width:680px; margin-bottom:18px;">
+        <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">About me · Life line</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,50px); line-height:1.08; letter-spacing:-0.015em; margin:16px 0 14px; color:#FAF8F5;">A path that connects disciplines.</h2>
+        <p style="font-size:16.5px; line-height:1.65; color:rgba(250,248,245,0.66);">From service to strategy. Each stage added a different way of understanding people and systems. Tap a stage to open it.</p>
+      </div>
+    </div>
+    <!-- horizontal rail -->
+    <div ref="{{ timelineRef }}" class="r-rail" style="display:flex; gap:18px; overflow-x:auto; padding:40px 48px 30px; scroll-snap-type:x proximity;">
+      <!-- stage template repeated -->
+      <div data-stage="0" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(212,160,23,0.4); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:#D4A017; letter-spacing:0.1em; margin-bottom:auto;">01</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:#D4A017; box-shadow:0 0 14px #D4A017; margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Service and volunteering</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:80px; opacity:1; overflow:hidden; transition:max-height .4s, opacity .4s;">The starting point: helping before having a degree to name it.</p>
+      </div>
+      <div data-stage="1" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">02</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Service mission</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Field work that taught me to listen to contexts, not only people.</p>
+      </div>
+      <div data-stage="2" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">03</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Training in psychology</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">A scientific foundation of behavior, motivation and well-being.</p>
+      </div>
+      <div data-stage="3" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">04</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Clinical care</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Individual support: anxiety, self-esteem and processes of change.</p>
+      </div>
+      <div data-stage="4" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">05</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">CAPSICOV</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Psychological care in a crisis context: caring at scale.</p>
+      </div>
+      <div data-stage="5" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">06</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Team leadership</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Decisions that care for people without losing the business.</p>
+      </div>
+      <div data-stage="6" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">07</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Operations coordination</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Processes that sustain the team and the results at once.</p>
+      </div>
+      <div data-stage="7" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">08</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Training programs</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Learning with a scientific basis and clear deliverables.</p>
+      </div>
+      <div data-stage="8" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">09</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Artificial intelligence</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">AI applied to productivity and critical thinking.</p>
+      </div>
+      <div data-stage="9" onClick="{{ pickStage }}" style="scroll-snap-align:center; cursor:pointer; flex:0 0 auto; width:230px; min-height:208px; border-radius:20px; padding:24px; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.1); backdrop-filter:blur(8px); transition:all .4s; display:flex; flex-direction:column;">
+        <div style="font-family:'Spectral',serif; font-size:14px; color:rgba(212,160,23,0.7); letter-spacing:0.1em; margin-bottom:auto;">10</div>
+        <div style="width:9px; height:9px; border-radius:50%; background:rgba(234,219,200,0.4); margin:18px 0;"></div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:19px; color:#FAF8F5; margin-bottom:10px;">Personal brand</h3>
+        <p data-desc style="font-size:13.5px; line-height:1.55; color:rgba(250,248,245,0.66); max-height:0; opacity:0; overflow:hidden; transition:max-height .4s, opacity .4s;">Connecting it all: people, processes and purpose.</p>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <div class="pg" data-page="servicios" style="display:none;">
+  <!-- ===================== SERVICES (beige light) ===================== -->
+  <section id="services" style="position:relative; background:linear-gradient(180deg,#EADBC8,#F3EEE6); color:#0D1B2A; padding:120px 48px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s; margin-bottom:56px; max-width:780px;">
+        <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#6B4E3D; font-weight:600;">My services</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,52px); line-height:1.08; letter-spacing:-0.015em; margin:18px 0 18px;">Psychology, leadership and human development.</h2>
+        <p style="font-size:18px; line-height:1.65; color:rgba(13,27,42,0.7);">I support people, families and organizations to build well-being, strengthen relationships and develop their full potential.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;">
+        <!-- 01 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">01</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Clinical psychology and emotional well-being</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Adolescents, adults, couples and families in processes of growth and emotional strengthening.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Emotional regulation</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Anxiety and stress</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Self-esteem</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Resilience</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Grief and loss</span>
+          </div>
+        </div>
+        <!-- 02 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .06s, transform .7s .06s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">02</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Crisis intervention</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Support in moments of high emotional load and changes that affect well-being.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Emotional crises</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Separation / divorce</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Acute stress</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Life changes</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Coping plans</span>
+          </div>
+        </div>
+        <!-- 03 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .12s, transform .7s .12s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">03</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Addiction and family recovery</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Support for people and families affected by addiction.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Education about addiction</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Codependency</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Healthy boundaries</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Support for family members</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Support networks</span>
+          </div>
+        </div>
+        <!-- 04 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">04</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Therapy for adolescents</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">A stage of emotional, social and academic change, accompanied closely.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Identity</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Self-esteem</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Emotional regulation</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Academic pressure</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Life project</span>
+          </div>
+        </div>
+        <!-- 05 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .06s, transform .7s .06s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">05</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Couples therapy</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Strengthening the bond, improving communication and facing challenges in a healthy way.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Communication</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Conflict resolution</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Rebuilding trust</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Emotional bond</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">New stages</span>
+          </div>
+        </div>
+        <!-- 06 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .12s, transform .7s .12s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">06</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Family therapy</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Improving coexistence and the well-being of the whole family system.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Family conflicts</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Communication</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Parenting</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Family dynamics</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Bonds</span>
+          </div>
+        </div>
+        <!-- 07 — differentiator, navy -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#0D1B2A; color:#FAF8F5; border-radius:22px; padding:32px 30px; border:1px solid rgba(212,160,23,0.34); display:flex; flex-direction:column; box-shadow:0 18px 44px rgba(13,27,42,0.18);">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+            <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017;">07</div>
+            <span style="width:24px; height:24px; border-radius:50%; overflow:hidden; border:1.5px solid rgba(212,160,23,0.6);"><img src="../assets/owl.jpg" alt="" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
+          </div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px; color:#FAF8F5;">Psychology applied to leadership and professional life</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(250,248,245,0.66); margin-bottom:20px;">The unique intersection between psychology, leadership, operations and human development.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Burnout prevention</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Workplace well-being</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Emotional intelligence</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Liderazgo humano</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Change management</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(250,248,245,0.06); color:rgba(250,248,245,0.82); border:1px solid rgba(212,160,23,0.3);">Sustainable productivity</span>
+          </div>
+        </div>
+        <!-- 08 -->
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s .06s, transform .7s .06s; background:#FFFFFF; border-radius:22px; padding:32px 30px; border:1px solid rgba(107,78,61,0.1); display:flex; flex-direction:column;">
+          <div style="font-family:'Spectral',serif; font-size:13px; letter-spacing:0.14em; color:#D4A017; margin-bottom:14px;">08</div>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; line-height:1.2; margin-bottom:10px;">Training and human development</h3>
+          <p style="font-size:14px; line-height:1.55; color:rgba(13,27,42,0.6); margin-bottom:20px;">Workshops for companies, institutions and groups.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Emotional intelligence</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Leadership</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Assertive communication</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Stress management</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Teamwork</span>
+            <span style="font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(212,160,23,0.1); color:#6B4E3D; border:1px solid rgba(212,160,23,0.22);">Applied AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <div class="pg" data-page="empresas" style="display:none;">
+  <!-- ===================== EMPRESAS / TALLERES (light) ===================== -->
+  <section id="empresas" style="position:relative; background:linear-gradient(180deg,#FAF8F5,#F3EEE6); color:#0D1B2A; padding:120px 48px; overflow:hidden;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s; max-width:800px; margin-bottom:50px;">
+        <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#6B4E3D; font-weight:600;">For companies and organizations</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(32px,4vw,52px); line-height:1.08; letter-spacing:-0.015em; margin:18px 0 18px;">Workshops that care for your team and lift results.</h2>
+        <p style="font-size:18px; line-height:1.65; color:rgba(13,27,42,0.7);">I design and deliver training and workshops for companies, institutions and teams, combining psychology, human leadership and sustainable productivity. Practical, science-based learning that transforms behavior — not just delivers information.</p>
+      </div>
+      <div class="r-grid3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:28px 26px; box-shadow:0 2px 0 rgba(107,78,61,0.04);"><h3 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin-bottom:9px;">Emotional intelligence</h3><p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Self-awareness and regulation to make better decisions as a team.</p></div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:28px 26px; box-shadow:0 2px 0 rgba(107,78,61,0.04);"><h3 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin-bottom:9px;">Human leadership</h3><p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Leading while caring for people without losing sight of results.</p></div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:28px 26px; box-shadow:0 2px 0 rgba(107,78,61,0.04);"><h3 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin-bottom:9px;">Assertive communication</h3><p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Clear conversations, healthy boundaries and stronger working relationships.</p></div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:28px 26px; box-shadow:0 2px 0 rgba(107,78,61,0.04);"><h3 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin-bottom:9px;">Burnout prevention</h3><p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Sustainable workloads and workplace well-being for teams that last.</p></div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:28px 26px; box-shadow:0 2px 0 rgba(107,78,61,0.04);"><h3 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin-bottom:9px;">Stress management</h3><p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Practical tools to sustain everyday pressure.</p></div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:28px 26px; box-shadow:0 2px 0 rgba(107,78,61,0.04);"><h3 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin-bottom:9px;">Teamwork</h3><p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Trust, collaboration and a shared purpose that unites.</p></div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:28px 26px; box-shadow:0 2px 0 rgba(107,78,61,0.04);"><h3 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin-bottom:9px;">Change management</h3><p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Accompanying transitions while caring for people in the process.</p></div>
+        <div data-reveal style="opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; background:#FFFFFF; border:1px solid rgba(107,78,61,0.1); border-radius:20px; padding:28px 26px; box-shadow:0 2px 0 rgba(107,78,61,0.04);"><h3 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin-bottom:9px;">Applied AI a la productividad</h3><p style="font-size:14.5px; line-height:1.6; color:rgba(13,27,42,0.62);">Technology with critical thinking to work better.</p></div>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .7s, transform .7s; margin-top:46px; display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+        <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:#D4A017; border:none; padding:15px 32px; border-radius:999px; cursor:pointer; box-shadow:0 12px 38px rgba(212,160,23,0.28); transition:transform .3s, box-shadow .3s;" style-hover="transform:translateY(-3px); box-shadow:0 18px 48px rgba(212,160,23,0.4);" onClick="{{ openBooking }}">Book a call</button>
+        <a href="https://wa.me/50670773517?text=Hola%20Ver%C3%B3nica%2C%20me%20interesa%20un%20taller%20para%20mi%20empresa%20u%20organizaci%C3%B3n." target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:rgba(37,211,102,0.14); border:1px solid rgba(37,211,102,0.5); padding:15px 28px; border-radius:999px; text-decoration:none; transition:all .3s;" style-hover="background:rgba(37,211,102,0.24);">Request a proposal on WhatsApp</a>
+      </div>
+      <div data-yt="liderazgo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .7s, transform .7s; margin-top:30px; background:#0D1B2A; border:1px solid rgba(212,160,23,0.3); border-radius:22px; padding:32px 30px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:22px; flex-wrap:wrap;" style-hover="border-color:rgba(212,160,23,0.6);">
+        <div style="max-width:640px;">
+          <span style="font-size:12px; letter-spacing:0.26em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Leadership preparation</span>
+          <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:23px; color:#FAF8F5; margin:10px 0 8px;">Soft skills to win people over and lead effective teams</h3>
+          <p style="font-size:14.5px; line-height:1.6; color:rgba(250,248,245,0.66);">A practical guide for those who lead or are preparing to: trust, communication, teams and the emotional intelligence that holds it all together.</p>
+        </div>
+        <span style="font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#0D1B2A; background:#D4A017; padding:13px 24px; border-radius:999px; white-space:nowrap;">Open guide →</span>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- ===================== TEMA (detalle de bienestar, dinámico) ===================== -->
+  <div class="pg" data-page="tema" style="display:none;">
+    <section style="position:relative; background:radial-gradient(120% 120% at 50% 18%, #102a45 0%, #0a1525 60%, #070f1c 100%); color:#FAF8F5; padding:118px 24px 90px; min-height:100vh;">
+      <div ref="{{ temaRef }}" style="max-width:760px; margin:0 auto;"></div>
+    </section>
+  </div>
+
+  <!-- ===================== PIE / FOOTER ===================== -->
+  <section style="position:relative; background:#0D1B2A; padding:44px 48px 60px; border-top:1px solid rgba(250,248,245,0.1);">
+    <div style="max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <svg viewBox="0 0 120 120" width="26" height="26" aria-hidden="true">
+          <g fill="none" stroke="#D4A017" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 16 C32 16 23 40 25 63 C27 92 44 104 60 104 C76 104 93 92 95 63 C97 40 88 16 60 16 Z"></path>
+            <circle cx="43" cy="61" r="11"></circle><circle cx="77" cy="61" r="11"></circle>
+          </g>
+          <circle cx="43" cy="61" r="4.4" fill="#D4A017"></circle><circle cx="77" cy="61" r="4.4" fill="#D4A017"></circle>
+        </svg>
+        <span style="font-family:'Spectral',serif; font-size:15px; color:rgba(250,248,245,0.85);">Verónica H. Garcia</span>
+      </div>
+      <span style="font-size:12.5px; color:rgba(250,248,245,0.4); letter-spacing:0.04em;">People · Processes · Purpose — Costa Rica · ES + EN</span>
+    </div>
+  </section>
+
+  <!-- contenedor del modal de reservas (lo llena el JS) -->
+  <div ref="{{ bookingRef }}"></div>
+
+  <!-- ===================== FLOATING OWL ASSISTANT ===================== -->
+  <button onClick="{{ goWellness }}" title="Hola, soy tu guía. ¿Exploramos un ejercicio de respiración?" style="position:fixed; bottom:24px; right:24px; z-index:60; width:74px; height:74px; border-radius:50%; border:none; padding:0; cursor:pointer; background:transparent; animation:floatBob 6s ease-in-out infinite; transition:transform .3s;" style-hover="transform:scale(1.08);">
+    <span style="position:absolute; inset:-8px; border-radius:50%; border:1.5px solid rgba(212,160,23,0.5); animation:glowPulse 3.4s ease-in-out infinite;"></span>
+    <span style="position:absolute; inset:0; border-radius:50%; overflow:hidden; box-shadow:0 14px 32px rgba(0,0,0,0.55); border:2px solid rgba(212,160,23,0.7); display:block;"><img src="../assets/owl.jpg" alt="Asistente Lechuza" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
+    <span style="position:absolute; bottom:3px; right:3px; width:14px; height:14px; border-radius:50%; background:#1F8A5B; border:2.5px solid #0D1B2A;"></span>
+  </button>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+/* ============================================================================
+   AGENDAR CITAS — Conexión con Google Calendar (calendario "Rachel" / CAPSICOV)
+   Pega entre las comillas la URL de tu app web de Google Apps Script
+   (la que termina en /exec — ver carpeta /booking del repo). Mientras esté
+   vacía, el botón "Book a consultation" lleva a la sección de contacto (WhatsApp).
+   ============================================================================ */
+const BOOKING_API = "";
+
+/* ============================================================================
+   YOUTUBE — Canal, video destacado y listas de reproducción (playlists) del
+   Wellness Center. Pega cada enlace cuando lo crees:
+     - channel:  URL de tu canal, p.ej. "https://www.youtube.com/@TuCanal"
+     - featured: ID o URL de un video para incrustarlo arriba (opcional)
+     - cada tema: URL de su playlist (carpeta de videos)
+   Si un tema está vacío, su botón lleva al canal; si el canal también está
+   vacío, el botón muestra "Próximamente".
+   ============================================================================ */
+const YOUTUBE = {
+  channel:     "https://www.youtube.com/@VeronicaH.Garcia",
+  featured:    "",
+  ansiedad:    "",
+  autoestima:  "",
+  dormir:      "",
+  relajacion:  "",
+  claridad:    "",
+  resiliencia: "",
+  adicciones:  ""
+};
+
+/* ============================================================================
+   SPOTIFY — Narraciones de imaginería por tema. Pega los enlaces cuando crees
+   tu canal/playlists. Si un tema está vacío, el botón usa el canal; si el canal
+   también está vacío, el botón no aparece todavía.
+   ============================================================================ */
+const SPOTIFY = {
+  channel:     "",
+  ansiedad:    "",
+  autoestima:  "",
+  dormir:      "",
+  relajacion:  "",
+  claridad:    "",
+  resiliencia: "",
+  adicciones:  ""
+};
+
+/* ============================================================================
+   CONTENIDO DEL CENTRO DE BIENESTAR — texto en la voz de Verónica.
+   Edita libremente títulos, técnicas e información de cada tema.
+   ============================================================================ */
+const TOPICS = {
+  ansiedad: {
+    title: `Anxiety`, tag: `Calm for your nervous system`,
+    intro: `Anxiety is not your enemy: it is your body trying to protect you. Here we do not try to erase it overnight, but to learn to listen to it and soothe it with kindness, one step at a time.`,
+    blocks: [
+      { h: `When you feel it right now`, list: [
+        `Breathe 4·7·8: inhale for 4, hold for 7, exhale for 8. Repeat 4 times and let your body know it is safe.`,
+        `5-4-3-2-1 grounding: name 5 things you see, 4 you can touch, 3 you hear, 2 you smell and 1 you taste.`,
+        `Place one hand on your chest and the other on your belly; breathe slowly toward the lower hand.` ] },
+      { h: `For your daily life`, list: [
+        `Protect your sleep and lower your caffeine: a tired body startles more easily.`,
+        `Move your body every day, even a short walk: anxiety needs an outlet.`,
+        `Write down what you feel: what gets named stops ruling you in secret.` ] }
+    ],
+    closing: `If anxiety limits you or shows up very often, you do not have to carry it alone. I am here to support you.`
+  },
+  autoestima: {
+    title: `Self-esteem`, tag: `Your worth is not up for negotiation`,
+    intro: `Your worth does not depend on what you achieve, how you look, or who approves of you. Working on self-esteem is coming home: making peace with yourself and treating yourself with the respect you deserve.`,
+    blocks: [
+      { h: `To start today`, list: [
+        `Talk to yourself the way you would to someone you love: swap "I am a disaster" for "I am learning".`,
+        `Each night, acknowledge 3 things you did well, however small.`,
+        `Setting a kind boundary is also self-care: saying "no" to others is often saying "yes" to yourself.` ] },
+      { h: `To look deeper`, list: [
+        `Identify the critical voice that speaks to you: often it is not yours, you learned it.`,
+        `Acknowledge your achievements without shrinking them with a "but".`,
+        `Surround yourself with people who add to you, not who dim you.` ] },
+      { h: `Life Skills (WHO)`, p: `Knowing yourself is the first step to loving yourself. The World Health Organization proposes ten life skills that help us understand ourselves and relate better to ourselves and others:`, list: [
+        `Self-awareness`, `Empathy`, `Assertive communication`, `Interpersonal relationships`, `Decision-making`, `Problem and conflict solving`, `Creative thinking`, `Critical thinking`, `Coping with emotions`, `Coping with stress and tension` ] }
+    ],
+    closing: `Rebuilding self-esteem takes time and company. If you want, we can walk that process together.`
+  },
+  dormir: {
+    title: `Better sleep`, tag: `Rest that restores`,
+    intro: `Sleeping well is not a luxury: it is the foundation of your emotional health. When you rest, your mind regulates what you feel better and the day weighs less.`,
+    blocks: [
+      { h: `Your night-time ritual`, list: [
+        `Turn off screens 30 to 60 minutes before: blue light tells your brain it is still daytime.`,
+        `Create a gentle ritual: dim light, caffeine-free tea, slow breathing.`,
+        `Go to bed and wake up at similar times, weekends too.` ] },
+      { h: `If you cannot sleep`, list: [
+        `Do not fight the bed: if you have been awake for 20 minutes, get up and do something calm.`,
+        `Write down what is spinning in your mind to empty it onto paper.`,
+        `4·7·8 breathing to wind your body down.` ] }
+    ],
+    closing: `If insomnia becomes constant, there is a lot we can work on together. Write to me.`
+  },
+  relajacion: {
+    title: `Relaxation`, tag: `Letting go of tension`,
+    intro: `Your body holds what the mind cannot process. Relaxing is not doing nothing: it is giving yourself permission to let go and come back to yourself.`,
+    blocks: [
+      { h: `Techniques to release`, list: [
+        `Progressive muscle relaxation: tense and release each muscle group, from your feet to your head.`,
+        `Box breathing: inhale 4, hold 4, exhale 4, hold 4.`,
+        `Visualization: imagine a safe place and stay there for a few minutes.` ] },
+      { h: `Create real pauses`, list: [
+        `Schedule 2-minute micro-breaks during your day.`,
+        `Drop your shoulders and unclench your jaw: we often tense them without noticing.` ] }
+    ],
+    closing: `In the Wellness Center you have the breathing circle to practice right now.`
+  },
+  claridad: {
+    title: `Mental clarity`, tag: `Focus and calm`,
+    intro: `When the mind is overloaded, everything feels urgent. Clarity does not arrive by demanding more of yourself, but by ordering what you carry.`,
+    blocks: [
+      { h: `To order your mind`, list: [
+        `Empty your head into a list: get everything pending onto paper.`,
+        `Choose only 3 priorities for today; the rest can wait.`,
+        `Work in blocks: 25 minutes of focus and 5 of rest.` ] },
+      { h: `To sustain focus`, list: [
+        `Silence notifications while you do something important.`,
+        `One thing at a time: multitasking tires and confuses.`,
+        `Rest for real; a clear mind also needs a pause.` ] }
+    ],
+    closing: `If the mental fog comes from stress or exhaustion, we will look at it together.`
+  },
+  resiliencia: {
+    title: `Resilience`, tag: `Strength that is cultivated`,
+    intro: `Being resilient is not about never falling or enduring everything. It is learning to hold yourself, ask for help, and rise again wiser than before.`,
+    blocks: [
+      { h: `To grow stronger`, list: [
+        `Name what is in your hands and let go of what is not.`,
+        `Remember other times you made it through: you already have resources.`,
+        `Lean on your network; asking for help is also strength.` ] },
+      { h: `To care for your base`, list: [
+        `Tend to the basics: sleep, food, movement and connections.`,
+        `Give yourself permission to feel; emotions also inform.`,
+        `Celebrate small progress, not only the big goals.` ] }
+    ],
+    closing: `Resilience is cultivated, and it is cultivated better in company. I am here.`
+  },
+  adicciones: {
+    title: `Managing addiction`, tag: `Recovery with dignity`,
+    intro: `Talking about addiction from judgment never heals. Here we do it from understanding: often addiction is an attempt to soothe a pain. Recovery is possible, and you do not have to do it alone.`,
+    blocks: [
+      { h: `First steps`, list: [
+        `Recognizing is the beginning: naming what is happening, without shame.`,
+        `Identify your triggers (places, emotions, people) and prepare a plan for each one.`,
+        `Build a support network: no one recovers entirely alone.` ] },
+      { h: `For the person and their family`, list: [
+        `Set healthy boundaries without guilt: caring for yourself also helps the other person.`,
+        `Learn about codependency; sometimes the family also needs to heal.`,
+        `A relapse does not erase your progress: it is part of the path, not the end.` ] }
+    ],
+    closing: `I support people and families through addiction and recovery, with respect and without judgment. If you are going through this, write to me: there is a way out.`
+  },
+  relaciones: {
+    title: `Interpersonal relationships`, tag: `Bonds that hold us`,
+    intro: `We are beings of connection: our relationships hold us, challenge us, and teach us who we are. Caring for them is not avoiding conflict, but learning to be present — with honesty, boundaries and tenderness. Choose the bond you want to work on.`,
+    children: ['pareja', 'padres', 'amistades']
+  },
+  pareja: {
+    title: `Relationships as a couple`, parent: 'relaciones', tag: `Building a healthy "us"`,
+    intro: `A healthy relationship is not one without problems, but one where both feel heard and safe to solve them. Love is cared for with presence, not perfection.`,
+    blocks: [
+      { h: `To care for the bond`, list: [
+        `Speak from "I feel" and not from "you always": lower the defenses and open the conversation.`,
+        `Listen to understand, not to respond; sometimes the other person just needs to feel seen.`,
+        `Tend to the small daily gestures: closeness is built in the everyday.` ] },
+      { h: `When there is conflict`, list: [
+        `Ask for a pause if the emotion overflows, and return when you are both calm.`,
+        `Discuss the problem, not the person: the goal is to understand each other, not to win.`,
+        `Repair after an argument; reconnecting is also part of love.` ] }
+    ],
+    closing: `If you feel the same conflict repeats or the distance grows, couples therapy can help you find each other again. Write to me.`
+  },
+  padres: {
+    title: `Parents and children`, parent: 'relaciones', tag: `Raising and accompanying with presence`,
+    intro: `Parenting does not come with a manual, and each stage asks something different of us. It is not about being a perfect parent, but a present one. Choose the stage you are living.`,
+    children: ['padres-0-11', 'padres-12-20', 'padres-mayores']
+  },
+  'padres-0-11': {
+    title: `Children aged 0 to 11`, parent: 'padres', tag: `Early years: safety and bonding`,
+    intro: `In childhood the emotional foundation for all of life is built. Your child does not need a perfect parent: they need a present one, who makes them feel safe and loved just as they are.`,
+    blocks: [
+      { h: `To accompany this stage`, list: [
+        `Validate what they feel before correcting: "I see you are angry" opens more than "do not cry".`,
+        `Set boundaries with warmth and firmness: boundaries are also a form of love and safety.`,
+        `Spend screen-free playtime; your full attention is worth more than any toy.` ] },
+      { h: `For everyday life`, list: [
+        `Care for sleep and meal routines: predictability gives them calm.`,
+        `Name emotions so they learn to understand them.`,
+        `Take care of yourself too: a rested caregiver regulates better.` ] }
+    ],
+    closing: `If parenting is overwhelming you or your child shows signs that worry you, you are not alone in this. Let us talk about it.`
+  },
+  'padres-12-20': {
+    title: `Children aged 12 to 20`, parent: 'padres', tag: `Adolescence: presence without intruding`,
+    intro: `Adolescence is not a war to win, it is a stage to accompany. Your child is building their identity and, even if they push you away at times, they still need to know you are there.`,
+    blocks: [
+      { h: `To sustain the bond`, list: [
+        `Listen without lecturing: if they feel judged, they stop telling you things.`,
+        `Respect their privacy and, at the same time, keep clear, agreed boundaries.`,
+        `Take an interest in their world (their music, their friends) without invading it.` ] },
+      { h: `When there is distance or conflict`, list: [
+        `Choose your battles: not everything deserves to become a fight.`,
+        `Validate their autonomy while you accompany them in deciding.`,
+        `Keep the door open: "whenever you want to talk, I am here".` ] }
+    ],
+    closing: `If you notice signs of anxiety, withdrawal or big changes, seeking support in time makes the difference. Write to me.`
+  },
+  'padres-mayores': {
+    title: `Elderly parents`, parent: 'padres', tag: `Caring for those who cared for us`,
+    intro: `Accompanying a parent who is aging stirs up many things: love, tiredness, guilt, changing roles. Caring with love also includes caring for yourself.`,
+    blocks: [
+      { h: `To accompany them`, list: [
+        `Respect their autonomy and decisions as long as possible; aging is not losing dignity.`,
+        `Be patient with the new pace: often they just need to be heard.`,
+        `Talk about important matters in time, with calm and care.` ] },
+      { h: `To care for yourself`, list: [
+        `Ask for and share the help: caregiving should not fall on one person alone.`,
+        `Set boundaries without guilt; burning out helps no one.`,
+        `Give yourself permission to grieve the changes, even while they are still here.` ] }
+    ],
+    closing: `If you feel the weight of caregiving or emotions that are hard to hold, you also deserve support. I am here.`
+  },
+  amistades: {
+    title: `Friendships`, parent: 'relaciones', tag: `Friendships that nourish`,
+    intro: `Friends are the family we choose. A good friendship is not measured by how long it has lasted, but by how you feel about yourself when you are with that person.`,
+    blocks: [
+      { h: `To cultivate healthy friendships`, list: [
+        `Cultivate the bonds that add to you and leave you at peace, not the ones that drain you.`,
+        `Be the friend you would like to have: presence, listening and honesty.`,
+        `Tend to the details: a timely message keeps closeness alive.` ] },
+      { h: `When a friendship hurts`, list: [
+        `It is okay to set boundaries or take distance from what harms you.`,
+        `Not every friendship is forever, and letting go can also be healthy.`,
+        `Talk things through honestly before letting them grow in silence.` ] }
+    ],
+    closing: `If you struggle to create or sustain bonds, or loneliness weighs on you, we can work on it together. Write to me.`
+  },
+  estancamiento: {
+    title: `When you feel you are not moving forward`, tag: `Your pace is not a delay`,
+    intro: `Feeling that you are not moving forward does not mean you are failing. Often growth is invisible: it happens inside before it shows on the outside. Comparing yourself to the path of others only clouds your own, because no one lives your story or your timing.`,
+    blocks: [
+      { h: `To find your progress again`, list: [
+        `Look back, not only at others: compare with who you were before, not with who someone else is.`,
+        `Acknowledge small steps; many tiny steps are also a path.`,
+        `Define what progress means to you, not by the yardstick of anyone else.` ] },
+      { h: `When comparison shows up`, list: [
+        `Remember that you see the results of others, not their process or struggles.`,
+        `Limit what you consume on social media if it leaves you feeling less.`,
+        `Turn comparison into information: what you admire shows you what you long for.` ] },
+      { h: `To get moving again`, list: [
+        `Take one small, concrete step today; action, however tiny, breaks the stagnation.`,
+        `Be patient and kind with yourself: pressuring yourself rarely drives you, it tends to paralyze.` ] }
+    ],
+    closing: `If the feeling of stagnation comes with discouragement or stays for a long time, you do not have to figure it out alone. Let us talk about it.`
+  },
+  equilibrio: {
+    title: `Balance in a busy life`, tag: `Being fair to yourself is also progress`,
+    intro: `If you demand the most of yourself, give your all and still feel it is never enough, I want to remind you of something: your worth is not measured by how productive you are. Wanting to do everything, perfectly and now, is not always discipline; often it is a way of treating yourself harshly.`,
+    blocks: [
+      { h: `To loosen the self-demand`, list: [
+        `Speak to yourself with the same kindness you would offer someone you love.`,
+        `Swap "I have to do everything" for "I choose what truly matters today".`,
+        `Good enough is also fine; perfection often costs you your peace.` ] },
+      { h: `To regain balance`, list: [
+        `Set boundaries on your time and learn to say "no" without guilt.`,
+        `Schedule rest the way you schedule tasks: it is not a reward, it is a necessity.`,
+        `Delegate and ask for help; you do not have to hold it all yourself.` ] },
+      { h: `For each day`, list: [
+        `Take real, screen-free breaks; your mind also needs to breathe.`,
+        `Celebrate what you did do, instead of punishing yourself for what was left.`,
+        `Resting is not wasting time: it is what allows you to keep going.` ] }
+    ],
+    closing: `If self-demand is exhausting you or you find it hard to stop, we can build together a kinder, more sustainable pace. Write to me.`
+  },
+  duelo: {
+    title: `Grief and loss`, tag: `Honoring what is gone`,
+    intro: `Grief is not only about death: it is the natural response to any significant loss. There is no right way or exact time to live it. Here we do not seek to "get over it" fast, but to learn to move through it with respect for what we feel. Choose the type of loss you are living.`,
+    children: ['duelo-fallecimiento', 'duelo-perdidas']
+  },
+  'duelo-fallecimiento': {
+    title: `Grief over the death of a loved one`, parent: 'duelo', tag: `When death separates us`,
+    intro: `Losing someone we love leaves a void that no one else can fill. Grief is the price of love, and mourning the one who is gone is also a way of honoring them. Give yourself permission to feel, at your own pace. Choose who you are saying goodbye to.`,
+    children: ['duelo-hijo', 'duelo-conyuge', 'duelo-amigo', 'duelo-embarazo', 'duelo-mascota']
+  },
+  'duelo-perdidas': {
+    title: `Significant losses (not related to death)`, parent: 'duelo', tag: `Grief that is rarely named`,
+    intro: `Not all losses have to do with death and, even so, they hurt deeply. Losing a job, a relationship, your health or a life project also deserves to be mourned. That others do not see it as grief does not mean it is not. Choose the loss you are going through.`,
+    children: ['duelo-no-hijos', 'duelo-despido', 'duelo-negocio', 'duelo-oportunidad', 'duelo-estudios', 'duelo-anos', 'duelo-relacion', 'duelo-control', 'duelo-matrimonio', 'duelo-finanzas', 'duelo-desastre', 'duelo-extremidad', 'duelo-enfermedad']
+  },
+  'duelo-hijo': {
+    title: `Losing a child`, parent: 'duelo-fallecimiento', tag: `The pain that has no name`,
+    intro: `There is no word for someone who loses a child, because it breaks the natural order of life. You do not have to be strong or make sense of it. You only need permission to feel and hands to hold you.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself to feel everything that comes: anger, guilt, emptiness. None of that makes you a bad parent.`,
+      `Do not rush: the grief of a child is not "gotten over", you learn to live with it.`,
+      `Talk about your child and name their memory; continuing to love them is also healing.`,
+      `Lean on those who do not demand that you be okay.` ] } ],
+    closing: `Losing a child is one of the deepest pains that exists. You do not have to carry it alone; accompanying you through this is an honor. Write to me.`
+  },
+  'duelo-conyuge': {
+    title: `Losing your spouse`, parent: 'duelo-fallecimiento', tag: `When your life companion is gone`,
+    intro: `Losing your partner is also losing the plans, the routine and the future you imagined together. It is learning to live in a life that no longer looks like the one you knew. Going step by step is okay.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself to miss them and, at the same time, keep living; both can coexist.`,
+      `Do not demand big decisions of yourself while the pain is fresh.`,
+      `Lean on your network and accept the help offered to you.`,
+      `Honor their memory in your own way, without letting anyone set your timing.` ] } ],
+    closing: `Rebuilding life without your companion takes time and company. When you are ready, I am here. Write to me.`
+  },
+  'duelo-amigo': {
+    title: `Losing a friend`, parent: 'duelo-fallecimiento', tag: `A bond that also leaves a mark`,
+    intro: `The death of a friend is mourned differently, because the world sometimes does not recognize it as a "big" grief. But a friend is a witness to your life, and their absence is felt. Your pain is valid.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Give yourself permission to mourn them, even if others minimize the loss.`,
+      `Share memories with those who also loved them.`,
+      `Honor what they left you: what you learned and laughed together stays with you.` ] } ],
+    closing: `Losing a friend leaves a real void. If you find it hard to hold, we can talk about it. Write to me.`
+  },
+  'duelo-embarazo': {
+    title: `Pregnancy loss`, parent: 'duelo-fallecimiento', tag: `A love that already existed`,
+    intro: `Losing a pregnancy is losing a dreamed-of child, a future you had already begun to love. It is real grief, even though the world often silences it. You are not exaggerating, and you are not alone.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself to mourn this loss; your pain needs no justification.`,
+      `Do not carry the guilt: it was not your fault.`,
+      `Give yourself space and time; healing the body and the heart move at different paces.`,
+      `If you need it, give a name or a gesture of farewell to what you lost.` ] } ],
+    closing: `Perinatal grief too often hurts in silence. Here your pain has space and a name. Write to me.`
+  },
+  'duelo-mascota': {
+    title: `Losing a pet`, parent: 'duelo-fallecimiento', tag: `They were family too`,
+    intro: `Someone who has never loved an animal may not understand it, but you know a pet is family. Their leaving leaves a huge silence at home. Your grief is completely valid.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Do not be ashamed of your pain; the love you felt was real.`,
+      `Allow yourself to say goodbye in your own way and honor their memory.`,
+      `Respect your process, even if others do not understand it.` ] } ],
+    closing: `Losing an animal companion truly hurts. If you need it, we can talk. Write to me.`
+  },
+  'duelo-no-hijos': {
+    title: `Not being able to have children`, parent: 'duelo-perdidas', tag: `Grieving a dream`,
+    intro: `Not being able to have children is a silent grief: you mourn a child who never came and a life you imagined. It is a real loss, even if there is no funeral or words to name it.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself to feel the sadness, anger and emptiness without judging yourself.`,
+      `Set boundaries on questions or comments that hurt.`,
+      `Give yourself permission to rethink your life plan in your own time.`,
+      `Do not carry guilt for something you did not choose.` ] } ],
+    closing: `This grief deserves to be recognized and accompanied. If you are living it, write to me.`
+  },
+  'duelo-despido': {
+    title: `Being laid off`, parent: 'duelo-perdidas', tag: `You are not your job`,
+    intro: `Losing your job shakes more than your income: it touches your identity, your routine and your sense of usefulness. It is normal to feel fear, anger or shame. Your worth did not leave with that position.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself to feel the blow before demanding that you "reinvent yourself" right away.`,
+      `Separate what happened from who you are: a layoff does not define your worth.`,
+      `Care for your routine and your network while you look for the next step.` ] } ],
+    closing: `Finding your way again after a layoff is possible, and you do not have to do it alone. Write to me.`
+  },
+  'duelo-negocio': {
+    title: `Losing a business`, parent: 'duelo-perdidas', tag: `When what you built falls`,
+    intro: `Closing a business is saying goodbye to a dream you put time, money and heart into. It hurts like a loss, because it is one. A project failing does not make you a failure.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Give yourself permission to grieve before "finding the lesson".`,
+      `Separate the outcome of the business from your worth as a person.`,
+      `Salvage what you learned when you are ready, without punishing yourself for what did not work.` ] } ],
+    closing: `Getting back up after losing a project takes time and support. I am here. Write to me.`
+  },
+  'duelo-oportunidad': {
+    title: `Losing an opportunity`, parent: 'duelo-perdidas', tag: `Grieving what could have been`,
+    intro: `Letting go of an opportunity — a job, a trip, a possibility — also hurts. Sometimes what weighs most is the "what if?". Feeling that loss is not weakness, it is human.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself to mourn what was not, without staying trapped there.`,
+      `Distinguish what was in your hands from what was not.`,
+      `Open your eyes to the doors that are still open, at your own pace.` ] } ],
+    closing: `If the sense of a lost opportunity weighs heavily on you, we can work on it. Write to me.`
+  },
+  'duelo-estudios': {
+    title: `Failing courses or a school year`, parent: 'duelo-perdidas', tag: `A stumble is not the end`,
+    intro: `Failing courses or a year can feel like a huge failure, especially when you demand a lot of yourself. But an academic stumble does not measure your intelligence or your future. It is a chapter, not the whole story.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself the frustration without turning it into punishment.`,
+      `Ask for help: sometimes the problem is not ability, but method, context or mood.`,
+      `Rethink your plan with realistic goals and small steps.` ] } ],
+    closing: `If the academic weight is affecting you emotionally, let us talk about it. Write to me.`
+  },
+  'duelo-anos': {
+    title: `Feeling you lost years`, parent: 'duelo-perdidas', tag: `Your story was not in vain`,
+    intro: `Looking back and feeling that you "lost years" in a relationship, a job or a stage hurts deeply. But that time also shaped you. You are not starting from zero: you start with everything you learned.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself to mourn the time, without rewriting it all as a mistake.`,
+      `Salvage what that period left you, even if it hurt.`,
+      `Put your energy into the present, which is where you can actually choose.` ] } ],
+    closing: `Giving the past new meaning is a process, and it is done better with company. Write to me.`
+  },
+  'duelo-relacion': {
+    title: `Losing a relationship`, parent: 'duelo-perdidas', tag: `Letting go of someone you loved`,
+    intro: `The end of a relationship is a grief, even if the person is still alive. You mourn the plans, the closeness and the version of you that existed in that bond. Healing is not forgetting, it is learning to be at peace.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Give yourself permission to miss them without going back to what hurt you.`,
+      `Avoid impulsive decisions while the wound is open.`,
+      `Rebuild your life and your bonds little by little.` ] } ],
+    closing: `Rebuilding yourself after a breakup takes time. If you need it, I will support you. Write to me.`
+  },
+  'duelo-control': {
+    title: `Losing control and freedom`, parent: 'duelo-perdidas', tag: `When life stops feeling like yours`,
+    intro: `There are moments — a crisis, an illness, a circumstance you did not choose — when you feel you have lost control of your life. That sense of powerlessness is exhausting, and it deserves to be cared for.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Distinguish what is in your hands, however small, and start there.`,
+      `Consciously let go of what you cannot change; resisting it drains more.`,
+      `Create small routines that give you back a sense of order.` ] } ],
+    closing: `Regaining a sense of control is worked on step by step. I am here to support you. Write to me.`
+  },
+  'duelo-matrimonio': {
+    title: `Losing a marriage`, parent: 'duelo-perdidas', tag: `The grief of a divorce`,
+    intro: `A divorce is the grief of a life built as a couple: the home, the routine, the shared dreams. Even if it was the best decision, it still hurts. Give yourself permission to mourn it.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself to grieve even if you were the one who decided to end it.`,
+      `Care for your identity beyond the role of husband or wife.`,
+      `If there are children, protect them from the conflict and seek support for everyone.` ] } ],
+    closing: `Rebuilding life after a marriage takes time and company. Write to me.`
+  },
+  'duelo-finanzas': {
+    title: `Losing your home or car to a financial crisis`, parent: 'duelo-perdidas', tag: `Losing belongings, not your worth`,
+    intro: `Losing your home, your car or your financial stability hits your security and also your pride. Feeling fear, shame or anger is normal. Your worth is not in what you have, but in who you are.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Allow yourself the grief without adding shame; struggling is not a moral failure.`,
+      `Focus on concrete, small steps to stabilize yourself.`,
+      `Ask for help and guidance; you do not have to solve it in silence.` ] } ],
+    closing: `Beyond the material, what sustains you is your strength and your network. If you need it, we can talk. Write to me.`
+  },
+  'duelo-desastre': {
+    title: `Losing your home to a natural disaster`, parent: 'duelo-perdidas', tag: `When you lose everything at once`,
+    intro: `A natural disaster takes in minutes what took years to build, and leaves a mix of fear, shock and pain. Losing your home is losing memories and security. What you feel is a normal reaction to something abnormal.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Tend first to the basics and to safety; the body needs stability before answers.`,
+      `Allow yourself to feel the shock and grief; do not demand that you be okay right away.`,
+      `Lean on your community and the available help; rebuilding is lighter with company.` ] } ],
+    closing: `After a loss like this, the body and mind also need to rebuild. I am here to support you. Write to me.`
+  },
+  'duelo-extremidad': {
+    title: `Losing a limb`, parent: 'duelo-perdidas', tag: `Making peace with your body`,
+    intro: `Losing a part of your body is a deep grief: you change the way you move, see yourself and inhabit the world. You have the right to mourn what you lost while you learn to recognize yourself again.`,
+    blocks: [ { h: `To move through it`, list: [
+      `Give yourself permission to grieve your former body, without rushing to "be positive".`,
+      `Go at your own pace in adapting; every small achievement counts.`,
+      `Lean on your network and on professional support for body and mind.` ] } ],
+    closing: `Making peace with your body and your new life is a process you deserve not to go through alone. Write to me.`
+  },
+  'duelo-enfermedad': {
+    title: `Losing your health to a chronic or critical illness`, parent: 'duelo-perdidas', tag: `Grieving the life you knew`,
+    intro: `Receiving a diagnosis that changes your life is living a grief: you mourn the health, the routine and the plans you took for granted. Grieving the life you had is not giving up; it is giving yourself permission to feel so you can adapt.`,
+    blocks: [
+      { h: `To move through it`, list: [
+        `Allow yourself to feel the fear, anger and sadness; they are part of the process, not weakness.`,
+        `Learn about your condition at your own pace, without overwhelming yourself.`,
+        `Build a support network (family, medical team, therapy) and lean on it.`,
+        `Find meaning and quality moments within what is possible.` ] },
+      { h: `Some conditions I support`, list: [
+        `Cancer`, `Diabetes`, `Autoimmune diseases (lupus, rheumatoid arthritis)`, `Chronic kidney or heart disease`, `Multiple sclerosis, Parkinson or Alzheimer`, `HIV`, `Fibromyalgia and chronic pain` ] }
+    ],
+    closing: `I support people facing life-changing diagnoses. You do not have to carry it alone. Write to me.`
+  },
+  vocacional: {
+    title: `Career guidance`, tag: `Discovering what you want and what you are good at`,
+    intro: `Choosing what to devote your life to can be dizzying, especially with the pressure to "get it right". But a calling is not found all at once: it is discovered by exploring, trying and getting to know yourself. It is not only about which degree to study, but about what life you want to build.`,
+    blocks: [
+      { h: `To know yourself better`, list: [
+        `Notice which activities make you lose track of time: there are usually clues there.`,
+        `Identify what others come to you for; sometimes they see your strengths before you do.`,
+        `Tell apart what you truly enjoy from what you think you "should" want.` ] },
+      { h: `To explore your path`, list: [
+        `Research and try: courses, volunteering or talking with someone who already does what attracts you.`,
+        `Look for the point where what you enjoy, what you are good at and what the world needs meet.`,
+        `Remember that choosing is not forever: you can adjust course without starting from zero.` ] },
+      { h: `To decide calmly`, list: [
+        `Separate your voice from the expectations of your family or surroundings.`,
+        `Think about the lifestyle you want, not just the title.`,
+        `Give yourself permission not to have it all clear today; clarity also comes by walking.` ] }
+    ],
+    closing: `If you want to discover your strengths and choose a path you can enjoy and live with gladness, we can work on it with tools and support. Write to me.`
+  },
+  estres: {
+    title: `Stress and its levels`, tag: `Recognizing it so you can care for it`,
+    intro: `Stress is not bad in itself: it is the natural response of your body to a demand. In the right measure it drives you; when it lasts too long, it begins to wear you down. Recognizing what level you are at is the first step to caring for yourself.`,
+    blocks: [
+      { h: `The levels of stress`, list: [
+        `Positive stress (eustress): it activates you and helps you perform in a specific challenge.`,
+        `Acute stress: an intense but brief reaction to a concrete situation.`,
+        `Episodic acute stress: acute stress that repeats again and again.`,
+        `Chronic stress: constant, sustained tension that wears down body and mind.`,
+        `Burnout: the point where chronic stress leaves you with no energy or motivation.` ] },
+      { h: `Warning signs`, list: [
+        `Body: tension, headaches, insomnia, fatigue, digestive discomfort.`,
+        `Mind: irritability, difficulty concentrating, racing thoughts.`,
+        `Behavior: withdrawing, neglecting your nutrition or snapping easily.` ] },
+      { h: `To manage it`, list: [
+        `Identify your sources of stress and what you can actually adjust.`,
+        `Use breathing and pauses to lower the activation in your body.`,
+        `Care for sleep, movement and your boundaries; they are not luxuries, they are support.`,
+        `Ask for help in time: chronic stress is not solved just by enduring.` ] }
+    ],
+    closing: `If stress has become constant or you feel you have reached burnout, you do not have to endure it in silence. Let us talk about it. Write to me.`
+  },
+  culpa: {
+    title: `Guilt`, tag: `Let guilt teach you, not punish you`,
+    intro: `Guilt, in the right measure, is a compass: it warns us when we act against our values and pushes us to repair. The problem appears when it is so low that it does not let us recognize the mistake, or so high that it keeps hurting even after you have made amends. And sometimes we carry guilt that is not even ours.`,
+    blocks: [
+      { h: `The levels of guilt`, list: [
+        `Optimal guilt: it helps you recognize the mistake and motivates you to change and repair. It is healthy.`,
+        `Low guilt: it does not let you see the harm or take your part; it keeps you from learning and growing.`,
+        `High guilt: it makes you feel bad even after apologizing and making amends; it no longer teaches, it only punishes.` ] },
+      { h: `To handle it healthily`, list: [
+        `Ask yourself whether you caused real harm or you are just being hard on yourself.`,
+        `If it was real: acknowledge, repair and apologize; that is responsibility, not punishment.`,
+        `Once you have repaired, allow yourself to let go: carrying it longer does not repair more, it only wears you out.`,
+        `Swap "I am a bad person" for "I made a mistake and I am correcting it".` ] },
+      { h: `Letting go of guilt that is not yours`, list: [
+        `Recognize what is yours and what is not: you are not responsible for the decisions or emotions of others.`,
+        `Sometimes we are made to believe their discomfort falls on us; that is guilt that does not belong to you.`,
+        `Setting boundaries does not make you guilty; caring for yourself is not selfish.`,
+        `Hand the responsibility back, with kindness, to whom it belongs.` ] }
+    ],
+    closing: `If guilt weighs too much on you, or you carry one that is not yours, we can work together to release it and live more at peace. Write to me.`
+  },
+  habitos: {
+    title: `Habits and goals`, tag: `Move forward without fighting yourself`,
+    intro: `Reaching your goals does not depend on having more willpower, but on building habits and systems that make the path easier. Lasting changes are not born from demand, but from small, consistent steps you can actually keep.`,
+    blocks: [
+      { h: `To set goals you actually reach`, list: [
+        `Make them clear and concrete: instead of "I want to be well", define "I will walk 20 minutes a day".`,
+        `Break them into small steps; the first should be so easy you cannot say no.`,
+        `Connect each goal with a why that truly matters to you.`,
+        `Measure progress, not perfection.` ] },
+      { h: `To build habits that last`, list: [
+        `Anchor the new habit to one you already have (for example, breathing deeply after brushing your teeth).`,
+        `Start ridiculously small: better 5 minutes a day than one hour just once.`,
+        `Tend to your environment: make easy what you want to do and hard what you want to avoid.`,
+        `Consistency matters more than intensity; one day you slip does not break the process.` ] },
+      { h: `When you lose motivation`, list: [
+        `Do not wait to feel like it: action usually comes before motivation.`,
+        `Celebrate small wins; acknowledging yourself sustains change.`,
+        `If you fall, get back without punishing yourself: try not to miss twice in a row.` ] }
+    ],
+    closing: `If you find it hard to sustain your habits or your goals feel overwhelming, we can design together a realistic plan that is kind to you. Write to me.`
+  },
+  empleo: {
+    title: `Job searching`, tag: `Your worth is not on pause`,
+    intro: `Searching for a job — especially when it drags on — can wear down your hope and make you doubt yourself. I want to remind you of something: that a process takes time does not mean you are not good enough. Your worth does not depend on having or not having a job right now. This stage can also be navigated with your head held high and with strategy.`,
+    blocks: [
+      { h: `To care for your spirits along the way`, list: [
+        `That it is taking time does not mean it will not come: the "no" of today does not define your future.`,
+        `Separate your worth as a person from the results of the search.`,
+        `Give your days structure: a routine protects you from hopelessness.`,
+        `Talk about what you feel; discouragement grows in silence.` ] },
+      { h: `To show a high-value profile`, list: [
+        `Identify your strengths and concrete achievements, not just your tasks.`,
+        `Tell your story clearly: what problems you solve and what makes you different.`,
+        `Care for your CV, your LinkedIn and how you present yourself; your personal brand also speaks.`,
+        `Prepare for interviews with real examples of what you have achieved.` ] },
+      { h: `To empower yourself`, list: [
+        `Acknowledge everything you already know how to do: you are probably worth more than you think.`,
+        `Keep learning; every new skill adds to your confidence and your profile.`,
+        `Surround yourself with those who lift you, not those who feed your doubt.`,
+        `Remember this stage is temporary, and you keep growing in it.` ] }
+    ],
+    closing: `If the search has you exhausted or doubting yourself, I can help you regain confidence and build a high-value profile that shows your best version. Write to me.`
+  },
+  violencia: {
+    title: `Addressing situations of violence`, tag: `It is not your fault, and you are not alone`,
+    intro: `Living through any kind of violence leaves deep marks, and taking the step to seek help takes great courage. I want you to read this clearly: violence is never the fault of the person who receives it, and you deserve to live free of fear. Here you will find guidance to recognize and address it, in a safe and non-judgmental space. Choose the type of situation you are living.`,
+    children: ['violencia-pareja', 'violencia-familiar', 'violencia-psicologica', 'violencia-sexual', 'violencia-laboral', 'violencia-digital'],
+    closing: `If you are in immediate danger, call 911. In Costa Rica, the INAMU line 1147 assists women in situations of violence. Your safety comes first.`
+  },
+  'violencia-pareja': {
+    title: `Violence in the relationship`, parent: 'violencia', tag: `Love does not hurt`,
+    intro: `Violence in a relationship does not always leave visible marks: it is also control, jealousy, humiliation or constant fear. Healthy love does not make you feel small or afraid. Recognizing it is the first step to protecting yourself.`,
+    blocks: [
+      { h: `Warning signs`, list: [
+        `They control you: who you talk to, what you do, how you dress or what you spend.`,
+        `They humiliate, insult or blame you for everything.`,
+        `There are shoves, blows or threats, even if they apologize afterward.`,
+        `You feel afraid of how they will react.` ] },
+      { h: `To protect yourself`, list: [
+        `Trust what you feel: if something harms you, it is valid to seek help.`,
+        `You are not alone and it is not your fault; the cycle of violence is not broken alone.`,
+        `Keep trusted people close and a plan for your safety.`,
+        `Seek professional and legal support; you deserve to live without fear.` ] }
+    ],
+    closing: `Your safety comes first. I can support you in your emotional process; if there is immediate danger, call 911 (or 1147 of INAMU in Costa Rica). Write to me.`
+  },
+  'violencia-familiar': {
+    title: `Family violence`, parent: 'violencia', tag: `Home should be a safe place`,
+    intro: `Violence within the family — toward children, adolescents, older adults or among those who live together — causes harm and is often normalized. No family bond justifies abuse. Asking for help is not betraying your family: it is protecting yourself and those you love.`,
+    blocks: [
+      { h: `What to recognize`, list: [
+        `Physical abuse, yelling, humiliation or punishments that harm.`,
+        `Neglect or abandonment of those who depend on others (children or older adults).`,
+        `An environment of fear, control or constant tension at home.` ] },
+      { h: `To act`, list: [
+        `Protect first whoever is at risk, especially children and older adults.`,
+        `Talk with someone you trust and seek professional support.`,
+        `Document what happens if it is safe to do so.`,
+        `Remember there are institutions that can help you protect yourself.` ] }
+    ],
+    closing: `If someone is in danger, call 911. I can support you in the emotional process of these situations. Write to me.`
+  },
+  'violencia-psicologica': {
+    title: `Psychological and emotional violence`, parent: 'violencia', tag: `The wounds that are not seen also hurt`,
+    intro: `Psychological violence is subtle but deep: humiliation, manipulation, control, threats or making you doubt your own perception. That it leaves no physical marks does not make it less serious. If you are constantly made to feel less, that is not normal and it is not your fault.`,
+    blocks: [
+      { h: `How it shows up`, list: [
+        `They humiliate, ridicule or dismiss you, alone or in front of others.`,
+        `They manipulate you or make you doubt what you saw or felt.`,
+        `They control you, isolate you or threaten you.`,
+        `You end up feeling guilty, confused or "overdramatic".` ] },
+      { h: `To protect yourself`, list: [
+        `Trust your perception: what you feel is valid information.`,
+        `Set boundaries and move away from what harms you when possible.`,
+        `Lean on people and support that give you back clarity.`,
+        `Rebuilding damaged self-esteem is possible, and you deserve to do it.` ] }
+    ],
+    closing: `You are not alone and you are not exaggerating. We can work to recover your clarity and your strength. Write to me.`
+  },
+  'violencia-sexual': {
+    title: `Sexual violence`, parent: 'violencia', tag: `It is never your fault`,
+    intro: `Sexual violence is any sexual act without your consent, no matter who did it or the circumstances. I want you to read it clearly: the only person responsible is the one who assaults; you are never to blame, no matter how you were dressed, what you said or what you did.`,
+    blocks: [
+      { h: `What you need to know`, list: [
+        `Your consent is essential; without it, it is violence.`,
+        `Whatever you feel (shock, guilt, denial, anger) is a normal response to something serious.`,
+        `You are not alone, and it was not your fault.` ] },
+      { h: `To take care of yourself`, list: [
+        `If it just happened, find a safe place and medical care.`,
+        `When you can, seek psychological support to heal at your own pace.`,
+        `Lean on trusted people; you do not have to carry it in silence.` ] }
+    ],
+    closing: `Healing from sexual violence is possible, with support and in your own time. If you are in danger, call 911. I can support you in your process. Write to me.`
+  },
+  'violencia-laboral': {
+    title: `Workplace violence and harassment`, parent: 'violencia', tag: `Work should not cost you your dignity`,
+    intro: `Violence at work — mistreatment, workplace harassment, sexual harassment, humiliation or abuse of power — affects your health and your self-esteem. Enduring it is not professionalism: your well-being also matters, and you have the right to a respectful environment.`,
+    blocks: [
+      { h: `What to recognize`, list: [
+        `Humiliation, yelling, overload or intentional isolation.`,
+        `Sexual harassment or unwanted advances.`,
+        `Abuse of power, threats or sustained unfair treatment.` ] },
+      { h: `To act`, list: [
+        `Document what happens: dates, facts and witnesses.`,
+        `Know the reporting channels of your organization and your rights.`,
+        `Care for your emotional health; work burnout is real.`,
+        `Seek support; you do not have to normalize abuse.` ] }
+    ],
+    closing: `If the work environment is harming you, we can work on your well-being and how to face it. Write to me.`
+  },
+  'violencia-digital': {
+    title: `Digital violence`, parent: 'violencia', tag: `Your safety is also online`,
+    intro: `Digital violence is real: harassment, threats, control through your phone, sharing images without your permission or identity theft. That it happens behind a screen does not make it less serious or less harmful.`,
+    blocks: [
+      { h: `How it shows up`, list: [
+        `Harassment, insults or threats through networks or messages.`,
+        `Control of your accounts, passwords or location.`,
+        `Sharing, or threatening to share, intimate images without your consent.`,
+        `Identity theft or exposure of your information.` ] },
+      { h: `To protect yourself`, list: [
+        `Save evidence (screenshots, messages) before blocking.`,
+        `Strengthen your security: passwords, privacy and blocks.`,
+        `Do not blame yourself; the responsibility is of the one who assaults.`,
+        `Seek support and, if appropriate, legal advice.` ] }
+    ],
+    closing: `If you are experiencing digital violence, you are not alone. I can support you emotionally; if there are threats to your safety, seek legal advice and call 911 if it is urgent. Write to me.`
+  },
+  liderazgo: {
+    title: `Leadership preparation`, tag: `Soft skills to lead with humanity`,
+    backPage: 'empresas', backName: `Companies`,
+    intro: `Leading is not having authority: it is earning the trust of people and bringing out the best in each one. Technical skills open the door, but it is the soft skills that make you someone people want to follow. Choose where to start.`,
+    children: ['lider-personas', 'lider-equipos', 'lider-ie']
+  },
+  'lider-personas': {
+    title: `Winning people over`, parent: 'liderazgo', tag: `Trust is earned, not demanded`,
+    intro: `People do not follow whoever shouts loudest, they follow whoever makes them feel seen and respected. Winning people over is not manipulating or pleasing everyone: it is building trust by being consistent, close and human.`,
+    blocks: [
+      { h: `To build trust`, list: [
+        `Listen for real: ask and leave space before giving your opinion.`,
+        `Be consistent: let your actions confirm your words; trust falls apart with inconsistency.`,
+        `Acknowledge the merit of others in public and correct in private.` ] },
+      { h: `To truly connect`, list: [
+        `Take an interest in the person, not just their task: remember what matters to them.`,
+        `Communicate with clarity and respect, even when the message is hard.`,
+        `Admit your mistakes; well-handled vulnerability builds respect, not weakness.` ] }
+    ],
+    closing: `Winning people over is daily work of consistency and empathy. If you want to develop it with method, we can work on it together.`
+  },
+  'lider-equipos': {
+    title: `Leading effective teams`, parent: 'liderazgo', tag: `Results without burning out your people`,
+    intro: `An effective team is not one where everyone agrees, but one with clarity, trust and purpose. Your job as a leader is not to do everything, but to create the conditions for your team to shine.`,
+    blocks: [
+      { h: `To give direction`, list: [
+        `Give clarity: let each person know what is expected of them and why it matters.`,
+        `Define priorities; a team without focus burns out doing everything.`,
+        `Connect tasks with a purpose: people give more when they understand the why.` ] },
+      { h: `To grow the team`, list: [
+        `Delegate with trust and accompany without controlling every step.`,
+        `Give clear, timely and respectful feedback; feedback is a gift, not a punishment.`,
+        `Care for the well-being of the team: burnout is never sustainable.` ] },
+      { h: `To sustain results`, list: [
+        `Celebrate the wins, not only point out what is missing.`,
+        `Make decisions in time, even with incomplete information.`,
+        `Lead by example: the team imitates what the leader does, not what they say.` ] }
+    ],
+    closing: `Leading teams is learned and trained. If you lead or are preparing to, let us talk about it.`
+  },
+  'lider-ie': {
+    title: `Emotional intelligence for leaders`, parent: 'liderazgo', tag: `Your calm is also leadership`,
+    intro: `You cannot lead others if you do not know how to lead yourself. Emotional intelligence is the foundation of human leadership: the way you handle pressure, emotions and bonds sets the climate of your whole team.`,
+    blocks: [
+      { h: `To lead yourself`, list: [
+        `Recognize what you feel before reacting: naming the emotion gives you back control.`,
+        `Care for your energy and your rest; an exhausted leader spreads tension.`,
+        `Know your triggers so you do not decide out of anger or fear.` ] },
+      { h: `To sustain the team`, list: [
+        `Regulate your reaction in moments of pressure; your calm calms the team.`,
+        `Practice empathy: understanding is not the same as giving in.`,
+        `Create a safe environment where people can speak without fear of reprisal.` ] }
+    ],
+    closing: `Emotional intelligence is trained, and it completely transforms how you lead. If you want to develop it, write to me.`
+  }
+};
+
+class Component extends DCLogic {
+  canvasRef = React.createRef();
+  timelineRef = React.createRef();
+  orbRef = React.createRef();
+  orbCountRef = React.createRef();
+  orbLabelRef = React.createRef();
+  patternsRef = React.createRef();
+  breathBtnRef = React.createRef();
+  bookingRef = React.createRef();
+  ytFeaturedRef = React.createRef();
+  temaRef = React.createRef();
+
+  componentDidMount() {
+    this.initConstellation();
+    this.initReveal();
+    this._initYouTube();
+    this._initRouter();
+    this.breathPattern = '4-4-4';
+    this.breathRunning = false;
+  }
+
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._braf) cancelAnimationFrame(this._braf);
+  }
+
+  // ---------- smooth scroll ----------
+  scrollToId(id) {
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: 'smooth' });
+  }
+
+  // ---------- navegación por páginas (pestañas) ----------
+  _pages = ['inicio', 'about', 'servicios', 'empresas'];
+
+  _showPage(name) {
+    document.querySelectorAll('.pg').forEach((p) => { p.style.display = (p.getAttribute('data-page') === name) ? '' : 'none'; });
+    const shown = document.querySelector('.pg[data-page="' + name + '"]');
+    if (shown) shown.querySelectorAll('[data-reveal]').forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; });
+  }
+
+  _setActiveNav(name) {
+    document.querySelectorAll('[data-nav]').forEach((a) => {
+      a.style.color = (a.getAttribute('data-nav') === name) ? '#FAF8F5' : 'rgba(250,248,245,0.78)';
+    });
+  }
+
+  // ---------- idioma (traducciones por IA, guardadas por versión) ----------
+  _langs = [['es', 'Español'], ['en', 'English'], ['pt', 'Português'], ['it', 'Italiano'], ['fr', 'Français'], ['zh-CN', '中文 (简体)'], ['ko', '한국어'], ['ja', '日本語']];
+  // Idiomas con traducción curada disponible (se irán sumando conforme se traducen).
+  _availableLangs = ['es', 'en'];
+  _lang = 'en';
+
+  openLang = (e) => {
+    this._ensureLangMenu();
+    const m = this._langMenu;
+    if (m.style.display === 'block') { m.style.display = 'none'; return; }
+    const btn = (e && e.currentTarget) || document.querySelector('[data-langbtn]');
+    const r = btn ? btn.getBoundingClientRect() : { left: 16, bottom: 64 };
+    m.style.left = Math.max(8, Math.min(r.left, window.innerWidth - 180)) + 'px';
+    m.style.top = (r.bottom + 8) + 'px';
+    m.style.display = 'block';
+  };
+
+  _ensureLangMenu() {
+    if (this._langMenu) return;
+    const m = document.createElement('div');
+    m.className = 'lang-menu notranslate';
+    m.setAttribute('translate', 'no');
+    m.innerHTML = this._langs.map((l) => {
+      const ok = this._availableLangs.indexOf(l[0]) >= 0;
+      const on = this._lang === l[0];
+      return '<button data-lang="' + l[0] + '"' + (on ? ' class="on"' : '') + (ok ? '' : ' disabled') + '>'
+        + l[1] + (ok ? '' : ' · coming soon') + '</button>';
+    }).join('');
+    document.body.appendChild(m);
+    this._langMenu = m;
+    m.querySelectorAll('button').forEach((b) => { b.onclick = () => this._setLang(b.getAttribute('data-lang')); });
+    document.addEventListener('click', (ev) => {
+      if (this._langMenu && this._langMenu.style.display === 'block' &&
+          !this._langMenu.contains(ev.target) &&
+          !(ev.target.closest && ev.target.closest('[data-langbtn]'))) {
+        this._langMenu.style.display = 'none';
+      }
+    });
+  }
+
+  _langUrl(code) {
+    const toRoot = (this._lang === 'es') ? './' : '../';
+    return (code === 'es') ? toRoot : (toRoot + code + '/');
+  }
+
+  _setLang(code) {
+    if (this._availableLangs.indexOf(code) < 0) return; // traducción en preparación
+    if (code === this._lang) { if (this._langMenu) this._langMenu.style.display = 'none'; return; }
+    location.href = this._langUrl(code);
+  }
+
+  goPage = (name, anchorId) => {
+    if (this._pages.indexOf(name) < 0) name = 'inicio';
+    this._showPage(name);
+    this._setActiveNav(name);
+    if (('#' + name) !== location.hash) { try { history.replaceState(null, '', '#' + name); } catch (e) {} }
+    if (anchorId) {
+      const el = document.getElementById(anchorId);
+      if (el) { setTimeout(() => window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: 'smooth' }), 30); return; }
+    }
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  };
+
+  openTopic = (arg) => {
+    const key = (typeof arg === 'string') ? arg : (arg && arg.currentTarget && arg.currentTarget.getAttribute('data-yt'));
+    if (!key || !TOPICS[key]) return;
+    const host = this.temaRef && this.temaRef.current;
+    if (!host) return;
+    if (!document.getElementById('tm-style')) {
+      const st = document.createElement('style'); st.id = 'tm-style';
+      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important}';
+      document.head.appendChild(st);
+    }
+    host.innerHTML = this._topicHTML(key);
+    const back = host.querySelector('[data-back]');
+    if (back) back.onclick = () => { const tp = TOPICS[key]; if (tp.parent) this.openTopic(tp.parent); else if (tp.backPage) this.goPage(tp.backPage); else this.goPage('inicio', 'wellness'); };
+    host.querySelectorAll('[data-go]').forEach((c) => { c.onclick = () => this.openTopic(c.getAttribute('data-go')); });
+    const book = host.querySelector('[data-book]'); if (book) book.onclick = () => this.openBooking(key);
+    const yt = host.querySelector('[data-yt-btn]'); if (yt) yt.onclick = () => { const u = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
+    const sp = host.querySelector('[data-sp-btn]'); if (sp) sp.onclick = () => { const u = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
+    this._showPage('tema');
+    this._setActiveNav('');
+    try { history.replaceState(null, '', '#bienestar-' + key); } catch (e) {}
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  };
+
+  _topicHTML(key) {
+    const d = TOPICS[key]; if (!d) return '';
+    const isLeaf = !d.children;
+    const ytUrl = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim();
+    const spUrl = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim();
+    const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Back to ' + TOPICS[d.parent].title) : (d.backName ? ('← Back to ' + d.backName) : '← Back to the Wellness Center');
+    let h = '';
+    h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
+    h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">Wellness Center</div>';
+    h += '<h2 style="font-family:Spectral,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:12px 0 6px;color:#FAF8F5;">' + d.title + '</h2>';
+    if (d.tag) h += '<p style="font-family:Spectral,serif;font-style:italic;font-size:19px;color:#D4A017;margin-bottom:20px;">' + d.tag + '</p>';
+    if (d.intro) h += '<p style="font-size:16.5px;line-height:1.7;color:rgba(250,248,245,0.82);margin-bottom:4px;">' + d.intro + '</p>';
+    if (d.children) {
+      h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:26px;">';
+      d.children.forEach((ck) => {
+        const c = TOPICS[ck]; if (!c) return;
+        h += '<div class="tm-card" data-go="' + ck + '" style="padding:22px 20px;border-radius:16px;background:rgba(250,248,245,0.04);border:1px solid rgba(212,160,23,0.28);">'
+          + '<h3 style="font-family:Spectral,serif;font-weight:500;font-size:18px;color:#FAF8F5;margin:0 0 6px;">' + c.title + '</h3>'
+          + (c.tag ? '<p style="font-size:13px;line-height:1.5;color:rgba(250,248,245,0.6);margin:0 0 10px;">' + c.tag + '</p>' : '')
+          + '<span style="font-size:12px;letter-spacing:0.08em;color:#D4A017;font-weight:600;">View →</span></div>';
+      });
+      h += '</div>';
+    }
+    (d.blocks || []).forEach((b) => {
+      h += '<h3 style="font-family:Spectral,serif;font-weight:500;font-size:20px;color:#FAF8F5;margin:26px 0 10px;">' + b.h + '</h3>';
+      if (b.p) h += '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.74);margin-bottom:6px;">' + b.p + '</p>';
+      if (b.list) { h += '<ul style="list-style:none;padding:0;margin:0;">'; b.list.forEach((it) => { h += '<li style="position:relative;padding-left:22px;margin-bottom:10px;font-size:15px;line-height:1.6;color:rgba(250,248,245,0.8);"><span style="position:absolute;left:0;top:1px;color:#D4A017;">◆</span>' + it + '</li>'; }); h += '</ul>'; }
+    });
+    if (d.closing) h += '<div style="margin-top:28px;padding:18px 20px;border-left:3px solid #D4A017;background:rgba(212,160,23,0.07);border-radius:8px;font-size:15.5px;line-height:1.6;color:#EADBC8;">' + d.closing + '</div>';
+    h += '<div style="margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;">';
+    h += '<button data-book style="font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#0D1B2A;background:#D4A017;border:none;padding:14px 26px;border-radius:999px;cursor:pointer;">Book a consultation</button>';
+    if (isLeaf && ytUrl) h += '<button data-yt-btn style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(255,77,77,0.10);border:1px solid rgba(255,77,77,0.45);padding:14px 22px;border-radius:999px;cursor:pointer;">▶ Watch on YouTube</button>';
+    if (isLeaf && spUrl) h += '<button data-sp-btn style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(29,185,84,0.14);border:1px solid rgba(29,185,84,0.5);padding:14px 22px;border-radius:999px;cursor:pointer;">♪ Listen to narration</button>';
+    h += '<a href="https://wa.me/50670773517" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#FAF8F5;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.45);padding:14px 22px;border-radius:999px;text-decoration:none;">WhatsApp</a>';
+    h += '</div>';
+    if (isLeaf) h += '<p style="margin-top:26px;font-size:12px;line-height:1.6;color:rgba(250,248,245,0.45);">This information is a self-care guide and does not replace professional consultation. If you are in crisis or at risk, seek help immediately.</p>';
+    return h;
+  }
+
+  _initRouter() {
+    const initial = (location.hash || '').replace('#', '');
+    if (initial.indexOf('bienestar-') === 0) this.openTopic(initial.slice('bienestar-'.length));
+    else if (this._pages.indexOf(initial) >= 0 && initial !== 'inicio') this.goPage(initial);
+    else this._setActiveNav('inicio');
+    window.addEventListener('hashchange', () => {
+      const hsh = (location.hash || '').replace('#', '');
+      if (hsh.indexOf('bienestar-') === 0) this.openTopic(hsh.slice('bienestar-'.length));
+      else if (this._pages.indexOf(hsh) >= 0) this.goPage(hsh);
+      else this.goPage('inicio');
+    });
+  }
+
+  // ---------- fluid cosmos (flow field + light trails + dust) ----------
+  initConstellation() {
+    const canvas = this.canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let w = 0, h = 0, dpr = 1;
+    const resize = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const r = canvas.getBoundingClientRect();
+      w = r.width; h = r.height;
+      canvas.width = Math.max(1, w * dpr); canvas.height = Math.max(1, h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener('resize', resize);
+
+    // light-trail particles advected by an organic wave field (liquid gold lines)
+    const flow = [];
+    const FN = Math.max(70, Math.min(140, Math.floor((w * h) / 11000)));
+    for (let i = 0; i < FN; i++) {
+      flow.push({ x: Math.random() * w, y: Math.random() * h, life: Math.random() * 220 + 70, gold: Math.random() < 0.6, spd: Math.random() * 0.6 + 0.55 });
+    }
+    // floating light dust + golden constellations
+    const dust = [];
+    const DN = Math.max(30, Math.min(72, Math.floor((w * h) / 24000)));
+    for (let i = 0; i < DN; i++) {
+      dust.push({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - 0.5) * 0.16, vy: (Math.random() - 0.5) * 0.16, r: Math.random() * 1.5 + 0.5, gold: Math.random() < 0.5 });
+    }
+
+    const mouse = { x: -9999, y: -9999 };
+    const onMove = (e) => { const r = canvas.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; };
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseout', () => { mouse.x = -9999; mouse.y = -9999; });
+
+    let t = 0;
+    const field = (x, y) => (Math.sin(x * 0.0016 + t * 0.15) + Math.cos(y * 0.0018 - t * 0.12) + Math.sin((x + y) * 0.0011 + t * 0.1)) * 1.04;
+
+    const tick = () => {
+      t += 0.016;
+      // fade previous frame on a transparent canvas → glowing trails over the nebula
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillStyle = 'rgba(0,0,0,0.052)';
+      ctx.fillRect(0, 0, w, h);
+      ctx.globalCompositeOperation = 'lighter';
+
+      // light trails
+      for (const p of flow) {
+        const a = field(p.x, p.y) * Math.PI;
+        let nx = p.x + Math.cos(a) * p.spd * 1.4;
+        let ny = p.y + Math.sin(a) * p.spd * 1.4;
+        const dx = nx - mouse.x, dy = ny - mouse.y, d2 = dx * dx + dy * dy;
+        if (d2 < 22000 && d2 > 0.01) { const d = Math.sqrt(d2), f = (1 - d / 148) * 0.7; nx += (dx / d) * f; ny += (dy / d) * f; }
+        ctx.strokeStyle = p.gold ? 'rgba(216,164,30,0.17)' : 'rgba(96,186,236,0.13)';
+        ctx.lineWidth = p.gold ? 1.1 : 0.8;
+        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(nx, ny); ctx.stroke();
+        p.x = nx; p.y = ny; p.life--;
+        if (p.life <= 0 || p.x < -20 || p.x > w + 20 || p.y < -20 || p.y > h + 20) {
+          p.x = Math.random() * w; p.y = Math.random() * h; p.life = Math.random() * 220 + 70;
+        }
+      }
+
+      // dust motion + cursor reaction
+      for (const p of dust) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < -10) p.x = w + 10; if (p.x > w + 10) p.x = -10;
+        if (p.y < -10) p.y = h + 10; if (p.y > h + 10) p.y = -10;
+        const dx = p.x - mouse.x, dy = p.y - mouse.y, d2 = dx * dx + dy * dy;
+        if (d2 < 14000 && d2 > 0.01) { const d = Math.sqrt(d2), f = (14000 - d2) / 14000 * 0.5; p.x += (dx / d) * f; p.y += (dy / d) * f; }
+      }
+      // golden constellations
+      for (let i = 0; i < dust.length; i++) {
+        for (let j = i + 1; j < dust.length; j++) {
+          const a = dust[i], b = dust[j];
+          const dx = a.x - b.x, dy = a.y - b.y, dd = Math.sqrt(dx * dx + dy * dy);
+          if (dd < 116) {
+            const al = (1 - dd / 116) * 0.22;
+            ctx.strokeStyle = (a.gold || b.gold) ? 'rgba(212,160,23,' + al + ')' : 'rgba(150,200,235,' + (al * 0.8) + ')';
+            ctx.lineWidth = 0.6;
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+          }
+        }
+      }
+      for (const p of dust) {
+        const dxm = p.x - mouse.x, dym = p.y - mouse.y, dm = Math.sqrt(dxm * dxm + dym * dym);
+        if (dm < 150) { ctx.strokeStyle = 'rgba(212,160,23,' + ((1 - dm / 150) * 0.32) + ')'; ctx.lineWidth = 0.6; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.gold ? 'rgba(216,164,30,0.7)' : 'rgba(200,225,245,0.55)';
+        ctx.fill();
+      }
+      this._raf = requestAnimationFrame(tick);
+    };
+    tick();
+  }
+
+  // ---------- reveal on scroll ----------
+  initReveal() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!('IntersectionObserver' in window) || !els.length) {
+      els.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'translateY(0)';
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => io.observe(el));
+  }
+
+  // ---------- timeline ----------
+  pickStage = (e) => {
+    const root = this.timelineRef.current;
+    if (!root) return;
+    const card = e.currentTarget;
+    Array.from(root.children).forEach(ch => {
+      const active = ch === card;
+      ch.style.background = active ? 'rgba(212,160,23,0.08)' : 'rgba(250,248,245,0.04)';
+      ch.style.borderColor = active ? 'rgba(212,160,23,0.5)' : 'rgba(250,248,245,0.1)';
+      const num = ch.querySelector('div');
+      if (num) num.style.color = active ? '#D4A017' : 'rgba(212,160,23,0.7)';
+      const dot = ch.querySelectorAll('div')[1];
+      if (dot) { dot.style.background = active ? '#D4A017' : 'rgba(234,219,200,0.4)'; dot.style.boxShadow = active ? '0 0 14px #D4A017' : 'none'; }
+      const desc = ch.querySelector('[data-desc]');
+      if (desc) { desc.style.maxHeight = active ? '80px' : '0px'; desc.style.opacity = active ? '1' : '0'; }
+    });
+  };
+
+  // ---------- breathing ----------
+  patterns = {
+    '4-4-4': [['Inhale', 4, 1], ['Hold', 4, 1], ['Exhale', 4, 0.62]],
+    '4-7-8': [['Inhale', 4, 1], ['Hold', 7, 1], ['Exhale', 8, 0.62]],
+    'Box':   [['Inhale', 4, 1], ['Hold', 4, 1], ['Exhale', 4, 0.62], ['Empty', 4, 0.62]]
+  };
+
+  pickPattern = (e) => {
+    const key = e.currentTarget.getAttribute('data-pat');
+    this.breathPattern = key;
+    const root = this.patternsRef.current;
+    if (root) {
+      Array.from(root.children).forEach(btn => {
+        const active = btn.getAttribute('data-pat') === key;
+        btn.style.background = active ? '#D4A017' : 'rgba(250,248,245,0.05)';
+        btn.style.color = active ? '#0D1B2A' : 'rgba(250,248,245,0.8)';
+        btn.style.borderColor = active ? '#D4A017' : 'rgba(250,248,245,0.18)';
+      });
+    }
+    if (this.breathRunning) this.startBreathLoop();
+  };
+
+  toggleBreath = () => {
+    if (this.breathRunning) {
+      this.stopBreath();
+    } else {
+      this.startBreathLoop();
+    }
+  };
+
+  startBreathLoop() {
+    this.breathRunning = true;
+    if (this.breathBtnRef.current) this.breathBtnRef.current.textContent = 'Stop';
+    this._breathStart = performance.now();
+    const orb = this.orbRef.current, label = this.orbLabelRef.current, count = this.orbCountRef.current;
+    const loop = () => {
+      if (!this.breathRunning) return;
+      const seq = this.patterns[this.breathPattern];
+      const total = seq.reduce((s, p) => s + p[1], 0);
+      let t = ((performance.now() - this._breathStart) / 1000) % total;
+      let idx = 0, acc = 0;
+      for (let i = 0; i < seq.length; i++) { if (t < acc + seq[i][1]) { idx = i; break; } acc += seq[i][1]; }
+      const phase = seq[idx];
+      const lt = t - acc;
+      const prevScale = idx === 0 ? seq[seq.length - 1][2] : seq[idx - 1][2];
+      const targetScale = phase[2];
+      const k = Math.min(1, lt / phase[1]);
+      const ease = 0.5 - 0.5 * Math.cos(Math.PI * k);
+      const scale = prevScale + (targetScale - prevScale) * ease;
+      if (orb) orb.style.transform = 'scale(' + scale.toFixed(3) + ')';
+      if (label) label.textContent = phase[0];
+      if (count) count.textContent = String(Math.ceil(phase[1] - lt));
+      this._braf = requestAnimationFrame(loop);
+    };
+    loop();
+  }
+
+  stopBreath() {
+    this.breathRunning = false;
+    if (this._braf) cancelAnimationFrame(this._braf);
+    if (this.breathBtnRef.current) this.breathBtnRef.current.textContent = 'Start';
+    if (this.orbLabelRef.current) this.orbLabelRef.current.textContent = 'Whenever you are ready';
+    if (this.orbCountRef.current) this.orbCountRef.current.textContent = '';
+    if (this.orbRef.current) { this.orbRef.current.style.transition = 'transform 1s ease'; this.orbRef.current.style.transform = 'scale(0.62)'; setTimeout(() => { if (this.orbRef.current) this.orbRef.current.style.transition = 'none'; }, 1000); }
+  }
+
+  // ---------- agendar consulta (reservas reales vía Google Apps Script) ----------
+  openBooking = (ctx) => {
+    this._bookingTopic = (typeof ctx === 'string' && TOPICS[ctx]) ? ctx : null;
+    this._localMode = !BOOKING_API;
+    this._ensureBookingUI();
+    this._bkOverlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    this._loadSlots();
+  };
+
+  // Pista (frase/afirmación) según la sección desde la que se agenda.
+  // En temas sensibles la pista es discreta (sin nombrar la sección).
+  _topicHint(key) {
+    const d = TOPICS[key]; if (!d) return '';
+    const discreet = {
+      'adicciones': 'I am looking for support to regain control of something that overwhelms me.',
+      'violencia': 'I am going through a situation that makes me feel unsafe and I want to talk about it.',
+      'violencia-pareja': 'My relationship is making me feel afraid and I need guidance.',
+      'violencia-familiar': 'In my close environment I experience situations that hurt me.',
+      'violencia-psicologica': 'I constantly feel belittled and I want to regain my clarity.',
+      'violencia-sexual': 'I went through a very hard experience and I need a safe space to heal.',
+      'violencia-laboral': 'My work environment is affecting my well-being.',
+      'violencia-digital': 'I am experiencing harassment or threats online and I need support.'
+    };
+    if (discreet[key]) return discreet[key];
+    return d.hint || ('I would like to work on: ' + d.title + (d.tag ? (' — «' + d.tag + '».') : '.'));
+  }
+
+  _closeBooking = () => {
+    if (this._bkOverlay) this._bkOverlay.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  _ensureBookingUI() {
+    if (this._bkOverlay) return;
+    if (!document.getElementById('bk-style')) {
+      const st = document.createElement('style');
+      st.id = 'bk-style';
+      st.textContent =
+        '.bk-overlay{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(7,15,27,.66);backdrop-filter:blur(4px);padding:20px}'
+        + '.bk-panel{position:relative;width:100%;max-width:440px;max-height:86vh;overflow:auto;background:#0f2138;border:1px solid rgba(212,160,23,.3);border-radius:20px;padding:24px;color:#FAF8F5;font-family:Manrope,system-ui,sans-serif;box-shadow:0 30px 80px rgba(0,0,0,.55)}'
+        + '.bk-x{position:absolute;top:10px;right:14px;background:transparent;border:none;color:rgba(250,248,245,.6);font-size:26px;line-height:1;cursor:pointer}'
+        + ".bk-head h3{font-family:Spectral,serif;font-weight:500;font-size:22px;margin:0 0 4px}"
+        + '.bk-head p{font-size:12.5px;color:rgba(250,248,245,.6);margin:0 0 18px}'
+        + '.bk-msg{padding:26px 4px;text-align:center;color:rgba(250,248,245,.7);font-size:14px;line-height:1.5}'
+        + '.bk-hint{font-size:12.5px;color:rgba(250,248,245,.62);background:rgba(212,160,23,.08);border:1px solid rgba(212,160,23,.22);border-radius:10px;padding:9px 12px;margin-bottom:16px;line-height:1.4}'
+        + '.bk-days{display:flex;flex-direction:column;gap:16px}'
+        + '.bk-dlabel{font-size:12px;letter-spacing:.04em;text-transform:capitalize;color:#D4A017;font-weight:600;margin-bottom:9px}'
+        + '.bk-times{display:flex;flex-wrap:wrap;gap:8px}'
+        + '.bk-slot{font-family:Manrope,sans-serif;font-size:13px;color:#FAF8F5;background:rgba(250,248,245,.05);border:1px solid rgba(212,160,23,.35);border-radius:10px;padding:8px 13px;cursor:pointer;transition:all .2s}'
+        + '.bk-slot:hover{background:#D4A017;color:#0D1B2A;border-color:#D4A017}'
+        + '.bk-back{background:transparent;border:none;color:rgba(250,248,245,.6);font-size:13px;cursor:pointer;padding:0;margin-bottom:14px}'
+        + ".bk-when{font-family:Spectral,serif;font-size:16px;color:#D4A017;margin-bottom:16px;text-transform:capitalize}"
+        + '.bk-l{display:block;font-size:12px;color:rgba(250,248,245,.7);margin-bottom:12px}'
+        + '.bk-i{display:block;width:100%;margin-top:5px;background:rgba(250,248,245,.06);border:1px solid rgba(250,248,245,.18);border-radius:9px;padding:10px 12px;color:#FAF8F5;font-family:Manrope,sans-serif;font-size:14px;box-sizing:border-box}'
+        + '.bk-i:focus{outline:none;border-color:#D4A017}'
+        + '.bk-confirm{width:100%;margin-top:6px;font-family:Manrope,sans-serif;font-weight:600;font-size:15px;color:#0D1B2A;background:#D4A017;border:none;border-radius:999px;padding:13px;cursor:pointer}'
+        + '.bk-confirm:disabled{opacity:.6;cursor:default}'
+        + '.bk-err{color:#ffb4a8;font-size:13px;margin-top:10px;min-height:16px}'
+        + ".bk-ok{text-align:center;padding:26px 6px;font-family:Spectral,serif;font-size:21px;color:#D4A017}"
+        + '.bk-ok span{display:block;margin-top:8px;font-family:Manrope,sans-serif;font-size:13.5px;color:rgba(250,248,245,.72)}';
+      document.head.appendChild(st);
+    }
+    const host = (this.bookingRef && this.bookingRef.current) || document.body;
+    const ov = document.createElement('div');
+    ov.className = 'bk-overlay';
+    ov.innerHTML =
+      '<div class="bk-panel"><button class="bk-x" aria-label="Cerrar">×</button>'
+      + '<div class="bk-head"><h3>Book a consultation</h3><p>1-hour sessions · Costa Rica (UTC−6)</p></div>'
+      + '<div class="bk-body"></div></div>';
+    host.appendChild(ov);
+    this._bkOverlay = ov;
+    this._bkBody = ov.querySelector('.bk-body');
+    ov.querySelector('.bk-x').addEventListener('click', this._closeBooking);
+    ov.addEventListener('click', (e) => { if (e.target === ov) this._closeBooking(); });
+  }
+
+  async _loadSlots() {
+    if (this._localMode) {
+      this._slots = this._localSlots();
+      if (!this._slots.length) {
+        this._bkBody.innerHTML = '<div class="bk-msg">No upcoming times are available.<br>Message me on WhatsApp and we will arrange it.</div>';
+        return;
+      }
+      this._renderDays();
+      return;
+    }
+    this._bkBody.innerHTML = '<div class="bk-msg">Loading availability…</div>';
+    try {
+      const r = await fetch(BOOKING_API + '?action=slots');
+      const data = await r.json();
+      if (!data.ok || !data.slots || !data.slots.length) {
+        this._bkBody.innerHTML = '<div class="bk-msg">No times are available right now.<br>Message me on WhatsApp and we will arrange it.</div>';
+        return;
+      }
+      this._slots = data.slots;
+      this._renderDays();
+    } catch (e) {
+      this._bkBody.innerHTML = '<div class="bk-msg">Availability could not be loaded.<br>Try again or message me on WhatsApp.</div>';
+    }
+  }
+
+  // Horarios generados en el navegador desde tu disponibilidad recurrente
+  // (hora de Costa Rica, UTC−6 sin horario de verano). Se usa mientras no haya
+  // BOOKING_API: la persona elige y se va a WhatsApp a confirmar.
+  _localSlots() {
+    // 0=Dom 1=Lun 2=Mar 3=Mié 4=Jue 5=Vie 6=Sáb
+    const SCHEDULE = { 1: [[11, 20]], 2: [[11, 20]], 3: [[16, 20]], 4: [[16, 20]], 5: [[11, 20]], 6: [[10, 20]] };
+    const TZ = 'America/Costa_Rica';
+    const pad = (n) => (n < 10 ? '0' + n : '' + n);
+    const dayFmt = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' });
+    const lead = Date.now() + 2 * 3600000;
+    const base = new Date(dayFmt.format(new Date()) + 'T00:00:00-06:00');
+    const out = [];
+    for (let d = 0; d < 21; d++) {
+      const ymd = dayFmt.format(new Date(base.getTime() + d * 86400000));
+      const dow = new Date(ymd + 'T12:00:00-06:00').getUTCDay();
+      const wins = SCHEDULE[dow];
+      if (!wins) continue;
+      wins.forEach((w) => {
+        for (let h = w[0]; h < w[1]; h++) {
+          const start = new Date(ymd + 'T' + pad(h) + ':00:00-06:00');
+          if (start.getTime() > lead) out.push(start.toISOString());
+        }
+      });
+    }
+    return out;
+  }
+
+  _whatsappBook(iso) {
+    const when = new Date(iso).toLocaleString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: 'America/Costa_Rica' });
+    let txt = 'Hi Verónica 👋, I would like to book a 1-hour session on ' + when + '.';
+    if (this._bookingTopic) { const hint = this._topicHint(this._bookingTopic); if (hint) txt += ' ' + hint; }
+    txt += ' Is that time available?';
+    window.open('https://wa.me/50670773517?text=' + encodeURIComponent(txt), '_blank', 'noopener');
+  }
+
+  _renderDays() {
+    const TZ = 'America/Costa_Rica';
+    const byDay = {};
+    this._slots.forEach((iso) => {
+      const key = new Date(iso).toLocaleDateString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', timeZone: TZ });
+      (byDay[key] = byDay[key] || []).push(iso);
+    });
+    let html = (this._localMode ? '<div class="bk-hint">Pick a time and I will take you to WhatsApp to confirm it.</div>' : '') + '<div class="bk-days">';
+    Object.keys(byDay).forEach((day) => {
+      html += '<div class="bk-day"><div class="bk-dlabel">' + day + '</div><div class="bk-times">';
+      byDay[day].forEach((iso) => {
+        const t = new Date(iso).toLocaleTimeString('es-CR', { hour: '2-digit', minute: '2-digit', timeZone: TZ });
+        html += '<button class="bk-slot" data-iso="' + iso + '">' + t + '</button>';
+      });
+      html += '</div></div>';
+    });
+    html += '</div>';
+    this._bkBody.innerHTML = html;
+    this._bkBody.querySelectorAll('.bk-slot').forEach((b) =>
+      b.addEventListener('click', () => {
+        const iso = b.getAttribute('data-iso');
+        if (this._localMode) this._whatsappBook(iso); else this._renderForm(iso);
+      }));
+  }
+
+  _renderForm(iso) {
+    const when = new Date(iso).toLocaleString('es-CR', { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: 'America/Costa_Rica' });
+    const noteVal = this._bookingTopic ? this._topicHint(this._bookingTopic) : '';
+    this._bkBody.innerHTML =
+      '<button class="bk-back">← Change time</button>'
+      + '<div class="bk-when">' + when + ' · 1 hour</div>'
+      + '<label class="bk-l">Name<input class="bk-i" id="bk-name" autocomplete="name"></label>'
+      + '<label class="bk-l">Email<input class="bk-i" id="bk-email" type="email" autocomplete="email"></label>'
+      + '<label class="bk-l">WhatsApp / phone<input class="bk-i" id="bk-phone" autocomplete="tel"></label>'
+      + '<label class="bk-l">Reason (optional)<textarea class="bk-i" id="bk-note" rows="2">' + noteVal + '</textarea></label>'
+      + '<button class="bk-confirm">Confirm appointment</button>'
+      + '<div class="bk-err"></div>';
+    this._bkBody.querySelector('.bk-back').addEventListener('click', () => this._renderDays());
+    this._bkBody.querySelector('.bk-confirm').addEventListener('click', () => this._submit(iso));
+  }
+
+  async _submit(iso) {
+    const g = (id) => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    const name = g('bk-name'), email = g('bk-email'), phone = g('bk-phone'), note = g('bk-note');
+    const err = this._bkBody.querySelector('.bk-err');
+    if (!name || !email) { err.textContent = 'Please enter your name and email.'; return; }
+    const btn = this._bkBody.querySelector('.bk-confirm');
+    btn.disabled = true; btn.textContent = 'Booking…';
+    try {
+      const r = await fetch(BOOKING_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ action: 'book', start: iso, name: name, email: email, phone: phone, note: note, topic: this._bookingTopic || '' })
+      });
+      const data = await r.json();
+      if (data.ok) {
+        this._bkBody.innerHTML = '<div class="bk-ok">✓ Appointment confirmed!<span>You will receive the invitation by email. See you soon.</span></div>';
+      } else {
+        err.textContent = data.error || 'That time is no longer available. Please choose another.';
+        btn.disabled = false; btn.textContent = 'Confirm appointment';
+      }
+    } catch (e) {
+      err.textContent = 'Booking failed. Please try again.';
+      btn.disabled = false; btn.textContent = 'Confirm appointment';
+    }
+  }
+
+  // ---------- YouTube: canal, video destacado y playlists por tema ----------
+  _ytId(s) {
+    if (!s) return '';
+    s = String(s).trim();
+    if (/^[\w-]{11}$/.test(s)) return s;
+    const m = s.match(/[?&]v=([\w-]{11})/) || s.match(/youtu\.be\/([\w-]{11})/) || s.match(/embed\/([\w-]{11})/);
+    return m ? m[1] : '';
+  }
+
+  _initYouTube() {
+    const host = this.ytFeaturedRef && this.ytFeaturedRef.current;
+    if (!host) return;
+    const id = this._ytId(YOUTUBE.featured);
+    if (!id) { host.style.display = 'none'; return; }
+    host.innerHTML =
+      '<div style="text-align:center; margin-bottom:22px;">'
+      + '<span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Watch my videos</span></div>'
+      + '<div style="position:relative; width:100%; max-width:760px; margin:0 auto; aspect-ratio:16/9; border-radius:18px; overflow:hidden; border:1px solid rgba(212,160,23,0.25); box-shadow:0 24px 60px rgba(0,0,0,0.45);">'
+      + '<iframe src="https://www.youtube.com/embed/' + id + '" title="Video del Wellness Center" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe></div>';
+    host.style.display = 'block';
+  }
+
+  openYT = (e) => {
+    const tile = e.currentTarget;
+    const key = tile.getAttribute('data-yt');
+    const url = ((YOUTUBE[key] || '').trim()) || ((YOUTUBE.channel || '').trim());
+    if (url) { window.open(url, '_blank', 'noopener'); return; }
+    const sub = tile.querySelector('div:last-child');
+    if (sub && !sub._soon) {
+      sub._soon = sub.textContent;
+      sub.textContent = 'Próximamente';
+      setTimeout(() => { if (sub._soon) { sub.textContent = sub._soon; sub._soon = null; } }, 1600);
+    }
+  };
+
+  openChannel = () => {
+    const url = (YOUTUBE.channel || '').trim();
+    if (url) window.open(url, '_blank', 'noopener');
+  };
+
+  renderVals() {
+    return {
+      canvasRef: this.canvasRef,
+      timelineRef: this.timelineRef,
+      orbRef: this.orbRef,
+      orbCountRef: this.orbCountRef,
+      orbLabelRef: this.orbLabelRef,
+      patternsRef: this.patternsRef,
+      breathBtnRef: this.breathBtnRef,
+      pickStage: this.pickStage,
+      pickPattern: this.pickPattern,
+      toggleBreath: this.toggleBreath,
+      goTop: () => this.goPage('inicio'),
+      goInicio: () => this.goPage('inicio'),
+      goAbout: () => this.goPage('about'),
+      goServices: () => this.goPage('servicios'),
+      goEmpresas: () => this.goPage('empresas'),
+      goWellness: () => this.goPage('inicio', 'wellness'),
+      goContact: () => this.goPage('inicio', 'contact'),
+      bookingRef: this.bookingRef,
+      openBooking: this.openBooking,
+      openWhatsApp: () => window.open('https://wa.me/50670773517', '_blank', 'noopener'),
+      openTopic: this.openTopic,
+      temaRef: this.temaRef,
+      openYT: this.openYT,
+      openChannel: this.openChannel,
+      openLang: this.openLang,
+      ytFeaturedRef: this.ytFeaturedRef
+    };
+  }
+}
+</script>
+</body>
+</html>
