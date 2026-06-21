@@ -288,6 +288,8 @@
         <div data-yt="estres" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Estrés y sus niveles</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="culpa" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">La culpa</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="habitos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Hábitos y metas</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="empleo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Búsqueda de empleo</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="violencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Situaciones de violencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -1331,6 +1333,134 @@ const TOPICS = {
         'Si te caes, vuelve sin castigarte: procura no fallar dos veces seguidas.' ] }
     ],
     closing: 'Si te cuesta sostener tus hábitos o sientes que tus metas te sobrepasan, podemos diseñar juntos un plan realista y amable contigo. Escríbeme.'
+  },
+
+  empleo: {
+    title: 'Búsqueda de empleo', tag: 'Tu valor no está en pausa',
+    intro: 'Buscar empleo —sobre todo cuando se alarga— puede minar la esperanza y hacerte dudar de ti. Quiero recordarte algo: que un proceso tome tiempo no significa que no sirvas. Tu valor no depende de tener o no un trabajo ahora mismo. Esta etapa también se puede transitar con la cabeza en alto y con estrategia.',
+    blocks: [
+      { h: 'Para cuidar tu ánimo en el camino', list: [
+        'Que tarde no significa que no llegará: el "no" de hoy no define tu futuro.',
+        'Separa tu valor como persona de los resultados de la búsqueda.',
+        'Ponle estructura a tus días: una rutina te protege de la desesperanza.',
+        'Habla de lo que sientes; el desánimo crece en el silencio.' ] },
+      { h: 'Para mostrar un perfil de alto valor', list: [
+        'Identifica tus fortalezas y logros concretos, no solo tus tareas.',
+        'Cuenta tu historia con claridad: qué problemas resuelves y qué te hace distinto.',
+        'Cuida tu CV, tu LinkedIn y cómo te presentas; tu marca personal también comunica.',
+        'Prepárate para las entrevistas con ejemplos reales de lo que has logrado.' ] },
+      { h: 'Para empoderarte', list: [
+        'Reconoce todo lo que ya sabes hacer: probablemente vales más de lo que crees.',
+        'Sigue aprendiendo; cada habilidad nueva suma a tu confianza y a tu perfil.',
+        'Rodéate de quien te impulse, no de quien alimente tu duda.',
+        'Recuerda que esta etapa es temporal, y tú sigues creciendo en ella.' ] }
+    ],
+    closing: 'Si la búsqueda te tiene agotado o dudando de ti, puedo ayudarte a recuperar la confianza y a construir un perfil de alto valor que muestre tu mejor versión. Escríbeme.'
+  },
+
+  violencia: {
+    title: 'Abordaje de situaciones de violencia', tag: 'No es tu culpa, y no estás solo',
+    intro: 'Vivir cualquier tipo de violencia deja huellas profundas, y dar el paso de buscar ayuda requiere mucha valentía. Quiero que lo leas con claridad: la violencia nunca es culpa de quien la recibe, y mereces vivir libre de miedo. Aquí encontrarás orientación para reconocerla y abordarla, en un espacio seguro y sin juicios. Elige el tipo de situación que estás viviendo.',
+    children: ['violencia-pareja', 'violencia-familiar', 'violencia-psicologica', 'violencia-sexual', 'violencia-laboral', 'violencia-digital'],
+    closing: 'Si estás en peligro inmediato, llama al 911. En Costa Rica, la línea 1147 del INAMU atiende a mujeres en situación de violencia. Tu seguridad es lo primero.'
+  },
+  'violencia-pareja': {
+    title: 'Violencia en la pareja', parent: 'violencia', tag: 'El amor no duele',
+    intro: 'La violencia en la pareja no siempre deja marcas visibles: también es el control, los celos, la humillación o el miedo constante. El amor sano no te hace sentir pequeño ni con miedo. Reconocerlo es el primer paso para protegerte.',
+    blocks: [
+      { h: 'Señales de alerta', list: [
+        'Te controla: con quién hablas, qué haces, cómo te vistes o en qué gastas.',
+        'Te humilla, te insulta o te culpa de todo.',
+        'Hay empujones, golpes o amenazas, aunque después pida perdón.',
+        'Sientes miedo de cómo va a reaccionar.' ] },
+      { h: 'Para cuidarte', list: [
+        'Confía en lo que sientes: si algo te hace daño, es válido buscar ayuda.',
+        'No estás solo y no es tu culpa; el ciclo de la violencia no se rompe en soledad.',
+        'Ten cerca a personas de confianza y un plan para tu seguridad.',
+        'Busca apoyo profesional y legal; mereces vivir sin miedo.' ] }
+    ],
+    closing: 'Tu seguridad es lo primero. Puedo acompañarte en tu proceso emocional; si hay peligro inmediato, llama al 911 (o al 1147 del INAMU en Costa Rica). Escríbeme.'
+  },
+  'violencia-familiar': {
+    title: 'Violencia familiar', parent: 'violencia', tag: 'El hogar debería ser un lugar seguro',
+    intro: 'La violencia dentro de la familia —hacia niños, adolescentes, personas mayores o entre quienes conviven— hace daño y muchas veces se normaliza. Ningún vínculo familiar justifica el maltrato. Pedir ayuda no es traicionar a tu familia: es protegerte y proteger a quienes amas.',
+    blocks: [
+      { h: 'Qué reconocer', list: [
+        'Maltrato físico, gritos, humillaciones o castigos que dañan.',
+        'Abandono o descuido de quienes dependen de otros (niños o personas mayores).',
+        'Un ambiente de miedo, control o tensión constante en casa.' ] },
+      { h: 'Para actuar', list: [
+        'Protege primero a quien esté en riesgo, especialmente niños y personas mayores.',
+        'Habla con alguien de confianza y busca apoyo profesional.',
+        'Documenta lo que ocurre si es seguro hacerlo.',
+        'Recuerda que existen instituciones que pueden ayudarte a protegerte.' ] }
+    ],
+    closing: 'Si hay alguien en peligro, llama al 911. Puedo acompañarte en el proceso emocional de estas situaciones. Escríbeme.'
+  },
+  'violencia-psicologica': {
+    title: 'Violencia psicológica y emocional', parent: 'violencia', tag: 'Las heridas que no se ven también duelen',
+    intro: 'La violencia psicológica es sutil pero profunda: humillaciones, manipulación, control, amenazas o hacerte dudar de tu propia percepción. Que no deje marcas físicas no la hace menos grave. Si te hacen sentir constantemente menos, eso no es normal ni es tu culpa.',
+    blocks: [
+      { h: 'Cómo se manifiesta', list: [
+        'Te humillan, ridiculizan o descalifican, a solas o frente a otros.',
+        'Te manipulan o te hacen dudar de lo que viste o sentiste.',
+        'Te controlan, te aíslan o te amenazan.',
+        'Terminas sintiéndote culpable, confundido o "exagerado".' ] },
+      { h: 'Para protegerte', list: [
+        'Confía en tu percepción: lo que sientes es información válida.',
+        'Pon límites y aléjate de lo que te hace daño cuando sea posible.',
+        'Apóyate en personas y en acompañamiento que te devuelvan claridad.',
+        'Reconstruir la autoestima dañada es posible, y mereces hacerlo.' ] }
+    ],
+    closing: 'No estás solo y no estás exagerando. Podemos trabajar para recuperar tu claridad y tu fuerza. Escríbeme.'
+  },
+  'violencia-sexual': {
+    title: 'Violencia sexual', parent: 'violencia', tag: 'Nunca es tu culpa',
+    intro: 'La violencia sexual es cualquier acto sexual sin tu consentimiento, sin importar quién lo haya hecho ni las circunstancias. Quiero que lo leas claro: la única persona responsable es quien agrede; tú nunca tienes la culpa, sin importar cómo ibas vestido, qué dijiste o qué hiciste.',
+    blocks: [
+      { h: 'Lo que necesitas saber', list: [
+        'Tu consentimiento es indispensable; sin él, es violencia.',
+        'Lo que sientas (shock, culpa, negación, rabia) es una respuesta normal a algo grave.',
+        'No estás solo, y no fue tu culpa.' ] },
+      { h: 'Para cuidarte', list: [
+        'Si acaba de ocurrir, busca un lugar seguro y atención médica.',
+        'Cuando puedas, busca acompañamiento psicológico para sanar a tu ritmo.',
+        'Apóyate en personas de confianza; no tienes que cargarlo en silencio.' ] }
+    ],
+    closing: 'Sanar de la violencia sexual es posible, con apoyo y a tu tiempo. Si estás en peligro, llama al 911. Puedo acompañarte en tu proceso. Escríbeme.'
+  },
+  'violencia-laboral': {
+    title: 'Violencia laboral y acoso', parent: 'violencia', tag: 'Trabajar no debería costarte tu dignidad',
+    intro: 'La violencia en el trabajo —maltrato, acoso laboral, acoso sexual, humillaciones o abuso de poder— afecta tu salud y tu autoestima. Aguantar no es profesionalismo: tu bienestar también importa, y tienes derecho a un ambiente respetuoso.',
+    blocks: [
+      { h: 'Qué reconocer', list: [
+        'Humillaciones, gritos, sobrecarga o aislamiento intencional.',
+        'Acoso sexual o insinuaciones no deseadas.',
+        'Abuso de poder, amenazas o trato injusto sostenido.' ] },
+      { h: 'Para actuar', list: [
+        'Documenta lo que ocurre: fechas, hechos y testigos.',
+        'Conoce los canales de denuncia de tu organización y tus derechos.',
+        'Cuida tu salud emocional; el desgaste laboral es real.',
+        'Busca apoyo; no tienes que normalizar el maltrato.' ] }
+    ],
+    closing: 'Si el ambiente laboral te está dañando, podemos trabajar en tu bienestar y en cómo afrontarlo. Escríbeme.'
+  },
+  'violencia-digital': {
+    title: 'Violencia digital', parent: 'violencia', tag: 'Tu seguridad también es en línea',
+    intro: 'La violencia digital es real: acoso, amenazas, control a través del celular, difusión de imágenes sin tu permiso o suplantación de identidad. Que ocurra detrás de una pantalla no la hace menos grave ni menos dañina.',
+    blocks: [
+      { h: 'Cómo se manifiesta', list: [
+        'Acoso, insultos o amenazas por redes o mensajes.',
+        'Control de tus cuentas, contraseñas o ubicación.',
+        'Difusión o amenaza de difundir imágenes íntimas sin tu consentimiento.',
+        'Suplantación de identidad o exposición de tu información.' ] },
+      { h: 'Para protegerte', list: [
+        'Guarda evidencia (capturas, mensajes) antes de bloquear.',
+        'Refuerza tu seguridad: contraseñas, privacidad y bloqueos.',
+        'No te culpes; la responsabilidad es de quien agrede.',
+        'Busca apoyo y, si corresponde, asesoría legal.' ] }
+    ],
+    closing: 'Si vives violencia digital, no estás solo. Puedo acompañarte emocionalmente; si hay amenazas a tu seguridad, busca asesoría legal y llama al 911 si es urgente. Escríbeme.'
   }
 };
 
