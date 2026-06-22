@@ -729,7 +729,7 @@
    AGENDAR CITAS — Conexión con Google Calendar (calendario "Rachel" / CAPSICOV)
    Pega entre las comillas la URL de tu app web de Google Apps Script
    (la que termina en /exec — ver carpeta /booking del repo). Mientras esté
-   vacía, el botón "Agendar consulta" lleva a la sección de contacto (WhatsApp).
+   vacía, el botón "预约咨询" lleva a la sección de contacto (WhatsApp).
    ============================================================================ */
 const BOOKING_API = "";
 
@@ -1956,7 +1956,7 @@ class Component extends DCLogic {
     ov.className = 'bk-overlay';
     ov.innerHTML =
       '<div class="bk-panel"><button class="bk-x" aria-label="Cerrar">×</button>'
-      + '<div class="bk-head"><h3>Agendar consulta</h3><p>1 小时的会谈 · 哥斯达黎加（UTC−6）</p></div>'
+      + '<div class="bk-head"><h3>预约咨询</h3><p>1 小时的会谈 · 哥斯达黎加（UTC−6）</p></div>'
       + '<div class="bk-body"></div></div>';
     host.appendChild(ov);
     this._bkOverlay = ov;
