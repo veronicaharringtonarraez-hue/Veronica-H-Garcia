@@ -36,6 +36,7 @@
   <style>
     *{ box-sizing:border-box; margin:0; padding:0; }
     html{ scroll-behavior:smooth; }
+    html,body{ overflow-x:hidden; }
     body{ background:#0D1B2A; font-family:'Manrope',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
     ::selection{ background:rgba(212,160,23,0.28); color:#FAF8F5; }
     ::-webkit-scrollbar{ height:8px; width:10px; }
@@ -99,10 +100,10 @@
   </style>
 </helmet>
 
-<div style="position:relative; background:#0D1B2A; color:#FAF8F5; overflow-x:hidden; font-family:'Manrope',sans-serif;">
+<div style="position:relative; background:#0D1B2A; color:#FAF8F5; font-family:'Manrope',sans-serif;">
 
   <!-- ===================== NAV ===================== -->
-  <nav class="r-nav" style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; backdrop-filter:blur(18px) saturate(1.2); -webkit-backdrop-filter:blur(18px) saturate(1.2); background:linear-gradient(180deg,rgba(13,27,42,0.72),rgba(13,27,42,0.28)); border-bottom:1px solid rgba(212,160,23,0.12);">
+  <nav class="r-nav" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; backdrop-filter:blur(18px) saturate(1.2); -webkit-backdrop-filter:blur(18px) saturate(1.2); background:linear-gradient(180deg,rgba(13,27,42,0.72),rgba(13,27,42,0.28)); border-bottom:1px solid rgba(212,160,23,0.12);">
     <div style="display:flex; align-items:center; gap:13px; cursor:pointer;" onClick="{{ goInicio }}">
       <svg viewBox="0 0 120 120" width="34" height="34" aria-hidden="true">
         <g fill="none" stroke="#D4A017" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
