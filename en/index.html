@@ -15,8 +15,14 @@
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#0D1B2A">
 <style>
-  .lang-menu { position:fixed; z-index:300; display:none; background:#0f2138; border:1px solid rgba(212,160,23,.35); border-radius:12px; padding:6px; box-shadow:0 18px 50px rgba(0,0,0,.5); min-width:190px; max-height:70vh; overflow:auto; }
-  .lang-menu button { display:block; width:100%; text-align:left; background:transparent; border:none; color:#FAF8F5; font:14px/1 Manrope,system-ui,sans-serif; padding:10px 12px; border-radius:8px; cursor:pointer; }
+  .lang-overlay { position:fixed; inset:0; z-index:299; display:none; background:rgba(8,15,26,.55); -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px); }
+  .lang-overlay.open { display:block; }
+  .lang-menu { position:fixed; top:0; right:0; bottom:0; z-index:300; display:none; width:min(320px,86vw); height:100vh; background:#0f2138; border-left:1px solid rgba(212,160,23,.35); border-radius:0; padding:18px 14px calc(18px + env(safe-area-inset-bottom)); box-shadow:-22px 0 60px rgba(0,0,0,.55); overflow-y:auto; -webkit-overflow-scrolling:touch; }
+  .lang-menu.open { display:block; }
+  .lang-menu .lang-head { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:2px 6px 12px; margin-bottom:6px; border-bottom:1px solid rgba(212,160,23,.2); }
+  .lang-menu .lang-head span { font:600 12px/1 Manrope,system-ui,sans-serif; letter-spacing:.18em; text-transform:uppercase; color:rgba(212,160,23,.9); }
+  .lang-menu .lang-x { background:transparent; border:none; color:#FAF8F5; font-size:24px; line-height:1; cursor:pointer; padding:0 4px; width:auto; }
+  .lang-menu button { display:block; width:100%; text-align:left; background:transparent; border:none; color:#FAF8F5; font:15px/1.2 Manrope,system-ui,sans-serif; padding:13px 12px; border-radius:8px; cursor:pointer; }
   .lang-menu button:hover:not(:disabled) { background:rgba(212,160,23,.15); }
   .lang-menu button.on { color:#D4A017; font-weight:600; }
   .lang-menu button:disabled { color:rgba(250,248,245,.4); cursor:default; }
@@ -1546,20 +1552,25 @@ class Component extends DCLogic {
   openLang = (e) => {
     this._ensureLangMenu();
     const m = this._langMenu;
-    if (m.style.display === 'block') { m.style.display = 'none'; return; }
-    const btn = (e && e.currentTarget) || document.querySelector('[data-langbtn]');
-    const r = btn ? btn.getBoundingClientRect() : { left: 16, bottom: 64 };
-    m.style.left = Math.max(8, Math.min(r.left, window.innerWidth - 180)) + 'px';
-    m.style.top = (r.bottom + 8) + 'px';
-    m.style.display = 'block';
+    if (m.classList.contains('open')) { this._closeLang(); return; }
+    if (this._langOverlay) this._langOverlay.classList.add('open');
+    m.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  _closeLang = () => {
+    if (this._langMenu) this._langMenu.classList.remove('open');
+    if (this._langOverlay) this._langOverlay.classList.remove('open');
+    document.body.style.overflow = '';
   };
 
   _ensureLangMenu() {
     if (this._langMenu) return;
+    const ov = document.createElement('div'); ov.className = 'lang-overlay notranslate'; ov.setAttribute('translate', 'no'); ov.onclick = () => this._closeLang(); document.body.appendChild(ov); this._langOverlay = ov;
     const m = document.createElement('div');
     m.className = 'lang-menu notranslate';
     m.setAttribute('translate', 'no');
-    m.innerHTML = this._langs.map((l) => {
+    m.innerHTML = '<div class="lang-head"><span>Idioma \u00b7 Language</span><button class="lang-x" aria-label="Cerrar / Close">\u00d7</button></div>' + this._langs.map((l) => {
       const ok = this._availableLangs.indexOf(l[0]) >= 0;
       const on = this._lang === l[0];
       return '<button data-lang="' + l[0] + '"' + (on ? ' class="on"' : '') + (ok ? '' : ' disabled') + '>'
@@ -1567,14 +1578,9 @@ class Component extends DCLogic {
     }).join('');
     document.body.appendChild(m);
     this._langMenu = m;
-    m.querySelectorAll('button').forEach((b) => { b.onclick = () => this._setLang(b.getAttribute('data-lang')); });
-    document.addEventListener('click', (ev) => {
-      if (this._langMenu && this._langMenu.style.display === 'block' &&
-          !this._langMenu.contains(ev.target) &&
-          !(ev.target.closest && ev.target.closest('[data-langbtn]'))) {
-        this._langMenu.style.display = 'none';
-      }
-    });
+    const _x = m.querySelector('.lang-x'); if (_x) _x.onclick = () => this._closeLang();
+    m.querySelectorAll('button[data-lang]').forEach((b) => { b.onclick = () => this._setLang(b.getAttribute('data-lang')); });
+    document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') this._closeLang(); });
   }
 
   _langUrl(code) {
@@ -1584,7 +1590,7 @@ class Component extends DCLogic {
 
   _setLang(code) {
     if (this._availableLangs.indexOf(code) < 0) return; // traducción en preparación
-    if (code === this._lang) { if (this._langMenu) this._langMenu.style.display = 'none'; return; }
+    if (code === this._lang) { this._closeLang(); return; }
     location.href = this._langUrl(code);
   }
 
