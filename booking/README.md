@@ -7,8 +7,17 @@ disponibilidad y crea las citas. Ninguna clave queda expuesta en la web.
 
 ## Cómo funciona
 - Tu **disponibilidad** son los eventos cuyo título contiene `CAPSICOV` dentro
-  del calendario **Rachel**.
+  del calendario **Rachel**. Se lee **en vivo** en cada visita: si te tomas
+  vacaciones, borras o agregas bloques, o pones más o menos horas, el sitio lo
+  refleja **automáticamente**. No hay nada fijo que actualizar a mano.
 - El script los divide en huecos de **1 hora** y descarta los ya reservados.
+- **Bloqueo por paciente:** cualquier evento de **Rachel** cuyo título contenga
+  una de estas palabras clave **bloquea esa hora** y deja de aparecer
+  disponible, *aunque el título también diga `CAPSICOV`*:
+  `Paciente`, `Caso`, `Evaluación`, `PAI`, `prueba psicométrica`.
+  Así nunca se ofrecen dos pacientes a la misma hora ni se muestra
+  disponibilidad donde ya agendaste a alguien. La comparación ignora
+  mayúsculas y acentos (`Evaluacion` = `Evaluación`).
 - Al reservar, crea un evento `Cita: <nombre>` en el calendario **Rachel** e
   **invita por correo** a la persona. Tu calendario personal nunca se muestra.
 
@@ -28,6 +37,8 @@ disponibilidad y crea las citas. Ninguna clave queda expuesta en la web.
    disponibilidad real.
 
 ## Ajustes rápidos (opcional, dentro de `Code.gs`)
+- `BLOCK_KEYWORDS` — palabras clave que bloquean la hora (paciente agendado).
+  Por defecto: `Paciente`, `Caso`, `Evaluación`, `PAI`, `prueba psicométrica`.
 - `SLOT_MIN` — duración de la cita (por defecto **60** min).
 - `DAYS_AHEAD` — cuántos días hacia adelante se ofrecen (por defecto **21**).
 - `LEAD_HOURS` — antelación mínima para reservar (por defecto **2** h).

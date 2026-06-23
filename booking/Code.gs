@@ -7,9 +7,16 @@
  *
  * CÓMO FUNCIONA
  *   - Tu DISPONIBILIDAD son los eventos cuyo título contiene "CAPSICOV"
- *     dentro del calendario "Rachel" (RACHEL_CAL).
+ *     dentro del calendario "Rachel" (RACHEL_CAL). Se lee EN VIVO en cada
+ *     visita, así que si te tomas vacaciones o cambias tus horas, la app lo
+ *     refleja automáticamente: no hay nada fijo que mantener.
  *   - El script parte esos bloques en huecos de 1 hora (SLOT_MIN) y descarta
  *     los que ya están reservados o chocan con tus calendarios "ocupados".
+ *   - Cualquier evento de Rachel cuyo título contenga una PALABRA CLAVE de
+ *     paciente (Paciente, Caso, Evaluación, PAI, prueba psicométrica) bloquea
+ *     esa hora aunque también diga "CAPSICOV": así nunca aparecen dos
+ *     pacientes a la misma hora ni se muestra disponibilidad donde ya hay
+ *     alguien agendado.
  *   - Cuando alguien reserva, crea un evento "Cita: <nombre>" en el calendario
  *     Rachel e invita por correo a la persona.
  *
@@ -30,6 +37,13 @@ var RACHEL_CAL = 'bea3e1fd21b905353477b997ed78fb06665324e6abcba117c1b75aa913ac05
 
 // Palabra que identifica tus bloques de disponibilidad por su título.
 var AVAIL_KEYWORD = 'CAPSICOV';
+
+// Palabras clave que BLOQUEAN la hora (un paciente agendado en ese horario).
+// Si el título de un evento de Rachel contiene cualquiera de estas, esa hora
+// NO aparecerá disponible en el sitio —aunque el título también diga
+// "CAPSICOV"—. La comparación ignora mayúsculas y acentos
+// (p. ej. "Evaluacion" y "Evaluación" se tratan igual).
+var BLOCK_KEYWORDS = ['paciente', 'caso', 'evaluacion', 'pai', 'prueba psicometrica'];
 
 var SLOT_MIN     = 60;   // duración de cada cita (minutos)
 var DAYS_AHEAD   = 21;   // cuántos días hacia adelante se ofrecen
@@ -91,10 +105,18 @@ function getFreeSlots() {
   var avail = [];
   var busy = [];
   events.forEach(function (ev) {
-    if (new RegExp(AVAIL_KEYWORD, 'i').test(ev.getTitle() || '')) {
-      avail.push([ev.getStartTime().getTime(), ev.getEndTime().getTime()]);
+    var title = ev.getTitle() || '';
+    var span = [ev.getStartTime().getTime(), ev.getEndTime().getTime()];
+    // PRIORIDAD: si el título tiene una palabra clave de paciente, la hora se
+    // bloquea aunque también contenga "CAPSICOV".
+    if (hasBlockKeyword(title)) {
+      busy.push(span);
+    } else if (new RegExp(AVAIL_KEYWORD, 'i').test(title)) {
+      avail.push(span);
     } else {
-      busy.push([ev.getStartTime().getTime(), ev.getEndTime().getTime()]);
+      // Cualquier otro evento (p. ej. las citas ya reservadas "Cita: ...")
+      // también ocupa el horario.
+      busy.push(span);
     }
   });
   // Otros calendarios marcados como ocupados (opcional).
@@ -121,6 +143,25 @@ function getFreeSlots() {
   });
   slots.sort();
   return slots;
+}
+
+// Quita acentos y pasa a minúsculas para comparar títulos de forma flexible.
+function normalize(str) {
+  return String(str)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
+
+// ¿El título contiene alguna palabra clave de paciente? Usa límites de palabra
+// para que claves cortas como "pai" no coincidan dentro de otras palabras
+// (p. ej. "país", "espai").
+function hasBlockKeyword(title) {
+  var t = normalize(title);
+  return BLOCK_KEYWORDS.some(function (kw) {
+    var k = normalize(kw).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp('(^|[^a-z0-9])' + k + '([^a-z0-9]|$)').test(t);
+  });
 }
 
 function json(obj) {
