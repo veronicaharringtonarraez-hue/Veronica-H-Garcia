@@ -151,48 +151,51 @@
     <!-- faint psi monogram -->
     <div style="position:absolute; right:6%; top:50%; transform:translateY(-50%); font-family:'Spectral',serif; font-size:46vh; line-height:1; color:rgba(212,160,23,0.045); pointer-events:none; user-select:none;">Ψ</div>
 
-    <div class="r-herogrid" style="position:relative; z-index:5; width:100%; max-width:1280px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;">
-      <!-- left: copy -->
-      <div class="r-herohead">
-        <div class="r-herobadge" style="display:inline-flex; align-items:center; gap:10px; padding:7px 16px; border-radius:999px; border:1px solid rgba(212,160,23,0.3); background:rgba(212,160,23,0.06); margin-bottom:30px;">
-          <span style="width:6px; height:6px; border-radius:50%; background:#D4A017; box-shadow:0 0 10px #D4A017;"></span>
-          <span style="font-size:11.5px; letter-spacing:0.26em; text-transform:uppercase; color:rgba(234,219,200,0.92); font-weight:600;">Psychologist · Operations · Project Management</span>
+    <div class="r-herogrid" style="position:relative; z-index:5; width:100%; max-width:1080px; margin:0 auto; padding:0 24px; display:block;">
+
+      <!-- ===== Encabezado tipo perfil de red social (solo foto + nombre) ===== -->
+      <div style="border-radius:24px; overflow:hidden; background:rgba(13,27,42,0.6); border:1px solid rgba(212,160,23,0.22); backdrop-filter:blur(16px); box-shadow:0 36px 90px rgba(0,0,0,0.55);">
+
+        <!-- banner / portada -->
+        <div style="position:relative; height:clamp(150px,24vw,238px); overflow:hidden;">
+          <img src="assets/marble-bg.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.92;">
+          <div style="position:absolute; inset:0; background:linear-gradient(108deg, rgba(13,27,42,0.82) 0%, rgba(13,27,42,0.34) 52%, rgba(212,160,23,0.20) 100%);"></div>
+          <!-- lechuza de marca (derecha, como en el ejemplo) -->
+          <span style="position:absolute; right:clamp(16px,5vw,46px); top:50%; transform:translateY(-50%); width:clamp(70px,12vw,116px); height:clamp(70px,12vw,116px); border-radius:50%; overflow:hidden; border:2px solid rgba(212,160,23,0.55); box-shadow:0 12px 32px rgba(0,0,0,0.45); animation:owlBreathe 5s ease-in-out infinite; transform-origin:center;"><img src="assets/owl.jpg" alt="Lechuza" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
+          <!-- selector de idioma (se conserva) -->
+          <button data-langbtn onClick="{{ openLang }}" title="Cambiar lenguaje / Change language" class="notranslate" translate="no" style="position:absolute; top:14px; right:14px; display:flex; align-items:center; gap:6px; background:rgba(13,27,42,0.6); border:1px solid rgba(212,160,23,0.45); color:#FAF8F5; font-family:'Manrope',sans-serif; font-size:12px; font-weight:600; padding:7px 12px; border-radius:999px; cursor:pointer; backdrop-filter:blur(8px);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"></path></svg>
+            Lenguaje</button>
         </div>
-        <h1 class="r-heroname" style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(46px,6.4vw,90px); line-height:0.98; letter-spacing:-0.02em; color:#FAF8F5; margin-bottom:22px;">Verónica<br><span style="color:#EADBC8;">H. Garcia</span></h1>
-        <p class="r-herolema" style="font-family:'Spectral',serif; font-style:italic; font-weight:300; font-size:clamp(20px,2.3vw,30px); color:#D4A017; letter-spacing:0.005em; margin-bottom:20px;">Bridging People, Processes &amp; Purpose</p>
+
+        <!-- cuerpo: foto circular superpuesta + nombre -->
+        <div style="padding:0 clamp(22px,4vw,40px) clamp(26px,3vw,34px);">
+          <div style="margin-top:clamp(-74px,-9vw,-58px);">
+            <span style="display:inline-block; width:clamp(112px,17vw,170px); height:clamp(112px,17vw,170px); border-radius:50%; overflow:hidden; border:4px solid #0D1B2A; background:#0D1B2A; box-shadow:0 18px 44px rgba(0,0,0,0.5);"><img src="assets/veronica.jpg" alt="Verónica H. Garcia" style="width:100%; height:100%; object-fit:cover; object-position:50% 26%; display:block;"></span>
+          </div>
+          <h1 class="r-heroname" style="display:flex; align-items:center; gap:11px; flex-wrap:wrap; font-family:'Spectral',serif; font-weight:500; font-size:clamp(28px,4.6vw,48px); line-height:1.04; letter-spacing:-0.01em; color:#FAF8F5; margin:16px 0 0;">
+            <span>Verónica H. Garcia</span>
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" role="img" aria-label="Cuenta verificada" style="flex:0 0 auto;"><title>Verificada</title><path d="M12 2l2.4 1.8 3 .1.9 2.9 2.4 1.8-.9 2.9.9 2.9-2.4 1.8-.9 2.9-3 .1L12 22l-2.4-1.8-3-.1-.9-2.9L3.3 15.4l.9-2.9-.9-2.9 2.4-1.8.9-2.9 3-.1L12 2z" fill="#D4A017"></path><path d="M8.4 12.2l2.4 2.4 4.8-5" stroke="#0D1B2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+          </h1>
+          <p class="r-herolema" style="font-family:'Spectral',serif; font-style:italic; font-weight:300; font-size:clamp(16px,2vw,23px); color:#D4A017; letter-spacing:0.005em; margin:9px 0 0;">Bridging People, Processes &amp; Purpose</p>
+          <p style="font-family:'Manrope',sans-serif; font-size:clamp(13.5px,1.4vw,16px); line-height:1.55; color:rgba(250,248,245,0.82); margin:10px 0 0; max-width:660px;">Bilingual Psychologist · Operations Coordinator &amp; Project Manager · Co-Founder &amp; Partner CAPSICOV</p>
+          <p style="font-family:'Manrope',sans-serif; font-size:13px; color:rgba(234,219,200,0.72); margin:12px 0 0;">La Unión, Cartago, Costa Rica · <a href="#contact" style="color:#D4A017; text-decoration:none; font-weight:600;">Contact info</a></p>
+        </div>
       </div>
-      <div class="r-herorest">
-        <p style="font-size:clamp(15px,1.25vw,18px); line-height:1.65; color:rgba(250,248,245,0.74); max-width:480px; margin-bottom:38px;">Conecto personas, procesos y propósito para generar impacto significativo y resultados sostenibles. Psicología clínica con la disciplina de las operaciones y el liderazgo humano.</p>
+
+      <!-- ===== Resto del contenido (descripción + acciones + valores) ===== -->
+      <div class="r-herorest" style="margin-top:36px; max-width:680px;">
+        <p style="font-size:clamp(15px,1.25vw,18px); line-height:1.65; color:rgba(250,248,245,0.74); margin-bottom:30px;">Conecto personas, procesos y propósito para generar impacto significativo y resultados sostenibles. Psicología clínica con la disciplina de las operaciones y el liderazgo humano.</p>
         <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
           <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:#D4A017; border:none; padding:15px 30px; border-radius:999px; cursor:pointer; box-shadow:0 10px 34px rgba(212,160,23,0.36); transition:transform .3s, box-shadow .3s;" style-hover="transform:translateY(-3px); box-shadow:0 16px 44px rgba(212,160,23,0.5);" onClick="{{ openBooking }}">Agendar consulta</button>
           <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.22); padding:15px 28px; border-radius:999px; cursor:pointer; backdrop-filter:blur(8px); transition:background .3s, border-color .3s, transform .3s;" style-hover="background:rgba(250,248,245,0.1); border-color:rgba(250,248,245,0.4); transform:translateY(-3px);" onClick="{{ goWellness }}">Explorar recursos</button>
         </div>
-        <div class="r-herovalues" style="display:flex; align-items:center; gap:26px; margin-top:48px;">
+        <div class="r-herovalues" style="display:flex; align-items:center; gap:26px; margin-top:42px;">
           <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Claridad</span>
           <span style="width:5px; height:5px; border-radius:50%; background:rgba(234,219,200,0.4);"></span>
           <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Compasión</span>
           <span style="width:5px; height:5px; border-radius:50%; background:rgba(234,219,200,0.4);"></span>
           <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">Impacto</span>
-        </div>
-      </div>
-      <!-- right: portrait + owl -->
-      <div class="r-heromedia" style="position:relative; display:flex; justify-content:center; align-items:center;">
-        <div style="position:absolute; width:118%; height:118%; border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.16), transparent 60%); filter:blur(20px);"></div>
-        <div class="r-heroportrait" style="position:relative; width:min(380px,80%); aspect-ratio:4/5; border-radius:26px; padding:1px; background:linear-gradient(160deg, rgba(212,160,23,0.55), rgba(234,219,200,0.12) 40%, rgba(212,160,23,0.2)); box-shadow:0 40px 90px rgba(0,0,0,0.5);">
-          <div style="width:100%; height:100%; border-radius:25px; overflow:hidden; background:linear-gradient(165deg,#13294a,#0d1b2a);">
-            <img src="assets/veronica.jpg" alt="Verónica H. Garcia" style="width:100%; height:100%; object-fit:cover; object-position:50% 26%; display:block;">
-          </div>
-        </div>
-        <!-- floating owl glass badge -->
-        <div class="r-owlbadge" style="position:absolute; bottom:-22px; right:-6px; display:flex; align-items:center; gap:12px; padding:12px 18px 12px 14px; border-radius:18px; background:rgba(13,27,42,0.55); border:1px solid rgba(212,160,23,0.28); backdrop-filter:blur(14px); box-shadow:0 18px 44px rgba(0,0,0,0.45); animation:floatBob 6s ease-in-out infinite;">
-          <span style="width:44px; height:44px; border-radius:50%; overflow:hidden; flex:0 0 auto; border:2px solid rgba(212,160,23,0.6); box-shadow:0 4px 14px rgba(0,0,0,0.4); animation:owlBreathe 5s ease-in-out infinite; transform-origin:center;"><img src="assets/owl.jpg" alt="Lechuza" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
-          <div style="line-height:1.2;">
-            <div style="font-family:'Spectral',serif; font-size:14px; color:#FAF8F5;">Costa Rica</div>
-            <div style="font-size:10.5px; letter-spacing:0.08em; color:rgba(234,219,200,0.7);">ES + EN · UTC−6</div>
-          </div>
-          <button data-langbtn onClick="{{ openLang }}" title="Cambiar lenguaje / Change language" class="notranslate" translate="no" style="display:flex; align-items:center; gap:5px; flex:0 0 auto; background:rgba(212,160,23,0.16); border:1px solid rgba(212,160,23,0.45); color:#FAF8F5; font-family:'Manrope',sans-serif; font-size:11px; font-weight:600; padding:6px 9px; border-radius:999px; cursor:pointer;">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"></path></svg>
-            Lenguaje</button>
         </div>
       </div>
     </div>
