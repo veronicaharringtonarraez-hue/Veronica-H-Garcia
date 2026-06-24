@@ -701,6 +701,14 @@
 
   <!-- ===================== PIE / FOOTER ===================== -->
   <section style="position:relative; background:#0D1B2A; padding:44px 48px 60px; border-top:1px solid rgba(250,248,245,0.1);">
+    <!-- contador de aperturas (prueba social) -->
+    <div style="max-width:1180px; margin:0 auto 34px; text-align:center;">
+      <div style="display:inline-flex; align-items:center; gap:13px; padding:13px 24px; border-radius:999px; border:1px solid rgba(212,160,23,0.32); background:rgba(212,160,23,0.06);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 12s3.8-7 10.5-7 10.5 7 10.5 7-3.8 7-10.5 7S1.5 12 1.5 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        <span style="font-family:'Spectral',serif; font-size:clamp(22px,3.4vw,32px); font-weight:600; color:#D4A017; letter-spacing:0.01em;" data-counter-num>…</span>
+        <span style="font-size:13px; color:rgba(234,219,200,0.82); letter-spacing:0.02em;">personas han abierto este espacio</span>
+      </div>
+    </div>
     <div style="max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
       <div style="display:flex; align-items:center; gap:12px;">
         <svg viewBox="0 0 120 120" width="26" height="26" aria-hidden="true">
@@ -736,6 +744,17 @@
    vacía, el botón "Agendar consulta" lleva a la sección de contacto (WhatsApp).
    ============================================================================ */
 const BOOKING_API = "";
+
+/* ============================================================================
+   CONTADOR DE APERTURAS — cuántas veces se ha abierto la app (prestigio /
+   prueba social). Para que el total sea GLOBAL (sumando a todas las personas),
+   pega aquí la misma URL /exec del Apps Script (puede ser la de BOOKING_API).
+   Mientras esté vacío, el sitio cuenta las aperturas de ESTE dispositivo como
+   respaldo, para que nunca se vea en blanco.
+   COUNTER_BASE: número inicial opcional para partir de una base.
+   ============================================================================ */
+const COUNTER_API = "";
+const COUNTER_BASE = 0;
 
 /* ============================================================================
    YOUTUBE — Canal, video destacado y listas de reproducción (playlists) del
@@ -1534,8 +1553,45 @@ class Component extends DCLogic {
     this._initYouTube();
     this._initRouter();
     this._detectCountry();
+    this._initCounter();
     this.breathPattern = '4-4-4';
     this.breathRunning = false;
+  }
+
+  // ---------- contador de aperturas (prueba social) ----------
+  _initCounter() {
+    const el = document.querySelector('[data-counter-num]');
+    if (!el) return;
+    const show = (n) => {
+      let txt; try { txt = Number(n).toLocaleString('es-CR'); } catch (e) { txt = String(n); }
+      el.textContent = txt;
+    };
+    const api = (typeof COUNTER_API === 'string' && COUNTER_API)
+      ? COUNTER_API
+      : ((typeof BOOKING_API === 'string') ? BOOKING_API : '');
+    if (api) {
+      // Total GLOBAL real desde tu Apps Script.
+      fetch(api + '?action=visit')
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => {
+          if (d && d.ok && typeof d.count === 'number') {
+            show(d.count);
+            try { localStorage.setItem('vh_open_count', String(d.count)); } catch (e) {}
+          } else { this._localCounter(show); }
+        })
+        .catch(() => this._localCounter(show));
+    } else {
+      this._localCounter(show);
+    }
+  }
+
+  // Respaldo por dispositivo mientras no haya backend desplegado.
+  _localCounter(show) {
+    let n = 0;
+    try { n = parseInt(localStorage.getItem('vh_open_count') || '0', 10) || 0; } catch (e) {}
+    n += 1;
+    try { localStorage.setItem('vh_open_count', String(n)); } catch (e) {}
+    show(n + (typeof COUNTER_BASE === 'number' ? COUNTER_BASE : 0));
   }
 
   componentWillUnmount() {

@@ -57,13 +57,39 @@ var BUSY_CALS = [];
 
 // Prefijo del título de las citas creadas (NO debe contener AVAIL_KEYWORD).
 var BOOKING_PREFIX = 'Cita: ';
+
+// ---- Contador global de aperturas de la app ----
+// Cuenta cuántas veces se ha ABIERTO el sitio (en computadora, celular o
+// tablet). Se guarda en las propiedades del script, así que es un total real
+// y compartido por todas las personas.
+var COUNTER_KEY  = 'app_open_count';
+var COUNTER_BASE = 0;   // número inicial opcional (p. ej. 1200 para partir de una base)
 // =============================================================
 
 function doGet(e) {
   try {
+    var action = (e && e.parameter && e.parameter.action) || '';
+    // Contador de aperturas: ?action=visit suma 1; ?action=count solo consulta.
+    if (action === 'visit') return json({ ok: true, count: bumpCounter(1) });
+    if (action === 'count') return json({ ok: true, count: bumpCounter(0) });
     return json({ ok: true, slots: getFreeSlots() });
   } catch (err) {
     return json({ ok: false, error: String(err) });
+  }
+}
+
+// Suma "inc" al contador (0 = solo leer) y devuelve el total + la base.
+// Usa un candado para no perder conteos cuando entran varias visitas a la vez.
+function bumpCounter(inc) {
+  var props = PropertiesService.getScriptProperties();
+  var lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(5000);
+    var n = parseInt(props.getProperty(COUNTER_KEY) || '0', 10) || 0;
+    if (inc) { n += inc; props.setProperty(COUNTER_KEY, String(n)); }
+    return n + COUNTER_BASE;
+  } finally {
+    try { lock.releaseLock(); } catch (e2) {}
   }
 }
 
