@@ -63,7 +63,7 @@ var BOOKING_PREFIX = 'Cita: ';
 // tablet). Se guarda en las propiedades del script, así que es un total real
 // y compartido por todas las personas.
 var COUNTER_KEY  = 'app_open_count';
-var COUNTER_BASE = 0;   // número inicial opcional (p. ej. 1200 para partir de una base)
+var COUNTER_BASE = 100;   // número inicial: el contador parte desde aquí
 // =============================================================
 
 function doGet(e) {
