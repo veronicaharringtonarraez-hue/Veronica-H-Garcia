@@ -174,34 +174,7 @@
         </div>
       </div>
 
-      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s;">
-        <span style="font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Centro de Bienestar</span>
-        <h2 style="font-family:'Spectral',serif; font-weight:300; font-size:clamp(32px,4.4vw,56px); line-height:1.1; letter-spacing:-0.01em; margin:18px auto 16px; color:#FAF8F5; max-width:680px;">Un cambio de ritmo. Aquí el sitio respira contigo.</h2>
-        <p style="font-size:16.5px; line-height:1.7; color:rgba(250,248,245,0.62); max-width:520px; margin:0 auto 50px;">Elige un patrón y deja que el círculo te guíe. Inhala, sostén, exhala. Sin prisa.</p>
-      </div>
 
-      <!-- breathing orb -->
-      <div style="display:flex; flex-direction:column; align-items:center; gap:34px;">
-        <div style="position:relative; width:300px; height:300px; display:flex; align-items:center; justify-content:center;">
-          <div style="position:absolute; inset:0; border-radius:50%; border:1px solid rgba(212,160,23,0.18);"></div>
-          <div style="position:absolute; inset:30px; border-radius:50%; border:1px solid rgba(212,160,23,0.12);"></div>
-          <div ref="{{ orbRef }}" style="width:170px; height:170px; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(212,160,23,0.9), rgba(212,160,23,0.35) 55%, rgba(212,160,23,0.08) 100%); box-shadow:0 0 60px rgba(212,160,23,0.4), inset 0 0 40px rgba(255,255,255,0.15); transform:scale(0.62); transition:none; display:flex; align-items:center; justify-content:center;">
-            <span ref="{{ orbCountRef }}" style="font-family:'Spectral',serif; font-size:46px; color:#0D1B2A; font-weight:500;"></span>
-          </div>
-        </div>
-        <div ref="{{ orbLabelRef }}" style="font-family:'Spectral',serif; font-style:italic; font-size:26px; color:#EADBC8; min-height:34px;">Cuando tú quieras empezar</div>
-
-        <!-- pattern selector -->
-        <div ref="{{ patternsRef }}" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-          <button data-pat="4-4-4" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:#0D1B2A; background:#D4A017; border:1px solid #D4A017; padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 4 · 4</button>
-          <button data-pat="4-7-8" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 7 · 8</button>
-          <button data-pat="Box" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">Box breathing</button>
-        </div>
-
-        <button onClick="{{ toggleBreath }}" style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:transparent; border:1px solid rgba(212,160,23,0.5); padding:14px 40px; border-radius:999px; cursor:pointer; transition:all .3s; letter-spacing:0.02em;" style-hover="background:rgba(212,160,23,0.12); border-color:#D4A017;"><span ref="{{ breathBtnRef }}">Comenzar</span></button>
-
-        <p style="font-size:12.5px; color:rgba(250,248,245,0.4); letter-spacing:0.06em; margin-top:6px;">Las meditaciones guiadas serán narradas por Verónica.</p>
-      </div>
 
       <!-- video destacado del Centro de Bienestar (lo inyecta el JS si hay YOUTUBE.featured) -->
       <div ref="{{ ytFeaturedRef }}" style="display:none; margin-top:64px;"></div>
@@ -231,6 +204,37 @@
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="#FF4D4D" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31.2 31.2 0 000 12a31.2 31.2 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31.2 31.2 0 0024 12a31.2 31.2 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"></path></svg>
           Ver mi canal de YouTube</button>
+      </div>
+
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s;">
+        <span style="font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">Centro de Bienestar</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:300; font-size:clamp(32px,4.4vw,56px); line-height:1.1; letter-spacing:-0.01em; margin:18px auto 16px; color:#FAF8F5; max-width:680px;">Un cambio de ritmo. Aquí el sitio respira contigo.</h2>
+        <p style="font-size:16.5px; line-height:1.7; color:rgba(250,248,245,0.62); max-width:520px; margin:0 auto 50px;">Elige un patrón y deja que el círculo te guíe. Inhala, sostén, exhala. Sin prisa.</p>
+      </div>
+
+      <!-- breathing orb -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:34px;">
+        <div style="position:relative; width:300px; height:300px; display:flex; align-items:center; justify-content:center;">
+          <div style="position:absolute; inset:0; border-radius:50%; border:1px solid rgba(212,160,23,0.18);"></div>
+          <div style="position:absolute; inset:30px; border-radius:50%; border:1px solid rgba(212,160,23,0.12);"></div>
+          <div ref="{{ orbRef }}" style="width:170px; height:170px; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(212,160,23,0.9), rgba(212,160,23,0.35) 55%, rgba(212,160,23,0.08) 100%); box-shadow:0 0 60px rgba(212,160,23,0.4), inset 0 0 40px rgba(255,255,255,0.15); transform:scale(0.62); transition:none; display:flex; align-items:center; justify-content:center;">
+            <span ref="{{ orbCountRef }}" style="font-family:'Spectral',serif; font-size:46px; color:#0D1B2A; font-weight:500;"></span>
+          </div>
+          <canvas ref="{{ kidsCanvasRef }}" width="600" height="600" style="position:absolute; inset:0; width:100%; height:100%; display:none;"></canvas>
+        </div>
+        <div ref="{{ orbLabelRef }}" style="font-family:'Spectral',serif; font-style:italic; font-size:26px; color:#EADBC8; min-height:34px;">Cuando tú quieras empezar</div>
+
+        <!-- pattern selector -->
+        <div ref="{{ patternsRef }}" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+          <button data-pat="4-4-4" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:#0D1B2A; background:#D4A017; border:1px solid #D4A017; padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 4 · 4</button>
+          <button data-pat="4-7-8" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 7 · 8</button>
+          <button data-pat="Box" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">Box breathing</button>
+          <button data-pat="Niños" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">Niños 🌸</button>
+        </div>
+
+        <button onClick="{{ toggleBreath }}" style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:transparent; border:1px solid rgba(212,160,23,0.5); padding:14px 40px; border-radius:999px; cursor:pointer; transition:all .3s; letter-spacing:0.02em;" style-hover="background:rgba(212,160,23,0.12); border-color:#D4A017;"><span ref="{{ breathBtnRef }}">Comenzar</span></button>
+
+        <p style="font-size:12.5px; color:rgba(250,248,245,0.4); letter-spacing:0.06em; margin-top:6px;">Las meditaciones guiadas serán narradas por Verónica.</p>
       </div>
     </div>
   </section>
@@ -1568,6 +1572,7 @@ class Component extends DCLogic {
   orbLabelRef = React.createRef();
   patternsRef = React.createRef();
   breathBtnRef = React.createRef();
+  kidsCanvasRef = React.createRef();
   bookingRef = React.createRef();
   ytFeaturedRef = React.createRef();
   temaRef = React.createRef();
@@ -1936,7 +1941,8 @@ class Component extends DCLogic {
   patterns = {
     '4-4-4': [['Inhala', 4, 1], ['Sostén', 4, 1], ['Exhala', 4, 0.62]],
     '4-7-8': [['Inhala', 4, 1], ['Sostén', 7, 1], ['Exhala', 8, 0.62]],
-    'Box':   [['Inhala', 4, 1], ['Sostén', 4, 1], ['Exhala', 4, 0.62], ['Vacío', 4, 0.62]]
+    'Box':   [['Inhala', 4, 1], ['Sostén', 4, 1], ['Exhala', 4, 0.62], ['Vacío', 4, 0.62]],
+    'Niños': [['Huele las flores', 4, 1], ['Quédate bajo el agua', 4, 1], ['Sopla las velas', 4, 0.62]]
   };
 
   pickPattern = (e) => {
@@ -1951,8 +1957,17 @@ class Component extends DCLogic {
         btn.style.borderColor = active ? '#D4A017' : 'rgba(250,248,245,0.18)';
       });
     }
+    this._applyKidsMode(key === 'Niños');
     if (this.breathRunning) this.startBreathLoop();
   };
+
+  // Alterna entre el orbe dorado y el canvas infantil (flores/agua/velas).
+  _applyKidsMode(on) {
+    const orb = this.orbRef.current, cv = this.kidsCanvasRef.current;
+    if (orb) orb.style.display = on ? 'none' : 'flex';
+    if (cv) cv.style.display = on ? 'block' : 'none';
+    if (on && cv) this._drawKids(0, 0.62, 0, 4); // dibujo inicial (flores pequeñas)
+  }
 
   toggleBreath = () => {
     if (this.breathRunning) {
@@ -1967,6 +1982,8 @@ class Component extends DCLogic {
     if (this.breathBtnRef.current) this.breathBtnRef.current.textContent = 'Detener';
     this._breathStart = performance.now();
     const orb = this.orbRef.current, label = this.orbLabelRef.current, count = this.orbCountRef.current;
+    const kids = this.breathPattern === 'Niños';
+    this._applyKidsMode(kids);
     const loop = () => {
       if (!this.breathRunning) return;
       const seq = this.patterns[this.breathPattern];
@@ -1981,9 +1998,11 @@ class Component extends DCLogic {
       const k = Math.min(1, lt / phase[1]);
       const ease = 0.5 - 0.5 * Math.cos(Math.PI * k);
       const scale = prevScale + (targetScale - prevScale) * ease;
-      if (orb) orb.style.transform = 'scale(' + scale.toFixed(3) + ')';
+      const remain = Math.ceil(phase[1] - lt);
+      if (kids) { this._drawKids(idx, scale, k, remain); }
+      else if (orb) orb.style.transform = 'scale(' + scale.toFixed(3) + ')';
       if (label) label.textContent = phase[0];
-      if (count) count.textContent = String(Math.ceil(phase[1] - lt));
+      if (count) count.textContent = String(remain);
       this._braf = requestAnimationFrame(loop);
     };
     loop();
@@ -1995,7 +2014,121 @@ class Component extends DCLogic {
     if (this.breathBtnRef.current) this.breathBtnRef.current.textContent = 'Comenzar';
     if (this.orbLabelRef.current) this.orbLabelRef.current.textContent = 'Cuando tú quieras empezar';
     if (this.orbCountRef.current) this.orbCountRef.current.textContent = '';
-    if (this.orbRef.current) { this.orbRef.current.style.transition = 'transform 1s ease'; this.orbRef.current.style.transform = 'scale(0.62)'; setTimeout(() => { if (this.orbRef.current) this.orbRef.current.style.transition = 'none'; }, 1000); }
+    if (this.breathPattern === 'Niños') {
+      this._drawKids(0, 0.62, 0, 4); // vuelve al jardín en reposo
+    } else if (this.orbRef.current) {
+      this.orbRef.current.style.transition = 'transform 1s ease'; this.orbRef.current.style.transform = 'scale(0.62)';
+      setTimeout(() => { if (this.orbRef.current) this.orbRef.current.style.transition = 'none'; }, 1000);
+    }
+  }
+
+  // ---------- Animación infantil en canvas: flores (inhala) · agua y burbujas
+  // (sostén) · velas que se soplan (exhala). El círculo crece al inhalar, se
+  // mantiene grande al sostener y se encoge al exhalar. ----------
+  _drawKids(phaseIdx, scale, k, countNum) {
+    const cv = this.kidsCanvasRef.current; if (!cv) return;
+    const ctx = cv.getContext('2d'); if (!ctx) return;
+    const W = cv.width, H = cv.height, cx = W / 2, cy = H / 2;
+    const R = (W / 2 - 12) * Math.max(0.32, Math.min(1, scale));
+    const now = performance.now() / 1000;
+    ctx.clearRect(0, 0, W, H);
+    ctx.save();
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.clip();
+    if (phaseIdx === 0) this._kidsFlowers(ctx, cx, cy, R, k, now);
+    else if (phaseIdx === 1) this._kidsWater(ctx, cx, cy, R, k, now);
+    else this._kidsCandles(ctx, cx, cy, R, k, now);
+    ctx.restore();
+    // aro dorado
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2);
+    ctx.lineWidth = 6; ctx.strokeStyle = 'rgba(212,160,23,0.75)'; ctx.stroke();
+    // número de cuenta regresiva
+    if (countNum != null) {
+      ctx.save();
+      ctx.font = "600 " + Math.round(R * 0.34) + "px 'Spectral', serif";
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.shadowColor = 'rgba(0,0,0,0.45)'; ctx.shadowBlur = 10;
+      ctx.fillStyle = 'rgba(255,255,255,0.92)';
+      ctx.fillText(String(countNum), cx, cy);
+      ctx.restore();
+    }
+  }
+
+  _kidsFlowers(ctx, cx, cy, R, k, now) {
+    const g = ctx.createLinearGradient(0, cy - R, 0, cy + R);
+    g.addColorStop(0, '#bfe6ff'); g.addColorStop(0.58, '#e8f6ff');
+    g.addColorStop(0.58, '#cdeaa6'); g.addColorStop(1, '#9ad06f');
+    ctx.fillStyle = g; ctx.fillRect(cx - R, cy - R, R * 2, R * 2);
+    ctx.fillStyle = '#FFD86B';
+    ctx.beginPath(); ctx.arc(cx + R * 0.52, cy - R * 0.55, R * 0.15, 0, Math.PI * 2); ctx.fill();
+    const bloom = 0.55 + 0.45 * k; // las flores se abren al inhalar
+    const cols = ['#FF7BAC', '#FFC75F', '#C39BD3'];
+    const xs = [-0.46, 0, 0.46];
+    for (let i = 0; i < 3; i++) {
+      const fx = cx + xs[i] * R, fy = cy + R * 0.32;
+      ctx.strokeStyle = '#3a9d4a'; ctx.lineWidth = R * 0.045;
+      ctx.beginPath(); ctx.moveTo(fx, fy + R * 0.5); ctx.lineTo(fx, fy); ctx.stroke();
+      const pr = R * 0.14 * bloom;
+      ctx.fillStyle = cols[i];
+      for (let p = 0; p < 6; p++) {
+        const a = p / 6 * Math.PI * 2 + now * 0.3;
+        ctx.beginPath(); ctx.arc(fx + Math.cos(a) * pr, fy + Math.sin(a) * pr, pr * 0.72, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.fillStyle = '#FFE17A'; ctx.beginPath(); ctx.arc(fx, fy, pr * 0.78, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+
+  _kidsWater(ctx, cx, cy, R, k, now) {
+    const g = ctx.createLinearGradient(0, cy - R, 0, cy + R);
+    g.addColorStop(0, '#4aa3d9'); g.addColorStop(1, '#0b3a66');
+    ctx.fillStyle = g; ctx.fillRect(cx - R, cy - R, R * 2, R * 2);
+    // rayos de luz
+    ctx.fillStyle = 'rgba(255,255,255,0.07)';
+    ctx.beginPath(); ctx.moveTo(cx - R * 0.5, cy - R); ctx.lineTo(cx - R * 0.2, cy - R); ctx.lineTo(cx + R * 0.4, cy + R); ctx.lineTo(cx + R * 0.05, cy + R); ctx.fill();
+    // burbujas subiendo
+    const span = R * 2.2;
+    for (let i = 0; i < 11; i++) {
+      const seed = i * 1.7;
+      const bx = cx + Math.sin(seed * 3 + now * 0.6) * R * 0.62;
+      const by = cy + R - (((now * 42 + seed * 41) % span));
+      const br = R * 0.05 * (0.6 + (i % 3) * 0.32);
+      ctx.beginPath(); ctx.arc(bx, by, br, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.14)'; ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.6)'; ctx.lineWidth = 1.6; ctx.stroke();
+      ctx.fillStyle = 'rgba(255,255,255,0.8)';
+      ctx.beginPath(); ctx.arc(bx - br * 0.3, by - br * 0.3, br * 0.26, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+
+  _kidsCandles(ctx, cx, cy, R, k, now) {
+    const g = ctx.createLinearGradient(0, cy - R, 0, cy + R);
+    g.addColorStop(0, '#3a2a4d'); g.addColorStop(1, '#191230');
+    ctx.fillStyle = g; ctx.fillRect(cx - R, cy - R, R * 2, R * 2);
+    // pastel
+    const cw = R * 1.2, ch = R * 0.5;
+    ctx.fillStyle = '#F6D7B0'; ctx.fillRect(cx - cw / 2, cy + R * 0.12, cw, ch);
+    ctx.fillStyle = '#E89BB0'; ctx.fillRect(cx - cw / 2, cy + R * 0.12, cw, R * 0.13);
+    const xs = [-0.32, 0, 0.32];
+    const flame = Math.max(0, 1 - k); // las velas se apagan al soplar (exhalar)
+    for (let i = 0; i < 3; i++) {
+      const vx = cx + xs[i] * R, base = cy + R * 0.12;
+      ctx.fillStyle = ['#FF9A9A', '#9AD0FF', '#C7A0FF'][i];
+      ctx.fillRect(vx - R * 0.035, base - R * 0.34, R * 0.07, R * 0.34);
+      const fy = base - R * 0.34;
+      if (flame > 0.06) {
+        const fl = R * 0.16 * flame;
+        ctx.fillStyle = '#FFD36B';
+        ctx.beginPath();
+        ctx.moveTo(vx, fy - fl);
+        ctx.quadraticCurveTo(vx + R * 0.05, fy - fl * 0.35, vx, fy);
+        ctx.quadraticCurveTo(vx - R * 0.05, fy - fl * 0.35, vx, fy - fl);
+        ctx.fill();
+        ctx.fillStyle = 'rgba(255,120,40,0.85)';
+        ctx.beginPath(); ctx.arc(vx, fy - fl * 0.25, R * 0.03 * flame, 0, Math.PI * 2); ctx.fill();
+      } else {
+        ctx.strokeStyle = 'rgba(255,255,255,0.32)'; ctx.lineWidth = 2.4;
+        ctx.beginPath(); ctx.moveTo(vx, fy); ctx.quadraticCurveTo(vx + R * 0.06, fy - R * 0.14, vx - R * 0.03, fy - R * 0.26); ctx.stroke();
+      }
+    }
   }
 
   // ---------- agendar consulta (reservas reales vía Google Apps Script) ----------
@@ -2250,6 +2383,7 @@ class Component extends DCLogic {
       orbCountRef: this.orbCountRef,
       orbLabelRef: this.orbLabelRef,
       patternsRef: this.patternsRef,
+      kidsCanvasRef: this.kidsCanvasRef,
       breathBtnRef: this.breathBtnRef,
       pickStage: this.pickStage,
       pickPattern: this.pickPattern,
