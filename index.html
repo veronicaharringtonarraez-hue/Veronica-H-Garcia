@@ -199,6 +199,9 @@
         <div data-yt="empleo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Búsqueda de empleo</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="violencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Situaciones de violencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="pnl" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Programación Neurolingüística</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="tdah" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">TDAH</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">TEA (Autismo)</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Familiares en la adicción</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -1548,6 +1551,54 @@ const TOPICS = {
         `Pequeños gestos (una respiración, una postura) pueden anclar calma o confianza.` ] }
     ],
     closing: `La PNL es una herramienta de cambio, no magia: funciona mejor acompañada y aplicada a tu historia. Si quieres trabajarla, escríbeme.`
+  },
+
+  tdah: {
+    title: 'TDAH', tag: 'Atención, foco y autorregulación',
+    intro: 'El TDAH no es falta de voluntad ni de inteligencia: es una forma distinta en que el cerebro regula la atención, el impulso y la energía. Comprenderlo es el primer paso para dejar de pelear contigo y empezar a trabajar a tu favor.',
+    blocks: [
+      { h: 'Estrategias para el día a día', list: [
+        'Divide las tareas grandes en pasos pequeños y concretos: el cerebro con TDAH avanza mejor por tramos cortos.',
+        'Apóyate en recordatorios externos (alarmas, listas, notas a la vista): no es trampa, es darte estructura.',
+        'Trabaja en bloques de tiempo con pausas (por ejemplo 25 minutos y descanso): el foco se entrena, no se exige de golpe.' ] },
+      { h: 'Para tu bienestar emocional', list: [
+        'Sé amable contigo cuando te distraes: la autocrítica gasta la energía que necesitas para enfocarte.',
+        'Cuida el sueño, el movimiento y la alimentación: un cuerpo regulado sostiene una mente más enfocada.',
+        'Celebra los avances, no solo lo pendiente: tu cerebro aprende mejor con refuerzos positivos.' ] }
+    ],
+    closing: 'El TDAH se acompaña mejor con comprensión y herramientas a tu medida, en niños y en adultos. Si tú o tu hijo lo viven, escríbeme: construimos un plan juntos.'
+  },
+
+  tea: {
+    title: 'TEA (Espectro Autista)', tag: 'Comprender para acompañar',
+    intro: 'El Trastorno del Espectro Autista es una forma diferente de percibir, comunicar y relacionarse con el mundo, no algo que haya que "arreglar". Acompañar desde el respeto a cada persona y a su ritmo abre el camino a su bienestar y al de su familia.',
+    blocks: [
+      { h: 'Claves para acompañar', list: [
+        'Respeta los tiempos y la forma de comunicar de cada persona: la diferencia no es un déficit.',
+        'Las rutinas y la previsibilidad dan seguridad: anticipa los cambios con calma y antelación.',
+        'Cuida el entorno sensorial (ruido, luces, texturas): muchas veces el malestar es sensorial, no conductual.' ] },
+      { h: 'Para la familia', list: [
+        'Infórmate desde fuentes serias y rodéate de una red de apoyo: no estás solo en esto.',
+        'Cuida también tu descanso y tus emociones: acompañas mejor cuando tú estás sostenido.',
+        'Reconoce cada logro a su escala y sus fortalezas: cada persona del espectro tiene talentos propios.' ] }
+    ],
+    closing: 'Acompaño a personas en el espectro y a sus familias con respeto y herramientas concretas, a cada edad. Si lo estás viviendo, escríbeme.'
+  },
+
+  familiares_adiccion: {
+    title: 'Familiares en la adicción', tag: 'Sanar el efecto colateral',
+    intro: 'Cuando alguien que amas vive una adicción, tú también te lastimas: el miedo, la culpa, el agotamiento y la esperanza rota dejan huella. Este espacio es para ti —cónyuge o familiar— para sanar el daño colateral y recuperar tu propia vida.',
+    blocks: [
+      { h: 'Cuidarte a ti también es necesario', list: [
+        'No eres responsable de la adicción de la otra persona, ni puedes controlarla ni curarla por ella.',
+        'Pon límites claros y amables: protegerte no es abandonar, es dejar de sostener lo que hace daño.',
+        'Recupera espacios tuyos (descanso, amistades, gustos): tu vida no debe girar solo en torno a su adicción.' ] },
+      { h: 'Sanar la codependencia', list: [
+        'Reconoce la codependencia: cuando tu bienestar depende por completo del estado de la otra persona.',
+        'Suelta la culpa: "rescatar" o ayudar en exceso muchas veces alarga el problema en lugar de resolverlo.',
+        'Apóyate en grupos y acompañamiento (como Al-Anon o terapia): tú también mereces tu propio proceso de sanación.' ] }
+    ],
+    closing: 'El dolor de amar a alguien en adicción es real y merece atención propia. Acompaño a cónyuges y familiares a sanar y reconstruir su vida. Si es tu caso, escríbeme: tú también importas.'
   }
 };
 
