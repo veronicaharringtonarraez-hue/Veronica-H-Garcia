@@ -1751,7 +1751,9 @@ class Component extends DCLogic {
     const m = document.createElement('div');
     m.className = 'lang-menu notranslate';
     m.setAttribute('translate', 'no');
-    m.innerHTML = '<div class="lang-head"><span>Idioma \u00b7 Language</span><button class="lang-x" aria-label="Cerrar / Close">\u00d7</button></div>' + this._langs.map((l) => {
+    m.innerHTML = '<div class="lang-head"><span>Idioma \u00b7 Language</span><button class="lang-x" aria-label="Cerrar / Close">\u00d7</button></div>'
+      + '<div style="font:12.5px/1.55 Manrope,system-ui,sans-serif; color:rgba(234,219,200,.82); padding:11px 12px; margin:2px 6px 12px; background:rgba(212,160,23,.07); border:1px solid rgba(212,160,23,.22); border-radius:10px;">' + (window.__NOTE__ ? window.__NOTE__ : 'Atiendo consultas solo en español e inglés. Las demás traducciones son para que leas las herramientas de bienestar en tu idioma materno, con más comodidad. · I only offer sessions in Spanish and English; the other translations let you read the wellness tools in your native language.') + '</div>'
+      + this._langs.map((l) => {
       const ok = this._availableLangs.indexOf(l[0]) >= 0;
       const on = this._lang === l[0];
       return '<button data-lang="' + l[0] + '"' + (on ? ' class="on"' : '') + (ok ? '' : ' disabled') + '>'
