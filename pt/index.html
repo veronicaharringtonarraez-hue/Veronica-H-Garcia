@@ -792,6 +792,7 @@ const BOOKING_API = "";
    ============================================================================ */
 const COUNTER_API = "";
 const COUNTER_BASE = 100;
+const COUNTER_GLOBAL = "https://api.counterapi.dev/v1/capsicov-veronica/visitas/up";
 
 
 /* ============================================================================
@@ -1644,7 +1645,7 @@ class Component extends DCLogic {
         })
         .catch(() => this._localCounter(show));
     } else {
-      this._localCounter(show);
+      this._globalCounter(show);
     }
   }
 
@@ -1655,6 +1656,24 @@ class Component extends DCLogic {
     try { localStorage.setItem('vh_open_count', String(n)); } catch (e) {}
     show(n + (typeof COUNTER_BASE === 'number' ? COUNTER_BASE : 0));
   }
+  // Contador GLOBAL gratuito: un único total sincronizado entre TODOS los
+  // dispositivos (computadora, celular, tablet). Cuenta cada visita una vez.
+  // Si configuras COUNTER_API (tu Apps Script), ese tiene prioridad.
+  _globalCounter(show) {
+    fetch(COUNTER_GLOBAL)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        var n = d && (typeof d.count === 'number' ? d.count
+              : (typeof d.value === 'number' ? d.value
+              : (d.data && typeof d.data.up_count === 'number' ? d.data.up_count : null)));
+        if (n != null) {
+          show(n + (typeof COUNTER_BASE === 'number' ? COUNTER_BASE : 0));
+          try { localStorage.setItem('vh_open_count', String(n)); } catch (e) {}
+        } else { this._localCounter(show); }
+      })
+      .catch(() => this._localCounter(show));
+  }
+
 
   componentWillUnmount() {
     if (this._raf) cancelAnimationFrame(this._raf);
