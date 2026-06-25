@@ -135,11 +135,113 @@
       <a data-nav="about" style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goAbout }}">关于我</a>
       <a data-nav="servicios" style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goServices }}">服务</a>
       <a data-nav="empresas" style="font-size:13.5px; color:rgba(250,248,245,0.78); text-decoration:none; letter-spacing:0.01em; cursor:pointer; transition:color .25s;" style-hover="color:#FAF8F5;" onClick="{{ goEmpresas }}">企业</a>
+      <button data-langbtn onClick="{{ openLang }}" title="Cambiar idioma / Change language" class="notranslate" translate="no" style="display:inline-flex; align-items:center; gap:6px; background:rgba(212,160,23,0.10); border:1px solid rgba(212,160,23,0.45); color:#FAF8F5; font-family:'Manrope',sans-serif; font-size:12.5px; font-weight:600; padding:8px 14px; border-radius:999px; cursor:pointer; transition:background .25s, border-color .25s;" style-hover="background:rgba(212,160,23,0.2); border-color:#D4A017;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"></path></svg>
+        语言</button>
       <button style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.02em; color:#0D1B2A; background:#D4A017; border:none; padding:10px 20px; border-radius:999px; cursor:pointer; box-shadow:0 6px 22px rgba(212,160,23,0.32); transition:transform .25s, box-shadow .25s;" style-hover="transform:translateY(-2px); box-shadow:0 10px 30px rgba(212,160,23,0.45);" onClick="{{ openBooking }}">预约</button>
     </div>
   </nav>
 
   <div class="pg" data-page="inicio">
+  <!-- ===================== WELLNESS CENTER (deep navy, contemplative) ===================== -->
+  <section id="wellness" style="position:relative; background:radial-gradient(120% 120% at 50% 20%, #102a45 0%, #0a1525 60%, #070f1c 100%); padding:120px 48px; overflow:hidden;">
+    <div style="position:absolute; width:50vw; height:50vw; left:50%; top:42%; transform:translate(-50%,-50%); border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.12), transparent 60%); filter:blur(30px); pointer-events:none;"></div>
+    <div style="position:relative; max-width:1080px; margin:0 auto; text-align:center;">
+      <!-- ===== Encabezado estilo canal de YouTube (foto a la izquierda, nombre a la derecha) ===== -->
+      <div style="text-align:left; margin-bottom:60px;">
+        <!-- banner / portada del canal -->
+        <div style="position:relative; height:clamp(110px,17vw,190px); border-radius:18px; overflow:hidden; box-shadow:0 22px 60px rgba(0,0,0,0.45);">
+          <img src="../assets/marble-bg.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.9;">
+          <div style="position:absolute; inset:0; background:linear-gradient(108deg, rgba(10,21,37,0.82) 0%, rgba(10,21,37,0.30) 55%, rgba(212,160,23,0.20) 100%);"></div>
+        </div>
+        <!-- fila del canal: foto (izquierda) + nombre (derecha) -->
+        <div style="display:flex; align-items:center; gap:clamp(16px,3vw,30px); margin-top:22px; flex-wrap:wrap;">
+          <span style="flex:0 0 auto; display:inline-block; width:clamp(96px,14vw,158px); height:clamp(96px,14vw,158px); border-radius:50%; overflow:hidden; border:4px solid #0A1525; background:#0A1525; box-shadow:0 16px 40px rgba(0,0,0,0.5);"><img src="../assets/veronica.jpg" alt="Verónica H. Garcia" style="width:100%; height:100%; object-fit:cover; object-position:50% 26%; display:block;"></span>
+          <div style="flex:1 1 300px; min-width:260px;">
+            <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:clamp(26px,4vw,44px); line-height:1.05; letter-spacing:-0.01em; color:#FAF8F5; margin:0;">Verónica H. Garcia</h2>
+            <div style="display:flex; align-items:center; gap:8px 14px; flex-wrap:wrap; margin-top:9px; font-family:'Manrope',sans-serif; font-size:13.5px; color:rgba(234,219,200,0.8);">
+              <span style="color:#EADBC8; font-weight:600;">@VeronicaH.Garcia</span>
+              <span style="opacity:0.5;">·</span>
+              <span><span style="color:#D4A017; font-weight:700;" data-counter-num>…</span> 人通过这个应用获得了帮助</span>
+            </div>
+            <p style="font-family:'Manrope',sans-serif; font-size:14px; line-height:1.6; color:rgba(250,248,245,0.66); margin:12px 0 0; max-width:560px;">身心健康中心 · 心理学、呼吸练习与陪伴你的资源。每周更新视频与冥想。</p>
+            <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:18px;">
+              <button onClick="{{ openBooking }}" style="display:inline-flex; align-items:center; gap:9px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:700; color:#FFFFFF; background:#FF0000; border:none; padding:11px 24px; border-radius:999px; cursor:pointer; box-shadow:0 10px 26px rgba(255,0,0,0.28); transition:background .25s;" style-hover="background:#E60000;">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"></rect><path d="M3 9h18M8 2.5v4M16 2.5v4"></path></svg>
+                Agendar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- video destacado del 身心健康中心 (lo inyecta el JS si hay YOUTUBE.featured) -->
+      <div ref="{{ ytFeaturedRef }}" style="display:none; margin-top:64px;"></div>
+
+      <!-- wellness category teasers -->
+      <div class="r-grid6" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:12px; margin-top:70px;">
+        <div data-yt="ansiedad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">焦虑</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="autoestima" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自尊</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="dormir" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">更好地睡眠</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="relajacion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">放松</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="claridad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">头脑清晰</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">心理韧性</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="adicciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">应对成瘾</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="relaciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">人际关系</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="estancamiento" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">感到停滞</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="equilibrio" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">平衡与自我要求</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="duelo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">哀伤与失去</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="vocacional" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">职业方向</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="estres" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">压力及其层级</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="culpa" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">愧疚</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="habitos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">习惯与目标</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="empleo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">求职</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="violencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">暴力情境</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="pnl" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">神经语言程序学</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="tdah" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">多动症（ADHD）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自闭症谱系（ASD）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">成瘾者的家属</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+      </div>
+      <div style="margin-top:34px; text-align:center;">
+        <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#FF4D4D" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31.2 31.2 0 000 12a31.2 31.2 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31.2 31.2 0 0024 12a31.2 31.2 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"></path></svg>
+          查看我的 YouTube 频道</button>
+      </div>
+
+      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s;">
+        <span style="font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">身心健康中心</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:300; font-size:clamp(32px,4.4vw,56px); line-height:1.1; letter-spacing:-0.01em; margin:18px auto 16px; color:#FAF8F5; max-width:680px;">换一种节奏。在这里，这个网站与你一同呼吸。</h2>
+        <p style="font-size:16.5px; line-height:1.7; color:rgba(250,248,245,0.62); max-width:520px; margin:0 auto 50px;">选择一个节奏，让这个圆圈引导你。吸气，屏息，呼气。不着急。</p>
+      </div>
+
+      <!-- breathing orb -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:34px;">
+        <div style="position:relative; width:300px; height:300px; display:flex; align-items:center; justify-content:center;">
+          <div style="position:absolute; inset:0; border-radius:50%; border:1px solid rgba(212,160,23,0.18);"></div>
+          <div style="position:absolute; inset:30px; border-radius:50%; border:1px solid rgba(212,160,23,0.12);"></div>
+          <div ref="{{ orbRef }}" style="width:170px; height:170px; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(212,160,23,0.9), rgba(212,160,23,0.35) 55%, rgba(212,160,23,0.08) 100%); box-shadow:0 0 60px rgba(212,160,23,0.4), inset 0 0 40px rgba(255,255,255,0.15); transform:scale(0.62); transition:none; display:flex; align-items:center; justify-content:center;">
+            <span ref="{{ orbCountRef }}" style="font-family:'Spectral',serif; font-size:46px; color:#0D1B2A; font-weight:500;"></span>
+          </div>
+          <canvas ref="{{ kidsCanvasRef }}" width="600" height="600" style="position:absolute; inset:0; width:100%; height:100%; display:none;"></canvas>
+        </div>
+        <div ref="{{ orbLabelRef }}" style="font-family:'Spectral',serif; font-style:italic; font-size:26px; color:#EADBC8; min-height:34px;">当你想开始时</div>
+
+        <!-- pattern selector -->
+        <div ref="{{ patternsRef }}" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+          <button data-pat="4-4-4" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:#0D1B2A; background:#D4A017; border:1px solid #D4A017; padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 4 · 4</button>
+          <button data-pat="4-7-8" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 7 · 8</button>
+          <button data-pat="Box" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">Box breathing</button>
+          <button data-pat="Niños" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">儿童 🌸</button>
+        </div>
+
+        <button onClick="{{ toggleBreath }}" style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:transparent; border:1px solid rgba(212,160,23,0.5); padding:14px 40px; border-radius:999px; cursor:pointer; transition:all .3s; letter-spacing:0.02em;" style-hover="background:rgba(212,160,23,0.12); border-color:#D4A017;"><span ref="{{ breathBtnRef }}">开始</span></button>
+
+        <p style="font-size:12.5px; color:rgba(250,248,245,0.4); letter-spacing:0.06em; margin-top:6px;">引导冥想将由 Verónica 配音。</p>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ===================== HERO ===================== -->
   <section style="position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden;">
     <!-- living nebula background -->
@@ -157,48 +259,51 @@
     <!-- faint psi monogram -->
     <div style="position:absolute; right:6%; top:50%; transform:translateY(-50%); font-family:'Spectral',serif; font-size:46vh; line-height:1; color:rgba(212,160,23,0.045); pointer-events:none; user-select:none;">Ψ</div>
 
-    <div class="r-herogrid" style="position:relative; z-index:5; width:100%; max-width:1280px; margin:0 auto; padding:0 48px; display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;">
-      <!-- left: copy -->
-      <div class="r-herohead">
-        <div class="r-herobadge" style="display:inline-flex; align-items:center; gap:10px; padding:7px 16px; border-radius:999px; border:1px solid rgba(212,160,23,0.3); background:rgba(212,160,23,0.06); margin-bottom:30px;">
-          <span style="width:6px; height:6px; border-radius:50%; background:#D4A017; box-shadow:0 0 10px #D4A017;"></span>
-          <span style="font-size:11.5px; letter-spacing:0.26em; text-transform:uppercase; color:rgba(234,219,200,0.92); font-weight:600;">心理学家 · 运营 · 项目管理</span>
+    <div class="r-herogrid" style="position:relative; z-index:5; width:100%; max-width:1080px; margin:0 auto; padding:0 24px; display:block;">
+
+      <!-- ===== Encabezado tipo perfil de red social (solo foto + nombre) ===== -->
+      <div style="border-radius:24px; overflow:hidden; background:rgba(13,27,42,0.6); border:1px solid rgba(212,160,23,0.22); backdrop-filter:blur(16px); box-shadow:0 36px 90px rgba(0,0,0,0.55);">
+
+        <!-- banner / portada -->
+        <div style="position:relative; height:clamp(150px,24vw,238px); overflow:hidden;">
+          <img src="../assets/marble-bg.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.92;">
+          <div style="position:absolute; inset:0; background:linear-gradient(108deg, rgba(13,27,42,0.82) 0%, rgba(13,27,42,0.34) 52%, rgba(212,160,23,0.20) 100%);"></div>
+          <!-- lechuza de marca (derecha, como en el ejemplo) -->
+          <span style="position:absolute; right:clamp(16px,5vw,46px); top:50%; transform:translateY(-50%); width:clamp(70px,12vw,116px); height:clamp(70px,12vw,116px); border-radius:50%; overflow:hidden; border:2px solid rgba(212,160,23,0.55); box-shadow:0 12px 32px rgba(0,0,0,0.45); animation:owlBreathe 5s ease-in-out infinite; transform-origin:center;"><img src="../assets/owl.jpg" alt="Lechuza" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
         </div>
-        <h1 class="r-heroname" style="font-family:'Spectral',serif; font-weight:400; font-size:clamp(46px,6.4vw,90px); line-height:0.98; letter-spacing:-0.02em; color:#FAF8F5; margin-bottom:22px;">Verónica<br><span style="color:#EADBC8;">H. Garcia</span></h1>
-        <p class="r-herolema" style="font-family:'Spectral',serif; font-style:italic; font-weight:300; font-size:clamp(20px,2.3vw,30px); color:#D4A017; letter-spacing:0.005em; margin-bottom:20px;">连接人、流程与使命</p>
+
+        <!-- cuerpo: foto circular superpuesta + nombre -->
+        <div style="padding:0 clamp(22px,4vw,40px) clamp(26px,3vw,34px);">
+          <div style="margin-top:clamp(-58px,-7vw,-46px); position:relative; z-index:5;">
+            <span style="position:relative; z-index:5; display:inline-block; width:clamp(112px,17vw,170px); height:clamp(112px,17vw,170px); border-radius:50%; overflow:hidden; border:4px solid #0D1B2A; background:#0D1B2A; box-shadow:0 0 0 2px rgba(212,160,23,0.45), 0 18px 44px rgba(0,0,0,0.5);"><img src="../assets/veronica.jpg" alt="Verónica H. Garcia" style="width:100%; height:100%; object-fit:cover; object-position:50% 22%; display:block;"></span>
+          </div>
+          <h1 class="r-heroname" style="display:flex; align-items:center; gap:11px; flex-wrap:nowrap; white-space:nowrap; font-family:'Spectral',serif; font-weight:500; font-size:clamp(24px,4.2vw,44px); line-height:1.1; letter-spacing:-0.01em; color:#FAF8F5; margin:16px 0 0;">
+            <span style="white-space:nowrap;">Verónica H. Garcia</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" role="img" aria-label="Cuenta verificada" style="flex:0 0 auto;"><title>Verificada</title><path d="M12 2l2.4 1.8 3 .1.9 2.9 2.4 1.8-.9 2.9.9 2.9-2.4 1.8-.9 2.9-3 .1L12 22l-2.4-1.8-3-.1-.9-2.9L3.3 15.4l.9-2.9-.9-2.9 2.4-1.8.9-2.9 3-.1L12 2z" fill="#D4A017"></path><path d="M8.4 12.2l2.4 2.4 4.8-5" stroke="#0D1B2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+          </h1>
+          <p class="r-herolema" style="font-family:'Spectral',serif; font-style:italic; font-weight:300; font-size:clamp(16px,2vw,23px); color:#D4A017; letter-spacing:0.005em; margin:9px 0 0;">Bridging People, Processes &amp; Purpose</p>
+          <p style="font-family:'Manrope',sans-serif; font-size:clamp(13.5px,1.4vw,16px); line-height:1.55; color:rgba(250,248,245,0.82); margin:10px 0 0; max-width:660px;">Bilingual Psychologist · Operations Coordinator &amp; Project Manager · Co-Founder &amp; Partner CAPSICOV</p>
+          <p style="font-family:'Manrope',sans-serif; font-size:13px; color:rgba(234,219,200,0.72); margin:12px 0 0;">La Unión, Cartago, Costa Rica · <a href="#contact" style="color:#D4A017; text-decoration:none; font-weight:600;">Contact info</a></p>
+          <!-- botón de LinkedIn (personas y empresas) -->
+          <a href="https://www.linkedin.com/in/veronica-gabriela-harrington-arraez/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:9px; margin:18px 0 0; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FFFFFF; background:#0A66C2; text-decoration:none; padding:10px 20px; border-radius:999px; box-shadow:0 8px 22px rgba(10,102,194,0.32); transition:background .25s, transform .25s;" style-hover="background:#004182; transform:translateY(-2px);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg>
+            Ver mi LinkedIn</a>
+        </div>
       </div>
-      <div class="r-herorest">
-        <p style="font-size:clamp(15px,1.25vw,18px); line-height:1.65; color:rgba(250,248,245,0.74); max-width:480px; margin-bottom:38px;">我连接人、流程与使命，创造有意义的影响和可持续的成果。把临床心理学，与运营的纪律和人性化的领导力结合在一起。</p>
+
+      <!-- ===== Resto del contenido (descripción + acciones + valores) ===== -->
+      <div class="r-herorest" style="margin-top:36px; max-width:680px;">
+        <p style="font-size:clamp(15px,1.25vw,18px); line-height:1.65; color:rgba(250,248,245,0.74); margin-bottom:30px;">我连接人、流程与使命，创造有意义的影响和可持续的成果。把临床心理学，与运营的纪律和人性化的领导力结合在一起。</p>
         <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
           <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#0D1B2A; background:#D4A017; border:none; padding:15px 30px; border-radius:999px; cursor:pointer; box-shadow:0 10px 34px rgba(212,160,23,0.36); transition:transform .3s, box-shadow .3s;" style-hover="transform:translateY(-3px); box-shadow:0 16px 44px rgba(212,160,23,0.5);" onClick="{{ openBooking }}">预约咨询</button>
           <button style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:rgba(250,248,245,0.04); border:1px solid rgba(250,248,245,0.22); padding:15px 28px; border-radius:999px; cursor:pointer; backdrop-filter:blur(8px); transition:background .3s, border-color .3s, transform .3s;" style-hover="background:rgba(250,248,245,0.1); border-color:rgba(250,248,245,0.4); transform:translateY(-3px);" onClick="{{ goWellness }}">探索资源</button>
         </div>
-        <div class="r-herovalues" style="display:flex; align-items:center; gap:26px; margin-top:48px;">
+        <div class="r-herovalues" style="display:flex; align-items:center; gap:26px; margin-top:42px;">
           <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">清晰</span>
           <span style="width:5px; height:5px; border-radius:50%; background:rgba(234,219,200,0.4);"></span>
           <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">同理</span>
           <span style="width:5px; height:5px; border-radius:50%; background:rgba(234,219,200,0.4);"></span>
           <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.8); font-weight:600;">影响</span>
-        </div>
-      </div>
-      <!-- right: portrait + owl -->
-      <div class="r-heromedia" style="position:relative; display:flex; justify-content:center; align-items:center;">
-        <div style="position:absolute; width:118%; height:118%; border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.16), transparent 60%); filter:blur(20px);"></div>
-        <div class="r-heroportrait" style="position:relative; width:min(380px,80%); aspect-ratio:4/5; border-radius:26px; padding:1px; background:linear-gradient(160deg, rgba(212,160,23,0.55), rgba(234,219,200,0.12) 40%, rgba(212,160,23,0.2)); box-shadow:0 40px 90px rgba(0,0,0,0.5);">
-          <div style="width:100%; height:100%; border-radius:25px; overflow:hidden; background:linear-gradient(165deg,#13294a,#0d1b2a);">
-            <img src="../assets/veronica.jpg" alt="Verónica H. Garcia" style="width:100%; height:100%; object-fit:cover; object-position:50% 26%; display:block;">
-          </div>
-        </div>
-        <!-- floating owl glass badge -->
-        <div class="r-owlbadge" style="position:absolute; bottom:-22px; right:-6px; display:flex; align-items:center; gap:12px; padding:12px 18px 12px 14px; border-radius:18px; background:rgba(13,27,42,0.55); border:1px solid rgba(212,160,23,0.28); backdrop-filter:blur(14px); box-shadow:0 18px 44px rgba(0,0,0,0.45); animation:floatBob 6s ease-in-out infinite;">
-          <span style="width:44px; height:44px; border-radius:50%; overflow:hidden; flex:0 0 auto; border:2px solid rgba(212,160,23,0.6); box-shadow:0 4px 14px rgba(0,0,0,0.4); animation:owlBreathe 5s ease-in-out infinite; transform-origin:center;"><img src="../assets/owl.jpg" alt="Lechuza" style="width:100%; height:100%; object-fit:cover; object-position:50% 24%;"></span>
-          <div style="line-height:1.2;">
-            <div style="font-family:'Spectral',serif; font-size:14px; color:#FAF8F5;">Costa Rica</div>
-            <div style="font-size:10.5px; letter-spacing:0.08em; color:rgba(234,219,200,0.7);">ES + EN · UTC−6</div>
-          </div>
-          <button data-langbtn onClick="{{ openLang }}" title="切换语言 / Change language" class="notranslate" translate="no" style="display:flex; align-items:center; gap:5px; flex:0 0 auto; background:rgba(212,160,23,0.16); border:1px solid rgba(212,160,23,0.45); color:#FAF8F5; font-family:'Manrope',sans-serif; font-size:11px; font-weight:600; padding:6px 9px; border-radius:999px; cursor:pointer;">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"></path></svg>
-            语言</button>
         </div>
       </div>
     </div>
@@ -256,70 +361,7 @@
     </div>
   </section>
 
-  <!-- ===================== WELLNESS CENTER (deep navy, contemplative) ===================== -->
-  <section id="wellness" style="position:relative; background:radial-gradient(120% 120% at 50% 20%, #102a45 0%, #0a1525 60%, #070f1c 100%); padding:120px 48px; overflow:hidden;">
-    <div style="position:absolute; width:50vw; height:50vw; left:50%; top:42%; transform:translate(-50%,-50%); border-radius:50%; background:radial-gradient(circle, rgba(212,160,23,0.12), transparent 60%); filter:blur(30px); pointer-events:none;"></div>
-    <div style="position:relative; max-width:1080px; margin:0 auto; text-align:center;">
-      <div data-reveal style="opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s;">
-        <span style="font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(212,160,23,0.85); font-weight:600;">身心健康中心</span>
-        <h2 style="font-family:'Spectral',serif; font-weight:300; font-size:clamp(32px,4.4vw,56px); line-height:1.1; letter-spacing:-0.01em; margin:18px auto 16px; color:#FAF8F5; max-width:680px;">换一种节奏。在这里，这个网站与你一同呼吸。</h2>
-        <p style="font-size:16.5px; line-height:1.7; color:rgba(250,248,245,0.62); max-width:520px; margin:0 auto 50px;">选择一个节奏，让这个圆圈引导你。吸气，屏息，呼气。不着急。</p>
-      </div>
 
-      <!-- breathing orb -->
-      <div style="display:flex; flex-direction:column; align-items:center; gap:34px;">
-        <div style="position:relative; width:300px; height:300px; display:flex; align-items:center; justify-content:center;">
-          <div style="position:absolute; inset:0; border-radius:50%; border:1px solid rgba(212,160,23,0.18);"></div>
-          <div style="position:absolute; inset:30px; border-radius:50%; border:1px solid rgba(212,160,23,0.12);"></div>
-          <div ref="{{ orbRef }}" style="width:170px; height:170px; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(212,160,23,0.9), rgba(212,160,23,0.35) 55%, rgba(212,160,23,0.08) 100%); box-shadow:0 0 60px rgba(212,160,23,0.4), inset 0 0 40px rgba(255,255,255,0.15); transform:scale(0.62); transition:none; display:flex; align-items:center; justify-content:center;">
-            <span ref="{{ orbCountRef }}" style="font-family:'Spectral',serif; font-size:46px; color:#0D1B2A; font-weight:500;"></span>
-          </div>
-        </div>
-        <div ref="{{ orbLabelRef }}" style="font-family:'Spectral',serif; font-style:italic; font-size:26px; color:#EADBC8; min-height:34px;">当你想开始时</div>
-
-        <!-- pattern selector -->
-        <div ref="{{ patternsRef }}" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-          <button data-pat="4-4-4" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:#0D1B2A; background:#D4A017; border:1px solid #D4A017; padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 4 · 4</button>
-          <button data-pat="4-7-8" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">4 · 7 · 8</button>
-          <button data-pat="Box" onClick="{{ pickPattern }}" style="font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; color:rgba(250,248,245,0.8); background:rgba(250,248,245,0.05); border:1px solid rgba(250,248,245,0.18); padding:11px 22px; border-radius:999px; cursor:pointer; transition:all .25s;">Box breathing</button>
-        </div>
-
-        <button onClick="{{ toggleBreath }}" style="font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:#FAF8F5; background:transparent; border:1px solid rgba(212,160,23,0.5); padding:14px 40px; border-radius:999px; cursor:pointer; transition:all .3s; letter-spacing:0.02em;" style-hover="background:rgba(212,160,23,0.12); border-color:#D4A017;"><span ref="{{ breathBtnRef }}">开始</span></button>
-
-        <p style="font-size:12.5px; color:rgba(250,248,245,0.4); letter-spacing:0.06em; margin-top:6px;">引导冥想将由 Verónica 配音。</p>
-      </div>
-
-      <!-- video destacado del 身心健康中心 (lo inyecta el JS si hay YOUTUBE.featured) -->
-      <div ref="{{ ytFeaturedRef }}" style="display:none; margin-top:64px;"></div>
-
-      <!-- wellness category teasers -->
-      <div class="r-grid6" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:12px; margin-top:70px;">
-        <div data-yt="ansiedad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">焦虑</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="autoestima" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自尊</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="dormir" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">更好地睡眠</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="relajacion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">放松</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="claridad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">头脑清晰</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">心理韧性</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="adicciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">应对成瘾</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="relaciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">人际关系</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="estancamiento" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">感到停滞</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="equilibrio" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">平衡与自我要求</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="duelo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">哀伤与失去</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="vocacional" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">职业方向</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="estres" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">压力及其层级</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="culpa" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">愧疚</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="habitos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">习惯与目标</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="empleo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">求职</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="violencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">暴力情境</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-        <div data-yt="pnl" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">神经语言程序学</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
-      </div>
-      <div style="margin-top:34px; text-align:center;">
-        <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="#FF4D4D" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31.2 31.2 0 000 12a31.2 31.2 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31.2 31.2 0 0024 12a31.2 31.2 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"></path></svg>
-          查看我的 YouTube 频道</button>
-      </div>
-    </div>
-  </section>
 
   </div>
 
@@ -739,6 +781,18 @@
    vacía, el botón "预约咨询" lleva a la sección de contacto (WhatsApp).
    ============================================================================ */
 const BOOKING_API = "";
+
+/* ============================================================================
+   CONTADOR DE APERTURAS — cuántas veces se ha abierto la app (prestigio /
+   prueba social). Para que el total sea GLOBAL (sumando a todas las personas),
+   pega aquí la misma URL /exec del Apps Script (puede ser la de BOOKING_API).
+   Mientras esté vacío, el sitio cuenta las aperturas de ESTE dispositivo como
+   respaldo, para que nunca se vea en blanco.
+   COUNTER_BASE: número inicial opcional para partir de una base.
+   ============================================================================ */
+const COUNTER_API = "";
+const COUNTER_BASE = 100;
+
 
 /* ============================================================================
    YOUTUBE — Canal, video destacado y listas de reproducción (playlists) del
@@ -1478,6 +1532,54 @@ const TOPICS = {
         `小小的动作（一次呼吸、一个姿势）可以锚定平静或自信。` ] }
     ],
     closing: `NLP 是一种改变的工具，不是魔法：在陪伴下、并应用到你自己的故事里，它效果最好。如果你想练习它，给我写信。`
+  },
+
+  tdah: {
+    title: `多动症（ADHD）`, tag: `注意力、专注与自我调节`,
+    intro: `多动症不是缺乏意志力或智力，而是大脑调节注意力、冲动与精力的方式不同。理解它，是停止与自己对抗、开始顺势而为的第一步。`,
+    blocks: [
+      { h: `日常的小策略`, list: [
+        `把大任务拆成具体的小步骤：多动症的大脑在短程里更容易前进。`,
+        `借助外部提醒（闹钟、清单、显眼的便签）：这不是作弊，而是给自己结构。`,
+        `用时间块加休息来工作（例如25分钟后休息一下）：专注是被训练的，而不是一下子被强迫的。` ] },
+      { h: `为了你的情绪健康`, list: [
+        `分心时对自己温柔一点：自我批评会耗尽你专注所需要的能量。`,
+        `照顾好睡眠、运动和饮食：被调节好的身体支撑着更专注的头脑。`,
+        `庆祝进步，而不只是盯着未完成的：你的大脑通过正向鼓励学得更好。` ] }
+    ],
+    closing: `无论是孩子还是成人，多动症在理解与量身定制的工具下会陪伴得更好。如果你或你的孩子正在经历，请给我留言：我们一起制定一个计划。`
+  },
+
+  tea: {
+    title: `自闭症谱系（ASD）`, tag: `理解，才能陪伴`,
+    intro: `自闭症谱系障碍是一种不同的感知、沟通与与世界相处的方式，而不是需要被「修好」的东西。以尊重每个人和他的节奏去陪伴，会为他和家庭的幸福打开道路。`,
+    blocks: [
+      { h: `陪伴的关键`, list: [
+        `尊重每个人的节奏与沟通方式：不同不是缺陷。`,
+        `规律与可预测会带来安全感：用平静的方式提前预告变化。`,
+        `留意感官环境（噪音、灯光、质地）：很多时候不适是感官性的，而不是行为问题。` ] },
+      { h: `给家人`, list: [
+        `从可靠的来源获取信息，并为自己建立支持网络：在这件事上你并不孤单。`,
+        `也要照顾自己的休息与情绪：当你被支撑时，你能更好地陪伴。`,
+        `按各自的尺度肯定每一个进步与长处：谱系里的每个人都有自己的天赋。` ] }
+    ],
+    closing: `我以尊重和具体的工具陪伴谱系中的人及其家庭，任何年龄都可以。如果你正在经历，请给我留言。`
+  },
+
+  familiares_adiccion: {
+    title: `成瘾者的家属`, tag: `疗愈连带的伤害`,
+    intro: `当你所爱的人陷入成瘾，你也会受伤：恐惧、内疚、疲惫与破碎的希望都会留下痕迹。这个空间是为你——配偶或家人——准备的，帮助你疗愈连带的伤害，并找回属于自己的人生。`,
+    blocks: [
+      { h: `照顾好自己同样必要`, list: [
+        `你不必为对方的成瘾负责，也无法替他控制或治愈它。`,
+        `设立清晰而温和的界限：保护自己不是抛弃，而是不再去托住那些伤害你的事。`,
+        `找回属于自己的空间（休息、友谊、爱好）：你的人生不该只围绕着他的成瘾打转。` ] },
+      { h: `疗愈共依存`, list: [
+        `认出共依存：当你的幸福完全取决于对方的状态时。`,
+        `放下内疚：一味「拯救」或过度帮助，往往延长了问题，而不是解决它。`,
+        `依靠团体与陪伴（如戒酒家庭互助会或心理治疗）：你也值得拥有自己的疗愈过程。` ] }
+    ],
+    closing: `爱着一个陷入成瘾的人所带来的痛是真实的，值得被单独看见。我陪伴配偶与家人去疗愈、重建自己的人生。如果这是你的处境，请给我留言：你也很重要。`
   }
 };
 
@@ -1502,6 +1604,7 @@ class Component extends DCLogic {
   orbLabelRef = React.createRef();
   patternsRef = React.createRef();
   breathBtnRef = React.createRef();
+  kidsCanvasRef = React.createRef();
   bookingRef = React.createRef();
   ytFeaturedRef = React.createRef();
   temaRef = React.createRef();
@@ -1512,8 +1615,44 @@ class Component extends DCLogic {
     this._initYouTube();
     this._initRouter();
     this._detectCountry();
+    this._initCounter();
     this.breathPattern = '4-4-4';
     this.breathRunning = false;
+  }
+
+  // ---------- contador de aperturas (prueba social) ----------
+  _initCounter() {
+    const el = document.querySelector('[data-counter-num]');
+    if (!el) return;
+    const show = (n) => {
+      let txt; try { txt = Number(n).toLocaleString('es-CR'); } catch (e) { txt = String(n); }
+      el.textContent = txt;
+    };
+    const api = (typeof COUNTER_API === 'string' && COUNTER_API)
+      ? COUNTER_API
+      : ((typeof BOOKING_API === 'string') ? BOOKING_API : '');
+    if (api) {
+      // Total GLOBAL real desde tu Apps Script.
+      fetch(api + '?action=visit')
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => {
+          if (d && d.ok && typeof d.count === 'number') {
+            show(d.count);
+            try { localStorage.setItem('vh_open_count', String(d.count)); } catch (e) {}
+          } else { this._localCounter(show); }
+        })
+        .catch(() => this._localCounter(show));
+    } else {
+      this._localCounter(show);
+    }
+  }
+
+  _localCounter(show) {
+    let n = 0;
+    try { n = parseInt(localStorage.getItem('vh_open_count') || '0', 10) || 0; } catch (e) {}
+    n += 1;
+    try { localStorage.setItem('vh_open_count', String(n)); } catch (e) {}
+    show(n + (typeof COUNTER_BASE === 'number' ? COUNTER_BASE : 0));
   }
 
   componentWillUnmount() {
@@ -1834,6 +1973,8 @@ class Component extends DCLogic {
     '4-4-4': [['吸气', 4, 1], ['屏息', 4, 1], ['呼气', 4, 0.62]],
     '4-7-8': [['吸气', 4, 1], ['屏息', 7, 1], ['呼气', 8, 0.62]],
     'Box':   [['吸气', 4, 1], ['屏息', 4, 1], ['呼气', 4, 0.62], ['停顿', 4, 0.62]]
+    ,
+    'Niños': [['闻一闻花香', 4, 1], ['待在水里', 4, 1], ['吹灭蜡烛', 4, 0.62]]
   };
 
   pickPattern = (e) => {
@@ -1848,8 +1989,16 @@ class Component extends DCLogic {
         btn.style.borderColor = active ? '#D4A017' : 'rgba(250,248,245,0.18)';
       });
     }
+    this._applyKidsMode(key === 'Niños');
     if (this.breathRunning) this.startBreathLoop();
   };
+
+    _applyKidsMode(on) {
+    const orb = this.orbRef.current, cv = this.kidsCanvasRef.current;
+    if (orb) orb.style.display = on ? 'none' : 'flex';
+    if (cv) cv.style.display = on ? 'block' : 'none';
+    if (on && cv) this._drawKids(0, 0.62, 0, 4); // dibujo inicial (flores pequeñas)
+  }
 
   toggleBreath = () => {
     if (this.breathRunning) {
@@ -1864,6 +2013,8 @@ class Component extends DCLogic {
     if (this.breathBtnRef.current) this.breathBtnRef.current.textContent = '停止';
     this._breathStart = performance.now();
     const orb = this.orbRef.current, label = this.orbLabelRef.current, count = this.orbCountRef.current;
+    const kids = this.breathPattern === 'Niños';
+    this._applyKidsMode(kids);
     const loop = () => {
       if (!this.breathRunning) return;
       const seq = this.patterns[this.breathPattern];
@@ -1878,9 +2029,11 @@ class Component extends DCLogic {
       const k = Math.min(1, lt / phase[1]);
       const ease = 0.5 - 0.5 * Math.cos(Math.PI * k);
       const scale = prevScale + (targetScale - prevScale) * ease;
-      if (orb) orb.style.transform = 'scale(' + scale.toFixed(3) + ')';
+      const remain = Math.ceil(phase[1] - lt);
+      if (kids) { this._drawKids(idx, scale, k, remain); }
+      else if (orb) orb.style.transform = 'scale(' + scale.toFixed(3) + ')';
       if (label) label.textContent = phase[0];
-      if (count) count.textContent = String(Math.ceil(phase[1] - lt));
+      if (count) count.textContent = String(remain);
       this._braf = requestAnimationFrame(loop);
     };
     loop();
@@ -1892,7 +2045,115 @@ class Component extends DCLogic {
     if (this.breathBtnRef.current) this.breathBtnRef.current.textContent = '开始';
     if (this.orbLabelRef.current) this.orbLabelRef.current.textContent = '当你想开始时';
     if (this.orbCountRef.current) this.orbCountRef.current.textContent = '';
-    if (this.orbRef.current) { this.orbRef.current.style.transition = 'transform 1s ease'; this.orbRef.current.style.transform = 'scale(0.62)'; setTimeout(() => { if (this.orbRef.current) this.orbRef.current.style.transition = 'none'; }, 1000); }
+    if (this.breathPattern === 'Niños') {
+      this._drawKids(0, 0.62, 0, 4);
+    } else if (this.orbRef.current) { this.orbRef.current.style.transition = 'transform 1s ease'; this.orbRef.current.style.transform = 'scale(0.62)'; setTimeout(() => { if (this.orbRef.current) this.orbRef.current.style.transition = 'none'; }, 1000); }
+  }
+
+    _drawKids(phaseIdx, scale, k, countNum) {
+    const cv = this.kidsCanvasRef.current; if (!cv) return;
+    const ctx = cv.getContext('2d'); if (!ctx) return;
+    const W = cv.width, H = cv.height, cx = W / 2, cy = H / 2;
+    const R = (W / 2 - 12) * Math.max(0.32, Math.min(1, scale));
+    const now = performance.now() / 1000;
+    ctx.clearRect(0, 0, W, H);
+    ctx.save();
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.clip();
+    if (phaseIdx === 0) this._kidsFlowers(ctx, cx, cy, R, k, now);
+    else if (phaseIdx === 1) this._kidsWater(ctx, cx, cy, R, k, now);
+    else this._kidsCandles(ctx, cx, cy, R, k, now);
+    ctx.restore();
+    // aro dorado
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2);
+    ctx.lineWidth = 6; ctx.strokeStyle = 'rgba(212,160,23,0.75)'; ctx.stroke();
+    // número de cuenta regresiva
+    if (countNum != null) {
+      ctx.save();
+      ctx.font = "600 " + Math.round(R * 0.34) + "px 'Spectral', serif";
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.shadowColor = 'rgba(0,0,0,0.45)'; ctx.shadowBlur = 10;
+      ctx.fillStyle = 'rgba(255,255,255,0.92)';
+      ctx.fillText(String(countNum), cx, cy);
+      ctx.restore();
+    }
+  }
+
+    _kidsFlowers(ctx, cx, cy, R, k, now) {
+    const g = ctx.createLinearGradient(0, cy - R, 0, cy + R);
+    g.addColorStop(0, '#bfe6ff'); g.addColorStop(0.58, '#e8f6ff');
+    g.addColorStop(0.58, '#cdeaa6'); g.addColorStop(1, '#9ad06f');
+    ctx.fillStyle = g; ctx.fillRect(cx - R, cy - R, R * 2, R * 2);
+    ctx.fillStyle = '#FFD86B';
+    ctx.beginPath(); ctx.arc(cx + R * 0.52, cy - R * 0.55, R * 0.15, 0, Math.PI * 2); ctx.fill();
+    const bloom = 0.55 + 0.45 * k; // las flores se abren al inhalar
+    const cols = ['#FF7BAC', '#FFC75F', '#C39BD3'];
+    const xs = [-0.46, 0, 0.46];
+    for (let i = 0; i < 3; i++) {
+      const fx = cx + xs[i] * R, fy = cy + R * 0.32;
+      ctx.strokeStyle = '#3a9d4a'; ctx.lineWidth = R * 0.045;
+      ctx.beginPath(); ctx.moveTo(fx, fy + R * 0.5); ctx.lineTo(fx, fy); ctx.stroke();
+      const pr = R * 0.14 * bloom;
+      ctx.fillStyle = cols[i];
+      for (let p = 0; p < 6; p++) {
+        const a = p / 6 * Math.PI * 2 + now * 0.3;
+        ctx.beginPath(); ctx.arc(fx + Math.cos(a) * pr, fy + Math.sin(a) * pr, pr * 0.72, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.fillStyle = '#FFE17A'; ctx.beginPath(); ctx.arc(fx, fy, pr * 0.78, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+
+    _kidsWater(ctx, cx, cy, R, k, now) {
+    const g = ctx.createLinearGradient(0, cy - R, 0, cy + R);
+    g.addColorStop(0, '#4aa3d9'); g.addColorStop(1, '#0b3a66');
+    ctx.fillStyle = g; ctx.fillRect(cx - R, cy - R, R * 2, R * 2);
+    // rayos de luz
+    ctx.fillStyle = 'rgba(255,255,255,0.07)';
+    ctx.beginPath(); ctx.moveTo(cx - R * 0.5, cy - R); ctx.lineTo(cx - R * 0.2, cy - R); ctx.lineTo(cx + R * 0.4, cy + R); ctx.lineTo(cx + R * 0.05, cy + R); ctx.fill();
+    // burbujas subiendo
+    const span = R * 2.2;
+    for (let i = 0; i < 11; i++) {
+      const seed = i * 1.7;
+      const bx = cx + Math.sin(seed * 3 + now * 0.6) * R * 0.62;
+      const by = cy + R - (((now * 42 + seed * 41) % span));
+      const br = R * 0.05 * (0.6 + (i % 3) * 0.32);
+      ctx.beginPath(); ctx.arc(bx, by, br, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.14)'; ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.6)'; ctx.lineWidth = 1.6; ctx.stroke();
+      ctx.fillStyle = 'rgba(255,255,255,0.8)';
+      ctx.beginPath(); ctx.arc(bx - br * 0.3, by - br * 0.3, br * 0.26, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+
+    _kidsCandles(ctx, cx, cy, R, k, now) {
+    const g = ctx.createLinearGradient(0, cy - R, 0, cy + R);
+    g.addColorStop(0, '#3a2a4d'); g.addColorStop(1, '#191230');
+    ctx.fillStyle = g; ctx.fillRect(cx - R, cy - R, R * 2, R * 2);
+    // pastel
+    const cw = R * 1.2, ch = R * 0.5;
+    ctx.fillStyle = '#F6D7B0'; ctx.fillRect(cx - cw / 2, cy + R * 0.12, cw, ch);
+    ctx.fillStyle = '#E89BB0'; ctx.fillRect(cx - cw / 2, cy + R * 0.12, cw, R * 0.13);
+    const xs = [-0.32, 0, 0.32];
+    const flame = Math.max(0, 1 - k); // las velas se apagan al soplar (exhalar)
+    for (let i = 0; i < 3; i++) {
+      const vx = cx + xs[i] * R, base = cy + R * 0.12;
+      ctx.fillStyle = ['#FF9A9A', '#9AD0FF', '#C7A0FF'][i];
+      ctx.fillRect(vx - R * 0.035, base - R * 0.34, R * 0.07, R * 0.34);
+      const fy = base - R * 0.34;
+      if (flame > 0.06) {
+        const fl = R * 0.16 * flame;
+        ctx.fillStyle = '#FFD36B';
+        ctx.beginPath();
+        ctx.moveTo(vx, fy - fl);
+        ctx.quadraticCurveTo(vx + R * 0.05, fy - fl * 0.35, vx, fy);
+        ctx.quadraticCurveTo(vx - R * 0.05, fy - fl * 0.35, vx, fy - fl);
+        ctx.fill();
+        ctx.fillStyle = 'rgba(255,120,40,0.85)';
+        ctx.beginPath(); ctx.arc(vx, fy - fl * 0.25, R * 0.03 * flame, 0, Math.PI * 2); ctx.fill();
+      } else {
+        ctx.strokeStyle = 'rgba(255,255,255,0.32)'; ctx.lineWidth = 2.4;
+        ctx.beginPath(); ctx.moveTo(vx, fy); ctx.quadraticCurveTo(vx + R * 0.06, fy - R * 0.14, vx - R * 0.03, fy - R * 0.26); ctx.stroke();
+      }
+    }
   }
 
   // ---------- agendar consulta (reservas reales vía Google Apps Script) ----------
@@ -2147,6 +2408,7 @@ class Component extends DCLogic {
       orbCountRef: this.orbCountRef,
       orbLabelRef: this.orbLabelRef,
       patternsRef: this.patternsRef,
+      kidsCanvasRef: this.kidsCanvasRef,
       breathBtnRef: this.breathBtnRef,
       pickStage: this.pickStage,
       pickPattern: this.pickPattern,
