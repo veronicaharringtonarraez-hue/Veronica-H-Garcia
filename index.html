@@ -202,6 +202,7 @@
         <div data-yt="tdah" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">TDAH</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">TEA (Autismo)</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Familiares en la adicción</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="derechos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Derechos Asertivos</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -1604,6 +1605,45 @@ const TOPICS = {
         'Apóyate en grupos y acompañamiento (como Al-Anon o terapia): tú también mereces tu propio proceso de sanación.' ] }
     ],
     closing: 'El dolor de amar a alguien en adicción es real y merece atención propia. Acompaño a cónyuges y familiares a sanar y reconstruir su vida. Si es tu caso, escríbeme: tú también importas.'
+  },
+
+  derechos: {
+    title: 'Derechos Asertivos', tag: 'Lealtad hacia ti, respeto hacia los demás',
+    intro: 'Los derechos asertivos son aquellos que asumimos y tenemos por el solo hecho de ser personas. Son válidos para ti, pero igualmente para todos los demás. Ejercerlos implica lealtad hacia ti mismo y respeto hacia el otro: todo un aprendizaje y un ejercicio de equilibrio. Manuel J. Smith propuso diez derechos asertivos básicos. Despliega cada uno para conocerlo a fondo.',
+    accTitle: 'Los diez derechos asertivos',
+    accordion: [
+      { n: 1, q: 'Derecho a ser tu propio juez',
+        a: `Es el principal derecho asertivo, del que se derivan todos los demás. Ser tu propio juez significa tener tu propia opinión, tu propio sistema de valores y creencias, y actuar en consecuencia. Implica asumir que eres el máximo responsable de tu vida y que puedes elegir cómo pensar, sentir y actuar en cada situación, liberándote de los mandatos sobre lo que "se debe" o "no se debe" hacer. También supone poder expresar a los demás lo que sientes y piensas, y sostener que no siempre les guste.`,
+        v: `En consulta veo cuánto pesa vivir bajo la mirada ajena como único juez. Recuperar este derecho no es volverse rígido ni indiferente: es dejar de pedir permiso para existir como eres. Cuando empiezas a validarte desde dentro, las decisiones dejan de doler tanto, porque ya no dependen de la aprobación de los demás para sentirse correctas.` },
+      { n: 2, q: 'Derecho a elegir si te haces responsable de los problemas de los demás',
+        a: `Implica respetar tus intereses tanto como los de las otras personas, buscando soluciones que concilien ambos siempre que sea posible. Habrá situaciones en que esos intereses entren en conflicto, y en ellas tienes derecho a anteponer tus propias necesidades a las de los demás.`,
+        v: `Las personas más empáticas suelen cargar con problemas que no les corresponden, hasta vaciarse. Hacerte cargo de todo no es amor: muchas veces es miedo a la culpa. Aprender a soltar lo que no es tuyo te permite ayudar desde la abundancia y no desde el agotamiento, y eso —paradójicamente— te vuelve un mejor apoyo para quienes amas.` },
+      { n: 3, q: 'Derecho a elegir si quieres dar o no explicaciones',
+        a: `Si eres tu propio juez y actúas según tus valores, pensamientos y opiniones, no tienes por qué justificarte ante los demás ni intentar convencer a nadie. Las otras personas también tienen derecho a opinar si les gusta o no lo que haces; cuando es posible, lo ideal es llegar a un acuerdo, y si no, puedes mantener tus preferencias u optar por las suyas si así lo decides.`,
+        v: `"No quiero" es una frase completa. Dar explicaciones de más suele ser un intento de evitar el rechazo, y casi nunca convence a quien ya decidió no entender. Un "no" tranquilo y respetuoso cuida tu energía y, sorprendentemente, suele generar más respeto que mil justificaciones.` },
+      { n: 4, q: 'Derecho a cambiar de opinión',
+        a: `Como cualquier situación puede mirarse desde múltiples puntos de vista y la realidad cambia constantemente, una persona asertiva tiene derecho a cambiar de opinión.`,
+        v: `Cambiar de opinión no te hace incoherente ni poco confiable: te hace una persona que crece. Quedarte atrapado en una decisión solo para "no contradecirte" es lealtad a un yo que ya no existe. Permitirte revisar lo que piensas es una de las formas más sanas de honrar tu propio proceso.` },
+      { n: 5, q: 'Derecho a cometer errores',
+        a: `Es uno de los derechos más difíciles cuando caemos en la autoexigencia. Una actitud asertiva implica mirar nuestros errores asumiendo que fallar es humano y normal, aprendiendo con responsabilidad para no repetirlos, pero liberándonos de la culpa que solemos asociarles.`,
+        v: `Hay una diferencia enorme entre responsabilidad y castigo. La responsabilidad aprende; la culpa solo lastima. Cuando dejas de tratar cada error como una prueba de que "no vales", el error vuelve a ser lo que siempre fue: información para crecer. Equivocarte no resta tu valor como persona.` },
+      { n: 6, q: 'Derecho a decir «no lo sé»',
+        a: `¿Podemos saberlo todo? No. Ejercer este derecho es darte permiso para preguntar con tranquilidad sobre aquello que dudas, no tienes claro o no comprendes. No estás obligado a tener respuesta para todo.`,
+        v: `Decir "no lo sé" requiere más seguridad que aparentar saberlo todo. La necesidad de tener siempre la respuesta suele esconder miedo a no ser suficiente. Reconocer lo que no sabes abre la puerta a aprender y, además, te vuelve una persona más honesta y cercana.` },
+      { n: 7, q: 'Derecho a no necesitar la aprobación del otro',
+        a: `Es uno de los derechos más importantes para lograr armonía y plenitud en las relaciones. A todos nos gusta agradar, pero es imposible gustarle a todo el mundo. De forma asertiva conviene aceptar que habrá personas a las que no les gustaremos, igual que a nosotros no nos gusta todo el mundo. Condicionar nuestras acciones a agradar puede llevarnos a traicionar nuestros principios y valores. Como señala Smith: «Nunca seremos libres si no somos capaces de arriesgarnos a hacer lo que deseamos, incluso si esto puede llevar consigo la antipatía del otro».`,
+        v: `Buscar la aprobación de todos es una forma silenciosa de abandonarte. Cada vez que te traicionas para agradar, pagas con tu paz. No se trata de dejar de querer a los demás, sino de poner tu propia lealtad por encima del aplauso. Quien te quiere de verdad no necesita que desaparezcas para quedarse.` },
+      { n: 8, q: 'Derecho a tomar decisiones ilógicas',
+        a: `Se relaciona con el primer derecho, el de ser tu propio juez. Tienes derecho a elegir tus objetivos y a tomar decisiones que pueden escapar a la lógica de los demás o de la mayoría, pero que son coherentes con tus criterios y valores.`,
+        v: `No todo lo importante cabe en una hoja de cálculo. A veces el corazón sabe algo que la "lógica" de los demás no alcanza a ver. Mientras tu decisión sea fiel a tus valores y no dañe a nadie, no necesita ser entendida por todos para ser válida. Tu vida no tiene que tener sentido para los demás, sino para ti.` },
+      { n: 9, q: 'Derecho a no comprender las expectativas ajenas',
+        a: `Ser asertivo significa que no tienes la obligación de adivinar lo que los demás necesitan o esperan de ti. Descifrar expectativas ajenas es difícil y, cuando nos embarcamos en ello, solemos cometer muchos errores.`,
+        v: `Cargar con expectativas que nadie te expresó es un peso invisible y agotador. No eres adivino, y exigirte serlo solo te llena de ansiedad. Si alguien necesita algo de ti, le corresponde decirlo con palabras. Pedir claridad no es ser difícil: es cuidar la relación de los malentendidos.` },
+      { n: 10, q: 'Derecho a no ser perfecto',
+        a: `Y, por tanto, a no perseguir la perfección. Intentar mejorar es positivo, pero también lo es asumir que quieres progresar sin necesidad de alcanzar la perfección. La actitud asertiva pasa por que cada quien juzgue y valide sus propias metas.`,
+        v: `La perfección no es una meta, es una trampa: siempre se aleja un paso más y nunca te deja descansar. Detrás del perfeccionismo casi siempre hay miedo a no ser amado si fallas. Permitirte ser suficiente —no perfecto— es uno de los mayores actos de paz que puedes regalarte. Eres valioso también en lo incompleto.` }
+    ],
+    closing: 'Estos diez derechos no son permisos para imponerte sobre los demás, sino recordatorios de que mereces el mismo respeto que ofreces. Practicar la asertividad es un camino, no un examen: se aprende, se falla y se vuelve a intentar. Si quieres trabajar tu asertividad y tus límites en un espacio seguro, te acompaño. Escríbeme.'
   }
 };
 
@@ -1796,7 +1836,7 @@ class Component extends DCLogic {
     if (!host) return;
     if (!document.getElementById('tm-style')) {
       const st = document.createElement('style'); st.id = 'tm-style';
-      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important}';
+      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important} .dr-acc>summary{list-style:none} .dr-acc>summary::-webkit-details-marker{display:none} .dr-acc>summary:hover{background:rgba(212,160,23,0.07)} .dr-acc[open]>summary{background:rgba(212,160,23,0.05)} .dr-acc[open] .dr-caret{transform:rotate(180deg)}';
       document.head.appendChild(st);
     }
     host.innerHTML = this._topicHTML(key);
@@ -1858,6 +1898,21 @@ class Component extends DCLogic {
       if (b.p) h += '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.74);margin-bottom:6px;">' + b.p + '</p>';
       if (b.list) { h += '<ul style="list-style:none;padding:0;margin:0;">'; b.list.forEach((it) => { h += '<li style="position:relative;padding-left:22px;margin-bottom:10px;font-size:15px;line-height:1.6;color:rgba(250,248,245,0.8);"><span style="position:absolute;left:0;top:1px;color:#D4A017;">◆</span>' + it + '</li>'; }); h += '</ul>'; }
     });
+    if (d.accordion) {
+      if (d.accTitle) h += '<h3 style="font-family:Spectral,serif;font-weight:500;font-size:20px;color:#FAF8F5;margin:30px 0 14px;">' + d.accTitle + '</h3>';
+      d.accordion.forEach((it) => {
+        h += '<details class="dr-acc" style="margin:10px 0;border:1px solid rgba(212,160,23,0.28);border-radius:12px;background:rgba(250,248,245,0.03);overflow:hidden;">'
+          + '<summary style="cursor:pointer;padding:15px 18px;display:flex;align-items:center;gap:13px;">'
+          + '<span class="dr-num" style="flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:rgba(212,160,23,0.16);color:#D4A017;font-family:Manrope,sans-serif;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;">' + it.n + '</span>'
+          + '<span style="flex:1;font-family:Spectral,serif;font-size:17px;color:#FAF8F5;">' + it.q + '</span>'
+          + '<span class="dr-caret" style="flex:0 0 auto;color:#D4A017;font-size:13px;transition:transform .2s;">▾</span>'
+          + '</summary>'
+          + '<div style="padding:2px 20px 18px 59px;">'
+          + '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.8);margin:0 0 12px;">' + it.a + '</p>'
+          + (it.v ? '<p style="font-size:14.5px;line-height:1.7;color:#EADBC8;font-style:italic;margin:0;padding:12px 16px;border-left:3px solid rgba(212,160,23,0.55);background:rgba(212,160,23,0.06);border-radius:0 8px 8px 0;">' + it.v + '</p>' : '')
+          + '</div></details>';
+      });
+    }
     if (d.closing) h += '<div style="margin-top:28px;padding:18px 20px;border-left:3px solid #D4A017;background:rgba(212,160,23,0.07);border-radius:8px;font-size:15.5px;line-height:1.6;color:#EADBC8;">' + d.closing + '</div>';
     h += '<div style="margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;">';
     h += '<button data-book style="font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#0D1B2A;background:#D4A017;border:none;padding:14px 26px;border-radius:999px;cursor:pointer;">Agendar consulta</button>';
