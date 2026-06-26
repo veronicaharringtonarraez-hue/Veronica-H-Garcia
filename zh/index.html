@@ -181,6 +181,7 @@
       <!-- wellness category teasers -->
       <div class="r-grid6" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:12px; margin-top:70px;">
         <div data-yt="crisis" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(212,160,23,0.12); border:1px solid rgba(212,160,23,0.5); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.2); border-color:#D4A017;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">危机干预</div><div style="font-size:10.5px; color:rgba(212,160,23,0.85); letter-spacing:0.08em;">心理急救</div></div>
+        <div data-yt="emdr" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">EMDR</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="ansiedad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">焦虑</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="autoestima" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自尊</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="dormir" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">更好地睡眠</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
@@ -1603,6 +1604,25 @@ const TOPICS = {
       { n: 10, q: `如果你此刻正处在紧急情况中，该怎么办`, a: `如果有即时危险，请先确保自身安全，并拨打你所在国家的紧急服务电话（上方会根据你的所在地显示号码）。呼吸，把你的身体锚定在当下。寻找其他人：不要独自面对这一切。满足最基本的需求，并遵从官方的指示。等你安全了，再平静地回到这些工具。`, v: `如果你正在紧急情况中读到这段话：跟我一起呼吸，你寻求支持，已经做对了。先是身体的安全，再是情绪的安全。你不必现在就解决一切，只需迈出下一步。等你有余力时，去寻求陪伴：你并不孤单。` }
     ],
     closing: `危机会撼动一切，但你并非独自一人去穿越它。这些工具是最初的支撑；而专业的陪伴，能让你所经历的，不至于留下一道久久不愈的伤口。如果你或你所爱的人正经历一场紧急、一场哀伤，或一桩创伤事件的余波，给我留言。而如果有即时危险，请马上联系你所在国家的紧急服务。`
+  },
+
+  emdr: {
+    title: `EMDR`, tag: `眼动脱敏与再加工`,
+    intro: `EMDR（眼动脱敏与再加工）是一种心理治疗方法，获世界卫生组织（WHO）与美国心理学会（APA）认可，对于疗愈创伤尤其有效。当我们经历某件极其痛苦的事，记忆有时会"卡住"、未被处理，并持续被激活，仿佛危险仍在眼前。EMDR帮助大脑重新加工这些记忆，让它们不再刺痛、卸下重负。点开每一项来认识它。`,
+    accTitle: `认识 EMDR`,
+    accordion: [
+      { n: 1, q: `什么是 EMDR？`, a: `EMDR（英文 Eye Movement Desensitization and Reprocessing，眼动脱敏与再加工）是由弗朗辛·夏皮罗（Francine Shapiro）发展出的一种心理治疗方法。它在当事人唤起一段困难记忆的同时，运用双侧刺激（如左右来回的眼球运动），帮助大脑以更健康的方式加工并整合这段记忆。它被世界卫生组织等机构公认为治疗创伤的有效方法。`, v: `我喜欢这样解释：有些记忆像一道久久不愈的伤口，每当有什么触碰到它，就会像第一天一样痛。EMDR并不抹去发生过的事，但它能帮记忆卸下那道锋利的刃，让你能够回想它，而不至于被淹没。` },
+      { n: 2, q: `它有什么用？`, a: `EMDR对创伤和创伤后应激尤其有用，但也用于焦虑、恐惧症、惊恐发作、艰难的哀伤、童年的痛苦记忆，以及事故、被攻击或自然灾害等事件的后遗影响。它处理的，是那些带着强烈情绪负荷被"存档"下来的经历。`, v: `在一场剧烈的事件之后——地震、丧失、被攻击——身体有时在几个月后仍处于警戒，仿佛不知道一切已经过去。EMDR正是在这里帮上忙：让你的系统真正明白，那个危险已经结束了。` },
+      { n: 3, q: `它在大脑里是如何起作用的？`, a: `当我们经历令人不堪承受之事，大脑有时来不及加工这段经历，记忆便被"生硬地"存了下来，连同它的画面、情绪与身体感受原封不动。EMDR的双侧刺激似乎能促进左右脑之间的沟通，并激活我们做梦时（REM快速眼动期）用来消化经历的那同一套自然机制。如此，记忆得以重新整理，强度也随之减弱。`, v: `想象一个损坏的电脑文件，时不时自己跳出来。EMDR帮你"重新加工"这个文件，把它妥善地存回过去——它本该待的地方。发生过的事仍在那里，但不会再毫无预警地弹到屏幕上。` },
+      { n: 4, q: `双侧刺激`, a: `这是这项技术的核心：左右交替的刺激。最为人所知的是眼球运动（用目光跟随治疗师的手），但也可以用两耳交替的声音，或在手上、膝盖上轻轻交替地敲拍（tapping）。它以短促的回合进行，同时当事人与那段记忆保持连接。`, v: `它毫无神秘或催眠的成分：自始至终你都是清醒的、有意识的，并且掌控着一切。任何时候你想停，就可以停。这种刺激只是一个工具，帮你的大脑去做它本就会做的事：疗愈。` },
+      { n: 5, q: `EMDR 的 8 个阶段`, a: `EMDR遵循一套结构化的八阶段流程：(1)病史采集与计划，(2)准备与平静资源，(3)对目标记忆的评估，(4)以双侧刺激进行脱敏，(5)植入一个积极信念，(6)身体扫描，(7)结束本次会谈，(8)再评估。它不会直接奔向那段痛苦的记忆：先建立起安全感与工具。`, v: `这一点很重要：EMDR不是"强迫你重新经历创伤"。在触碰艰难之处之前，我们会花时间让你感到安全，并给你调节自己的资源。我们按你的节奏来，小心地走。面对那段记忆，你从来不是一个人。` },
+      { n: 6, q: `一次会谈中会有什么感觉？`, a: `在再加工的过程中，你可能会注意到画面、想法、情绪或身体感受，它们在一回合与一回合之间不断变化。许多人感到那段记忆在"远去"，变得更模糊，或不那么令人揪心。之后感到些许疲惫是正常的；这种加工可能在两次会谈之间继续进行。`, v: `每个人的体验都不一样，并没有一种"正确"的感受方式。有人哭，有人感到释然，有人在身体里察觉到一些东西。我的工作，是陪伴你，让这一切安全而可承受。你不必"做得好"：只需让你的头脑去完成它的历程。` },
+      { n: 7, q: `它安全吗？适合谁？`, a: `EMDR是一种循证治疗，被世界卫生组织推荐用于成人、儿童与青少年的创伤后应激。它由受过训练的专业人员实施，对方会先评估现在是否是适合你的时机。它不能取代个别化的评估：有些情况下，宜先打好某些基础。因此，它总是从一次评估开始。`, v: `当由受过训练的人引导、并尊重你的节奏时，它是有效而安全的。它不是魔法，也不是一次会谈就解决一切的方案；它是一个严肃而尊重的过程。如果它让你心生疑虑，我们可以在决定它是否适合你之前，先把这些疑虑谈清楚。` },
+      { n: 8, q: `迷思与事实`, a: `迷思："这是催眠。"事实：你全程都清醒、有意识。迷思："他们会让我把所有的痛重新经历一遍。"事实：它在充分准备下、按你的节奏进行，不以再次造成创伤为目的。迷思："不过就是动动眼睛。"事实：刺激只是一整套完整流程中的一环。迷思："它会抹掉记忆。"事实：它不抹掉记忆，而是卸下那份令人刺痛的负荷。`, v: `很多人因为听来的说法而带着害怕前来。所以我喜欢把它讲清楚：你做主，你是清醒的，我绝不会把你推过你所能承受的界限。目标不是让你遗忘，而是让你能够平静地回想。` },
+      { n: 9, q: `"安全之地"与平静资源`, a: `在重新加工任何东西之前，EMDR会先花时间安装调节的资源，比如"安全之地"练习：用你所有的感官，唤起一个让你感到平静、被保护的地方（真实的或想象的），并把它锚定下来，好让你在需要时能回到那里。这也是一个你可以在会谈之外使用的工具。`, v: `我很喜欢这一步，因为从第一天起你就带走了一样有用的东西，哪怕我们还没碰触那些艰难之处。学会回到你的"安全之地"，就像拥有一个属于自己的锚：一种住在你心里、谁也夺不走的安抚自己的方式。` },
+      { n: 10, q: `你有兴趣试试吗？`, a: `如果你背负着一段始终无法愈合的记忆——一桩创伤、一场丧失、一件难事的后遗影响——EMDR也许能帮到你。第一步永远是一次交谈：让我了解你的经历，并和你一起评估，它是否是适合你的方法，以及适合在什么时候开始。不必着急：这件事会被小心地对待。`, v: `如果这其中有什么触动了你，给我留言。我们先从彼此认识、从给你安全感开始；其余的，按你的节奏一点点搭建。疗愈那痛了如此之久的，是有可能的，而你不必独自去面对。` }
+    ],
+    closing: `创伤无法靠"意志力"克服，也无法靠遗忘抹去：它的疗愈，在于给大脑一个机会，去加工那些被卡住的东西。EMDR是实现这一点最受支持的工具之一，带着尊重，并按你的节奏。如果你想知道它是否适合你，给我留言，我们一起聊聊。`
   },
 
   frustracion: {
