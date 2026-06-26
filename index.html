@@ -204,6 +204,7 @@
         <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Familiares en la adicción</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="derechos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Derechos Asertivos</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="acoso" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Acoso y malestar</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="frustracion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Frustración y control</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="liderazgo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Habilidades blandas y liderazgo</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
@@ -1591,6 +1592,45 @@ const TOPICS = {
         'Reconoce cada logro a su escala y sus fortalezas: cada persona del espectro tiene talentos propios.' ] }
     ],
     closing: 'Acompaño a personas en el espectro y a sus familias con respeto y herramientas concretas, a cada edad. Si lo estás viviendo, escríbeme.'
+  },
+
+  frustracion: {
+    title: 'Frustración y control', tag: 'Soltar lo que no depende de ti',
+    intro: 'La frustración aparece cuando la realidad no encaja con lo que esperábamos. Gran parte de nuestro malestar nace de pelear con lo que no podemos controlar, en lugar de enfocar la energía en lo que sí depende de nosotros. Aprender a distinguir una cosa de la otra es una de las claves de la paz mental. Despliega cada idea para trabajarla.',
+    accTitle: 'Claves para manejar la frustración',
+    accordion: [
+      { n: 1, q: '¿Qué es la frustración?',
+        a: `Es la emoción que aparece cuando algo se interpone entre nosotros y lo que deseamos o esperamos: un plan que falla, alguien que no responde como queríamos, un resultado que no llega. No es "mala": es una señal de que algo nos importa. El problema no es sentirla, sino qué hacemos con ella.`,
+        v: `En consulta veo cuánta culpa carga la gente por frustrarse, como si fuera un defecto. No lo es: frustrarse es humano. Lo que sana no es dejar de sentir, sino aprender a acompañar esa emoción sin que te arrastre a la rabia, el bloqueo o el reproche.` },
+      { n: 2, q: 'El círculo de control: lo que sí depende de ti',
+        a: `Hay una zona que sí está en tus manos: tus decisiones, tu esfuerzo, tu actitud, tus palabras, tus límites, cómo te cuidas, cómo interpretas lo que pasa y cómo respondes. Ahí es donde tu energía rinde de verdad. Cuanto más la enfocas aquí, más capaz y tranquilo te sientes.`,
+        v: `Te invito a una pregunta sencilla ante cada malestar: "¿esto depende de mí?". Si la respuesta es sí, actúa. Reconocer tu parcela de control —aunque sea pequeña— te devuelve el poder que la frustración parecía haberte quitado.` },
+      { n: 3, q: 'Lo que no puedes controlar',
+        a: `Y hay otra zona que no te pertenece: las decisiones y opiniones de los demás, el pasado, lo que ya dijiste, el clima, el tráfico, los resultados finales, el ritmo de los procesos. Pelear contra esto es como remar contra la corriente: te agota y no cambia el río.`,
+        v: `Mucho sufrimiento nace de intentar controlar lo incontrolable, sobre todo a otras personas. Soltar no es rendirte: es dejar de gastar fuerzas donde no tienen efecto, para guardarlas para tu propia vida.` },
+      { n: 4, q: 'La trampa de querer controlarlo todo',
+        a: `Cuando intentamos controlar lo que no depende de nosotros, aparecen la ansiedad, el agotamiento y la sensación de fracaso constante. El control excesivo promete seguridad, pero entrega tensión: revisamos, anticipamos y nos adelantamos a catástrofes que casi nunca ocurren.`,
+        v: `El exceso de control suele esconder miedo a la incertidumbre. Trabajar la confianza —en ti, en el proceso, en que podrás afrontar lo que venga— afloja ese nudo. No necesitas controlarlo todo para estar a salvo.` },
+      { n: 5, q: 'Aceptar no es resignarse',
+        a: `Aceptar es reconocer la realidad tal como es, sin gastar energía en negarla, aunque no te guste. Resignarse es rendirse y dejar de actuar. Son cosas distintas: desde la aceptación, paradójicamente, sí puedes cambiar lo que está en tu mano; desde la negación, te quedas atascado.`,
+        v: `"Acepto que esto pasó y elijo qué hago ahora" es una de las frases más liberadoras que trabajo con mis pacientes. Aceptar no significa que esté bien lo ocurrido; significa dejar de pelear con lo inevitable para poner tu fuerza donde sí cuenta.` },
+      { n: 6, q: 'Regular la frustración en el momento',
+        a: `Cuando la frustración aprieta: para un instante, respira hondo (alarga la exhalación), nombra lo que sientes ("estoy frustrado") y date unos segundos antes de reaccionar. Ese pequeño espacio entre el estímulo y la respuesta es donde vive tu libertad.`,
+        v: `La frustración pide acción inmediata, y casi siempre esa prisa empeora las cosas. Aprender a hacer una pausa —aunque sean tres respiraciones— no es debilidad: es el músculo que te permite responder en vez de estallar o hundirte.` },
+      { n: 7, q: 'De la exigencia a la preferencia',
+        a: `Mucha frustración nace de exigencias rígidas: "esto tiene que salir así", "la gente debería…", "yo no puedo fallar". Cuando cambiamos el "tiene que" por un "me gustaría", seguimos buscando lo que queremos, pero dejamos espacio para que la realidad sea distinta sin derrumbarnos.`,
+        v: `No te pido que dejes de querer cosas, sino que sueltes la tiranía del "debería". "Preferiría que pasara, y si no, lo afrontaré" duele mucho menos que "tenía que pasar sí o sí". Tu paz no debería depender de que todo salga exacto.` },
+      { n: 8, q: 'Tolerancia a la frustración (y cómo se entrena)',
+        a: `La tolerancia a la frustración es la capacidad de sostener el malestar de que las cosas no salgan como queremos, sin desbordarnos. No se nace con ella fija: se entrena, en niños y en adultos, enfrentando pequeñas frustraciones, sin rescatar de inmediato ni rendirse al primer obstáculo.`,
+        v: `A los padres les digo: evitarle a un niño toda frustración no lo protege, lo deja sin herramientas. Y a los adultos: cada vez que toleras una pequeña molestia sin estallar ni abandonar, fortaleces ese músculo. Se entrena a cualquier edad.` },
+      { n: 9, q: 'Reenfocar la energía',
+        a: `Después de reconocer lo que no depende de ti, vuelve a lo que sí: ¿cuál es el siguiente paso pequeño que sí puedes dar? Convertir la frustración en una acción concreta —por mínima que sea— transforma la impotencia en movimiento.`,
+        v: `La pregunta que más repito: "¿qué sí puedo hacer hoy con esto?". No lo resuelve todo de golpe, pero te saca del lugar de víctima de las circunstancias y te devuelve a ser protagonista de tu vida, paso a paso.` },
+      { n: 10, q: 'Qué hacer si te supera',
+        a: `Si la frustración se vuelve constante, se convierte en rabia que daña tus vínculos o te lleva a la apatía y la desesperanza, es momento de pedir apoyo. No es debilidad: es cuidar tu salud emocional antes de que el desgaste se haga crónico.`,
+        v: `Si sientes que la frustración te gana la mayoría de los días, no tienes que resolverlo solo. En terapia trabajamos a fondo el manejo de las emociones, la aceptación y los límites sanos. Si lo necesitas, escríbeme: te acompaño.` }
+    ],
+    closing: 'Hay una sabiduría antigua en distinguir lo que puedes cambiar de lo que no, y poner tu energía donde sí marca diferencia. No se trata de no frustrarte nunca, sino de que la frustración deje de gobernarte. Si quieres aprender a soltar lo que no depende de ti y enfocar tu fuerza donde sí cuenta, te acompaño. Escríbeme.'
   },
 
   acoso: {
