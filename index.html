@@ -203,6 +203,7 @@
         <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">TEA (Autismo)</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Familiares en la adicción</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="derechos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Derechos Asertivos</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="acoso" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Acoso y malestar</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="liderazgo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Habilidades blandas y liderazgo</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
@@ -1590,6 +1591,45 @@ const TOPICS = {
         'Reconoce cada logro a su escala y sus fortalezas: cada persona del espectro tiene talentos propios.' ] }
     ],
     closing: 'Acompaño a personas en el espectro y a sus familias con respeto y herramientas concretas, a cada edad. Si lo estás viviendo, escríbeme.'
+  },
+
+  acoso: {
+    title: 'Acoso y malestar', tag: 'Bullying, mobbing, phubbing y otras formas sutiles',
+    intro: 'No todo el daño deja marcas visibles. Hay formas de acoso y trato hostil que no llegan a la violencia física, pero que desgastan la autoestima, el sueño y la paz. Si algo te hace sentir mal de forma repetida, tu malestar es válido y merece atención. Despliega cada tipo para reconocerlo.',
+    accTitle: 'Tipos de acoso y trato hostil',
+    accordion: [
+      { n: 1, q: 'Bullying (acoso escolar)',
+        a: `Agresión repetida y deliberada de una persona o grupo hacia alguien percibido en desventaja, en el colegio o entre pares: burlas, exclusión, apodos, golpes "de broma", humillación. No es "cosa de niños" ni un juego: hay un desequilibrio de poder y una intención sostenida de hacer daño.`,
+        v: `He acompañado a niños, adolescentes y también adultos que cargaron en silencio el bullying durante años. Lo más dañino no es solo la agresión, sino el mensaje que deja: "algo malo hay en mí". No lo hay. Romper el silencio y pedir ayuda no es ser débil ni "acusón": es el primer acto de cuidado hacia ti.` },
+      { n: 2, q: 'Mobbing (acoso laboral)',
+        a: `Acoso psicológico en el trabajo: hostigamiento sistemático de jefes o compañeros para aislar, desprestigiar o "empujar a renunciar" a alguien. Incluye sobrecarga o vaciado de tareas, críticas constantes, rumores, exclusión de reuniones, ridiculización. Suele ser sutil y sostenido, lo que hace dudar a la víctima de su propia percepción.`,
+        v: `El mobbing enferma: insomnio, ansiedad, nudo en el estómago antes de entrar a trabajar. Muchas personas creen que "aguantar" es ser fuerte, hasta que el cuerpo dice basta. Tu salud vale más que cualquier puesto. Documentar lo que ocurre, buscar apoyo y poner límites no es exagerar; es protegerte.` },
+      { n: 3, q: 'Ciberacoso (ciberbullying)',
+        a: `Acoso a través de pantallas: mensajes ofensivos, difusión de rumores o fotos, exclusión de grupos, suplantación, comentarios humillantes en redes. Su particularidad es que te persigue las 24 horas, llega hasta tu casa y puede volverse viral y permanente.`,
+        v: `Cuando el acoso vive en el teléfono, sientes que no hay refugio. Pero sí lo hay: puedes silenciar, bloquear, guardar pruebas y apagar. No tienes que leerlo todo ni responder. Tu valor no se mide en likes ni en lo que un grupo diga de ti en una pantalla.` },
+      { n: 4, q: 'Phubbing',
+        a: `Del inglés phone + snubbing: el desaire de ignorar a quien tienes delante por estar pendiente del teléfono. No es una agresión, pero repetido transmite un mensaje doloroso —"lo que hay en la pantalla importa más que tú"— y erosiona los vínculos de pareja, familia y amistad.`,
+        v: `El phubbing duele precisamente porque es silencioso y está "normalizado". Si en tu casa o tu relación sientes que compites con una pantalla, no estás exagerando. Acordar momentos sin teléfono no es control: es pedir presencia, una de las formas más básicas del cariño.` },
+      { n: 5, q: 'Gaslighting (luz de gas)',
+        a: `Manipulación que te hace dudar de tu propia memoria, percepción o cordura: "eso nunca pasó", "estás loca/o", "lo exageras todo". Con el tiempo dejas de confiar en ti y quedas más dependiente de quien manipula. Es una forma sutil pero grave de maltrato psicológico.`,
+        v: `Si sales de cada conversación confundida, disculpándote por todo y sintiendo que "la del problema eres tú", presta atención. Tu percepción importa. Una de las cosas más sanadoras en terapia es recuperar la confianza en lo que sientes y recuerdas: volver a creerte a ti misma.` },
+      { n: 6, q: 'Ley del hielo y exclusión (ostracismo)',
+        a: `Castigar con el silencio: ignorar a propósito, dejar de hablarle a alguien o excluirlo del grupo "como si no existiera". Aunque no haya gritos ni golpes, el rechazo social activa en el cerebro las mismas zonas que el dolor físico. Es una forma real de agresión.`,
+        v: `Ser ignorado a propósito es profundamente doloroso, y muchas veces quien lo sufre se siente "tonto" porque le afecte tanto. No lo eres: estamos hechos para pertenecer. Reconocer que el silencio puede usarse como arma te ayuda a dejar de buscar la culpa en ti.` },
+      { n: 7, q: 'Microagresiones',
+        a: `Comentarios o gestos sutiles, a veces "disfrazados de broma o halago", que menosprecian a alguien por su género, cuerpo, origen, edad u orientación: "qué bien hablas para ser de…", "¿segura que vas a comer eso?". Uno solo parece menor; el goteo constante desgasta.`,
+        v: `Lo agotador de las microagresiones es que, si te quejas, te dicen "era solo un chiste, qué sensible". No eres exagerada: el daño está en la repetición. Validar tu incomodidad y poner un límite amable —"eso no me gusta"— es legítimo y necesario.` },
+      { n: 8, q: 'Acoso callejero y piropos no deseados',
+        a: `Comentarios sexuales, silbidos, miradas insistentes o seguimientos en la calle o el transporte. Aunque "no llegue a más", invade tu espacio, te hace sentir cosificada e insegura y te obliga a cambiar rutas, ropa u horarios. No es un halago: es acoso.`,
+        v: `Que algo sea "habitual" no lo hace aceptable. Si caminar por la calle te genera tensión o estar en alerta constante, ese malestar es real y no es tu culpa. Tienes derecho a ocupar el espacio público con tranquilidad.` },
+      { n: 9, q: 'Stalking y control (vigilancia)',
+        a: `Vigilancia y persecución no deseada: mensajes y llamadas insistentes, aparecer "por casualidad" donde estás, revisar tu teléfono o redes, controlar con quién hablas. Empieza disfrazado de "interés" o "amor", pero busca control y genera miedo.`,
+        v: `El control no es amor, aunque te lo vendan así. Si sientes que debes dar explicaciones de cada paso o que te vigilan, hazle caso a esa señal. Tu libertad y tu privacidad no son negociables, ni siquiera dentro de una relación.` },
+      { n: 10, q: 'Qué hacer si lo estás viviendo',
+        a: `No te aísles: cuéntaselo a alguien de confianza. Guarda evidencias (mensajes, fechas, testigos). Pon límites claros y, cuando sea posible, por escrito. Usa los canales formales (orientación escolar, recursos humanos, denuncia) y cuida tu salud emocional con apoyo profesional.`,
+        v: `Pedir ayuda no es perder; es dejar de cargar a solas. El acoso se sostiene en el silencio y la vergüenza, y se debilita cuando lo nombras y te rodeas de apoyo. Si algo de esto resuena contigo o con alguien que quieres, escríbeme: trabajamos tu bienestar y tus límites juntos.` }
+    ],
+    closing: 'El malestar que no deja moretones también merece ser atendido. Reconocer el acoso es el primer paso para dejar de normalizarlo. Si lo estás viviendo —tú o alguien que quieres—, no estás solo: acompaño a personas de todas las edades a recuperar su seguridad y su paz. Y si en algún momento hay peligro físico, busca ayuda inmediata. Escríbeme.'
   },
 
   familiares_adiccion: {
