@@ -1833,6 +1833,8 @@ class Component extends DCLogic {
   openTopic = (arg) => {
     const key = (typeof arg === 'string') ? arg : (arg && arg.currentTarget && arg.currentTarget.getAttribute('data-yt'));
     if (!key || !TOPICS[key]) return;
+    var _tgt = (arg && arg.currentTarget && arg.currentTarget.closest) ? arg.currentTarget : null;
+    if (_tgt) { if (_tgt.closest('#empresas')) this._topicOrigin = 'empresas'; else if (_tgt.closest('#wellness')) this._topicOrigin = 'wellness'; }
     const host = this.temaRef && this.temaRef.current;
     if (!host) return;
     if (!document.getElementById('tm-style')) {
@@ -1842,7 +1844,7 @@ class Component extends DCLogic {
     }
     host.innerHTML = this._topicHTML(key);
     const back = host.querySelector('[data-back]');
-    if (back) back.onclick = () => { const tp = TOPICS[key]; if (tp.parent) this.openTopic(tp.parent); else if (tp.backPage) this.goPage(tp.backPage); else this.goPage('inicio', 'wellness'); };
+    if (back) back.onclick = () => { const tp = TOPICS[key]; if (tp.parent) this.openTopic(tp.parent); else if (this._topicOrigin === 'wellness') this.goPage('inicio', 'wellness'); else if (tp.backPage) this.goPage(tp.backPage); else this.goPage('inicio', 'wellness'); };
     host.querySelectorAll('[data-go]').forEach((c) => { c.onclick = () => this.openTopic(c.getAttribute('data-go')); });
     const book = host.querySelector('[data-book]'); if (book) book.onclick = () => this.openBooking(key);
     const yt = host.querySelector('[data-yt-btn]'); if (yt) yt.onclick = () => { const u = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
@@ -1875,7 +1877,7 @@ class Component extends DCLogic {
     const isLeaf = !d.children;
     const ytUrl = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim();
     const spUrl = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim();
-    const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Volver a ' + TOPICS[d.parent].title) : (d.backName ? ('← Volver a ' + d.backName) : '← Volver al Centro de Bienestar');
+    const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Volver a ' + TOPICS[d.parent].title) : (this._topicOrigin === 'wellness') ? '← Volver al Centro de Bienestar' : (d.backName ? ('← Volver a ' + d.backName) : '← Volver al Centro de Bienestar');
     let h = '';
     h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
     if (key.indexOf('violencia') === 0) h += this._emergHTML();
