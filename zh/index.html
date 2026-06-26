@@ -203,6 +203,7 @@
         <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">成瘾者的家属</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="derechos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自我主张的权利</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="acoso" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">骚扰与心理困扰</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="frustracion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">挫折感与掌控</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="liderazgo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">软技能与领导力</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
@@ -1587,6 +1588,25 @@ const TOPICS = {
       { n: 10, q: `不必完美的权利`, a: `因此，也有权不去追求完美。想要进步是好的，但接受"我想前进、却不必抵达完美"同样是好的。自我主张的态度在于：每个人都去评判并认可自己的目标。`, v: `完美不是目标，而是陷阱：它总是再退一步，永远不让你休息。完美主义背后，几乎总藏着"若失败便不被爱"的恐惧。允许自己足够好——而非完美——是你能送给自己的最大的平静之一。即使在尚未完成之处，你也同样珍贵。` }
     ],
     closing: `这十项权利，不是让你凌驾于他人之上的许可，而是提醒你：你值得你所给予的那份同样的尊重。练习自我主张是一条路，而非一场考试：会学习，会跌倒，再重新尝试。如果你愿意在一个安全的空间里梳理你的自我主张与界限，我愿意陪伴你。给我留言。`
+  },
+
+  frustracion: {
+    title: `挫折感与掌控`, tag: `放下不由你决定的事`,
+    intro: `当现实与我们的预期不符时，挫折感便会出现。我们大部分的痛苦，源于与无法掌控的事对抗，而不是把精力放在真正由我们决定的事上。学会分辨这两者，是内心平静的关键之一。点开每一条来逐一练习。`,
+    accTitle: `管理挫折感的要点`,
+    accordion: [
+      { n: 1, q: `什么是挫折感？`, a: `这是当某件事横在我们与所渴望或期待之间时升起的情绪：一个落空的计划、一个没有如我们所愿回应的人、一个迟迟不来的结果。它并不"坏"：它是某件事对你很重要的信号。问题不在于感到挫折，而在于我们如何对待它。`, v: `在咨询中，我看到许多人因为感到挫折而背负愧疚，仿佛那是一种缺陷。并不是：会挫折是人之常情。疗愈的不是不再有感受，而是学会陪伴这份情绪，不让它把你拖向愤怒、僵住或自责。` },
+      { n: 2, q: `掌控之圈：哪些由你决定`, a: `有一片区域确实掌握在你手中：你的决定、你的努力、你的态度、你的言语、你的界限、你如何照顾自己、如何理解所发生的事、如何回应。那里才是你的精力真正见效的地方。你越把精力聚焦于此，就越感到有力量、越平静。`, v: `面对每一份不适，我邀请你问一个简单的问题："这由我决定吗？"如果答案是肯定的，就行动。承认你那份掌控——哪怕很小——会把挫折似乎夺走的力量还给你。` },
+      { n: 3, q: `哪些是你无法掌控的`, a: `还有另一片区域并不属于你：他人的决定与看法、过去、你已说出口的话、天气、交通、最终的结果、事情推进的节奏。与这些对抗，就像逆流划桨：耗尽你，却改变不了那条河。`, v: `许多痛苦源于试图控制无法控制的事，尤其是控制他人。放手不是认输：而是不再把力气花在没有效果的地方，好把它留给你自己的人生。` },
+      { n: 4, q: `想掌控一切的陷阱`, a: `当我们试图控制不由自己决定的事，焦虑、耗竭与不断的挫败感便会出现。过度控制许诺安全，交付的却是紧绷：我们反复检查、预演、抢先去担忧那些几乎从不发生的灾难。`, v: `过度控制往往藏着对不确定的恐惧。培养信任——对自己、对过程、对"无论来什么你都能面对"的信任——会松开那个结。你不必控制一切，才能安全。` },
+      { n: 5, q: `接纳不是认命`, a: `接纳，是如实承认现实本来的样子，不把精力耗在否认它上，即便你并不喜欢。认命，则是放弃、不再行动。两者不同：从接纳出发，反而能改变力所能及之处；从否认出发，你只会卡住。`, v: `"我接纳这件事已经发生，并选择此刻我要怎么做"，是我和来访者一起练习的最具解放力的句子之一。接纳并不意味着所发生的就是对的；它意味着停止与不可避免之事缠斗，把你的力量放到真正算数的地方。` },
+      { n: 6, q: `在当下调节挫折感`, a: `当挫折紧逼时：停一下，深呼吸（把呼气拉长），为你的感受命名（"我很挫败"），在回应之前给自己几秒。刺激与回应之间那一小段空间，正是你自由的所在。`, v: `挫折要求立刻行动，而那份急促几乎总是把事情弄得更糟。学会停顿——哪怕只是三次呼吸——不是软弱：它是让你能够回应、而非爆发或崩塌的那块肌肉。` },
+      { n: 7, q: `从"必须"到"偏好"`, a: `许多挫折源于僵硬的要求："这件事必须这样""人们应该……""我不能失败"。当我们把"必须"换成"我希望"，我们仍在追求所要的，却给现实留出了不同的余地，而不至于崩溃。`, v: `我并不是要你停止想要，而是放下"应该"的暴政。"我希望它发生，若没有，我也会面对"，比"它非如此不可"要少痛得多。你的平静，不该取决于一切都分毫不差。` },
+      { n: 8, q: `挫折耐受力（以及如何锻炼）`, a: `挫折耐受力，是承受"事情不如我们所愿"的不适而不溃堤的能力。它并非天生就固定：它可以被训练，在孩子和成人身上，通过面对小小的挫折，不立刻搭救，也不在第一个障碍前放弃。`, v: `我会对父母说：替孩子挡掉一切挫折并不能保护他，反而让他没有工具。我也对成人说：每当你忍受一点小小的不适而不爆发、不放弃，你都在强化那块肌肉。它在任何年龄都能被训练。` },
+      { n: 9, q: `把精力重新聚焦`, a: `在认清哪些不由你决定之后，回到那些由你决定的：你真正能迈出的下一小步是什么？把挫折转化为一个具体的行动——无论多么微小——就把无力感变成了行动。`, v: `我最常重复的问题："关于这件事，今天我能做点什么？"它不会一下子解决一切，但它把你从"被环境摆布的受害者"中拉出来，让你一步一步重新成为自己人生的主角。` },
+      { n: 10, q: `如果它压垮了你，该怎么办`, a: `如果挫折变得持续不断、化为伤害你关系的愤怒，或把你引向冷漠与绝望，那就到了寻求支持的时候。这不是软弱：而是在耗损变成慢性之前，照顾你的情绪健康。`, v: `如果你感到大多数日子里挫折都占了上风，你不必独自解决。在治疗中，我们深入地处理情绪管理、接纳与健康的界限。如果你需要，给我留言：我陪着你。` }
+    ],
+    closing: `在分辨"什么能改变、什么不能"，并把精力放在真正有所不同之处——这其中有一种古老的智慧。重点不是永不挫折，而是让挫折不再支配你。如果你愿意学会放下不由你决定的事、把力量聚焦在真正算数之处，我愿意陪伴你。给我留言。`
   },
 
   acoso: {
