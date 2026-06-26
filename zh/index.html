@@ -202,6 +202,7 @@
         <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自闭症谱系（ASD）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">成瘾者的家属</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="derechos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自我主张的权利</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="acoso" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">骚扰与心理困扰</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="liderazgo" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">软技能与领导力</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
@@ -1586,6 +1587,25 @@ const TOPICS = {
       { n: 10, q: `不必完美的权利`, a: `因此，也有权不去追求完美。想要进步是好的，但接受"我想前进、却不必抵达完美"同样是好的。自我主张的态度在于：每个人都去评判并认可自己的目标。`, v: `完美不是目标，而是陷阱：它总是再退一步，永远不让你休息。完美主义背后，几乎总藏着"若失败便不被爱"的恐惧。允许自己足够好——而非完美——是你能送给自己的最大的平静之一。即使在尚未完成之处，你也同样珍贵。` }
     ],
     closing: `这十项权利，不是让你凌驾于他人之上的许可，而是提醒你：你值得你所给予的那份同样的尊重。练习自我主张是一条路，而非一场考试：会学习，会跌倒，再重新尝试。如果你愿意在一个安全的空间里梳理你的自我主张与界限，我愿意陪伴你。给我留言。`
+  },
+
+  acoso: {
+    title: `骚扰与心理困扰`, tag: `霸凌、职场欺凌、低头冷落等微妙形式`,
+    intro: `并非所有伤害都会留下可见的痕迹。有些骚扰与敌意的对待并不构成肢体暴力，却会侵蚀自尊、睡眠与内心的安宁。如果某件事反复让你感到难受，你的不适是正当的，值得被认真对待。点开每一种类型来认识它。`,
+    accTitle: `骚扰与敌意对待的类型`,
+    accordion: [
+      { n: 1, q: `校园霸凌（Bullying）`, a: `一个人或一群人对被视为弱势者反复且蓄意的攻击，发生在学校或同伴之间：嘲笑、排挤、起外号、"开玩笑"式的拳脚、羞辱。这不是"孩子间的事"，也不是游戏：其中存在权力的不对等，以及持续伤害的意图。`, v: `我陪伴过默默承受多年霸凌的孩子、青少年，也有成年人。最具破坏力的不只是攻击本身，而是它留下的讯息："我身上有什么不对劲。"并没有。打破沉默、寻求帮助，不是软弱，也不是"打小报告"，而是你对自己最初的照顾。` },
+      { n: 2, q: `职场欺凌（Mobbing）`, a: `职场中的心理骚扰：上司或同事系统性地刁难，以孤立、抹黑某人，或"逼其辞职"。包括任务超载或被架空、不断批评、散布谣言、排除在会议之外、当众取笑。它往往隐蔽而持续，让受害者怀疑自己的感受。`, v: `职场欺凌会让人生病：失眠、焦虑、上班前胃里发紧。很多人以为"忍下去"就是坚强，直到身体喊停。你的健康比任何职位都珍贵。记录所发生的事、寻求支持、设立界限，不是小题大做，而是在保护自己。` },
+      { n: 3, q: `网络霸凌`, a: `通过屏幕进行的骚扰：辱骂讯息、散布谣言或照片、把人踢出群组、冒名顶替、在社交网络上发表羞辱性评论。它的特点是24小时如影随形，一直追到你家里，还可能被疯传并永久留存。`, v: `当骚扰住进了手机，你会觉得无处可躲。但其实有：你可以静音、拉黑、保存证据，然后关机。你不必把每一条都看完，也不必回应。你的价值，不由点赞数衡量，也不取决于一群人在屏幕上如何议论你。` },
+      { n: 4, q: `低头冷落（Phubbing）`, a: `源自英文 phone（手机）+ snubbing（冷落）：因只顾看手机而怠慢眼前的人。它不是攻击，但反复出现就传递着一个令人受伤的讯息——"屏幕里的东西比你更重要"——并慢慢侵蚀伴侣、家人与朋友之间的连结。`, v: `低头冷落之所以伤人，恰恰因为它无声且被"视为正常"。如果在家里或在关系中，你感到自己在与一块屏幕争夺，你并没有夸张。约定"无手机"的时刻不是控制，而是请求陪伴——这是关爱最基本的形式之一。` },
+      { n: 5, q: `煤气灯操纵（Gaslighting）`, a: `让你怀疑自己记忆、感受或理智的操纵："那从没发生过""你疯了""你什么都夸大"。久而久之，你不再相信自己，反而更依赖操纵你的人。这是一种隐蔽却严重的心理虐待。`, v: `如果每次对话结束你都一头雾水、为一切道歉，并觉得"有问题的是我"，请留意。你的感受很重要。在治疗中最具疗愈力的事情之一，就是重新信任你的感受与记忆：重新相信你自己。` },
+      { n: 6, q: `冷暴力与排挤（冷处理）`, a: `用沉默来惩罚：故意忽视、不再与某人说话，或把他排除在群体之外，"仿佛他不存在"。即便没有叫喊与拳脚，社会排斥在大脑中激活的区域与身体疼痛相同。这是一种真实的攻击。`, v: `被故意忽视是极其痛苦的，而承受者常常觉得"自己太傻"才会这么在意。你并不傻：我们生来就需要归属。认识到沉默也可以成为武器，能帮你不再把过错归咎于自己。` },
+      { n: 7, q: `微歧视（微冒犯）`, a: `微妙的言语或动作，有时"伪装成玩笑或称赞"，因性别、身材、出身、年龄或性取向而贬低他人："以你这种出身，能说得这么好真不错""你确定要吃那个？"。单独一句似乎微不足道；持续的点滴却令人疲惫。`, v: `微歧视令人筋疲力尽之处在于：你一抱怨，对方就说"只是开个玩笑，你怎么这么敏感"。你并没有夸张：伤害在于反复。承认自己的不适，并温和地设下界限——"我不喜欢这样"——是正当且必要的。` },
+      { n: 8, q: `街头骚扰与不受欢迎的搭讪`, a: `在街上或交通工具里的性暗示言语、口哨、紧盯的目光或尾随。即便"没有更进一步"，它也侵入了你的空间，让你感到被物化、不安全，并迫使你改变路线、衣着或时间。这不是赞美：这是骚扰。`, v: `一件事"司空见惯"并不代表它可以被接受。如果走在街上让你感到紧张或时刻警觉，那份不适是真实的，而且不是你的错。你有权安然地占有公共空间。` },
+      { n: 9, q: `跟踪与控制（监视）`, a: `不受欢迎的监视与纠缠：不停发讯息打电话、"碰巧"出现在你所在之处、翻看你的手机或社交账号、控制你和谁来往。它起初伪装成"关心"或"爱"，实则在寻求控制，并制造恐惧。`, v: `控制不是爱，哪怕他们如此包装。如果你觉得自己每走一步都要交代，或感到被监视，请相信那个信号。你的自由与隐私不容商量，即使在一段关系之中也是如此。` },
+      { n: 10, q: `如果你正在经历，该怎么办`, a: `不要把自己孤立起来：告诉一个你信任的人。保存证据（讯息、日期、证人）。设下清晰的界限，可能的话以书面形式。善用正式渠道（学校辅导、人力资源、报案），并在专业支持下照顾你的情绪健康。`, v: `求助不是失败，而是不再独自扛着。骚扰靠沉默与羞耻维系，当你说出它、并让支持环绕你时，它就会削弱。如果这些有任何一点触动了你，或你所爱的人，给我留言：我们一起来梳理你的身心健康与界限。` }
+    ],
+    closing: `不会留下淤青的痛苦，同样值得被照顾。认出骚扰，是不再把它视为理所当然的第一步。如果你正在经历——无论是你，还是你所爱的人——你并不孤单：我陪伴各个年龄的人重新找回安全感与内心的平静。而一旦出现肢体上的危险，请立即寻求帮助。给我留言。`
   },
 
   familiares_adiccion: {
