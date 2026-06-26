@@ -180,6 +180,7 @@
 
       <!-- wellness category teasers -->
       <div class="r-grid6" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:12px; margin-top:70px;">
+        <div data-yt="crisis" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(212,160,23,0.12); border:1px solid rgba(212,160,23,0.5); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.2); border-color:#D4A017;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">危机干预</div><div style="font-size:10.5px; color:rgba(212,160,23,0.85); letter-spacing:0.08em;">心理急救</div></div>
         <div data-yt="ansiedad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">焦虑</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="autoestima" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自尊</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="dormir" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">更好地睡眠</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
@@ -1585,6 +1586,25 @@ const TOPICS = {
     closing: `这十项权利，不是让你凌驾于他人之上的许可，而是提醒你：你值得你所给予的那份同样的尊重。练习自我主张是一条路，而非一场考试：会学习，会跌倒，再重新尝试。如果你愿意在一个安全的空间里梳理你的自我主张与界限，我愿意陪伴你。给我留言。`
   },
 
+  crisis: {
+    title: `危机干预`, tag: `心理急救与情绪支撑`,
+    intro: `危机是一种暂时的震荡状态，当某个事件——地震、事故、丧失、紧急情况——超出了我们惯常的应对方式时便会出现。在那些时刻你所感受到的（恐惧、僵住、哭泣、混乱）都是对一个不正常处境的正常反应。这些心理急救工具能帮你稳住自己、调节自己，在最初的时刻陪伴他人，并知道何时该求助。点开每一项。`,
+    accTitle: `危机干预的工具`,
+    accordion: [
+      { n: 1, q: `什么是危机？`, a: `危机，是面对一件超出我们惯常资源的事件时所产生的强烈反应：自然灾害、事故、被攻击、毁灭性的消息。它不是疾病，也不是软弱：而是面对令人不堪承受之事时，人之常情、可以预料的反应。它通常是暂时的，在适当的陪伴下，大多数人都会康复。`, v: `我希望你在混乱中记住一件事：你的反应，对一个不正常的处境而言，是正常的。哭泣、发抖、脑子一片空白，或什么都感觉不到，并不代表你"疯了"，而代表你是一个面对极艰难之事的人。在这件事里，你并不孤单。` },
+      { n: 2, q: `心理急救（PAP）`, a: `心理急救是紧急事件后最初的情绪支持，不需要你是心理学家。它可归纳为三步：观察（看看谁需要帮助、环境是否安全）、倾听（靠近、询问对方需要什么、陪伴而不施压）、连接（帮助满足基本需求，并把人与资源及亲人联系起来）。目标不是"治愈"，而是稳住情绪、给予安全感。`, v: `你不需要完美的话语，才能帮助处在危机中的人。多数时候，最能疗愈的是一份平静的在场：在那里、递上一杯水、一条毯子、倾听。你的平静会传染。有时，默默地陪伴，胜过任何劝告。` },
+      { n: 3, q: `在当下调节你的身体（落地）`, a: `当身体处于警报状态，帮它回到当下。缓慢呼吸，把呼气拉长（吸气4拍，呼气6拍）。把双脚稳稳踩在地上，感受那份接触。用5-4-3-2-1练习：说出你看到的5样东西、听到的4样、触到的3样、闻到的2样、尝到的1样。喝点水。这会告诉你的神经系统：眼前的危险已经过去。`, v: `身处危机正中，你无法"冷静思考"：你的大脑处在生存模式。所以要先安抚身体，再安抚头脑。这些练习不是魔法，但当恐惧想把你卷走时，它们能给你的身体一个锚，把你定在此时此地。平时多练：在紧急关头，越熟悉就越管用。` },
+      { n: 4, q: `如何陪伴处在危机中的人`, a: `平静地走近并自我介绍。把他带到一个安全、安静的地方。不打断地倾听，并肯定他的感受（"你会这样很正常"）。不要轻描淡写（"没那么严重啦"），不要评判，也不要逼他开口。满足基本需求（水、保暖、与亲人取得联系），并确保他不会独自一人。`, v: `有些话虽出于好意，却会伤人："你要坚强""一切都有它的道理""至少你还活着"。在危机中，人需要的不是解决方案或道理，而是感到被陪伴、被守护。一句"我在这里陪着你"，胜过千言万语的建议。` },
+      { n: 5, q: `在紧急情况中陪伴孩子`, a: `孩子会捕捉到大人的恐惧。给他们身体上的安全与亲近（拥抱、你的在场）。用简单而诚实的话向他们说明发生了什么，不要描述吓人的细节，并平静地回答他们的问题。尽快恢复日常作息（吃饭、睡觉）：这能带来结构与安全感。限制他们接触关于该事件的新闻和画面。让他们通过游戏或画画来表达感受。`, v: `对一个孩子来说，你就是他的安全之地。你不必假装什么都没发生，但要让他知道：无论发生什么，你都会照顾他。"刚才很可怕，但现在我们在一起，是安全的"——这样的话，比任何长篇解释都更能安抚他。而当你是平稳的，他也会被你安定下来。` },
+      { n: 6, q: `地震或灾害之后`, a: `首先是安全：远离受损的建筑，处理伤口。与亲人重新取得联系，报个平安。满足最基本的需求：水、食物、休息、保暖。限制对新闻和画面的过度接触，它们会重新唤起恐惧。依靠你的社区与官方渠道。也允许自己休息：恢复也是身体上的。`, v: `地震过后，脚下的土地不再让人觉得稳固——无论字面上还是情感上。在之后的几天甚至几周里，仍然警觉、身体紧绷，都是正常的；你的系统正在重新学习"我可以是安全的"。一步一步来，先顾最要紧的，不要逼自己立刻"恢复正常"。` },
+      { n: 7, q: `可能出现的正常反应`, a: `在接下来的几天和几周里，可能出现：失眠或噩梦、保持警觉或容易受惊、重新经历那一刻（画面、回忆）、易怒、流泪、难以专注、不真实感或"麻木感"、为所发生的事或为自己幸存下来而内疚。在大多数人身上，这些会慢慢平复。`, v: `如果你在这份清单里认出了自己，请呼吸：你不是"疯了"，你的头脑正在消化一件巨大的事。这些反应，正是心灵消化所经历之事的方式。给自己时间与照顾。警讯不是感受到这些，而是随着一周周过去仍不见好转，或妨碍了你的生活。` },
+      { n: 8, q: `警讯：何时该寻求帮助`, a: `如果几周过去后，症状没有好转甚至恶化；如果你无法入睡、工作或照顾自己；如果你不断重新经历那一刻；如果你感到深深的绝望，或出现想伤害自己、或觉得生命不值得活下去的念头——请寻求专业支持。在这种情况下，别等：立即求助。`, v: `危机之后求助，不是小题大做，也不是软弱；而是给自己一个好好疗愈、不把创伤一路背下去的机会。我陪伴哀伤、创伤后应激与危机的历程。如果这发生在你或你所爱的人身上，给我留言。而如果你的生命有即时危险，请马上联系紧急服务。` },
+      { n: 9, q: `照顾那些施以援手的人`, a: `如果你正在帮助他人——作为家属、志愿者或救援者——你同样在承受冲击。要休息、补水、进食，与他人轮换，并与一个你信任的人谈谈你的感受。承认自己的极限：如果你垮了，就无法撑住别人。照顾自己不是自私；而是让你能够继续帮助他人的前提。`, v: `施以援手的人，常常忘了自己，直到身体来讨债（这同样是倦怠）。允许自己去感受、去哭、去休息。你不必一直做一块磐石。照顾好自己，本就是"照顾他人"这份工作的一部分。` },
+      { n: 10, q: `如果你此刻正处在紧急情况中，该怎么办`, a: `如果有即时危险，请先确保自身安全，并拨打你所在国家的紧急服务电话（上方会根据你的所在地显示号码）。呼吸，把你的身体锚定在当下。寻找其他人：不要独自面对这一切。满足最基本的需求，并遵从官方的指示。等你安全了，再平静地回到这些工具。`, v: `如果你正在紧急情况中读到这段话：跟我一起呼吸，你寻求支持，已经做对了。先是身体的安全，再是情绪的安全。你不必现在就解决一切，只需迈出下一步。等你有余力时，去寻求陪伴：你并不孤单。` }
+    ],
+    closing: `危机会撼动一切，但你并非独自一人去穿越它。这些工具是最初的支撑；而专业的陪伴，能让你所经历的，不至于留下一道久久不愈的伤口。如果你或你所爱的人正经历一场紧急、一场哀伤，或一桩创伤事件的余波，给我留言。而如果有即时危险，请马上联系你所在国家的紧急服务。`
+  },
+
   frustracion: {
     title: `挫折感与掌控`, tag: `放下不由你决定的事`,
     intro: `当现实与我们的预期不符时，挫折感便会出现。我们大部分的痛苦，源于与无法掌控的事对抗，而不是把精力放在真正由我们决定的事上。学会分辨这两者，是内心平静的关键之一。点开每一条来逐一练习。`,
@@ -1871,7 +1891,7 @@ class Component extends DCLogic {
     const backLabel = (d.parent && TOPICS[d.parent]) ? ('← 返回 ' + TOPICS[d.parent].title) : (this._topicOrigin === 'wellness') ? '← 返回身心健康中心' : (d.backName ? ('← 返回 ' + d.backName) : '← 返回身心健康中心');
     let h = '';
     h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
-    if (key.indexOf('violencia') === 0) h += this._emergHTML();
+    if (key.indexOf('violencia') === 0 || key.indexOf('crisis') === 0) h += this._emergHTML();
     h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">身心健康中心</div>';
     h += '<h2 style="font-family:Spectral,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:12px 0 6px;color:#FAF8F5;">' + d.title + '</h2>';
     if (d.tag) h += '<p style="font-family:Spectral,serif;font-style:italic;font-size:19px;color:#D4A017;margin-bottom:20px;">' + d.tag + '</p>';
