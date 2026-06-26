@@ -201,6 +201,7 @@
         <div data-yt="tdah" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">ADHD(주의력결핍 과잉행동)</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">도구 보기</div></div>
         <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">ASD(자폐 스펙트럼)</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">도구 보기</div></div>
         <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">중독자의 가족</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">도구 보기</div></div>
+        <div data-yt="derechos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">자기주장의 권리</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">도구 보기</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -1567,6 +1568,25 @@ const TOPICS = {
     closing: `저는 스펙트럼에 있는 사람과 그 가족을 존중과 구체적인 도구로, 어떤 나이에서든 함께합니다. 겪고 있다면 연락 주세요.`
   },
 
+  derechos: {
+    title: `자기주장의 권리`, tag: `나에게 충실하고, 타인을 존중하기`,
+    intro: `자기주장의 권리는 우리가 사람이라는 이유만으로 갖는 권리입니다. 당신에게 유효하지만, 똑같이 다른 모든 사람에게도 유효합니다. 이를 행사하는 것은 자신에 대한 충실함과 타인에 대한 존중을 뜻합니다. 이것은 하나의 배움의 과정이자 균형의 연습입니다. 마누엘 J. 스미스는 열 가지 기본 자기주장 권리를 제안했습니다. 각 항목을 펼쳐 깊이 살펴보세요.`,
+    accTitle: `열 가지 자기주장 권리`,
+    accordion: [
+      { n: 1, q: `스스로의 판단자가 될 권리`, a: `이것은 가장 핵심적인 자기주장 권리이며, 다른 모든 권리가 여기에서 비롯됩니다. 스스로의 판단자가 된다는 것은 자신의 의견, 자신의 가치와 신념 체계를 가지고 그에 따라 행동하는 것입니다. 당신이 당신 삶의 가장 큰 책임자이며, 모든 상황에서 어떻게 생각하고 느끼고 행동할지 선택할 수 있음을 받아들이는 것입니다. "해야 한다" "하면 안 된다"는 명령에서 자유로워지는 것이지요. 또한 당신이 느끼고 생각하는 바를 타인에게 표현하고, 그것이 늘 마음에 들지 않을 수 있음을 견디는 것이기도 합니다.`, v: `상담에서 저는 타인의 시선을 유일한 판단자로 삼고 살아가는 것이 얼마나 무거운지 자주 봅니다. 이 권리를 되찾는 것은 완고해지거나 무관심해지는 것이 아니라, 있는 그대로 존재하기 위해 더는 허락을 구하지 않는 것입니다. 내면에서 스스로를 인정하기 시작하면, 결정은 그만큼 덜 아픕니다. 더 이상 옳다고 느끼기 위해 타인의 인정에 기대지 않으니까요.` },
+      { n: 2, q: `타인의 문제를 책임질지 선택할 권리`, a: `이는 타인의 이익만큼 당신의 이익도 존중하며, 가능할 때마다 둘을 조화시키는 해법을 찾는 것을 뜻합니다. 그 이익이 충돌하는 상황도 있을 것이며, 그럴 때 당신은 자신의 필요를 타인의 필요보다 앞세울 권리가 있습니다.`, v: `공감 능력이 큰 사람일수록 자기 것이 아닌 문제까지 짊어지다 텅 비어 버리곤 합니다. 모든 것을 떠맡는 것은 사랑이 아니라, 흔히 죄책감에 대한 두려움입니다. 당신의 것이 아닌 것을 놓는 법을 배우면, 소진이 아니라 충만함에서 도울 수 있습니다. 역설적이게도, 그것이 사랑하는 이에게 더 나은 버팀목이 되게 합니다.` },
+      { n: 3, q: `설명을 할지 말지 선택할 권리`, a: `당신이 스스로의 판단자이고 자신의 가치와 생각, 의견에 따라 행동한다면, 타인 앞에서 변명하거나 누구를 설득할 필요가 없습니다. 타인도 당신이 하는 일이 마음에 드는지 말할 권리가 있습니다. 가능하다면 합의에 이르는 것이 가장 좋고, 그렇지 않다면 당신의 선호를 지키거나, 원한다면 그들의 것을 택할 수도 있습니다.`, v: `"하고 싶지 않다"는 그 자체로 완결된 문장입니다. 지나친 설명은 대개 거절을 피하려는 시도이며, 이미 이해하지 않기로 한 사람을 거의 설득하지 못합니다. 차분하고 존중하는 "아니오"는 당신의 에너지를 지키고, 놀랍게도 천 마디 변명보다 더 많은 존중을 불러옵니다.` },
+      { n: 4, q: `생각을 바꿀 권리`, a: `어떤 상황이든 여러 관점에서 볼 수 있고 현실은 끊임없이 변하기에, 자기주장이 분명한 사람은 생각을 바꿀 권리가 있습니다.`, v: `생각을 바꾸는 것은 당신을 일관성 없거나 믿을 수 없는 사람으로 만들지 않습니다. 오히려 성장하는 사람으로 만듭니다. "모순되지 않으려고" 하나의 결정에 갇혀 있는 것은, 이미 존재하지 않는 자신에 대한 충성입니다. 자신의 생각을 다시 살펴볼 수 있도록 허락하는 것은, 자신의 여정을 존중하는 가장 건강한 방법 중 하나입니다.` },
+      { n: 5, q: `실수할 권리`, a: `자기 자신에게 가혹해질 때, 이것은 가장 어려운 권리 중 하나입니다. 자기주장적 태도란, 실수하는 것은 인간적이고 당연하다고 받아들이며 자신의 잘못을 바라보고, 되풀이하지 않도록 책임 있게 배우되, 거기에 흔히 덧붙이는 죄책감에서는 스스로를 풀어 주는 것입니다.`, v: `책임과 처벌 사이에는 엄청난 차이가 있습니다. 책임은 배우고, 죄책감은 상처만 줍니다. 모든 실수를 "나는 부족하다"는 증거로 다루기를 멈추면, 실수는 본래의 모습으로 돌아옵니다. 성장을 위한 정보로요. 실수한다고 해서 사람으로서의 당신의 가치가 줄어들지는 않습니다.` },
+      { n: 6, q: `"모른다"고 말할 권리`, a: `우리가 모든 것을 알 수 있을까요? 아니요. 이 권리를 행사한다는 것은, 의심스럽거나 분명하지 않거나 이해되지 않는 것을 차분히 물어볼 수 있도록 자신에게 허락하는 것입니다. 모든 것에 답을 가질 의무는 없습니다.`, v: `"모른다"고 말하는 데는 다 아는 척하는 것보다 더 큰 안정감이 필요합니다. 늘 답을 가져야 한다는 욕구는 흔히 "충분하지 않을까" 하는 두려움을 감추고 있습니다. 모르는 것을 인정하는 것은 배움의 문을 열고, 나아가 당신을 더 정직하고 다가가기 쉬운 사람으로 만듭니다.` },
+      { n: 7, q: `타인의 인정을 필요로 하지 않을 권리`, a: `이것은 관계에서 조화와 충만함을 이루기 위한 가장 중요한 권리 중 하나입니다. 누구나 호감을 사고 싶어 하지만, 모두를 만족시키기란 불가능합니다. 자기주장적으로, 우리가 모두를 좋아하지는 않듯 우리를 좋아하지 않는 사람도 있을 것임을 받아들이는 편이 좋습니다. 호감을 사는 것을 행동의 조건으로 삼으면, 자신의 원칙과 가치를 저버리게 될 수 있습니다. 스미스는 이렇게 말합니다. 「타인의 반감을 살지라도 원하는 바를 감행하지 못한다면, 우리는 결코 자유로울 수 없다.」`, v: `모두의 인정을 구하는 것은 조용히 자신을 저버리는 일입니다. 호감을 사려고 자신을 배신할 때마다, 당신은 마음의 평화로 그 값을 치릅니다. 타인을 아끼기를 멈추라는 것이 아니라, 박수보다 자신에 대한 충실함을 위에 두라는 것입니다. 당신을 진정으로 사랑하는 사람은, 당신이 사라져야만 곁에 남는 것이 아닙니다.` },
+      { n: 8, q: `비논리적인 결정을 내릴 권리`, a: `이것은 첫 번째 권리, 곧 스스로의 판단자가 되는 것과 연결됩니다. 당신에게는 자신의 목표를 선택하고, 타인이나 다수의 논리에서는 벗어나 보일지라도 자신의 기준과 가치에는 부합하는 결정을 내릴 권리가 있습니다.`, v: `중요한 모든 것이 스프레드시트에 담기지는 않습니다. 때때로 마음은 타인의 "논리"가 보지 못하는 무언가를 압니다. 당신의 결정이 자신의 가치에 충실하고 누구도 해치지 않는 한, 정당하기 위해 모두에게 이해받을 필요는 없습니다. 당신의 삶은 타인에게가 아니라 당신에게 의미가 있으면 됩니다.` },
+      { n: 9, q: `타인의 기대를 이해하지 않을 권리`, a: `자기주장이 분명하다는 것은, 타인이 무엇을 필요로 하고 당신에게 무엇을 기대하는지 알아맞힐 의무가 없다는 뜻입니다. 타인의 기대를 해독하는 일은 어렵고, 거기에 뛰어들면 우리는 흔히 많은 실수를 저지릅니다.`, v: `아무도 당신에게 말하지 않은 기대를 짊어지는 것은, 보이지 않지만 지치게 하는 짐입니다. 당신은 독심술사가 아니며, 그것을 자신에게 요구하면 불안만 가득 차게 됩니다. 누군가 당신에게 무언가가 필요하다면, 그것을 말로 표현하는 것은 그 사람의 몫입니다. 분명히 해 달라고 청하는 것은 까다로운 것이 아니라, 관계를 오해로부터 지키는 일입니다.` },
+      { n: 10, q: `완벽하지 않을 권리`, a: `따라서 완벽을 좇지 않을 권리이기도 합니다. 더 나아지려는 것은 긍정적이지만, 완벽에 도달할 필요 없이 나아가고 싶다고 받아들이는 것 또한 그렇습니다. 자기주장적 태도란, 저마다 자신의 목표를 스스로 판단하고 인정하는 데 있습니다.`, v: `완벽은 목표가 아니라 함정입니다. 늘 한 걸음 더 멀어지며, 결코 당신을 쉬게 하지 않습니다. 완벽주의 뒤에는 거의 언제나 "실패하면 사랑받지 못한다"는 두려움이 있습니다. 완벽이 아니라 충분하다고 자신에게 허락하는 것은, 당신이 자신에게 줄 수 있는 가장 큰 평화 중 하나입니다. 미완성 속에서도 당신은 똑같이 소중합니다.` }
+    ],
+    closing: `이 열 가지 권리는 타인 위에 자신을 군림시키는 허가가 아니라, 당신이 베푸는 만큼의 존중을 당신도 받을 자격이 있음을 일깨우는 것입니다. 자기주장을 연습하는 일은 시험이 아니라 하나의 여정입니다. 배우고, 넘어지고, 다시 시도하지요. 안전한 공간에서 당신의 자기주장과 경계를 다루고 싶다면, 제가 함께하겠습니다. 연락 주세요.`
+  },
+
   familiares_adiccion: {
     title: `중독자의 가족`, tag: `곁가지로 입은 상처를 치유하기`,
     intro: `사랑하는 사람이 중독을 살아갈 때, 당신도 다칩니다. 두려움과 죄책감, 지침, 부서진 희망이 흔적을 남깁니다. 이 공간은 당신—배우자나 가족—을 위한 곳입니다. 곁가지로 입은 상처를 치유하고 당신 자신의 삶을 되찾기 위한 곳입니다.`,
@@ -1772,7 +1792,7 @@ class Component extends DCLogic {
     if (!host) return;
     if (!document.getElementById('tm-style')) {
       const st = document.createElement('style'); st.id = 'tm-style';
-      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important}';
+      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important} .dr-acc>summary{list-style:none} .dr-acc>summary::-webkit-details-marker{display:none} .dr-acc>summary:hover{background:rgba(212,160,23,0.07)} .dr-acc[open]>summary{background:rgba(212,160,23,0.05)} .dr-acc[open] .dr-caret{transform:rotate(180deg)}';
       document.head.appendChild(st);
     }
     host.innerHTML = this._topicHTML(key);
@@ -1834,6 +1854,21 @@ class Component extends DCLogic {
       if (b.p) h += '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.74);margin-bottom:6px;">' + b.p + '</p>';
       if (b.list) { h += '<ul style="list-style:none;padding:0;margin:0;">'; b.list.forEach((it) => { h += '<li style="position:relative;padding-left:22px;margin-bottom:10px;font-size:15px;line-height:1.6;color:rgba(250,248,245,0.8);"><span style="position:absolute;left:0;top:1px;color:#D4A017;">◆</span>' + it + '</li>'; }); h += '</ul>'; }
     });
+    if (d.accordion) {
+      if (d.accTitle) h += '<h3 style="font-family:Spectral,serif;font-weight:500;font-size:20px;color:#FAF8F5;margin:30px 0 14px;">' + d.accTitle + '</h3>';
+      d.accordion.forEach((it) => {
+        h += '<details class="dr-acc" style="margin:10px 0;border:1px solid rgba(212,160,23,0.28);border-radius:12px;background:rgba(250,248,245,0.03);overflow:hidden;">'
+          + '<summary style="cursor:pointer;padding:15px 18px;display:flex;align-items:center;gap:13px;">'
+          + '<span class="dr-num" style="flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:rgba(212,160,23,0.16);color:#D4A017;font-family:Manrope,sans-serif;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;">' + it.n + '</span>'
+          + '<span style="flex:1;font-family:Spectral,serif;font-size:17px;color:#FAF8F5;">' + it.q + '</span>'
+          + '<span class="dr-caret" style="flex:0 0 auto;color:#D4A017;font-size:13px;transition:transform .2s;">\u25be</span>'
+          + '</summary>'
+          + '<div style="padding:2px 20px 18px 59px;">'
+          + '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.8);margin:0 0 12px;">' + it.a + '</p>'
+          + (it.v ? '<p style="font-size:14.5px;line-height:1.7;color:#EADBC8;font-style:italic;margin:0;padding:12px 16px;border-left:3px solid rgba(212,160,23,0.55);background:rgba(212,160,23,0.06);border-radius:0 8px 8px 0;">' + it.v + '</p>' : '')
+          + '</div></details>';
+      });
+    }
     if (d.closing) h += '<div style="margin-top:28px;padding:18px 20px;border-left:3px solid #D4A017;background:rgba(212,160,23,0.07);border-radius:8px;font-size:15.5px;line-height:1.6;color:#EADBC8;">' + d.closing + '</div>';
     h += '<div style="margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;">';
     h += '<button data-book style="font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#0D1B2A;background:#D4A017;border:none;padding:14px 26px;border-radius:999px;cursor:pointer;">상담 예약</button>';

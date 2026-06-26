@@ -201,6 +201,7 @@
         <div data-yt="tdah" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">ADHD（注意欠如・多動）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
         <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">ASD（自閉スペクトラム）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
         <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">依存症の家族</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
+        <div data-yt="derechos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">アサーティブな権利</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -1567,6 +1568,25 @@ const TOPICS = {
     closing: `スペクトラムの方とそのご家族に、敬意と具体的な道具をもって、どの年齢でも寄り添います。経験しているなら、ご連絡ください。`
   },
 
+  derechos: {
+    title: `アサーティブな権利`, tag: `自分への誠実さ、他者への尊重`,
+    intro: `アサーティブな権利とは、私たちが人間であるというだけで持っている権利です。あなたにとって有効であると同時に、他のすべての人にとっても同じように有効です。それらを行使することは、自分自身への誠実さと他者への尊重を意味します。これは学びの道であり、バランスの練習でもあります。マニュエル・J・スミスは十の基本的なアサーティブ権を提唱しました。それぞれを開いて、じっくり知ってください。`,
+    accTitle: `十のアサーティブな権利`,
+    accordion: [
+      { n: 1, q: `自分自身の裁き手である権利`, a: `これはもっとも基本的なアサーティブ権であり、ほかのすべての権利がここから生まれます。自分自身の裁き手であるとは、自分の意見、自分の価値観や信念を持ち、それにしたがって行動することです。あなたが自分の人生の最大の責任者であり、どの状況でもどう考え、感じ、行動するかを選べると認めることを意味します。「すべき」「すべきでない」という縛りから自由になることです。また、自分が感じ考えていることを他者に伝え、それが必ずしも気に入られなくても受け止められることでもあります。`, v: `相談の場で、他者の視線を唯一の裁き手として生きることがどれほど重いかをよく目にします。この権利を取り戻すのは、頑なになったり冷たくなったりすることではありません。ありのままの自分でいることに、もう許可を求めないということです。内側から自分を認め始めると、決断はそれほど痛まなくなります。もう他者の承認に頼らなくても、正しいと感じられるからです。` },
+      { n: 2, q: `他人の問題に責任を持つかどうかを選ぶ権利`, a: `これは、他者の利益と同じくらい自分の利益も尊重し、可能なかぎり両方を両立させる解決策を探すことを意味します。両者がぶつかる場面もあるでしょう。そのとき、あなたには自分の必要を他者のそれより優先する権利があります。`, v: `共感力の高い人ほど、自分のものではない問題まで背負い、空っぽになってしまいがちです。すべてを引き受けることは愛ではなく、多くの場合、罪悪感への恐れです。自分のものでないものを手放すことを学ぶと、消耗からではなく満ちた心から人を助けられます。逆説的に、それが大切な人にとってより良い支えになるのです。` },
+      { n: 3, q: `説明をするかどうかを選ぶ権利`, a: `あなたが自分自身の裁き手であり、自分の価値観・考え・意見にしたがって行動しているなら、他者に弁解する必要も、誰かを説得する必要もありません。他者にも、あなたのすることが気に入るかどうかを言う権利があります。可能なら合意に達するのが理想ですが、そうでなければ、自分の好みを保っても、望むなら相手の方を選んでもかまいません。`, v: `「したくない」は、それだけで完結した一文です。説明しすぎるのは、たいてい拒絶を避けようとする試みで、すでに理解しないと決めた相手をほぼ説得できません。穏やかで敬意ある「ノー」は、あなたのエネルギーを守り、意外にも、千の弁解より多くの敬意を生みます。` },
+      { n: 4, q: `考えを変える権利`, a: `どんな状況も多くの視点から見ることができ、現実は絶えず変化するのですから、アサーティブな人には考えを変える権利があります。`, v: `考えを変えることは、あなたを一貫性のない、当てにならない人にはしません。むしろ成長している人にします。「矛盾しない」ためだけに一つの決断に囚われ続けるのは、もう存在しない自分への忠誠です。自分の考えを見直すことを許すのは、自分の歩みを敬うもっとも健やかな方法の一つです。` },
+      { n: 5, q: `間違える権利`, a: `自分への厳しさに陥ったとき、これはもっとも難しい権利の一つです。アサーティブな態度とは、間違うことは人間的で当たり前だと受け止めて自分の過ちを見つめ、繰り返さないよう責任をもって学びつつ、そこに結びつけがちな罪悪感からは自分を解き放つことです。`, v: `責任と罰のあいだには、とても大きな違いがあります。責任は学び、罪悪感はただ傷つけるだけです。どの過ちも「自分は値しない」証拠として扱うのをやめると、過ちは本来の姿に戻ります——成長のための情報に。間違えても、あなたの人としての価値は少しも減りません。` },
+      { n: 6, q: `「わからない」と言う権利`, a: `私たちはすべてを知ることができるでしょうか。いいえ。この権利を行使するとは、疑問に思うこと、はっきりしないこと、分からないことを、落ち着いて尋ねる許可を自分に与えることです。すべてに答えを持つ義務はありません。`, v: `「わからない」と言うには、すべてを知っているふりをするより大きな安心感が要ります。いつも答えを持っていたいという欲求は、しばしば「自分は足りない」という恐れを隠しています。知らないことを認めることは、学びの扉を開き、さらにあなたをより誠実で親しみやすい人にします。` },
+      { n: 7, q: `他者の承認を必要としない権利`, a: `これは、人間関係に調和と充足をもたらすためのもっとも大切な権利の一つです。誰でも好かれたいものですが、すべての人に好かれることは不可能です。アサーティブに、私たちを好まない人もいると受け入れるのがよいでしょう——私たちも全員を好きなわけではないように。好かれることを行動の条件にすると、自分の原則や価値を裏切りかねません。スミスはこう言います。「他者の反感を招くとしても、望むことをする危険を冒せないかぎり、私たちは決して自由にはなれない。」`, v: `みんなの承認を求めることは、静かに自分を見捨てる行為です。好かれるために自分を裏切るたび、あなたは心の平安で代償を払います。他者を大切にするのをやめる、ということではなく、拍手より自分への忠誠を上に置くということです。本当にあなたを愛する人は、あなたが消えることを必要としません。` },
+      { n: 8, q: `非論理的な決断をする権利`, a: `これは第一の権利、自分自身の裁き手であることと結びついています。あなたには、自分の目標を選び、他者や大多数の論理からは外れて見えても、自分の基準や価値とは一致する決断を下す権利があります。`, v: `大切なものすべてが表計算に収まるわけではありません。ときに心は、他者の「論理」には見えない何かを知っています。あなたの決断が自分の価値に忠実で、誰も傷つけないかぎり、正当であるために全員に理解される必要はありません。あなたの人生は、他者にとってではなく、あなたにとって意味を持てばよいのです。` },
+      { n: 9, q: `他者の期待を理解しない権利`, a: `アサーティブであるとは、他者が何を必要とし、あなたに何を期待しているかを推し量る義務はない、ということです。他者の期待を読み解くのは難しく、それに乗り出すと、しばしば多くの間違いを犯します。`, v: `誰も口に出さなかった期待を背負うのは、目に見えない、消耗する重荷です。あなたは予言者ではなく、それを自分に求めても不安が募るだけです。誰かがあなたに何かを必要とするなら、それを言葉にするのはその人の役目です。はっきりさせてと求めるのは、面倒なのではなく、関係を誤解から守ることです。` },
+      { n: 10, q: `完璧でなくてよい権利`, a: `したがって、完璧を求めない権利でもあります。良くなろうとするのは前向きですが、完璧に到達する必要なく前進したいと受け入れることも、同じく前向きです。アサーティブな態度とは、一人ひとりが自分の目標を判断し、認めることにあります。`, v: `完璧は目標ではなく、罠です。いつも一歩先へ遠ざかり、決してあなたを休ませません。完璧主義の裏には、ほとんどいつも「失敗したら愛されない」という恐れがあります。完璧ではなく——十分であることを自分に許すのは、あなたが自分に贈れるもっとも大きな平安の一つです。未完成のなかにも、あなたは同じく価値があります。` }
+    ],
+    closing: `この十の権利は、他者の上に自分を押しつける許可ではなく、あなたが与えるのと同じ敬意を、あなた自身も受けるに値するという思い出しです。アサーティブネスを実践するのは試験ではなく、道のりです。学び、つまずき、また試みる。安全な場で自分のアサーティブネスと境界線に取り組みたいなら、私が寄り添います。ご連絡ください。`
+  },
+
   familiares_adiccion: {
     title: `依存症の家族`, tag: `巻き添えの傷を癒す`,
     intro: `愛する人が依存症を生きるとき、あなたも傷つきます。恐れ、罪悪感、疲れ、砕けた希望は跡を残します。この場所は、あなた——配偶者や家族——のためのもの。巻き添えの傷を癒し、自分自身の人生を取り戻すためのものです。`,
@@ -1772,7 +1792,7 @@ class Component extends DCLogic {
     if (!host) return;
     if (!document.getElementById('tm-style')) {
       const st = document.createElement('style'); st.id = 'tm-style';
-      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important}';
+      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important} .dr-acc>summary{list-style:none} .dr-acc>summary::-webkit-details-marker{display:none} .dr-acc>summary:hover{background:rgba(212,160,23,0.07)} .dr-acc[open]>summary{background:rgba(212,160,23,0.05)} .dr-acc[open] .dr-caret{transform:rotate(180deg)}';
       document.head.appendChild(st);
     }
     host.innerHTML = this._topicHTML(key);
@@ -1834,6 +1854,21 @@ class Component extends DCLogic {
       if (b.p) h += '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.74);margin-bottom:6px;">' + b.p + '</p>';
       if (b.list) { h += '<ul style="list-style:none;padding:0;margin:0;">'; b.list.forEach((it) => { h += '<li style="position:relative;padding-left:22px;margin-bottom:10px;font-size:15px;line-height:1.6;color:rgba(250,248,245,0.8);"><span style="position:absolute;left:0;top:1px;color:#D4A017;">◆</span>' + it + '</li>'; }); h += '</ul>'; }
     });
+    if (d.accordion) {
+      if (d.accTitle) h += '<h3 style="font-family:Spectral,serif;font-weight:500;font-size:20px;color:#FAF8F5;margin:30px 0 14px;">' + d.accTitle + '</h3>';
+      d.accordion.forEach((it) => {
+        h += '<details class="dr-acc" style="margin:10px 0;border:1px solid rgba(212,160,23,0.28);border-radius:12px;background:rgba(250,248,245,0.03);overflow:hidden;">'
+          + '<summary style="cursor:pointer;padding:15px 18px;display:flex;align-items:center;gap:13px;">'
+          + '<span class="dr-num" style="flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:rgba(212,160,23,0.16);color:#D4A017;font-family:Manrope,sans-serif;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;">' + it.n + '</span>'
+          + '<span style="flex:1;font-family:Spectral,serif;font-size:17px;color:#FAF8F5;">' + it.q + '</span>'
+          + '<span class="dr-caret" style="flex:0 0 auto;color:#D4A017;font-size:13px;transition:transform .2s;">\u25be</span>'
+          + '</summary>'
+          + '<div style="padding:2px 20px 18px 59px;">'
+          + '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.8);margin:0 0 12px;">' + it.a + '</p>'
+          + (it.v ? '<p style="font-size:14.5px;line-height:1.7;color:#EADBC8;font-style:italic;margin:0;padding:12px 16px;border-left:3px solid rgba(212,160,23,0.55);background:rgba(212,160,23,0.06);border-radius:0 8px 8px 0;">' + it.v + '</p>' : '')
+          + '</div></details>';
+      });
+    }
     if (d.closing) h += '<div style="margin-top:28px;padding:18px 20px;border-left:3px solid #D4A017;background:rgba(212,160,23,0.07);border-radius:8px;font-size:15.5px;line-height:1.6;color:#EADBC8;">' + d.closing + '</div>';
     h += '<div style="margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;">';
     h += '<button data-book style="font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#0D1B2A;background:#D4A017;border:none;padding:14px 26px;border-radius:999px;cursor:pointer;">相談を予約</button>';

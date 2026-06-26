@@ -201,6 +201,7 @@
         <div data-yt="tdah" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">多动症（ADHD）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自闭症谱系（ASD）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="familiares_adiccion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">成瘾者的家属</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
+        <div data-yt="derechos" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自我主张的权利</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
       </div>
       <div style="margin-top:34px; text-align:center;">
         <button onClick="{{ openChannel }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; color:#FAF8F5; background:rgba(255,77,77,0.08); border:1px solid rgba(255,77,77,0.4); padding:12px 24px; border-radius:999px; cursor:pointer;" style-hover="background:rgba(255,77,77,0.16); border-color:rgba(255,77,77,0.75);">
@@ -1567,6 +1568,25 @@ const TOPICS = {
     closing: `我以尊重和具体的工具陪伴谱系中的人及其家庭，任何年龄都可以。如果你正在经历，请给我留言。`
   },
 
+  derechos: {
+    title: `自我主张的权利`, tag: `忠于自己，尊重他人`,
+    intro: `自我主张的权利，是我们仅仅因为身为人就拥有的权利。它们对你有效，但同样对所有人有效。行使这些权利意味着忠于自己、尊重他人：这是一整个学习过程，也是一种平衡的练习。曼努埃尔·J·史密斯提出了十项基本的自我主张权利。点开每一项，深入了解。`,
+    accTitle: `十项自我主张权利`,
+    accordion: [
+      { n: 1, q: `做自己裁判的权利`, a: `这是最主要的自我主张权利，其他所有权利都由此衍生。做自己的裁判，意味着拥有自己的观点、自己的价值与信念体系，并据此行动。这意味着承认你是自己人生的最大负责人，可以在每种情境中选择如何思考、如何感受、如何行动，从而摆脱那些"应该"或"不应该"的束缚。它也意味着能够向他人表达你的感受与想法，并坦然面对他们未必喜欢。`, v: `在咨询中，我看到把他人当作唯一裁判地活着有多沉重。重拾这项权利，并不是变得僵硬或冷漠，而是不再为"按本来的样子存在"而请求许可。当你开始从内在肯定自己，决定就不再那么痛苦，因为它们不再需要他人的认可才显得正确。` },
+      { n: 2, q: `选择是否为他人的问题负责的权利`, a: `这意味着既尊重自己的利益，也尊重他人的利益，并尽可能寻找兼顾两者的方案。会有这两者发生冲突的时候，在那时，你有权把自己的需要放在他人之前。`, v: `最有同理心的人，常常背负本不属于自己的问题，直到把自己掏空。把一切都揽下来并不是爱，很多时候是对愧疚的恐惧。学会放下不属于你的，让你能从丰盈而非耗竭中去帮助他人——而这，恰恰让你成为所爱之人更好的依靠。` },
+      { n: 3, q: `选择是否给出解释的权利`, a: `如果你是自己的裁判，并依照自己的价值、想法与观点行事，你就不必向他人辩解，也不必去说服任何人。他人同样有权表达他们是否喜欢你所做的；在可能时，最好能达成共识，若不能，你可以保留自己的偏好，或在你愿意时选择他们的。`, v: `"我不想"就是一句完整的话。过度解释，往往是想避免被拒绝，而对一个已决定不理解你的人，几乎从不奏效。一个平静而尊重的"不"，守护你的能量，而且出人意料地，往往比千言万语的辩解赢得更多尊重。` },
+      { n: 4, q: `改变主意的权利`, a: `既然任何情境都可以从多个角度去看，而现实又在不断变化，一个有自我主张的人有权改变主意。`, v: `改变主意并不会让你前后矛盾或不可信赖，反而让你成为一个在成长的人。只为了"不自相矛盾"而困在一个决定里，是对一个早已不存在的自己的忠诚。允许自己重新审视所想，是尊重自己历程的最健康方式之一。` },
+      { n: 5, q: `犯错的权利`, a: `当我们陷入自我苛求时，这是最难的权利之一。有自我主张的态度，意味着看待自己的错误时，承认犯错是人之常情、是正常的，带着责任去学习以免重蹈覆辙，但把我们常附加其上的愧疚释放掉。`, v: `责任与惩罚之间有天壤之别。责任会学习，愧疚只会伤害。当你不再把每个错误当作"你不够好"的证明，错误就回归它本来的样子：成长的信息。犯错，丝毫不减你作为一个人的价值。` },
+      { n: 6, q: `说"我不知道"的权利`, a: `我们能知道一切吗？不能。行使这项权利，就是允许自己平静地去询问那些你怀疑、不清楚或不理解的事。你没有义务对一切都有答案。`, v: `说"我不知道"，比假装无所不知需要更多的安全感。总要拥有答案的需求，常常藏着"怕自己不够好"的恐惧。承认你所不知道的，打开了学习之门，也让你成为更诚实、更亲近的人。` },
+      { n: 7, q: `不需要他人认可的权利`, a: `这是在关系中获得和谐与圆满最重要的权利之一。人人都喜欢讨人喜欢，但不可能取悦所有人。以自我主张的方式，最好接受总会有人不喜欢我们，正如我们也并非喜欢所有人。让我们的行动以讨好为前提，会使我们背叛自己的原则与价值。正如史密斯所言：「若我们没有勇气冒险去做自己渴望之事，哪怕这会招致他人的反感，我们便永远不会自由。」`, v: `寻求所有人的认可，是一种悄无声息的自我抛弃。每一次为了讨好而背叛自己，你都用内心的平静去偿还。这并不是要你不再在乎他人，而是把对自己的忠诚放在掌声之上。真正爱你的人，不需要你消失才肯留下。` },
+      { n: 8, q: `做出不合逻辑决定的权利`, a: `这与第一项权利相关，即做自己的裁判。你有权选择自己的目标，做出也许在他人或多数人看来不合逻辑、却与你自己的标准与价值相一致的决定。`, v: `并非一切重要之事都能装进一张电子表格。有时，心知道一些他人的"逻辑"看不见的东西。只要你的决定忠于你的价值、不伤害任何人，它就不需要被所有人理解才算正当。你的人生不必对别人有意义，只需对你自己有意义。` },
+      { n: 9, q: `不理解他人期待的权利`, a: `有自我主张，意味着你没有义务去猜测他人需要什么、期待你做什么。破译他人的期待很难，而当我们投身其中时，往往会犯许多错。`, v: `背负没有人对你说出口的期待，是一种看不见却令人疲惫的重担。你不是读心者，强求自己如此，只会让你充满焦虑。如果有人需要你做什么，那是他该用言语说出来的事。请求把话说清楚，不是难搞，而是守护这段关系不被误解侵蚀。` },
+      { n: 10, q: `不必完美的权利`, a: `因此，也有权不去追求完美。想要进步是好的，但接受"我想前进、却不必抵达完美"同样是好的。自我主张的态度在于：每个人都去评判并认可自己的目标。`, v: `完美不是目标，而是陷阱：它总是再退一步，永远不让你休息。完美主义背后，几乎总藏着"若失败便不被爱"的恐惧。允许自己足够好——而非完美——是你能送给自己的最大的平静之一。即使在尚未完成之处，你也同样珍贵。` }
+    ],
+    closing: `这十项权利，不是让你凌驾于他人之上的许可，而是提醒你：你值得你所给予的那份同样的尊重。练习自我主张是一条路，而非一场考试：会学习，会跌倒，再重新尝试。如果你愿意在一个安全的空间里梳理你的自我主张与界限，我愿意陪伴你。给我留言。`
+  },
+
   familiares_adiccion: {
     title: `成瘾者的家属`, tag: `疗愈连带的伤害`,
     intro: `当你所爱的人陷入成瘾，你也会受伤：恐惧、内疚、疲惫与破碎的希望都会留下痕迹。这个空间是为你——配偶或家人——准备的，帮助你疗愈连带的伤害，并找回属于自己的人生。`,
@@ -1772,7 +1792,7 @@ class Component extends DCLogic {
     if (!host) return;
     if (!document.getElementById('tm-style')) {
       const st = document.createElement('style'); st.id = 'tm-style';
-      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important}';
+      st.textContent = '.tm-card{transition:all .2s;cursor:pointer} .tm-card:hover{background:rgba(212,160,23,0.12)!important;border-color:rgba(212,160,23,0.5)!important} .dr-acc>summary{list-style:none} .dr-acc>summary::-webkit-details-marker{display:none} .dr-acc>summary:hover{background:rgba(212,160,23,0.07)} .dr-acc[open]>summary{background:rgba(212,160,23,0.05)} .dr-acc[open] .dr-caret{transform:rotate(180deg)}';
       document.head.appendChild(st);
     }
     host.innerHTML = this._topicHTML(key);
@@ -1834,6 +1854,21 @@ class Component extends DCLogic {
       if (b.p) h += '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.74);margin-bottom:6px;">' + b.p + '</p>';
       if (b.list) { h += '<ul style="list-style:none;padding:0;margin:0;">'; b.list.forEach((it) => { h += '<li style="position:relative;padding-left:22px;margin-bottom:10px;font-size:15px;line-height:1.6;color:rgba(250,248,245,0.8);"><span style="position:absolute;left:0;top:1px;color:#D4A017;">◆</span>' + it + '</li>'; }); h += '</ul>'; }
     });
+    if (d.accordion) {
+      if (d.accTitle) h += '<h3 style="font-family:Spectral,serif;font-weight:500;font-size:20px;color:#FAF8F5;margin:30px 0 14px;">' + d.accTitle + '</h3>';
+      d.accordion.forEach((it) => {
+        h += '<details class="dr-acc" style="margin:10px 0;border:1px solid rgba(212,160,23,0.28);border-radius:12px;background:rgba(250,248,245,0.03);overflow:hidden;">'
+          + '<summary style="cursor:pointer;padding:15px 18px;display:flex;align-items:center;gap:13px;">'
+          + '<span class="dr-num" style="flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:rgba(212,160,23,0.16);color:#D4A017;font-family:Manrope,sans-serif;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;">' + it.n + '</span>'
+          + '<span style="flex:1;font-family:Spectral,serif;font-size:17px;color:#FAF8F5;">' + it.q + '</span>'
+          + '<span class="dr-caret" style="flex:0 0 auto;color:#D4A017;font-size:13px;transition:transform .2s;">\u25be</span>'
+          + '</summary>'
+          + '<div style="padding:2px 20px 18px 59px;">'
+          + '<p style="font-size:15px;line-height:1.7;color:rgba(250,248,245,0.8);margin:0 0 12px;">' + it.a + '</p>'
+          + (it.v ? '<p style="font-size:14.5px;line-height:1.7;color:#EADBC8;font-style:italic;margin:0;padding:12px 16px;border-left:3px solid rgba(212,160,23,0.55);background:rgba(212,160,23,0.06);border-radius:0 8px 8px 0;">' + it.v + '</p>' : '')
+          + '</div></details>';
+      });
+    }
     if (d.closing) h += '<div style="margin-top:28px;padding:18px 20px;border-left:3px solid #D4A017;background:rgba(212,160,23,0.07);border-radius:8px;font-size:15.5px;line-height:1.6;color:#EADBC8;">' + d.closing + '</div>';
     h += '<div style="margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;">';
     h += '<button data-book style="font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:#0D1B2A;background:#D4A017;border:none;padding:14px 26px;border-radius:999px;cursor:pointer;">预约咨询</button>';
