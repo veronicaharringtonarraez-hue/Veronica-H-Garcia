@@ -1349,26 +1349,39 @@ const TOPICS = {
   },
 
   estres: {
-    title: 'Estrés y sus niveles', tag: 'Reconocerlo para poder cuidarlo',
-    intro: 'El estrés no es malo en sí mismo: es la respuesta natural de tu cuerpo ante una demanda. En su justa medida te impulsa; cuando se sostiene demasiado tiempo, empieza a desgastarte. Reconocer en qué nivel estás es el primer paso para cuidarte.',
-    blocks: [
-      { h: 'Los niveles del estrés', list: [
-        'Estrés positivo (eustrés): te activa y te ayuda a rendir ante un reto puntual.',
-        'Estrés agudo: una reacción intensa pero breve ante una situación concreta.',
-        'Estrés agudo episódico: el estrés agudo que se repite una y otra vez.',
-        'Estrés crónico: una tensión constante y sostenida que desgasta cuerpo y mente.',
-        'Agotamiento (burnout): el punto donde el estrés crónico te deja sin energía ni motivación.' ] },
-      { h: 'Señales de alerta', list: [
-        'Cuerpo: tensión, dolores de cabeza, insomnio, fatiga, malestar digestivo.',
-        'Mente: irritabilidad, dificultad para concentrarte, pensamientos acelerados.',
-        'Conducta: aislarte, descuidar tu alimentación o explotar con facilidad.' ] },
-      { h: 'Para manejarlo', list: [
-        'Identifica tus fuentes de estrés y lo que sí puedes ajustar.',
-        'Usa la respiración y las pausas para bajar la activación del cuerpo.',
-        'Cuida el sueño, el movimiento y tus límites; no son lujos, son sostén.',
-        'Pide ayuda a tiempo: el estrés crónico no se resuelve solo aguantando.' ] }
+    title: 'Estrés y sus niveles', tag: 'Ni de menos ni de más: encuentra tu punto',
+    intro: 'El estrés no es tu enemigo: es la energía con la que tu cuerpo responde a lo que la vida te pide. La clave está en la dosis. Piensa en una curva: con muy poco estrés no arrancamos; en su punto justo nos impulsa y rendimos; y cuando es demasiado, en lugar de movernos, nos paraliza. Reconocer en qué nivel estás es el primer paso para cuidarte. Despliega cada nivel para identificarte.',
+    accTitle: 'Los niveles del estrés',
+    accordion: [
+      { n: 1, q: 'Nivel bajo: cuando falta presión',
+        a: `Cuando el estrés es demasiado bajo, no nos moviliza: aparecen el aburrimiento, la desgana y la procrastinación. La tarea "puede esperar", así que la dejamos para después. Es ese momento en que solo con un pequeño plazo o algo de presión —"lo hago antes de que llegue el café"— por fin arrancamos con algo sencillo. Un poco de estrés, aquí, es un aliado que nos pone en marcha.`,
+        v: `Muchas personas se culpan por "ser flojas" cuando en realidad les falta un poco de activación, no de voluntad. Si algo te aburre o lo dejas siempre para después, no eres vaga: tu sistema necesita un reto o un plazo que le dé sentido. A veces ponerte un pequeño límite de tiempo es todo lo que hace falta para empezar.` },
+      { n: 2, q: 'Nivel óptimo: la zona que te impulsa',
+        a: `Es el punto justo: te sientes activado pero capaz, concentrado y con energía. Aquí el estrés se vuelve motivación; nos impulsa a enfrentar un desafío difícil pero emocionante, esa meta que cuesta pero ilusiona. Es la zona donde aparecen la concentración plena y tu mejor rendimiento.`,
+        v: `Este es el estrés "bueno", el que quiero ayudarte a habitar más seguido. No se trata de vivir sin tensión, sino de buscar retos a tu medida: lo bastante difíciles para que te muevan, lo bastante posibles para que no te aplasten. Ahí es donde florece tu mejor versión.` },
+      { n: 3, q: 'Nivel alto: cuando el estrés paraliza',
+        a: `Pasado cierto punto, el estrés deja de ayudar y empieza a bloquear. El cuerpo se inunda de alerta, la mente se nubla, y en lugar de actuar nos quedamos paralizados, irritables o desbordados. El estrés alto y paralizante suele tomar cuatro formas, que verás a continuación. Reconocer cuál es la tuya te ayuda a saber qué necesitas.`,
+        v: `Cuando llegas aquí, "echarle más ganas" no funciona: tu cerebro está en modo supervivencia, no en modo rendimiento. Por eso lo primero no es exigirte más, sino bajar la activación. Identificar qué tipo de estrés alto estás viviendo es el mapa para saber por dónde empezar.` },
+      { n: 4, q: 'Alto · Sostenido en el tiempo: el burnout',
+        a: `Cuando un estrés alto se mantiene durante demasiado tiempo, sin pausas ni recuperación, el cuerpo y la mente se agotan: es el burnout. Aparecen el cansancio que no se va ni durmiendo, el cinismo o la distancia emocional, y la sensación de "ya no puedo más" o de que nada tiene sentido.`,
+        v: `El burnout no es debilidad ni falta de compromiso: muchas veces le pasa justo a quien más se esforzó y más aguantó. Si llegaste hasta aquí, tu cuerpo no te está fallando, te está pidiendo parar. Recuperarte no es un lujo: es lo que te permitirá volver a funcionar.` },
+      { n: 5, q: 'Alto · Por incertidumbre',
+        a: `Es el estrés de no saber: esperar un resultado, un diagnóstico, una decisión que no depende de ti. La mente, que detesta el vacío, lo llena con los peores escenarios posibles. Agota porque luchas mentalmente contra algo que aún no existe y que, además, no controlas.`,
+        v: `La incertidumbre se vuelve más llevadera cuando dejas de exigirte tener todas las respuestas y te enfocas en lo único que sí está en tus manos: el siguiente paso pequeño. No puedes controlar el resultado, pero sí cómo te acompañas mientras esperas. Eso ya cambia mucho.` },
+      { n: 6, q: 'Alto · Por demasiadas tareas a la vez',
+        a: `Es la sobrecarga: muchas tareas que parecen tener que hacerse todas al mismo tiempo. La mente salta de una a otra sin terminar ninguna, y esa sensación de "no doy abasto" paraliza y desborda. El problema no siempre es la cantidad, sino sentir que todo es urgente a la vez.`,
+        v: `Cuando todo parece urgente, nada lo es de verdad: ese caos es justamente lo que bloquea. Te invito a sacar todo de tu cabeza a una lista, elegir solo lo siguiente y darte permiso de hacer una cosa a la vez. No puedes hacerlo todo junto, y está bien: nadie puede.` },
+      { n: 7, q: 'Alto · Por una tarea demasiado grande',
+        a: `Aquí no son muchas tareas, sino una sola que se siente enorme: un proyecto, una decisión o un problema que supera las herramientas o los recursos con los que cuentas ahora. La tarea parece tan grande que ni siquiera sabes por dónde empezar, y esa desproporción paraliza.`,
+        v: `La clave no es que seas incapaz, sino que la tarea, así de grande, no cabe entera en tus manos. La solución casi siempre es la misma: partirla en trozos tan pequeños que el primero te parezca fácil. No tienes que poder con todo de golpe; solo con el siguiente paso.` },
+      { n: 8, q: 'Señales de que tu estrés está alto',
+        a: `Cuerpo: tensión, dolores de cabeza, insomnio, fatiga, malestar digestivo. Mente: irritabilidad, dificultad para concentrarte, pensamientos acelerados o en blanco. Conducta: aislarte, descuidar tu alimentación o tu descanso, o explotar con facilidad.`,
+        v: `Tu cuerpo suele avisar antes que tu mente. Aprender a leer tus señales tempranas —ese nudo en el estómago, esa noche sin dormir— te permite cuidarte antes de llegar al límite. Escucharte no es exagerar: es prevenir.` },
+      { n: 9, q: 'Cómo cuidarte según tu nivel',
+        a: `Si tu estrés es bajo: ponte retos y plazos pequeños que te activen. Si estás en el punto óptimo: cuídalo con descanso para sostenerlo. Si está alto: primero baja la activación (respira, haz pausas, mueve el cuerpo), reduce o reparte la carga, parte lo grande en pasos pequeños y pide ayuda a tiempo. El estrés crónico no se resuelve solo aguantando.`,
+        v: `No se trata de eliminar el estrés, sino de moverte hacia tu punto óptimo: subir un poco cuando falta chispa y bajar cuando te desborda. Si sientes que la mayoría de los días vives en el nivel alto o llegaste al agotamiento, no tienes que resolverlo solo. Escríbeme: lo trabajamos juntos.` }
     ],
-    closing: 'Si el estrés se volvió constante o sientes que llegaste al agotamiento, no tienes que aguantarlo en silencio. Conversémoslo. Escríbeme.'
+    closing: 'El estrés no se trata de eliminarlo, sino de encontrar tu punto justo: el que te impulsa sin paralizarte. Si sientes que vives instalado en el nivel alto, en la incertidumbre o al borde del agotamiento, conversémoslo. Aprender a manejarlo se puede, y no tienes que hacerlo en silencio. Escríbeme.'
   },
   culpa: {
     title: 'La culpa', tag: 'Que la culpa enseñe, no que te castigue',
