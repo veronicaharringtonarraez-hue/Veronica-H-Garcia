@@ -182,6 +182,7 @@
       <!-- wellness category teasers -->
       <div class="r-grid6" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:12px; margin-top:70px;">
         <div data-yt="crisis" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(212,160,23,0.12); border:1px solid rgba(212,160,23,0.5); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.2); border-color:#D4A017;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Intervención en crisis</div><div style="font-size:10.5px; color:rgba(212,160,23,0.85); letter-spacing:0.08em;">Primeros auxilios psicológicos</div></div>
+        <div data-yt="ideacion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(212,160,23,0.12); border:1px solid rgba(212,160,23,0.5); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.2); border-color:#D4A017;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Ideación suicida</div><div style="font-size:10.5px; color:rgba(212,160,23,0.85); letter-spacing:0.08em;">Pedir ayuda salva</div></div>
         <div data-yt="emdr" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">EMDR</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="ansiedad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Ansiedad</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="autoestima" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Autoestima</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
@@ -1144,8 +1145,30 @@ const TOPICS = {
   },
   'duelo-fallecimiento': {
     title: 'Duelo por fallecimiento de un ser querido', parent: 'duelo', tag: 'Cuando la muerte nos separa',
-    intro: 'Perder a alguien que amamos deja un vacío que nadie más puede llenar. El duelo es el precio del amor, y llorar a quien se fue también es una forma de honrarlo. Date permiso de sentir, a tu ritmo. Elige a quién estás despidiendo.',
-    children: ['duelo-hijo', 'duelo-conyuge', 'duelo-amigo', 'duelo-embarazo', 'duelo-mascota']
+    intro: 'Perder a alguien que amamos deja un vacío que nadie más puede llenar. El duelo es el precio del amor, y llorar a quien se fue también es una forma de honrarlo. Date permiso de sentir, a tu ritmo. Elige a quién estás despidiendo, y más abajo encontrarás herramientas según cómo ocurrió la muerte.',
+    children: ['duelo-hijo', 'duelo-conyuge', 'duelo-amigo', 'duelo-embarazo', 'duelo-mascota'],
+    accTitle: 'Según cómo ocurrió la muerte',
+    accordion: [
+      { n: 1, q: 'Por enfermedad',
+        a: `Cuando la muerte llega tras una enfermedad, a veces hubo tiempo de despedirse y otras no. Puedes sentir alivio de que el sufrimiento terminó y, a la vez, culpa por ese alivio: ambas cosas son normales. Si acompañaste el proceso, puedes cargar también el agotamiento del cuidador y recuerdos difíciles de la etapa final.`,
+        v: `El "duelo anticipado" —empezar a despedirte mientras la persona aún vive— es real y agotador, y no te hace desalmado. Sentir alivio no significa que no amaras; significa que amabas tanto que su dolor te dolía. Poco a poco, los últimos recuerdos difíciles dejan espacio a los buenos.` },
+      { n: 2, q: 'Por accidente',
+        a: `Una muerte accidental es repentina, sin aviso ni despedida. Es normal quedar en shock, revivir una y otra vez lo ocurrido, buscar explicaciones ("si hubiera…") y sentir que el mundo dejó de ser un lugar seguro. La falta de un adiós hace este duelo especialmente difícil.`,
+        v: `La mente busca culpables o "hubieras" porque necesita entender lo que no tiene sentido; es su forma de intentar recuperar el control. Pero un accidente, por definición, no se pudo prever. Soltar el "si hubiera" es uno de los trabajos más difíciles y más sanadores de este duelo.` },
+      { n: 3, q: 'Por suicidio',
+        a: `El duelo por suicidio suele venir cargado de preguntas sin respuesta, culpa ("¿pude haberlo evitado?"), enojo y a veces vergüenza por el estigma. Es importante saber: la responsabilidad de un suicidio no recae en quien queda. Tú no lo causaste ni tenías el poder de evitarlo por completo. Este duelo necesita un cuidado especial.`,
+        v: `A quienes pierden a alguien por suicidio les digo con firmeza y con amor: no fue tu culpa. La mente en un dolor extremo toma decisiones que no reflejan cuánto le importabas. Rodéate de personas que no juzguen y busca acompañamiento; este es uno de los duelos donde más ayuda el apoyo profesional. (Si tú tienes pensamientos suicidas, mira la sección de Ideación suicida.)` },
+      { n: 4, q: 'Por asesinato',
+        a: `Cuando la muerte es a manos de otra persona, al dolor se suman la rabia, la injusticia, el miedo y, muchas veces, el peso de procesos legales y mediáticos que reabren la herida. Es un duelo traumático: además de la pérdida, hay que sanar el trauma de la violencia.`,
+        v: `La rabia y el deseo de justicia son respuestas humanas y legítimas; no tienes que "perdonar" para sanar, ni en un tiempo que otros te marquen. Conviene separar dos procesos: el legal (buscar justicia) y el emocional (cuidar tu herida). Ambos importan, pero tu sanación no puede esperar al veredicto.` },
+      { n: 5, q: 'Por catástrofe natural',
+        a: `Perder a alguien en un terremoto, una inundación u otro desastre une el duelo con el trauma colectivo: muchas veces se pierden también el hogar, la seguridad y la rutina, todo a la vez. Puede haber culpa del sobreviviente y la dificultad de hacer duelo mientras aún se lucha por lo básico.`,
+        v: `Es muy duro tener que llorar a alguien mientras todavía buscas agua, refugio o noticias. Primero lo urgente —tu seguridad y la de los tuyos—; el duelo tendrá su espacio después, y está bien que así sea. La culpa por haber sobrevivido es común y no es justa: que tú vivas no le quita nada a quien se fue.` },
+      { n: 6, q: 'Por causas naturales',
+        a: `La muerte por vejez o causas naturales, aunque "esperada", duele igual. A veces el entorno minimiza el dolor ("ya era mayor", "tuvo una larga vida"), lo que puede hacerte sentir que no tienes derecho a llorar. Sí lo tienes: la pérdida de un vínculo largo deja un vacío enorme.`,
+        v: `Que una muerte llegue "en su ley" no la hace menos dolorosa. Perder a un padre, una madre o un abuelo con quien compartiste toda una vida reordena tu mundo entero. No dejes que nadie mida tu duelo: el amor no se despide fácil, tenga la edad que tenga.` }
+    ],
+    closing: 'Sea cual sea la forma en que ocurrió, tu duelo es válido y merece ser acompañado. No tienes que atravesarlo solo ni "superarlo" en un tiempo marcado. Si el dolor se te hace demasiado, escríbeme: podemos transitarlo juntos.'
   },
   'duelo-perdidas': {
     title: 'Pérdidas significativas (no relacionadas a la muerte)', parent: 'duelo', tag: 'Duelos que pocas veces se nombran',
@@ -1609,6 +1632,39 @@ const TOPICS = {
     closing: 'Acompaño a personas en el espectro y a sus familias con respeto y herramientas concretas, a cada edad. Si lo estás viviendo, escríbeme.'
   },
 
+  ideacion: {
+    title: 'Ideación suicida', tag: 'No estás solo: pedir ayuda salva vidas',
+    intro: 'La ideación suicida son pensamientos sobre querer morir o dejar de existir. Tenerlos no te hace débil ni significa que vayas a actuar: casi siempre son la señal de un dolor que se volvió insoportable y de una mente que busca, con desesperación, que ese dolor pare. Ese dolor se puede aliviar con ayuda. Aquí encontrarás herramientas y protocolos para ti o para acompañar a otra persona.',
+    accTitle: 'Herramientas y protocolos',
+    accordion: [
+      { n: 1, q: '¿Qué es la ideación suicida?',
+        a: `Son pensamientos sobre querer morir, que van desde ideas pasajeras ("ojalá no despertara") hasta planes concretos. Tenerlos no significa que seas débil ni que necesariamente vayas a actuar: casi siempre son la señal de un dolor que se volvió insoportable y de una mente que busca, con desesperación, que ese dolor pare. Y ese dolor se puede aliviar.`,
+        v: `Quiero decirte algo con toda claridad: si tienes estos pensamientos, no estás loco ni eres una mala persona. Estás sufriendo mucho. La parte de ti que buscó esta información es la parte que quiere vivir de otra manera, sin tanto dolor. Vamos a cuidar esa parte. No estás solo.` },
+      { n: 2, q: 'Si tú tienes estos pensamientos ahora',
+        a: `Protocolo inmediato: 1) No te quedes solo: dile a alguien de confianza o llama a una línea de crisis (el número de emergencia aparece arriba). 2) Aléjate de medios para hacerte daño (medicamentos, armas) o pide a alguien que los guarde. 3) Posponer: comprométete a no hacer nada en las próximas 24 horas; el impulso baja. 4) Respira y ancla tu cuerpo al presente. 5) Recuerda: los pensamientos no son órdenes, y este dolor —aunque ahora no lo parezca— puede cambiar.`,
+        v: `Si estás en ese punto justo ahora, quédate conmigo un momento y respira. No tienes que resolver toda tu vida hoy; solo atravesar este momento, y luego el siguiente. El dolor te está mintiendo cuando te dice que no hay salida. Por favor, díselo a alguien ya. Tu vida importa, aunque ahora no lo sientas.` },
+      { n: 3, q: 'Construir un plan de seguridad',
+        a: `Un plan de seguridad se prepara ANTES de una crisis, por escrito. Incluye: tus señales de alerta personales; estrategias para calmarte (música, caminar, respirar); personas y lugares que te distraen; a quién llamar (contactos y líneas de crisis); cómo hacer tu entorno más seguro (retirar medios de riesgo); y tus razones para vivir. Tenlo a mano en el teléfono para leerlo cuando lo necesites.`,
+        v: `En terapia lo armamos juntos, pero puedes empezar hoy. Escríbelo cuando estés más estable, para que tu "yo en calma" cuide a tu "yo en crisis". Es como dejarte notas de amor e instrucciones para los momentos difíciles. Ese plan puede, literalmente, salvarte.` },
+      { n: 4, q: 'Razones para seguir y red de apoyo',
+        a: `Haz una lista de tus motivos para vivir, por pequeños que parezcan: personas, mascotas, metas, lugares, cosas pendientes por ver. Identifica tu red de apoyo (2 o 3 personas a las que puedes acudir) y guarda las líneas de ayuda de tu país. No necesitas sentir esperanza para pedir ayuda; basta con dar el paso.`,
+        v: `A veces la razón para quedarte un día más es tan simple como un café por la mañana o tu perro esperándote. Vale. No necesitas grandes razones épicas; necesitas una, hoy. Y mañana, otra. Así se reconstruye, de a poco, el deseo de vivir.` },
+      { n: 5, q: 'Cómo ayudar a alguien con pensamientos suicidas',
+        a: `Protocolo para ayudar: 1) PREGUNTA directamente: "¿estás pensando en quitarte la vida?". Preguntar NO induce la idea; alivia y abre la puerta. 2) ESCUCHA sin juzgar, sin minimizar ni sermonear. 3) NO lo dejes solo si el riesgo es alto. 4) AYUDA a alejar medios peligrosos. 5) CONECTA con ayuda profesional o una línea de crisis, y acompáñalo a dar el paso. Toma en serio toda señal.`,
+        v: `Mucha gente calla por miedo a "meter la idea" o a decir algo equivocado. Preguntar con cariño no empuja a nadie: al contrario, le muestra que puede hablar. No tienes que tener las respuestas; solo estar, escuchar y ayudar a que reciba ayuda profesional. Tu presencia puede marcar la diferencia.` },
+      { n: 6, q: 'Señales de alerta en otra persona',
+        a: `Presta atención si alguien: habla de querer morir o de ser una carga; busca medios para hacerse daño; se despide o regala sus cosas; se aísla; muestra cambios bruscos de ánimo (incluida una calma repentina tras una gran angustia); aumenta el consumo de alcohol o drogas; o dice que "todo estaría mejor sin mí". Ninguna señal es "para llamar la atención": todas merecen tomarse en serio.`,
+        v: `A veces la señal más peligrosa es una calma repentina, porque puede significar que la persona "ya decidió". Confía en tu instinto: si algo te preocupa de alguien, pregúntale. Es mejor equivocarse preguntando que callar por miedo. Nunca guardes el secreto de que alguien quiere morir.` },
+      { n: 7, q: 'Qué NO hacer (mitos)',
+        a: `No minimices ("no es para tanto", "tienes todo para ser feliz"). No juzgues ni culpes ("es un pecado", "es de egoístas"). No retes ni desafíes. No prometas guardar el secreto si hay riesgo de vida: la seguridad va primero. No creas el mito de que "quien lo dice no lo hace": muchas personas avisan antes. Y recuerda: preguntar por el suicidio no lo provoca.`,
+        v: `El miedo a decir "lo incorrecto" nos hace callar, y el silencio es lo más peligroso. No necesitas frases perfectas: "estoy aquí, me importas, no quiero que te quedes solo con esto" es suficiente. Lo que sana no es el consejo perfecto, sino sentirse acompañado y llevado, con cuidado, hacia la ayuda.` },
+      { n: 8, q: 'Después de una crisis o un intento',
+        a: `Superada la crisis inmediata, el trabajo es sostener la seguridad y tratar el dolor de fondo. Mantén el plan de seguridad activo, retira medios de riesgo, cuida el sueño y evita el alcohol. Acude a seguimiento profesional: la ideación suele ser síntoma de algo tratable (depresión, ansiedad, trauma). Recuperarse es posible, y muchísimas personas que pasaron por esto hoy viven en paz.`,
+        v: `Que hoy sientas que no puedes más no significa que será así siempre. La ideación suicida, con tratamiento y acompañamiento, mejora. Lo he visto una y otra vez: personas que estuvieron en el borde y hoy se alegran de seguir aquí. Date la oportunidad de llegar a ese después. Escríbeme, y si estás en riesgo ahora, llama ya a emergencias.` }
+    ],
+    closing: 'Si estás leyendo esto por ti, tu dolor es real y también es tratable: no tienes que cargarlo solo. Si es por alguien que quieres, tu preocupación puede salvarle la vida. Pedir ayuda no es rendirse: es el acto más valiente. Acompaño estos procesos con todo el cuidado que merecen. Y si hay riesgo inmediato para tu vida o la de otra persona, contacta ya a los servicios de emergencia de tu país.'
+  },
+
   crisis: {
     title: 'Intervención en crisis', tag: 'Primeros auxilios psicológicos y contención',
     intro: 'Una crisis es un estado temporal de conmoción que aparece cuando un hecho —un terremoto, un accidente, una pérdida o una emergencia— supera nuestras formas habituales de afrontar. Lo que sientes en esos momentos (miedo, bloqueo, llanto, confusión) son reacciones normales ante una situación anormal. Estas herramientas de primeros auxilios psicológicos te ayudan a contenerte, regularte y acompañar a otros en los primeros momentos, y a saber cuándo pedir ayuda. Despliega cada una.',
@@ -2053,7 +2109,7 @@ class Component extends DCLogic {
     const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Volver a ' + TOPICS[d.parent].title) : (this._topicOrigin === 'wellness') ? '← Volver al Centro de Bienestar' : (d.backName ? ('← Volver a ' + d.backName) : '← Volver al Centro de Bienestar');
     let h = '';
     h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
-    if (key.indexOf('violencia') === 0 || key.indexOf('crisis') === 0) h += this._emergHTML();
+    if (key.indexOf('violencia') === 0 || key.indexOf('crisis') === 0 || key.indexOf('ideacion') === 0) h += this._emergHTML();
     h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">Centro de Bienestar</div>';
     h += '<h2 style="font-family:Spectral,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:12px 0 6px;color:#FAF8F5;">' + d.title + '</h2>';
     if (d.tag) h += '<p style="font-family:Spectral,serif;font-style:italic;font-size:19px;color:#D4A017;margin-bottom:20px;">' + d.tag + '</p>';
