@@ -190,6 +190,7 @@
         <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resilience</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="adicciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Managing addiction</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="relaciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Interpersonal relationships</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="adopcion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Adoption</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="estancamiento" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Feeling stuck</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="equilibrio" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Balance &amp; self-demand</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="vocacional" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Career guidance</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
@@ -1615,6 +1616,78 @@ const TOPICS = {
       { n: 8, q: `After a crisis or an attempt`, a: `Once the immediate crisis is over, the work is to sustain safety and treat the underlying pain. Keep the safety plan active, remove risky means, protect sleep, and avoid alcohol. Attend professional follow-up: ideation is usually a symptom of something treatable (depression, anxiety, trauma). Recovery is possible, and a great many people who went through this now live in peace.`, v: `That you feel today you can't go on doesn't mean it will always be this way. Suicidal ideation, with treatment and support, gets better. I've seen it again and again: people who were on the edge and today are glad to still be here. Give yourself the chance to reach that "after." Write to me, and if you're at risk now, call emergency services right away.` }
     ],
     closing: `If you're reading this for yourself, your pain is real and it's also treatable: you don't have to carry it alone. If it's for someone you love, your concern may save their life. Asking for help isn't giving up: it's the bravest act. I accompany these processes with all the care they deserve. And if there's immediate risk to your life or someone else's, contact your country's emergency services now.`
+  },
+
+  adopcion: {
+    title: `Adoption`, tag: `Building family from love and respect`,
+    intro: `Adoption is a beautiful and brave way to form a family, and also a path with its own challenges. Whether you're thinking of adopting, raising an adopted child, or you yourself were adopted, here you'll find support. Choose the moment you're living.`,
+    children: ['adopcion-proceso', 'adopcion-crianza', 'adopcion-adoptado']
+  },
+  'adopcion-proceso': {
+    title: `Adoption process and mental fitness`, parent: 'adopcion', tag: `Preparing yourself to receive`,
+    intro: `Adopting is a legal and emotional process that includes a suitability assessment. It doesn't look for "perfect parents," but seeks to ensure the child's well-being and prepare you to accompany them. Here's what it involves and how to prepare mentally.`,
+    accTitle: `Keys to the process`,
+    accordion: [
+      { n: 1, q: `What is suitability to adopt?`,
+        a: `Suitability is a psychosocial assessment of your capacity to offer a child a stable, loving environment: your emotional stability, your motivations, your support network, your history, and how you understand parenting. It's not about being perfect, but about being prepared and aware.`,
+        v: `Many prospective parents are anxious about the idea of "being evaluated," as if flaws were being hunted. In reality, the process is there to accompany you and protect both you and the child. Seeing it as preparation —not an exam— helps you go through it more calmly.` },
+      { n: 2, q: `Reviewing your motivations`,
+        a: `It's healthy to ask yourself why you want to adopt. Adopting to "fill a void," "save a child," or replace an unprocessed loss can create difficult expectations. The most sustainable motivation is the genuine wish to accompany and love a child for who they are.`,
+        v: `There are no 100% "pure" motivations, and that's okay. What matters is looking at them honestly. If you adopt carrying a grief (for example, over infertility), it's best to work on it first: not to disqualify you, but to arrive freer and more available.` },
+      { n: 3, q: `Preparing yourself emotionally`,
+        a: `Learn about attachment development, early trauma, and the particular needs of adopted children. Strengthen your support network, your relationship (if you have one), and your tools to regulate stress. Flexibility and patience will be your best allies.`,
+        v: `Preparing yourself isn't arriving knowing everything, but arriving willing to learn and to ask for help. The best adoptive parents aren't those who never doubt, but those who allow themselves not to know and seek support when they need it.` },
+      { n: 4, q: `Realistic expectations`,
+        a: `An adopted child doesn't arrive "blank": they bring their history, their temperament, and often experiences of loss or adversity. The bond is built over time, it isn't always "love at first sight," and that's normal. Adjusting expectations avoids frustration and guilt.`,
+        v: `Sometimes the moment of meeting is idealized and then reality —with its ups and downs— is disconcerting. That love takes time to settle doesn't mean something is wrong: attachment is cooked on a low flame, with presence and consistency.` }
+    ],
+    closing: `The suitability assessment isn't an obstacle but support to begin on firm ground. If you want to prepare emotionally to adopt or to go through the process more calmly, I'm here for you. Write to me.`
+  },
+  'adopcion-crianza': {
+    title: `Raising an adopted child: love, boundaries and discipline`, parent: 'adopcion', tag: `Secure bond and loving guidance`,
+    intro: `Raising an adopted child is based on the same things as all healthy parenting —love, boundaries, and presence— with some nuances specific to their history. Here are keys to build a secure bond and set limits without breaking trust.`,
+    accTitle: `Love, boundaries and discipline`,
+    accordion: [
+      { n: 1, q: `Love first: building secure attachment`,
+        a: `Secure attachment is built with constant presence, physical contact, responding to their needs, and predictability. With children who lived through losses, this takes time and repetition: each time you respond calmly, their brain learns "I can trust, I'm safe here."`,
+        v: `Don't be discouraged if at first they reject affection or test you: often they need to check, again and again, that you won't leave. Your loving consistency is the medicine. The bond isn't demanded, it's offered, and little by little it takes root.` },
+      { n: 2, q: `Boundaries are also love`,
+        a: `Clear, consistent boundaries give security: a child who knows what to expect feels held. Setting limits doesn't contradict love; it complements it. The key is firmness in the rule and warmth in the treatment: "I love you, and this isn't allowed."`,
+        v: `Sometimes, out of fear of "not being loved" or out of guilt ("they've suffered enough"), setting limits is avoided. But a child without limits feels insecure, not free. You can be warm and firm at once: limits, set with love, tell them there's an adult who cares for them.` },
+      { n: 3, q: `Discipline that teaches, not that frightens`,
+        a: `Healthy discipline seeks to teach, not to punish for punishing. With children who lived adversity, harsh punishment or shouting reactivate fear and damage the bond. What works better: anticipating, offering choices, validating the emotion, and separating the behavior ("that's not okay") from the person ("you are worthy").`,
+        v: `Many difficult behaviors aren't "bad manners," but fear or dysregulation the child can't manage. When you change the question from "how do I correct it?" to "what do they need?", discipline becomes a bridge, not a wall. First regulate yourself, so you can regulate them.` },
+      { n: 4, q: `Talking about their history and origins`,
+        a: `Talk about the adoption naturally, from an early age and with the truth adapted to their age. Avoiding the subject or lying does more harm than the truth told with love. Acknowledge their history and origins without fear: they're part of who they are, and honoring them strengthens their identity.`,
+        v: `Sometimes parents fear that talking about origins "will distance them." It's the opposite: secrecy distances, truth accompanied brings closer. You can love your child with all your soul and, at the same time, make room for their history. You're not competing with their past; you're integrating it.` },
+      { n: 5, q: `Taking care of yourself as a mother or father`,
+        a: `Parenting from attachment, especially with trauma histories, is demanding and can exhaust you. Care for your rest, your relationship, your network, and your own emotional process. You can't convey security if you're in constant alarm.`,
+        v: `Asking for help doesn't make you a worse parent; it makes you a sustainable one. If you feel you react in ways you don't want, or that the bond is an uphill struggle, it's not failure: it's a signal to seek support. You need to be cared for too.` }
+    ],
+    closing: `Raising an adopted child with love, boundaries, and understanding is learned, and you don't have to do it alone. If you want tools to strengthen the bond or manage difficult behaviors, I'm here for you. Write to me.`
+  },
+  'adopcion-adoptado': {
+    title: `You were adopted: trust and aftereffects`, parent: 'adopcion', tag: `Healing the story, rewriting the present`,
+    intro: `Having been adopted —and sometimes having gone through homes or orphanages— leaves marks that can appear years later: difficulty trusting, fear of abandonment, questions about identity. None of that defines or condemns you. Here you'll find understanding and tools to heal.`,
+    accTitle: `Trust, identity and healing`,
+    accordion: [
+      { n: 1, q: `Learning to trust`,
+        a: `If as a child the world wasn't a safe place, your system learned to protect itself by distrusting. It's hard to believe someone will stay, or you believe that if you show yourself "they'll leave you." Rebuilding trust is possible: it happens slowly, with secure bonds that, over time, disprove the "everyone leaves."`,
+        v: `Distrust isn't a flaw of yours: it was a smart strategy to survive when it truly wasn't safe to trust. Today, carefully, you can teach your system that you're no longer in that place. Trusting again is an act of courage, and it can be learned.` },
+      { n: 2, q: `The fear of abandonment`,
+        a: `It's common to carry a deep fear of being left, which can lead you to cling, to test those you love, or to pull away first "so it won't hurt later." Recognizing this pattern is the first step for it to stop running your relationships without you noticing.`,
+        v: `If in your relationships you often think "at some point they'll leave," that voice probably comes from far back. It's not the truth about your present; it's the echo of an old wound. Telling the past apart from the present is a big part of the work, and it brings much relief.` },
+      { n: 3, q: `The wound of origin and identity`,
+        a: `Asking about your origins, feeling a void or a divided loyalty, or doubting "who you are" is a legitimate part of your process, not a betrayal of those who raised you. You can honor your whole story: where you come from and who accompanied you. Both fit within you.`,
+        v: `Seeking your roots or asking yourself questions doesn't mean you don't love your family. Your identity isn't "either one or the other": you are the sum of your whole history. Integrating those parts, instead of denying them, is what gives you back the sense of being one, whole.` },
+      { n: 4, q: `The aftereffects of homes or orphanages`,
+        a: `Growing up in institutions or homes can leave marks: hypervigilance, difficulty with closeness, self-demand, self-protective behaviors, or difficulty asking for and receiving. These aren't "character flaws": they're adaptations to an environment where constant care was missing. And adaptations can be transformed.`,
+        v: `What helped you survive in that environment may today weigh on your bonds. Recognizing it with compassion —"this makes sense given what I lived"— removes guilt and opens the door to change. You're not broken; you're shaped by your history, and that shape can keep being sculpted.` },
+      { n: 5, q: `Healing is possible`,
+        a: `Early wounds can be worked on and healed, at any age. Therapy —including approaches like EMDR for trauma— helps reprocess what you lived, calm the fear of abandonment, and build safer relationships. You don't have to carry alone what began when you were small.`,
+        v: `That the wound is old doesn't mean it's permanent. I've accompanied adopted people in letting go of the weight of "I wasn't enough" and building bonds where they finally feel safe. Your story began without you being able to choose; your healing, today, you can choose. Write to me.` }
+    ],
+    closing: `What you lived as a child wasn't your fault and doesn't have to mark your whole future. You can learn to trust, to stay, and to feel at home. If you want to work on your history in a safe space, I'm here for you. Write to me.`
   },
 
   sensibles: {

@@ -190,6 +190,7 @@
         <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resiliência</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver ferramentas</div></div>
         <div data-yt="adicciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Lidar com vícios</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver ferramentas</div></div>
         <div data-yt="relaciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relações interpessoais</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver ferramentas</div></div>
+        <div data-yt="adopcion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Adoção</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver ferramentas</div></div>
         <div data-yt="estancamiento" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Sentir-se estagnado</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver ferramentas</div></div>
         <div data-yt="equilibrio" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Equilíbrio e autoexigência</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver ferramentas</div></div>
         <div data-yt="vocacional" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Orientação vocacional</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver ferramentas</div></div>
@@ -1615,6 +1616,78 @@ const TOPICS = {
       { n: 8, q: `Depois de uma crise ou de uma tentativa`, a: `Passada a crise imediata, o trabalho é sustentar a segurança e tratar a dor de fundo. Mantém o plano de segurança ativo, retira meios de risco, cuida do sono e evita o álcool. Faz acompanhamento profissional: a ideação costuma ser sintoma de algo tratável (depressão, ansiedade, trauma). Recuperar é possível, e muitíssimas pessoas que passaram por isto vivem hoje em paz.`, v: `Que hoje sintas que não consegues mais não significa que será sempre assim. A ideação suicida, com tratamento e acompanhamento, melhora. Vi-o vezes sem conta: pessoas que estiveram no limite e hoje se alegram por continuar aqui. Dá-te a oportunidade de chegar a esse "depois". Escreve-me, e se estás em risco agora, liga já para a emergência.` }
     ],
     closing: `Se estás a ler isto por ti, a tua dor é real e também é tratável: não tens de a carregar sozinho. Se é por alguém que amas, a tua preocupação pode salvar-lhe a vida. Pedir ajuda não é desistir: é o ato mais corajoso. Acompanho estes processos com todo o cuidado que merecem. E se houver risco imediato para a tua vida ou a de outra pessoa, contacta já os serviços de emergência do teu país.`
+  },
+
+  adopcion: {
+    title: `Adoção`, tag: `Construir família a partir do amor e do respeito`,
+    intro: `A adoção é uma forma bonita e corajosa de formar uma família, e também um caminho com os seus próprios desafios. Quer estejas a pensar em adotar, a criar um filho adotivo, ou tenhas tu mesmo sido adotado, aqui encontrarás acompanhamento. Escolhe o momento que estás a viver.`,
+    children: ['adopcion-proceso', 'adopcion-crianza', 'adopcion-adoptado']
+  },
+  'adopcion-proceso': {
+    title: `Processo de adoção e idoneidade mental`, parent: 'adopcion', tag: `Preparares-te para receber`,
+    intro: `Adotar é um processo legal e emocional que inclui uma avaliação de idoneidade. Não procura "pais perfeitos", mas garantir o bem-estar da criança e preparar-te para a acompanhar. Aqui te conto o que implica e como te preparares mentalmente.`,
+    accTitle: `Chaves do processo`,
+    accordion: [
+      { n: 1, q: `O que é a idoneidade para adotar?`,
+        a: `A idoneidade é uma avaliação psicossocial da tua capacidade de oferecer a uma criança um ambiente estável e amoroso: a tua estabilidade emocional, as tuas motivações, a tua rede de apoio, a tua história e como entendes a parentalidade. Não se trata de ser perfeito, mas de estar preparado e consciente.`,
+        v: `A muitos futuros pais angustia a ideia de "serem avaliados", como se procurassem falhas. Na verdade, o processo está para te acompanhar e proteger tanto a ti como à criança. Vê-lo como uma preparação —e não como um exame— ajuda a vivê-lo com mais calma.` },
+      { n: 2, q: `Rever as tuas motivações`,
+        a: `É saudável perguntares-te por que queres adotar. Adotar para "preencher um vazio", "salvar uma criança" ou substituir uma perda não elaborada pode gerar expectativas difíceis. A motivação mais sustentável é o desejo genuíno de acompanhar e amar um filho por quem é.`,
+        v: `Não há motivações "puras" a cem por cento, e está tudo bem. O importante é olhá-las com honestidade. Se adotas a carregar um luto (por exemplo, por infertilidade), convém trabalhá-lo antes: não para te desqualificar, mas para chegares mais livre e disponível.` },
+      { n: 3, q: `Preparares-te emocionalmente`,
+        a: `Informa-te sobre o desenvolvimento do apego, o trauma precoce e as necessidades particulares das crianças adotadas. Fortalece a tua rede de apoio, a tua relação (se a tens) e as tuas ferramentas para regular o stress. A flexibilidade e a paciência serão as tuas melhores aliadas.`,
+        v: `Preparares-te não é chegar a saber tudo, mas chegar disposto a aprender e a pedir ajuda. Os melhores pais adotivos não são os que nunca duvidam, mas os que se permitem não saber e procuram acompanhamento quando precisam.` },
+      { n: 4, q: `Expectativas realistas`,
+        a: `Um filho adotivo não chega "em branco": traz a sua história, o seu temperamento e, muitas vezes, experiências de perda ou adversidade. O vínculo constrói-se com tempo, nem sempre é "amor à primeira vista", e isso é normal. Ajustar as expectativas evita frustração e culpa.`,
+        v: `Às vezes idealiza-se o momento do encontro e depois a realidade —com os seus altos e baixos— desconcerta. Que o amor demore a assentar não significa que algo esteja mal: o apego cozinha-se em lume brando, com presença e constância.` }
+    ],
+    closing: `A avaliação de idoneidade não é um obstáculo, mas um acompanhamento para começar com bases firmes. Se quiseres preparar-te emocionalmente para adotar ou atravessar o processo com mais calma, acompanho-te. Escreve-me.`
+  },
+  'adopcion-crianza': {
+    title: `Criar um filho adotivo: amor, limites e disciplina`, parent: 'adopcion', tag: `Vínculo seguro e orientação amorosa`,
+    intro: `Criar um filho adotivo baseia-se no mesmo que toda a criação saudável —amor, limites e presença— com alguns matizes próprios da sua história. Aqui vão chaves para construir um vínculo seguro e pôr limites sem quebrar a confiança.`,
+    accTitle: `Amor, limites e disciplina`,
+    accordion: [
+      { n: 1, q: `O amor primeiro: construir apego seguro`,
+        a: `O apego seguro constrói-se com presença constante, contacto físico, resposta às suas necessidades e previsibilidade. Com crianças que viveram perdas, isto leva tempo e repetição: cada vez que respondes com calma, o cérebro dela aprende "posso confiar, aqui estou em segurança".`,
+        v: `Não te desanimes se ao início rejeita o carinho ou te põe à prova: muitas vezes precisa de comprovar, uma e outra vez, que não vais embora. A tua constância amorosa é o remédio. O vínculo não se exige, oferece-se, e aos poucos cria raízes.` },
+      { n: 2, q: `Os limites também são amor`,
+        a: `Limites claros e consistentes dão segurança: uma criança que sabe o que esperar sente-se contida. Pôr limites não contradiz o amor; complementa-o. A chave é firmeza na norma e calor no trato: "gosto muito de ti, e isto não pode ser".`,
+        v: `Às vezes, por medo de "não ser amado" ou por culpa ("já sofreu que chegue"), evita-se pôr limites. Mas uma criança sem limites sente-se insegura, não livre. Podes ser caloroso e firme ao mesmo tempo: os limites, postos com amor, dizem-lhe que há um adulto que cuida dela.` },
+      { n: 3, q: `Disciplina que ensina, não que assusta`,
+        a: `A disciplina saudável procura ensinar, não castigar por castigar. Com crianças que viveram adversidade, o castigo duro ou o grito reativam o medo e danificam o vínculo. Funcionam melhor: antecipar, oferecer opções, validar a emoção e separar o comportamento ("isso não está bem") da pessoa ("tu vales").`,
+        v: `Muitos comportamentos difíceis não são "má criação", mas medo ou desregulação que a criança não sabe gerir. Quando mudas a pergunta de "como o corrijo?" para "do que é que precisa?", a disciplina torna-se uma ponte e não um muro. Primeiro regula-te tu, para poderes regulá-la a ela.` },
+      { n: 4, q: `Falar da sua história e das suas origens`,
+        a: `Fala da adoção com naturalidade, desde pequeno e com a verdade adaptada à sua idade. Evitar o tema ou mentir causa mais dano do que a verdade contada com amor. Reconhece a sua história e as suas origens sem medo: fazem parte de quem é, e honrá-las fortalece a sua identidade.`,
+        v: `Às vezes os pais temem que falar das origens "os afaste". É ao contrário: o segredo afasta, a verdade acompanhada aproxima. Podes amar o teu filho de toda a alma e, ao mesmo tempo, dar espaço à sua história. Não competes com o passado dele; integra-lo.` },
+      { n: 5, q: `Cuidares de ti como mãe ou pai`,
+        a: `Criar a partir do apego, sobretudo com histórias de trauma, é exigente e pode esgotar. Cuida do teu descanso, da tua relação, da tua rede e do teu próprio processo emocional. Não podes transmitir segurança se estás em alerta constante.`,
+        v: `Pedir ajuda não te torna pior mãe ou pai; torna-te sustentável. Se sentes que reages de formas que não queres, ou que o vínculo te custa muito, não é fracasso: é um sinal para procurar acompanhamento. De ti também há que cuidar.` }
+    ],
+    closing: `Criar um filho adotivo com amor, limites e compreensão aprende-se, e não tens de o fazer sozinho. Se quiseres ferramentas para fortalecer o vínculo ou gerir os comportamentos difíceis, acompanho-te. Escreve-me.`
+  },
+  'adopcion-adoptado': {
+    title: `Foste adotado: confiança e sequelas`, parent: 'adopcion', tag: `Sarar a história, reescrever o presente`,
+    intro: `Ter sido adotado —e às vezes ter passado por lares ou orfanatos— deixa marcas que podem aparecer anos depois: dificuldade em confiar, medo do abandono, perguntas sobre a identidade. Nada disso te define nem te condena. Aqui encontrarás compreensão e ferramentas para sarar.`,
+    accTitle: `Confiança, identidade e cura`,
+    accordion: [
+      { n: 1, q: `Aprender a confiar`,
+        a: `Se em pequeno o mundo não foi um lugar seguro, o teu sistema aprendeu a proteger-se desconfiando. Custa acreditar que alguém fica, ou acreditas que se te mostras "vão-te deixar". Reconstruir a confiança é possível: faz-se devagar, com vínculos seguros que, com o tempo, vão desmentindo o "todos se vão".`,
+        v: `A desconfiança não é um defeito teu: foi uma estratégia inteligente para sobreviver quando de facto não era seguro confiar. Hoje, com cuidado, podes ir ensinando ao teu sistema que já não estás naquele lugar. Confiar de novo é um ato de coragem, e aprende-se.` },
+      { n: 2, q: `O medo do abandono`,
+        a: `É comum carregar um medo profundo de ser deixado, que te pode levar a agarrares-te, a pôr à prova quem amas, ou a afastares-te tu primeiro "para não doer depois". Reconhecer este padrão é o primeiro passo para que deixe de conduzir as tuas relações sem dares por isso.`,
+        v: `Se nas tuas relações costumas pensar "a certa altura vai-se embora", essa voz vem provavelmente de muito longe. Não é a verdade sobre o teu presente; é o eco de uma ferida antiga. Distinguir o passado do presente é grande parte do trabalho, e traz muito alívio.` },
+      { n: 3, q: `A ferida de origem e a identidade`,
+        a: `Perguntares-te pelas tuas origens, sentir um vazio ou uma lealdade dividida, ou duvidar de "quem és" é parte legítima do teu processo, não uma traição a quem te criou. Podes honrar a tua história completa: de onde vens e quem te acompanhou. As duas coisas cabem em ti.`,
+        v: `Procurar as tuas raízes ou fazeres-te perguntas não significa que não ames a tua família. A tua identidade não é "ou uma ou outra": és a soma de toda a tua história. Integrar essas partes, em vez de as negar, é o que te devolve a sensação de seres um só, inteiro.` },
+      { n: 4, q: `As sequelas de lares ou orfanatos`,
+        a: `Crescer em instituições ou lares pode deixar marcas: hipervigilância, dificuldade com a proximidade, autoexigência, comportamentos de autoproteção, ou dificuldade em pedir e receber. Não são "defeitos de carácter": são adaptações a um ambiente onde faltou o cuidado constante. E as adaptações podem transformar-se.`,
+        v: `O que naquele ambiente te ajudou a sobreviver talvez hoje te pese nos vínculos. Reconhecê-lo com compaixão —"isto faz sentido pelo que vivi"— tira culpa e abre a porta à mudança. Não estás partido; estás moldado pela tua história, e essa forma pode continuar a ser esculpida.` },
+      { n: 5, q: `Sarar é possível`,
+        a: `As feridas precoces podem ser trabalhadas e saradas, em qualquer idade. A terapia —incluindo abordagens como o EMDR para o trauma— ajuda a reprocessar o vivido, a acalmar o medo do abandono e a construir relações mais seguras. Não tens de carregar sozinho o que começou quando eras pequeno.`,
+        v: `Que a ferida seja antiga não significa que seja permanente. Acompanhei pessoas adotadas a largar o peso do "não era suficiente" e a construir vínculos onde finalmente se sentem em segurança. A tua história começou sem que pudesses escolher; a tua cura, hoje, podes escolhê-la. Escreve-me.` }
+    ],
+    closing: `O que viveste em criança não foi culpa tua e não tem de marcar todo o teu futuro. Pode aprender-se a confiar, a ficar e a sentir-se em casa. Se quiseres trabalhar a tua história num espaço seguro, acompanho-te. Escreve-me.`
   },
 
   sensibles: {
