@@ -191,6 +191,7 @@
         <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resiliencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="adicciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Manejo de adicciones</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="relaciones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Relaciones interpersonales</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
+        <div data-yt="adopcion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Adopción</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="estancamiento" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Sentirse estancado</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="equilibrio" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Equilibrio y autoexigencia</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
         <div data-yt="vocacional" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Orientación vocacional</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">Ver herramientas</div></div>
@@ -1664,6 +1665,78 @@ const TOPICS = {
         v: `Que hoy sientas que no puedes más no significa que será así siempre. La ideación suicida, con tratamiento y acompañamiento, mejora. Lo he visto una y otra vez: personas que estuvieron en el borde y hoy se alegran de seguir aquí. Date la oportunidad de llegar a ese después. Escríbeme, y si estás en riesgo ahora, llama ya a emergencias.` }
     ],
     closing: 'Si estás leyendo esto por ti, tu dolor es real y también es tratable: no tienes que cargarlo solo. Si es por alguien que quieres, tu preocupación puede salvarle la vida. Pedir ayuda no es rendirse: es el acto más valiente. Acompaño estos procesos con todo el cuidado que merecen. Y si hay riesgo inmediato para tu vida o la de otra persona, contacta ya a los servicios de emergencia de tu país.'
+  },
+
+  adopcion: {
+    title: 'Adopción', tag: 'Construir familia desde el amor y el respeto',
+    intro: 'La adopción es una forma hermosa y valiente de formar una familia, y también un camino con sus propios retos. Ya sea que estés pensando en adoptar, criando a un hijo adoptado, o que tú mismo fuiste adoptado, aquí encontrarás acompañamiento. Elige el momento que estás viviendo.',
+    children: ['adopcion-proceso', 'adopcion-crianza', 'adopcion-adoptado']
+  },
+  'adopcion-proceso': {
+    title: 'Proceso de adopción e idoneidad mental', parent: 'adopcion', tag: 'Prepararte para recibir',
+    intro: 'Adoptar es un proceso legal y emocional que incluye una valoración de idoneidad. No busca "padres perfectos", sino asegurar el bienestar del niño y prepararte para acompañarlo. Aquí te cuento qué implica y cómo prepararte mentalmente.',
+    accTitle: 'Claves del proceso',
+    accordion: [
+      { n: 1, q: '¿Qué es la idoneidad para adoptar?',
+        a: `La idoneidad es una valoración psicosocial que evalúa tu capacidad de ofrecer un entorno estable y amoroso a un niño: tu estabilidad emocional, tus motivaciones, tu red de apoyo, tu historia y cómo entiendes la crianza. No se trata de ser perfecto, sino de estar preparado y consciente.`,
+        v: `A muchos futuros padres les angustia la idea de "ser evaluados", como si buscaran fallos. En realidad, el proceso está para acompañarte y proteger tanto a ti como al niño. Verlo como una preparación —y no como un examen— ayuda a vivirlo con más calma.` },
+      { n: 2, q: 'Revisar tus motivaciones',
+        a: `Es sano preguntarte por qué quieres adoptar. Adoptar para "llenar un vacío", "salvar a un niño" o reemplazar una pérdida no elaborada puede generar expectativas difíciles. La motivación más sostenible es el deseo genuino de acompañar y amar a un hijo por quien es.`,
+        v: `No hay motivaciones "puras" al cien por cien, y está bien. Lo importante es mirarlas con honestidad. Si adoptas cargando un duelo (por ejemplo, por infertilidad), conviene trabajarlo antes: no para descalificarte, sino para llegar más libre y disponible.` },
+      { n: 3, q: 'Prepararte emocionalmente',
+        a: `Infórmate sobre el desarrollo del apego, el trauma temprano y las necesidades particulares de los niños adoptados. Fortalece tu red de apoyo, tu relación de pareja (si la hay) y tus herramientas para regular el estrés. La flexibilidad y la paciencia serán tus mejores aliadas.`,
+        v: `Prepararte no es llegar sabiéndolo todo, sino llegar dispuesto a aprender y a pedir ayuda. Los mejores padres adoptivos no son los que nunca dudan, sino los que se permiten no saber y buscan acompañamiento cuando lo necesitan.` },
+      { n: 4, q: 'Expectativas realistas',
+        a: `Un hijo adoptado no llega "en blanco": trae su historia, su temperamento y, muchas veces, experiencias de pérdida o adversidad. El vínculo se construye con tiempo, no siempre es "amor a primera vista", y eso es normal. Ajustar las expectativas evita frustración y culpa.`,
+        v: `A veces se idealiza el momento del encuentro y luego la realidad —con sus altibajos— desconcierta. Que el amor tarde en asentarse no significa que algo esté mal: el apego se cocina a fuego lento, con presencia y constancia.` }
+    ],
+    closing: 'La valoración de idoneidad no es un obstáculo, sino un acompañamiento para empezar con bases firmes. Si quieres prepararte emocionalmente para adoptar o transitar el proceso con más calma, te acompaño. Escríbeme.'
+  },
+  'adopcion-crianza': {
+    title: 'Criar a un hijo adoptado: amor, límites y disciplina', parent: 'adopcion', tag: 'Vínculo seguro y guía amorosa',
+    intro: 'Criar a un hijo adoptado se basa en lo mismo que toda crianza sana —amor, límites y presencia— con algunos matices propios de su historia. Aquí van claves para construir un vínculo seguro y poner límites sin romper la confianza.',
+    accTitle: 'Amor, límites y disciplina',
+    accordion: [
+      { n: 1, q: 'El amor primero: construir apego seguro',
+        a: `El apego seguro se construye con presencia constante, contacto físico, respuesta a sus necesidades y previsibilidad. Con niños que vivieron pérdidas, esto lleva tiempo y repetición: cada vez que respondes con calma, su cerebro aprende "puedo confiar, aquí estoy a salvo".`,
+        v: `No te desanimes si al principio rechaza el cariño o te pone a prueba: muchas veces necesita comprobar, una y otra vez, que no te irás. Tu constancia amorosa es la medicina. El vínculo no se exige, se ofrece, y poco a poco echa raíces.` },
+      { n: 2, q: 'Los límites también son amor',
+        a: `Los límites claros y consistentes dan seguridad: un niño que sabe qué esperar se siente contenido. Poner límites no contradice el amor; lo complementa. La clave es firmeza en la norma y calidez en el trato: "te quiero, y esto no se puede".`,
+        v: `A veces, por miedo a "no ser querido" o por culpa ("ya sufrió bastante"), se evita poner límites. Pero un niño sin límites se siente inseguro, no libre. Puedes ser cálido y firme a la vez: los límites, puestos con amor, le dicen que hay un adulto que lo cuida.` },
+      { n: 3, q: 'Disciplina que enseña, no que asusta',
+        a: `La disciplina sana busca enseñar, no castigar por castigar. Con niños que vivieron adversidad, el castigo duro o el grito reactivan el miedo y dañan el vínculo. Funcionan mejor: anticipar, ofrecer opciones, validar la emoción y separar la conducta ("eso no está bien") de la persona ("tú vales").`,
+        v: `Muchas conductas difíciles no son "malcriadez", sino miedo o desregulación que el niño no sabe manejar. Cuando cambias la pregunta de "¿cómo lo corrijo?" a "¿qué necesita?", la disciplina se vuelve un puente y no un muro. Primero regúlate tú, para poder regularlo a él.` },
+      { n: 4, q: 'Hablar de su historia y sus orígenes',
+        a: `Habla de la adopción con naturalidad, desde pequeño y con la verdad adaptada a su edad. Evitar el tema o mentir genera más daño que la verdad contada con amor. Reconoce su historia y sus orígenes sin miedo: son parte de quien es, y honrarlos fortalece su identidad.`,
+        v: `A veces los padres temen que hablar de los orígenes "los aleje". Es al revés: el secreto distancia, la verdad acompañada acerca. Puedes amar a tu hijo con toda el alma y, a la vez, dar espacio a su historia. No compites con su pasado; lo integras.` },
+      { n: 5, q: 'Cuidarte a ti como madre o padre',
+        a: `Criar desde el apego, sobre todo con historias de trauma, es exigente y puede agotar. Cuida tu descanso, tu pareja, tu red y tu propio proceso emocional. No puedes transmitir seguridad si tú estás en alarma constante.`,
+        v: `Pedir ayuda no te hace peor madre o padre; te hace uno sostenible. Si sientes que reaccionas de formas que no quieres, o que el vínculo se te hace cuesta arriba, no es fracaso: es una señal para buscar acompañamiento. A ti también hay que cuidarte.` }
+    ],
+    closing: 'Criar a un hijo adoptado con amor, límites y comprensión se aprende, y no tienes que hacerlo en soledad. Si quieres herramientas para fortalecer el vínculo o manejar las conductas difíciles, te acompaño. Escríbeme.'
+  },
+  'adopcion-adoptado': {
+    title: 'Fuiste adoptado: confianza y secuelas', parent: 'adopcion', tag: 'Sanar la historia, reescribir el presente',
+    intro: 'Haber sido adoptado —y a veces haber pasado por hogares u orfanatos— deja marcas que pueden aparecer años después: dificultad para confiar, miedo al abandono, preguntas sobre la identidad. Nada de eso te define ni te condena. Aquí encontrarás comprensión y herramientas para sanar.',
+    accTitle: 'Confianza, identidad y sanación',
+    accordion: [
+      { n: 1, q: 'Aprender a confiar',
+        a: `Si de pequeño el mundo no fue un lugar seguro, tu sistema aprendió a protegerse desconfiando. Cuesta creer que alguien se quedará, o crees que si te muestras "te van a dejar". Reconstruir la confianza es posible: se hace despacio, con vínculos seguros que, con el tiempo, van desmintiendo el "todos se van".`,
+        v: `La desconfianza no es un defecto tuyo: fue una estrategia inteligente para sobrevivir cuando de verdad no era seguro confiar. Hoy, con cuidado, puedes ir enseñándole a tu sistema que ya no estás en aquel lugar. Confiar de nuevo es un acto de valentía, y se aprende.` },
+      { n: 2, q: 'El miedo al abandono',
+        a: `Es común cargar un miedo profundo a ser dejado, que puede llevarte a aferrarte, a poner a prueba a quienes amas, o a alejarte tú primero "para que no te duela después". Reconocer este patrón es el primer paso para que deje de manejar tus relaciones sin que te des cuenta.`,
+        v: `Si en tus relaciones sueles pensar "en algún momento se irá", esa voz probablemente viene de muy atrás. No es la verdad sobre tu presente; es el eco de una herida antigua. Distinguir el pasado del presente es gran parte del trabajo, y trae mucho alivio.` },
+      { n: 3, q: 'La herida de origen y la identidad',
+        a: `Preguntarte por tus orígenes, sentir un vacío o una lealtad dividida, o dudar de "quién eres" es parte legítima de tu proceso, no una traición a quienes te criaron. Puedes honrar tu historia completa: de dónde vienes y quién te acompañó. Ambas cosas caben en ti.`,
+        v: `Buscar tus raíces o hacerte preguntas no significa que no ames a tu familia. Tu identidad no es "o lo uno o lo otro": eres la suma de toda tu historia. Integrar esas partes, en vez de negarlas, es lo que te devuelve la sensación de ser uno solo, entero.` },
+      { n: 4, q: 'Las secuelas de hogares u orfanatos',
+        a: `Crecer en instituciones u hogares puede dejar huellas: hipervigilancia, dificultad con la cercanía, autoexigencia, conductas de autoprotección, o dificultad para pedir y recibir. No son "defectos de carácter": son adaptaciones a un entorno donde faltó el cuidado constante. Y las adaptaciones se pueden transformar.`,
+        v: `Lo que en aquel entorno te ayudó a sobrevivir, hoy quizá te pesa en tus vínculos. Reconocerlo con compasión —"esto tiene sentido por lo que viví"— quita culpa y abre la puerta al cambio. No estás roto; estás moldeado por tu historia, y esa forma se puede seguir esculpiendo.` },
+      { n: 5, q: 'Sanar es posible',
+        a: `Las heridas tempranas se pueden trabajar y sanar, a cualquier edad. La terapia —incluyendo enfoques como el EMDR para el trauma— ayuda a reprocesar lo vivido, calmar el miedo al abandono y construir relaciones más seguras. No tienes que cargar solo con lo que empezó cuando eras pequeño.`,
+        v: `Que la herida sea antigua no significa que sea permanente. He acompañado a personas adoptadas a soltar el peso del "no era suficiente" y a construir vínculos donde por fin se sienten a salvo. Tu historia empezó sin que pudieras elegir; tu sanación, hoy, sí puedes elegirla. Escríbeme.` }
+    ],
+    closing: 'Lo que viviste de niño no fue tu culpa y no tiene por qué marcar todo tu futuro. Se puede aprender a confiar, a quedarse y a sentirse en casa. Si quieres trabajar tu historia en un espacio seguro, te acompaño. Escríbeme.'
   },
 
   sensibles: {
