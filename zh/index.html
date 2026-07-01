@@ -181,6 +181,7 @@
       <!-- wellness category teasers -->
       <div class="r-grid6" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:12px; margin-top:70px;">
         <div data-yt="crisis" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(212,160,23,0.12); border:1px solid rgba(212,160,23,0.5); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.2); border-color:#D4A017;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">危机干预</div><div style="font-size:10.5px; color:rgba(212,160,23,0.85); letter-spacing:0.08em;">心理急救</div></div>
+        <div data-yt="ideacion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(212,160,23,0.12); border:1px solid rgba(212,160,23,0.5); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.2); border-color:#D4A017;"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自杀念头</div><div style="font-size:10.5px; color:rgba(212,160,23,0.85); letter-spacing:0.08em;">求助能救命</div></div>
         <div data-yt="emdr" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">EMDR</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="ansiedad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">焦虑</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="autoestima" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自尊</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
@@ -1079,7 +1080,17 @@ const TOPICS = {
   'duelo-fallecimiento': {
     title: `因亲人离世而哀伤`, parent: 'duelo', tag: `当死亡将我们分开`,
     intro: `失去所爱之人，会留下无人能填补的空缺。哀伤是爱的代价，而为逝者哭泣也是一种致敬。允许自己去感受，按你自己的节奏。选择你正在告别的人。`,
-    children: ['duelo-hijo', 'duelo-conyuge', 'duelo-amigo', 'duelo-embarazo', 'duelo-mascota']
+    children: ['duelo-hijo', 'duelo-conyuge', 'duelo-amigo', 'duelo-embarazo', 'duelo-mascota'],
+    accTitle: `依据死亡发生的方式`,
+    accordion: [
+      { n: 1, q: `因疾病`, a: `当死亡在一场疾病之后到来，有时来得及道别，有时来不及。你可能因为苦难终于结束而感到宽慰，同时又因这份宽慰而愧疚：两者都是正常的。如果你陪伴过整个过程，你可能还背负着照顾者的耗竭，以及最后那段日子里艰难的记忆。`, v: `"预期性哀伤"——在亲人还在世时就开始告别——是真实而令人疲惫的，它并不代表你冷血。感到宽慰不代表你不爱；恰恰相反，那代表你爱得太深，深到他的痛也让你痛。渐渐地，最后那些艰难的记忆，会让位给美好的记忆。` },
+      { n: 2, q: `因意外事故`, a: `意外的死亡是突然的，没有预兆，也来不及道别。感到震惊、一遍遍重演当时的经过、不断寻找解释（"要是我当时……"）、觉得世界不再是一个安全的地方——这些都很正常。缺少一句告别，让这种哀伤格外艰难。`, v: `头脑之所以去找罪魁祸首或"要是当初"，是因为它需要去理解那本无意义之事；这是它试图重新夺回掌控的方式。但一场意外，就其定义而言，本就无法预料。放下那句"要是当初"，是这种哀伤中最艰难、也最有疗愈力的功课之一。` },
+      { n: 3, q: `因自杀`, a: `因自杀而生的哀伤，往往夹带着无解的疑问、愧疚（"我本来能阻止吗？"）、愤怒，有时还有来自污名的羞耻。有一点很重要，要知道：一场自杀的责任，不落在留下来的人身上。不是你造成的，你也没有能力完全阻止它。这种哀伤需要特别的照护。`, v: `对因自杀而失去至亲的人，我坚定而温柔地说：那不是你的错。一颗处在极度痛苦中的心，会做出无法反映"你对他有多重要"的决定。让不评判你的人围绕在你身边，并寻求陪伴；在各种哀伤中，这是专业支持最能帮上忙的一种。（如果你自己有自杀念头，请看"自杀念头"那一节。）` },
+      { n: 4, q: `因谋杀`, a: `当死亡出自他人之手，痛苦之上还叠加着愤怒、不公、恐惧，以及往往还有法律与媒体过程的重压，它们一次次撕开伤口。这是一种创伤性的哀伤：除了失去，还要疗愈暴力所带来的创伤。`, v: `愤怒与对正义的渴望，是人之常情、正当的反应；你不必为了疗愈而"原谅"，也不必在别人给你划定的时间里做到。最好把两个过程分开来看：法律的（寻求正义）与情感的（照护你的伤口）。两者都重要，但你的疗愈，不能等到判决之后。` },
+      { n: 5, q: `因自然灾害`, a: `在地震、洪水或其他灾难中失去亲人，会把哀伤与集体创伤交织在一起：很多时候，家园、安全感与日常也一同失去，全都在同一时刻。可能会有幸存者的愧疚，以及在仍为最基本的生存而挣扎时、难以哀悼的困境。`, v: `在你还在寻找水、避难所或消息时，却不得不去哀悼一个人——这非常艰难。先顾紧急的事——你和家人的安全；哀伤之后自会有它的空间，如此也无妨。幸存者的愧疚很常见，却并不公平：你活着，丝毫不曾夺走离去之人的任何东西。` },
+      { n: 6, q: `因自然原因`, a: `因年老或自然原因而离世，尽管是"意料之中"，痛却分毫不减。有时周围的人会淡化这份痛（"都那么大年纪了""也算长寿了"），这可能让你觉得自己没有资格哭。你有：失去一段长久的联结，会留下巨大的空缺。`, v: `一场死亡即便来得"合乎天年"，也不会因此少一分痛。失去一位与你共度了一生的父亲、母亲或祖辈，会把你的整个世界重新打乱。别让任何人来丈量你的哀伤：爱，无论到了什么年纪，都不轻易说再见。` }
+    ],
+    closing: `无论它以何种方式发生，你的哀伤都是正当的，都值得被陪伴。你不必独自穿过它，也不必在被规定的时间里"走出来"。如果这份痛让你难以承受，给我留言：我们可以一起走过。`
   },
   'duelo-perdidas': {
     title: `重大的失去（与死亡无关）`, parent: 'duelo', tag: `很少被命名的哀伤`,
@@ -1587,6 +1598,23 @@ const TOPICS = {
     closing: `这十项权利，不是让你凌驾于他人之上的许可，而是提醒你：你值得你所给予的那份同样的尊重。练习自我主张是一条路，而非一场考试：会学习，会跌倒，再重新尝试。如果你愿意在一个安全的空间里梳理你的自我主张与界限，我愿意陪伴你。给我留言。`
   },
 
+  ideacion: {
+    title: `自杀念头`, tag: `你并不孤单：求助能拯救生命`,
+    intro: `自杀意念，是关于想要死去、想要停止存在的念头。有这样的念头，并不代表你软弱，也不代表你一定会付诸行动：它几乎总是一个信号——一份变得难以承受的痛苦，以及一颗绝望地渴望那痛苦停止的心。而那份痛苦，是可以在帮助下被减轻的。这里有供你自己、或用来陪伴他人的工具与行动步骤。`,
+    accTitle: `工具与行动步骤`,
+    accordion: [
+      { n: 1, q: `什么是自杀意念？`, a: `这是一些关于想要死去的念头，从一闪而过的想法（"要是我不再醒来就好了"）到具体的计划都算。有这些念头，并不代表你软弱，也不代表你一定会付诸行动：它几乎总是一个信号——一份变得难以承受的痛苦，以及一颗绝望地渴望那痛苦停止的心。而那份痛苦，是可以被减轻的。`, v: `我想非常清楚地告诉你：如果你有这些念头，你不是疯了，也不是坏人。你正承受着巨大的痛苦。你身上去寻找这份信息的那一部分，正是那个想以另一种方式、以更少的痛苦活下去的你。让我们一起照顾那一部分。你并不孤单。` },
+      { n: 2, q: `如果你此刻正有这些念头`, a: `即时步骤：1) 不要独自一人：告诉一个你信任的人，或拨打危机热线（上方会显示紧急号码）。2) 远离可用来伤害自己的东西（药物、武器），或请人代为保管。3) 推迟：向自己承诺在接下来的24小时内什么都不做；冲动会退去。4) 呼吸，把身体锚定在当下。5) 记住：念头不是命令，而这份痛苦——尽管此刻看来不像——是可以改变的。`, v: `如果你此刻正处在那个点上，请陪我一会儿，呼吸。你不必今天就解决整个人生；你只需穿过这一刻，然后是下一刻。当痛苦告诉你"没有出路"时，它在对你撒谎。请现在就告诉一个人。你的生命很重要，即使此刻你感觉不到。` },
+      { n: 3, q: `制定一份安全计划`, a: `安全计划要在危机来临之前、以书面形式准备好。它包括：你个人的预警信号；让自己平静下来的方法（音乐、散步、呼吸）；能分散你注意力的人和地方；可以打给谁（联系人与危机热线）；如何让你的环境更安全（移走危险物品）；以及你活下去的理由。把它存在手机里随手可取，需要时就拿出来读。`, v: `在治疗中我们会一起制定，但你今天就可以开始。趁你比较稳定时把它写下来，让"平静的你"去照顾"危机中的你"。这就像给自己留下一封封爱的字条和艰难时刻的说明书。这份计划，真的可以救你。` },
+      { n: 4, q: `继续下去的理由与支持网络`, a: `列一张你活下去的理由清单，无论看起来多微小：某些人、宠物、目标、地方、还想看到的事。找出你的支持网络（2到3个你能求助的人），并保存你所在国家的求助热线。你不必先感到有希望，才去求助；迈出这一步就够了。`, v: `有时候，多留一天的理由，简单得就像早晨的一杯咖啡，或等着你的那只狗。这就够了。你不需要什么宏大、史诗般的理由；你只需要一个，就在今天。而明天，再有一个。活下去的愿望，就是这样一点一点重新长出来的。` },
+      { n: 5, q: `如何帮助有自杀念头的人`, a: `帮助的步骤：1) 直接询问："你在想结束自己的生命吗？"询问并不会"植入"这个念头；它反而带来释然，打开一扇门。2) 不加评判地倾听，不轻描淡写，也不说教。3) 若风险很高，不要让他独自一人。4) 帮忙把危险物品移开。5) 把他与专业帮助或危机热线连接起来，并陪他一起迈出那一步。任何信号都要认真对待。`, v: `很多人因为怕"把念头灌进去"或说错话而闭口不言。带着关爱去询问，并不会推谁一把：恰恰相反，它让对方知道，他可以开口。你不必拥有答案；只需在那里、倾听，并帮他获得专业帮助。你的存在，可能就是关键。` },
+      { n: 6, q: `他人身上的预警信号`, a: `如果有人：谈到想死或觉得自己是负担；在寻找伤害自己的方式；开始道别或把东西送人；把自己孤立起来；情绪剧烈起伏（包括在极度痛苦后突然的平静）；酒精或药物用量增加；或说"没有我，一切都会更好"——请留意。没有任何一个信号是"为了博关注"：每一个都值得被认真对待。`, v: `有时最危险的信号，是突然的平静，因为它可能意味着那个人"已经决定了"。相信你的直觉：如果你为某人担心，就去问他。宁可问错，也别因害怕而沉默。绝不要替一个想去死的人保守这个秘密。` },
+      { n: 7, q: `不该做的事（迷思）`, a: `不要轻描淡写（"没那么严重""你什么都有，该知足了"）。不要评判或指责（"这是罪过""这是自私"）。不要激将或挑衅。若有生命危险，不要答应保守秘密：安全第一。不要相信"会说的人不会去做"这个迷思：许多人在事前是有征兆的。并且记住：询问自杀，并不会引发自杀。`, v: `害怕说"错话"让我们沉默，而沉默才是最危险的。你不需要完美的句子："我在这里，你对我很重要，我不想让你独自扛着这件事"就足够了。真正疗愈的，不是完美的建议，而是感到被陪伴，并被小心地引向帮助。` },
+      { n: 8, q: `在一次危机或一次尝试之后`, a: `度过眼前的危机之后，接下来的功课是守住安全，并处理底层的痛苦。让安全计划持续生效，移走危险物品，照顾睡眠，避开酒精。去做专业的随访：自杀意念往往是某种可治疗之物（抑郁、焦虑、创伤）的症状。康复是有可能的，许许多多曾经历这一切的人，如今活得平静。`, v: `你今天感到撑不下去，并不意味着永远会如此。自杀意念，在治疗与陪伴之下，会好转。我一次又一次亲眼见证：曾站在边缘的人，如今为自己还留在这里而庆幸。给自己一个机会，去抵达那个"之后"。给我留言；如果你此刻正处于危险中，请立刻拨打紧急电话。` }
+    ],
+    closing: `如果你是为自己读到这里，你的痛苦是真实的，也是可以被治疗的：你不必独自背负。如果你是为你所爱的人，你的这份牵挂，也许能救他一命。求助不是认输：它是最勇敢的行动。我会以这些历程应得的全部珍重，陪伴你走过。而如果你的生命，或另一个人的生命，正面临即时危险，请立刻联系你所在国家的紧急服务。`
+  },
+
   crisis: {
     title: `危机干预`, tag: `心理急救与情绪支撑`,
     intro: `危机是一种暂时的震荡状态，当某个事件——地震、事故、丧失、紧急情况——超出了我们惯常的应对方式时便会出现。在那些时刻你所感受到的（恐惧、僵住、哭泣、混乱）都是对一个不正常处境的正常反应。这些心理急救工具能帮你稳住自己、调节自己，在最初的时刻陪伴他人，并知道何时该求助。点开每一项。`,
@@ -1911,7 +1939,7 @@ class Component extends DCLogic {
     const backLabel = (d.parent && TOPICS[d.parent]) ? ('← 返回 ' + TOPICS[d.parent].title) : (this._topicOrigin === 'wellness') ? '← 返回身心健康中心' : (d.backName ? ('← 返回 ' + d.backName) : '← 返回身心健康中心');
     let h = '';
     h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
-    if (key.indexOf('violencia') === 0 || key.indexOf('crisis') === 0) h += this._emergHTML();
+    if (key.indexOf('violencia') === 0 || key.indexOf('crisis') === 0 || key.indexOf('ideacion') === 0) h += this._emergHTML();
     h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">身心健康中心</div>';
     h += '<h2 style="font-family:Spectral,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:12px 0 6px;color:#FAF8F5;">' + d.title + '</h2>';
     if (d.tag) h += '<p style="font-family:Spectral,serif;font-style:italic;font-size:19px;color:#D4A017;margin-bottom:20px;">' + d.tag + '</p>';
