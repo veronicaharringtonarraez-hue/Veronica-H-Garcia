@@ -204,6 +204,7 @@
         <div data-yt="tdah" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">ADHD（注意欠如・多動）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
         <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">ASD（自閉スペクトラム）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
         <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; grid-column:1/-1; margin-top:22px; margin-bottom:2px; display:flex; align-items:center; gap:12px;"><span style="font-family:'Manrope',sans-serif; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.9); font-weight:600; white-space:nowrap;">感情との向き合い</span><span style="flex:1; height:1px; background:rgba(212,160,23,0.22);"></span></div>
+        <div data-yt="emociones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">感情</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
         <div data-yt="estres" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">ストレスとその段階</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
         <div data-yt="frustracion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">フラストレーションとコントロール</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
         <div data-yt="culpa" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">罪悪感</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">ツールを見る</div></div>
@@ -1493,6 +1494,54 @@ const TOPICS = {
     ],
     closing: `自分の強みを見つけ、楽しんで夢中になれる道を選びたいなら、道具と寄り添いをもって一緒に取り組めます。メッセージをください。`
   },
+  emociones: {
+    title: `感情と、その向き合い方`, tag: `感じてよい：大切なのは、どう表すか`,
+    intro: `すべての感情は正当で、必要なものです。「悪い」感情はありません。どれにも働きがあり、メッセージを運んでいます。感じることはよいこと。気をつけたいのは、どう、そしてどれだけ表すか——表現を見合った大きさにすることであって、感情を抑え込むことではありません。まず六つの基本(一次)感情から始め、次に、それらの組み合わせやわたしたちの歴史から生まれる二次感情へ進みます。それぞれについて、その働きと、低いとき・ちょうどよいとき・あふれるときの姿を見ていきます。`,
+    accTitle: `それぞれの感情と、その強さ`,
+    accordion: [
+      { n: 1, q: `喜び(一次)`,
+        a: `<b>その働き：</b> 自分によいものと結びつけ、繰り返し、分かち合うよう促します。<br><b>低いとき：</b> 楽しむのが難しく、すべてが灰色に感じられます。疲れ果てや悲しみのサインかもしれません。<br><b>ちょうどよいとき：</b> よいものを味わい、祝い、健やかなエネルギーを広げます。<br><b>高すぎるとき：</b> 危険を無視したり人を不快にさせたりする高揚、あるいは痛みを覆い隠す作り笑い。`,
+        v: `喜ぶことは浅いことではなく、健康です。ただ、感じるべきものを避けるために高揚を使わないように。` },
+      { n: 2, q: `悲しみ(一次)`,
+        a: `<b>その働き：</b> 立ち止まり、喪失を受けとめ、体を整えるのを助けます。いたわりと近さも求めています。<br><b>低いとき：</b> 悲しむことを自分に許さないと、大切なものから切り離され、喪失の作業がふさがれます。<br><b>ちょうどよいとき：</b> それを感じ、泣き、ペースを落とし、支えを求めることを自分に許します。<br><b>高すぎるとき：</b> 居座り、すべてを侵し、去らない悲しみ。うつになり、助けが必要になることもあります。`,
+        v: `泣くことは調整し、解き放ちます。悲しみは弱さではなく、体が失ったものを処理する仕方です。` },
+      { n: 3, q: `恐れ(一次)`,
+        a: `<b>その働き：</b> わたしたちを守ります。脅威を察知し、体を守る準備を整えます。<br><b>低いとき：</b> 恐れがないと、本当の危険に無防備にさらされます。<br><b>ちょうどよいとき：</b> あなたに警告し、理にかなった用心をする助けになります。<br><b>高すぎるとき：</b> 麻痺させるパニックや不安になり、危険のないところに危険を見ます。`,
+        v: `恐れは臆病ではなく、あなたの守りのしくみです。鍵は、それに耳を傾けつつ、人生を支配させないことです。` },
+      { n: 4, q: `怒り(一次)`,
+        a: `<b>その働き：</b> 正しいことを守り、境界を示し、不正の前で、あるいは大切な何かが侵されたときに、わたしたちを動かします。<br><b>低いとき：</b> 決して怒らないでいると、我慢しすぎて、価値や境界を守らなくなることがあります。<br><b>ちょうどよいとき：</b> しっかりと境界を定め、敬意をもって正しさを守ることを可能にします。<br><b>高すぎるとき：</b> 叫び、攻撃、傷つけへと爆発し、守るのをやめて傷つけ始めます。`,
+        v: `怒ってよいのです。正しいことを守り、正義を行い、価値を守ることを可能にします。気をつけるのは表し方であって、感情そのものではありません。` },
+      { n: 5, q: `嫌悪／拒否(一次)`,
+        a: `<b>その働き：</b> 害しうるもの(身体的にも道徳的にも)から守り、望まないものから遠ざかるのを助けます。<br><b>低いとき：</b> 拒否がないと、自分を害するものや価値に反するものを許してしまいます。<br><b>ちょうどよいとき：</b> 傷つけるものから距離を取り、境界を大切にする助けになります。<br><b>高すぎるとき：</b> 軽蔑、偏見、人や経験への過度の拒否になります。`,
+        v: `健やかな拒否は守ってくれます。それが軽蔑へ硬くなったら、正直に見直す価値があります。` },
+      { n: 6, q: `驚き(一次)`,
+        a: `<b>その働き：</b> 予期せぬことに立ち止まり、注意を向けさせ、素早く適応させます。<br><b>低いとき：</b> 驚きに心を閉じると、好奇心と驚嘆する力が薄れます。<br><b>ちょうどよいとき：</b> 新しいもの、学び、変化への調整へと開いてくれます。<br><b>高すぎるとき：</b> 絶えず驚かされることは消耗させ、落ち着いて反応しにくくします。`,
+        v: `驚かされることは好奇心を生き生きと保ちます。ただ、絶えざる警戒の中に生きないように。` },
+      { n: 7, q: `愛／いつくしみ(二次)`,
+        a: `<b>その働き：</b> わたしたちを結び、他者を、そして自分を、いたわり支えさせます。<br><b>低いとき：</b> いつくしみに心を閉じると、孤立し、絆が冷えます。<br><b>ちょうどよいとき：</b> 自由にいつくしみを与え、受け取り、自分の境界も大切にします。<br><b>高すぎるとき：</b> 依存、息を詰まらせる執着、あるいは自分を失うまで与え尽くすことになります。`,
+        v: `愛することは健やかで人間的です。いたわりは、相手を支えるために自分を失わないことにあります。` },
+      { n: 8, q: `共感(二次)`,
+        a: `<b>その働き：</b> 他者とともに感じ、理解し、いたわりをもって応えることを可能にします。<br><b>低いとき：</b> 共感が少なすぎると、他者に不快を生み、絆に距離が生まれます。<br><b>ちょうどよいとき：</b> 相手の感じることとつながりつつ、自分を感じることをやめません。<br><b>高すぎるとき：</b> 共感しすぎると、他者の痛みを背負い、奉仕の中で自分を失います。`,
+        v: `共感はよいこと。共感しすぎるとあなたを空にします。境界を大切にすることが、燃え尽きずに助け続けることを可能にします。` },
+      { n: 9, q: `罪悪感(二次)`,
+        a: `<b>その働き：</b> 価値に反して行動したとき知らせ、修復するよう促します。<br><b>低いとき：</b> 決して罪悪感を感じないと、害を認めて修復するのが難しくなります。<br><b>ちょうどよいとき：</b> 謝り、修復し、行動を調える助けになります。<br><b>高すぎるとき：</b> すべてを、あなたのものでないことまで、果てしなく罰する罪悪感。`,
+        v: `健やかな罪悪感は修復し、毒のある罪悪感はただ罰します。見分けることが、あなたのものでない重みから解き放ちます。` },
+      { n: 10, q: `恥(二次)`,
+        a: `<b>その働き：</b> どう自分を見せるかに気を配り、共同体の中で生きる助けになります。<br><b>低いとき：</b> 少しの慎みがないと、自分の行いの影響を見過ごすことがあります。<br><b>ちょうどよいとき：</b> なりたい自分と一致して、心をこめて行動する助けになります。<br><b>高すぎるとき：</b> 「わたしには何か問題がある」と感じ、隠れ、自分を見せなくなることになります。`,
+        v: `時に恥を感じるのは人間的です。けれど自分自身を恥じて生きるのは違います。あなたは過ちを超えて価値があります。` },
+      { n: 11, q: `妬み(二次)`,
+        a: `<b>その働き：</b> 望むもの、大切にするものを示し、成長へと押し出しうるものです。<br><b>低いとき：</b> それを否定すると、本当に何を望んでいるか見えなくなります。<br><b>ちょうどよいとき：</b> それを、自分の目標への情報とひらめきに変えます。<br><b>高すぎるとき：</b> 恨み、苦くする比較、あるいは相手の不幸を願うことになります。`,
+        v: `妬みは、正直に見つめれば、あなたの望みを示します。問題は感じることではなく、それに毒させることです。` },
+      { n: 12, q: `誇り(二次)`,
+        a: `<b>その働き：</b> あなたの価値と成し遂げを認め、尊厳を支えます。<br><b>低いとき：</b> 健やかな誇りがないと、自分の価値や成し遂げを認めにくくなります。<br><b>ちょうどよいとき：</b> 自分を大切にし、境界を定め、自分を尊いと感じることを可能にします。<br><b>高すぎるとき：</b> 高慢になります。自分を優れていると思い込み、過ちを認めず、助けを求めません。`,
+        v: `自分を誇るのは健やかで、高慢は孤立させます。違いは、誰も貶めずにあなたを高めるかどうかです。` },
+      { n: 13, q: `感謝(二次)`,
+        a: `<b>その働き：</b> 持っているよいものと結び、絆を強めます。<br><b>低いとき：</b> よいものを認めないと、不平と欠けの感覚の中に留まります。<br><b>ちょうどよいとき：</b> 欠けているものを否定せずに、あるものに感謝します。安らぎを養います。<br><b>高すぎるとき：</b> 「大丈夫でいる」ことを強い、痛みを黙らせる、強いられた感謝。`,
+        v: `感謝は癒します。ただし、感じる必要のあるもの、変える必要のあるものを覆い隠すために使わない限りは。` }
+    ],
+    closing: `感情を、ちょうどよい大きさで感じ、表すことを学ぶのは、心の安らぎの土台の一つです。ある感情に押しつぶされそうなとき、詰まってしまうとき、あるいは扱えないと感じるとき、あなたは一人でそれをする必要はありません。ご連絡ください。`
+  },
+
   estres: {
     title: `ストレスとそのレベル`, tag: `少なすぎず多すぎず——あなたの最適点を`,
     intro: `ストレスはあなたの敵ではありません。人生が求めるものに、あなたの体が応えるためのエネルギーです。鍵は「量」にあります。曲線を思い浮かべてください——ストレスが少なすぎると動き出せず、ちょうどよい点では私たちを後押しして力を発揮させ、多すぎると、動かすどころか私たちを麻痺させます。自分が今どのレベルにいるかを見分けることが、自分をいたわる第一歩です。それぞれのレベルを開いて、自分を重ねてみてください。`,

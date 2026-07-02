@@ -204,6 +204,7 @@
         <div data-yt="tdah" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">多动症（ADHD）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="tea" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">自闭症谱系（ASD）</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; grid-column:1/-1; margin-top:22px; margin-bottom:2px; display:flex; align-items:center; gap:12px;"><span style="font-family:'Manrope',sans-serif; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.9); font-weight:600; white-space:nowrap;">情绪管理</span><span style="flex:1; height:1px; background:rgba(212,160,23,0.22);"></span></div>
+        <div data-yt="emociones" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">情绪</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="estres" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">压力及其层级</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="frustracion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">挫折感与掌控</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
         <div data-yt="culpa" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">愧疚</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">查看工具</div></div>
@@ -1493,6 +1494,54 @@ const TOPICS = {
     ],
     closing: `如果你想发现自己的长处、选择一条你能享受并乐在其中的路，我们可以用工具与陪伴一起来做。给我写信。`
   },
+  emociones: {
+    title: `情绪与恰当的管理`, tag: `感受没有错：我们要照看的是表达的方式`,
+    intro: `所有情绪都是正当而必要的：没有"坏"情绪。每一种都有其功能，都带来一个讯息。感受它们没有错；需要照看的是我们如何、以及以多大的量去表达它们——去掂量表达的方式，而非压抑情绪本身。我们先从六种基本（原生）情绪开始，再谈衍生情绪，它们由这些基本情绪的组合和我们的经历而生。对每一种，你都会看到它的功能，以及它在低水平、在最佳状态、以及在溢出时的样子。`,
+    accTitle: `每一种情绪及其水平`,
+    accordion: [
+      { n: 1, q: `喜悦（原生）`,
+        a: `<b>它的功能：</b> 它把我们与对自己有益的事物相连，推动我们去重复、去分享。<br><b>处于低水平时：</b> 很难享受，一切都灰蒙蒙的；这可能是耗竭或悲伤的信号。<br><b>处于最佳水平时：</b> 你享受美好、庆祝，并散发出健康的能量。<br><b>处于高水平时：</b> 无视风险、或让他人不适的亢奋，或用来掩盖痛处的假装的快乐。`,
+        v: `让自己喜悦并不肤浅：那是健康。只要留意，别用亢奋去逃避你需要去感受的东西。` },
+      { n: 2, q: `悲伤（原生）`,
+        a: `<b>它的功能：</b> 它帮我们停下、消化一份失去，并调节身体；它也在请求被照顾与靠近。<br><b>处于低水平时：</b> 不允许自己悲伤，会让你与重要之事失去连接，并卡住哀伤。<br><b>处于最佳水平时：</b> 你允许自己去感受它、哭泣、放慢脚步，并寻求支持。<br><b>处于高水平时：</b> 一种驻扎下来、吞没一切、久久不退的悲伤；它可能变成抑郁，需要帮助。`,
+        v: `哭泣能调节、能释放。悲伤不是软弱；那是身体处理所失之物的方式。` },
+      { n: 3, q: `恐惧（原生）`,
+        a: `<b>它的功能：</b> 它保护我们：侦测威胁，并让身体做好自我照看的准备。<br><b>处于低水平时：</b> 没有恐惧，我们会毫无防备地暴露于真实的风险中。<br><b>处于最佳水平时：</b> 它向你示警，帮你采取合理的防范。<br><b>处于高水平时：</b> 它变成使人瘫痪的惊恐或焦虑，在没有危险处也看见危险。`,
+        v: `恐惧不是懦弱：那是你的照看系统。关键是听它说话，却不让它统治你的生活。` },
+      { n: 4, q: `愤怒（原生）`,
+        a: `<b>它的功能：</b> 它捍卫正确、划定界限，并在面对不公、或某样重要之物被侵犯时，动员我们。<br><b>处于低水平时：</b> 从不愤怒，可能让你忍受过头，不去捍卫你的价值和你的界限。<br><b>处于最佳水平时：</b> 它让你坚定地划界，带着尊重去捍卫公正。<br><b>处于高水平时：</b> 它爆发为吼叫、攻击或伤害；不再保护，反而开始伤人。`,
+        v: `愤怒没有错：它让你捍卫正确、伸张正义、守护你的价值。要照看的是表达它的方式，而非情绪本身。` },
+      { n: 5, q: `厌恶／排斥（原生）`,
+        a: `<b>它的功能：</b> 它保护我们免于可能的伤害（身体的或道德的），帮我们远离不想要的东西。<br><b>处于低水平时：</b> 没有排斥，我们会容忍伤害自己、或违背自己价值的事。<br><b>处于最佳水平时：</b> 它帮你与伤害你的东西保持距离，并守护你的界限。<br><b>处于高水平时：</b> 它变成轻蔑、偏见，或对人或经历过度的排斥。`,
+        v: `健康的排斥保护你；当它硬化成轻蔑，值得诚实地重新审视。` },
+      { n: 6, q: `惊讶（原生）`,
+        a: `<b>它的功能：</b> 它让我们停下、留意意料之外，以便迅速适应。<br><b>处于低水平时：</b> 对惊讶关上门，会削弱你的好奇与惊叹的能力。<br><b>处于最佳水平时：</b> 它向新事物、向学习、向适应变化打开你。<br><b>处于高水平时：</b> 持续的惊吓令人耗竭，也让人难以平静地反应。`,
+        v: `让自己被惊讶，能让好奇保持鲜活。只要留意，别活在长久的警戒里。` },
+      { n: 7, q: `爱／情感（衍生）`,
+        a: `<b>它的功能：</b> 它把我们相连，让我们去照顾、去托住他人，也托住自己。<br><b>处于低水平时：</b> 对情感关上门，会孤立自己，让关系变冷。<br><b>处于最佳水平时：</b> 你自由地给予和接收关爱，同时也照看自己的界限。<br><b>处于高水平时：</b> 它变成依赖、令人窒息的黏附，或付出一切直到失去自己。`,
+        v: `爱是健康而人性的。照看之处，在于不为托住对方而失去自己。` },
+      { n: 8, q: `共情（衍生）`,
+        a: `<b>它的功能：</b> 它让我们与他人一同感受、理解他人，并带着关怀去回应。<br><b>处于低水平时：</b> 共情太少，会让他人不适，让关系变得疏远。<br><b>处于最佳水平时：</b> 你与他人所感相连，却不停止感受自己。<br><b>处于高水平时：</b> 共情太多，会让你背起他人的痛，在服务里迷失自己。`,
+        v: `共情没有错；共情太多会把你掏空。照看你的界限，正是让你能继续帮助而不耗竭。` },
+      { n: 9, q: `内疚（衍生）`,
+        a: `<b>它的功能：</b> 它在我们违背自己价值时提醒我们，并邀我们去修补。<br><b>处于低水平时：</b> 从不内疚，会让人难以认清伤害并加以修补。<br><b>处于最佳水平时：</b> 它帮你道歉、修补，并调整你的行为。<br><b>处于高水平时：</b> 一种无休止地为一切、甚至为不属于你的事而惩罚你的内疚。`,
+        v: `健康的内疚去修补；有毒的内疚只惩罚。分清两者，能让你卸下那份本不属于你的重量。` },
+      { n: 10, q: `羞耻（衍生）`,
+        a: `<b>它的功能：</b> 它帮我们照看自己如何示人，并在群体中生活。<br><b>处于低水平时：</b> 没有一点羞耻感，我们可能忽视自己所为的影响。<br><b>处于最佳水平时：</b> 它帮你带着分寸行事，与你想成为的人保持一致。<br><b>处于高水平时：</b> 它变成觉得“我身上有什么不对”，把自己藏起来、不敢示人。`,
+        v: `偶尔感到羞耻是人之常情；但活在对自己的羞耻里，则不是。你的价值，远在你的错误之上。` },
+      { n: 11, q: `嫉妒（衍生）`,
+        a: `<b>它的功能：</b> 它向我们显示我们渴望或看重的东西，并可能推动我们成长。<br><b>处于低水平时：</b> 否认它，会让你看不清自己真正渴望什么。<br><b>处于最佳水平时：</b> 你把它化为信息，化为对自己目标的激励。<br><b>处于高水平时：</b> 它变成怨恨、令人苦涩的比较，或希望对方过得不好。`,
+        v: `嫉妒，若诚实地去看，会向你显示你的渴望。问题不在于感到它，而在于任它下毒。` },
+      { n: 12, q: `自豪（衍生）`,
+        a: `<b>它的功能：</b> 它认可你的价值与成就，托起你的尊严。<br><b>处于低水平时：</b> 没有健康的自豪，你会难以认可自己的价值和成就。<br><b>处于最佳水平时：</b> 它让你看重自己、划定界限、感到自己有尊严。<br><b>处于高水平时：</b> 它变成傲慢：自以为高人一等，不认错，也不求助。`,
+        v: `为自己自豪是健康的；傲慢让人孤立。区别在于，它是否在不贬低任何人的前提下抬升你。` },
+      { n: 13, q: `感恩（衍生）`,
+        a: `<b>它的功能：</b> 它把我们与所拥有的美好相连，并强化关系。<br><b>处于低水平时：</b> 不去认可美好，会让你停留在抱怨与匮乏感里。<br><b>处于最佳水平时：</b> 你感激所拥有的，而不否认所缺失的；它滋养安适。<br><b>处于高水平时：</b> 一种被迫的感恩，逼你“要好好的”，并对痛处闭口不言。`,
+        v: `感恩能疗愈，只要它不被用来掩盖你需要去感受或改变的东西。` }
+    ],
+    closing: `学会以恰当的分寸去感受和表达情绪，是身心安适的基础之一。如果某种情绪让你不堪重负、卡住不去，或你感到自己无法驾驭它，你不必独自面对。给我留言。`
+  },
+
   estres: {
     title: `压力及其层级`, tag: `不多不少：找到你的最佳点`,
     intro: `压力并不是你的敌人：它是身体回应生活要求时所用的能量。关键在于剂量。想象一条曲线：压力太少，我们无法启动；恰到好处时，它推动我们、让我们发挥；而当它过多时，非但不能推动我们，反而使我们瘫痪。认清你处在哪个层级，是照顾自己的第一步。点开每个层级，对照看看你在哪里。`,
