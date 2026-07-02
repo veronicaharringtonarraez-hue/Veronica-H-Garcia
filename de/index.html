@@ -1020,19 +1020,33 @@ const TOPICS = {
     closing: `Wenn du Angst, Rückzug oder große Veränderungen bemerkst, macht es einen Unterschied, rechtzeitig Unterstützung zu suchen. Schreib mir.`
   },
   'padres-mayores': {
-    title: `Alternde Eltern`, parent: 'padres', tag: `Für die sorgen, die einst für uns sorgten`,
-    intro: `Alternde Eltern zu begleiten weckt viele Gefühle: Liebe, Erschöpfung, Schuld, einen Rollenwechsel. Mit Liebe zu pflegen schließt ein, auch für dich selbst zu sorgen.`,
-    blocks: [
-      { h: `Sie begleiten`, list: [
-        `Respektiere im Rahmen des Möglichen ihre Eigenständigkeit und Entscheidungen; älter zu werden heißt nicht, die Würde zu verlieren.`,
-        `Hab mehr Geduld mit dem neuen Rhythmus: Oft wollen sie einfach gehört werden.`,
-        `Sprich Wichtiges früh, ruhig und sanft an.` ] },
-      { h: `Für dich selbst sorgen`, list: [
-        `Such und teile Hilfe: Fürsorge sollte nicht auf einer Person allein lasten.`,
-        `Setze Grenzen ohne Schuld; dich auszubrennen hilft niemandem.`,
-        `Erlaube dir, um diese Veränderungen zu trauern, auch wenn sie noch da sind.` ] }
+    title: `Alte Eltern`, parent: 'padres', tag: `Für die sorgen, die für uns sorgten`,
+    intro: `Einen alternden Elternteil zu begleiten rührt vieles auf: Liebe, Müdigkeit, Schuld, Rollen, die sich umkehren. Es kann bedeuten, sie zu unterstützen, sie in der Krankheit zu pflegen, eine schwierige Diagnose zu durchleben oder, irgendwann, Abschied zu nehmen. Mit Liebe sorgen schließt auch ein, für dich zu sorgen. Wähle, was du gerade erlebst.`,
+    accTitle: `Was du gerade durchleben könntest`,
+    accordion: [
+      { n: 1, q: `Seine Autonomie und sein Tempo begleiten`,
+        a: `Altern ist kein Verlust der Würde. Achte seine Autonomie und seine Entscheidungen, solange es möglich ist, hab Geduld mit den neuen Rhythmen —oft braucht er nur gehört zu werden— und besprecht die wichtigen Themen rechtzeitig, mit Ruhe und Zuneigung. Begleiten heißt nicht, für ihn zu entscheiden, sondern an seiner Seite zu gehen.`,
+        v: `Manchmal behandeln wir ihn aus Fürsorge, als könne er nichts mehr, und das verletzt ihn. Seine Würde zu wahren —ihn wählen, mitreden, tun zu lassen, was er noch kann— ist eine der tiefsten Formen der Liebe in dieser Phase. Sorge für ihn, ohne ihm den Platz des Erwachsenen zu nehmen, der er bleibt.` },
+      { n: 2, q: `Wenn sie erkranken oder eine Verletzung sie einschränkt`,
+        a: `Einen starken Elternteil durch Krankheit oder Verletzung zerbrechlich werden zu sehen, tut weh und bringt einen durcheinander. Da ist die Ohnmacht, nicht alles "reparieren" zu können, und manchmal die Überlastung durch Pflegeaufgaben. Organisiere die Unterstützung (Ärzte, Familie, Netzwerke), informiere dich über den Zustand und vor allem: erlaube dir zu fühlen. Du musst nicht die ganze Zeit stark sein.`,
+        v: `Der Körper, der dich als Kind trug, braucht jetzt, dass du ihn hältst, und das rührt die Seele auf. Es ist normal, Traurigkeit, Angst oder sogar Wut über die Lage zu fühlen; das macht dich nicht zur schlechten Tochter oder zum schlechten Sohn. Um Hilfe bei der Pflege zu bitten heißt nicht, zu versagen: es heißt, besser und länger zu sorgen, ohne selbst zu zerbrechen.` },
+      { n: 3, q: `Eine schwierige Diagnose bekommen (Alzheimer, Demenz, Behinderung)`,
+        a: `Eine Diagnose wie Alzheimer, Demenz oder eine Behinderung verändert die Landkarte der ganzen Familie. Sie bringt meist eine vorweggenommene Trauer: du beginnst, dich nach und nach von dem zu verabschieden, der er war, während er noch da ist. Informiere dich über die Krankheit, bau ein Unterstützungsnetz auf und such professionelle Begleitung; niemand sollte das allein tragen.`,
+        v: `Bei Krankheiten wie Demenz schmerzt es, vergessen zu werden, den Charakter sich ändern zu sehen, die Beziehung sich verwandeln zu sehen. Denk daran, dass der Mensch noch da ist, wenn auch anders, und dass du sein Kind bleibst, auch wenn er dich nicht mehr erkennt. Deinen eigenen Schmerz in diesem Prozess zu pflegen ist kein Egoismus: es ist, was dir erlaubt, weiter da zu sein.` },
+      { n: 4, q: `Einen Elternteil finanziell unterstützen`,
+        a: `Wenn ein Elternteil arbeitslos wird, mit wenig in Rente geht oder kein Einkommen mehr erzielen kann, sind es oft die Kinder, die ihn unterstützen. Es ist ein Akt der Liebe, aber auch eine reale Last, die man klar organisieren sollte: was du geben kannst, ohne unterzugehen, wie man es unter Geschwistern aufteilt, wenn es welche gibt, und wie man darüber spricht, ohne die Würde von irgendjemandem zu verletzen.`,
+        v: `Den finanziell zu unterstützen, der dich großzog, kann mit Stolz kommen und zugleich mit Druck, Müdigkeit oder stillem Groll, und all das kann nebeneinander bestehen. Klare Zahlen und Grenzen zu setzen macht dich nicht zum schlechten Kind; es schützt dich vor einem stillen Verschleiß. Aus Liebe zu helfen heißt nicht, es zu tun, bis du dich und deine eigene Familie leerst.` },
+      { n: 5, q: `Die Erschöpfung der Pflegenden und das Burnout`,
+        a: `Das Kind oder der Angehörige zu sein, der pflegt —oder der alles trägt— zehrt aus. Anhaltender Stress kann akut werden und zum Pflege-Burnout führen: tiefe Erschöpfung, Gereiztheit, Schlaflosigkeit, Schuld, das Gefühl, nicht mehr zu können. Das ist keine Schwäche und kein Mangel an Liebe: es ist das Zeichen, dass du dich gegeben hast, ohne dich aufzufüllen. Bitte um Hilfe und teile sie; Pflege sollte nicht auf einer einzigen Person lasten.`,
+        v: `Aus einem leeren Tank kannst du nicht gut pflegen. Grenzen ohne Schuld zu setzen, dich auszuruhen und Unterstützung anzunehmen macht dich nicht zum schlechteren Pflegenden; es macht dich zu einem tragfähigen. Für dich zu sorgen nimmt deinem Elternteil keine Pflege weg: es sichert sie, denn ein zerbrochener Pflegender kann niemanden tragen. Auch du verdienst Fürsorge.` },
+      { n: 6, q: `Verletzungen durch Verlassenwerden im Erwachsenenalter heilen`,
+        a: `Manchmal ist der Elternteil, der heute Pflege braucht, derselbe, der nicht da war, der verließ oder verletzte. Für ihn zu sorgen kann alte Wunden aufreißen und dich mit widersprüchlichen Gefühlen füllen: Pflicht, Wut, Kummer, Schuld. All das ist gültig. Du bist nicht verpflichtet zu fühlen, was du "solltest"; du kannst bewusst wählen, wie viel und wie du begleitest, und dabei auch deine Grenzen pflegen.`,
+        v: `Die Wunde des Verlassenwerdens zu heilen bedeutet nicht immer, dich mit dem zu versöhnen, der dir fehlte; manchmal ist es, Frieden mit dir und deiner Geschichte zu schließen. Du kannst aus Mitgefühl sorgen, ohne den Schaden zu leugnen, oder Abstand halten, ohne dich zu beschuldigen. Es gibt keine einzige richtige Antwort. Das in der Therapie zu bearbeiten —manchmal mit Ansätzen wie EMDR— hilft, das Gewicht loszulassen, das nie deins war.` },
+      { n: 7, q: `Der Tod eines Elternteils`,
+        a: `Einen Vater oder eine Mutter zu verlieren ist eine der tiefsten Trauern: es geht, wer uns das Leben gab, und mit ihm ein Teil unserer eigenen Geschichte und unseres Gefühls von Zuflucht. Es gibt keine "richtige" Art und keine genaue Frist für Trauer. Erlaube dir, alles zu fühlen, was kommt —Traurigkeit, Erleichterung, Schuld, Leere— ohne dich zu verurteilen.`,
+        v: `Wenn sein Gehen nach einer langen Krankheit kam, kann neben dem Schmerz Erleichterung auftauchen und dann Schuld, sie zu fühlen: das ist menschlich und macht dich nicht lieblos. Du hast einen Trauer-Bereich, wo du mehr Begleitung für diesen Prozess findest. Und wenn der Schmerz zu viel wird, musst du ihn nicht allein durchstehen. Schreib mir.` }
     ],
-    closing: `Wenn du die Last des Sorgens oder überwältigende Gefühle spürst, verdienst auch du Begleitung. Ich bin da.`
+    closing: `Für den zu sorgen, der für uns sorgte, ihn zu unterstützen, Wunden zu heilen oder Abschied zu nehmen sind Prozesse, die die Seele aufrühren, und du musst sie nicht allein durchstehen. Wenn du das Gewicht der Pflege oder schwer zu tragende Gefühle spürst, verdienst auch du Begleitung. Ich bin da.`
   },
   amistades: {
     title: `Freundschaft`, tag: `Deine Freundschaften nähren`,

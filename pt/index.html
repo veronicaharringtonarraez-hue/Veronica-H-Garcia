@@ -1021,18 +1021,32 @@ const TOPICS = {
   },
   'padres-mayores': {
     title: `Pais idosos`, parent: 'padres', tag: `Cuidar de quem cuidou de nós`,
-    intro: `Acompanhar um pai ou uma mãe que envelhece mexe com muitas coisas: amor, cansaço, culpa, papéis que mudam. Cuidar com amor também inclui cuidar de você.`,
-    blocks: [
-      { h: `Para acompanhá-los`, list: [
-        `Respeite a autonomia e as decisões deles enquanto for possível; envelhecer não é perder dignidade.`,
-        `Tenha paciência com o novo ritmo: muitas vezes só precisam ser ouvidos.`,
-        `Conversem sobre os temas importantes a tempo, com calma e carinho.` ] },
-      { h: `Para cuidar de você`, list: [
-        `Peça e divida a ajuda: o cuidado não deveria recair sobre uma só pessoa.`,
-        `Ponha limites sem culpa; esgotar-se não ajuda ninguém.`,
-        `Dê-se permissão de sentir o luto das mudanças, mesmo que eles ainda estejam aqui.` ] }
+    intro: `Acompanhar um pai ou uma mãe que envelhece mexe com muita coisa: amor, cansaço, culpa, papéis que se invertem. Pode implicar sustentá-los, cuidar deles na doença, atravessar um diagnóstico difícil ou, em algum momento, despedir-se. Cuidar com amor também inclui cuidar de você. Escolha o que está vivendo.`,
+    accTitle: `O que você pode estar vivendo`,
+    accordion: [
+      { n: 1, q: `Acompanhar a sua autonomia e os seus ritmos`,
+        a: `Envelhecer não é perder a dignidade. Respeite a autonomia e as decisões dele enquanto for possível, tenha paciência com os novos ritmos —muitas vezes só precisa ser ouvido— e conversem a tempo os assuntos importantes, com calma e carinho. Acompanhar não é decidir por ele, mas caminhar ao seu lado.`,
+        v: `Às vezes, de tanto cuidar, o tratamos como se já não pudesse nada, e isso o fere. Sustentar a sua dignidade —deixá-lo escolher, opinar, fazer o que ainda pode— é uma das formas mais profundas de amor nesta etapa. Cuide dele sem lhe tirar o lugar de adulto que ele continua sendo.` },
+      { n: 2, q: `Quando adoecem ou uma lesão os limita`,
+        a: `Ver um pai forte tornar-se frágil por uma doença ou uma lesão dói e desorganiza. Surge a impotência de não poder "consertar" tudo e, às vezes, a sobrecarga das tarefas de cuidado. Organize os apoios (médicos, familiares, redes), informe-se sobre a condição dele e, sobretudo, permita-se sentir: você não tem que ser forte o tempo todo.`,
+        v: `O corpo que te carregou quando criança agora precisa que você o sustente, e isso mexe com a alma. É normal sentir tristeza, medo ou até raiva pela situação; isso não te faz uma filha ou um filho ruim. Pedir ajuda para o cuidado não é falhar com ele: é cuidar melhor, e por mais tempo, sem se quebrar.` },
+      { n: 3, q: `Receber um diagnóstico difícil (Alzheimer, demência, deficiência)`,
+        a: `Um diagnóstico como Alzheimer, demência ou uma deficiência muda o mapa de toda a família. Costuma trazer um luto antecipado: você começa a se despedir aos poucos de quem ele foi, enquanto ainda está aqui. Informe-se sobre a doença, monte uma rede de apoio e busque acompanhamento profissional; ninguém deveria sustentar isso sozinho.`,
+        v: `Em doenças como a demência dói ser esquecido, ver o caráter mudar, ver a relação se transformar. Lembre-se de que a pessoa continua ali, ainda que de outra forma, e que você continua sendo filho ou filha mesmo que ela já não te reconheça. Cuidar da sua própria dor neste processo não é egoísmo: é o que te permite continuar presente.` },
+      { n: 4, q: `Sustentar um pai economicamente`,
+        a: `Quando um pai fica desempregado, se aposenta com pouco ou já não pode gerar renda, muitas vezes são os filhos que o sustentam. É um ato de amor, mas também uma carga real que convém organizar com clareza: o que você pode dar sem se afogar, como repartir entre irmãos se houver, e como falar disso sem que a dignidade de ninguém se machuque.`,
+        v: `Sustentar economicamente quem te criou pode vir com orgulho e, ao mesmo tempo, com pressão, cansaço ou ressentimento calado, e tudo isso pode conviver. Pôr números e limites claros não te faz um filho ruim; te protege de um desgaste silencioso. Ajudar por amor não significa fazê-lo até se esvaziar e à sua própria família.` },
+      { n: 5, q: `O cansaço do cuidador e o burnout`,
+        a: `Ser o filho ou familiar que cuida —ou o que sustenta tudo— desgasta. O estresse sustentado pode se tornar agudo e levar ao burnout do cuidador: esgotamento profundo, irritabilidade, insônia, culpa, sensação de não dar mais conta. Não é fraqueza nem falta de amor: é o sinal de que você tem se dado sem se repor. Peça e reparta a ajuda; o cuidado não deveria recair sobre uma só pessoa.`,
+        v: `Você não pode cuidar bem de um tanque vazio. Pôr limites sem culpa, descansar e aceitar apoio não te faz um cuidador pior; te faz um sustentável. Cuidar de você não tira cuidado do seu pai: garante-o, porque um cuidador quebrado não pode sustentar ninguém. Você também merece ser cuidado.` },
+      { n: 6, q: `Curar feridas de abandono na vida adulta`,
+        a: `Às vezes o pai que hoje precisa de cuidado é o mesmo que não esteve, que abandonou ou feriu. Cuidar dele pode reabrir feridas antigas e te encher de sentimentos contraditórios: dever, raiva, pena, culpa. Tudo isso é válido. Você não é obrigada a sentir o que "deveria"; pode escolher, com consciência, quanto e como acompanhar, cuidando também dos seus limites.`,
+        v: `Curar a ferida do abandono nem sempre significa se reconciliar com quem te faltou; às vezes é fazer as pazes consigo e com a sua história. Você pode cuidar pela compaixão sem negar o dano, ou manter distância sem se culpar. Não há uma única resposta certa. Trabalhar isso em terapia —às vezes com abordagens como o EMDR— ajuda a soltar o peso que não era seu.` },
+      { n: 7, q: `O falecimento de um pai`,
+        a: `Perder um pai ou uma mãe é um dos lutos mais profundos: vai-se quem nos deu a vida e, com ele, uma parte da nossa história e da nossa sensação de refúgio. Não há uma forma "certa" nem um tempo exato de luto. Permita-se sentir tudo o que vier —tristeza, alívio, culpa, vazio— sem se julgar.`,
+        v: `Se a partida veio depois de uma longa doença, junto à dor pode aparecer alívio, e depois culpa por senti-lo: é humano e não te faz desamorosa. Você tem uma seção de Luto onde encontrará mais acompanhamento para este processo. E se a dor se tornar demais, você não tem que atravessá-la sozinho. Escreva-me.` }
     ],
-    closing: `Se você sente o peso do cuidado ou emoções difíceis de sustentar, você também merece acompanhamento. Estou aqui.`
+    closing: `Cuidar de quem cuidou de nós, sustentá-lo, curar feridas ou despedir-se são processos que mexem com a alma, e você não tem que atravessá-los sozinho. Se você sente o peso do cuidado ou emoções difíceis de sustentar, você também merece acompanhamento. Estou aqui.`
   },
   amistades: {
     title: `Amizades`, tag: `Amizades que nutrem`,

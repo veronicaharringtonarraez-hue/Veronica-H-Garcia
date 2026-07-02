@@ -1021,18 +1021,32 @@ const TOPICS = {
   },
   'padres-mayores': {
     title: `Genitori anziani`, parent: 'padres', tag: `Prendersi cura di chi si è preso cura di noi`,
-    intro: `Accompagnare un genitore che invecchia smuove molte cose: amore, stanchezza, senso di colpa, ruoli che cambiano. Prendersi cura con amore include anche prendersi cura di te.`,
-    blocks: [
-      { h: `Per accompagnarli`, list: [
-        `Rispetta la loro autonomia e le loro decisioni finché è possibile; invecchiare non è perdere dignità.`,
-        `Abbi pazienza con i nuovi ritmi: spesso hanno solo bisogno di essere ascoltati.`,
-        `Parlate per tempo dei temi importanti, con calma e affetto.` ] },
-      { h: `Per prenderti cura di te`, list: [
-        `Chiedi e distribuisci l'aiuto: la cura non dovrebbe ricadere su una sola persona.`,
-        `Poni limiti senza colpa; esaurirti non aiuta nessuno.`,
-        `Datti il permesso di vivere il lutto dei cambiamenti, anche se sono ancora qui.` ] }
+    intro: `Accompagnare un genitore che invecchia smuove molte cose: amore, stanchezza, senso di colpa, ruoli che si invertono. Può significare sostenerlo, curarlo nella malattia, attraversare una diagnosi difficile o, a un certo punto, dirgli addio. Prendersi cura con amore include anche prendersi cura di te. Scegli ciò che stai vivendo.`,
+    accTitle: `Ciò che potresti stare vivendo`,
+    accordion: [
+      { n: 1, q: `Accompagnare la sua autonomia e i suoi ritmi`,
+        a: `Invecchiare non è perdere dignità. Rispetta la sua autonomia e le sue decisioni finché è possibile, abbi pazienza con i nuovi ritmi —spesso ha solo bisogno di essere ascoltato— e parlate per tempo dei temi importanti, con calma e affetto. Accompagnare non è decidere al suo posto, ma camminare al suo fianco.`,
+        v: `A volte, per prendercene cura, lo trattiamo come se non potesse più nulla, e questo lo ferisce. Sostenere la sua dignità —lasciarlo scegliere, dire la sua, fare ciò che ancora può— è una delle forme più profonde di amore in questa fase. Prenditene cura senza togliergli il posto di adulto che resta.` },
+      { n: 2, q: `Quando si ammala o una lesione lo limita`,
+        a: `Vedere un genitore forte diventare fragile per una malattia o una lesione fa male e destabilizza. Compare l'impotenza di non poter "aggiustare" tutto e, a volte, il sovraccarico dei compiti di cura. Organizza i sostegni (medici, familiari, reti), informati sulla sua condizione e, soprattutto, permettiti di sentire: non devi essere forte tutto il tempo.`,
+        v: `Il corpo che ti ha portato da bambino ora ha bisogno che tu lo sostenga, e questo smuove l'anima. È normale provare tristezza, paura o persino rabbia per la situazione; non ti rende una cattiva figlia o un cattivo figlio. Chiedere aiuto per la cura non è venir meno: è prendersi cura meglio, e più a lungo, senza spezzarti.` },
+      { n: 3, q: `Ricevere una diagnosi difficile (Alzheimer, demenza, disabilità)`,
+        a: `Una diagnosi come Alzheimer, demenza o una disabilità cambia la mappa di tutta la famiglia. Porta spesso un lutto anticipato: cominci a dire addio poco a poco a chi è stato, mentre è ancora qui. Informati sulla malattia, crea una rete di sostegno e cerca un accompagnamento professionale; nessuno dovrebbe reggere questo da solo.`,
+        v: `In malattie come la demenza fa male essere dimenticati, vedere cambiare il suo carattere, veder trasformare la relazione. Ricorda che la persona è ancora lì, anche se in altro modo, e che tu resti suo figlio o figlia anche se non ti riconosce più. Curare il tuo stesso dolore in questo processo non è egoismo: è ciò che ti permette di continuare a esserci.` },
+      { n: 4, q: `Sostenere economicamente un genitore`,
+        a: `Quando un genitore resta disoccupato, va in pensione con poco o non può più generare reddito, spesso sono i figli a sostenerlo. È un atto d'amore, ma anche un carico reale che conviene organizzare con chiarezza: cosa puoi dare senza affogare, come dividere tra fratelli se ci sono, e come parlarne senza ferire la dignità di nessuno.`,
+        v: `Sostenere economicamente chi ti ha cresciuto può venire con orgoglio e, insieme, con pressione, stanchezza o risentimento silenzioso, e tutto questo può convivere. Mettere numeri e limiti chiari non ti rende un cattivo figlio; ti protegge da un logorio silenzioso. Aiutare per amore non significa farlo fino a svuotare te e la tua stessa famiglia.` },
+      { n: 5, q: `La stanchezza del caregiver e il burnout`,
+        a: `Essere il figlio o il familiare che cura —o quello che regge tutto— logora. Lo stress prolungato può diventare acuto e portare al burnout del caregiver: esaurimento profondo, irritabilità, insonnia, senso di colpa, sensazione di non farcela più. Non è debolezza né mancanza d'amore: è il segnale che ti sei dato senza reintegrarti. Chiedi e distribuisci l'aiuto; la cura non dovrebbe ricadere su una sola persona.`,
+        v: `Non puoi curare bene da un serbatoio vuoto. Mettere limiti senza colpa, riposare e accettare sostegno non ti rende un caregiver peggiore; ti rende sostenibile. Prenderti cura di te non toglie cura a tuo padre: gliela garantisce, perché un caregiver spezzato non può sostenere nessuno. Anche tu meriti di essere accudito.` },
+      { n: 6, q: `Sanare ferite di abbandono nell'età adulta`,
+        a: `A volte il genitore che oggi ha bisogno di cura è lo stesso che non c'è stato, che ha abbandonato o ferito. Prendersene cura può riaprire vecchie ferite e riempirti di sentimenti contrastanti: dovere, rabbia, pena, colpa. Tutto questo è valido. Non sei obbligata a sentire ciò che "dovresti"; puoi scegliere, con consapevolezza, quanto e come accompagnare, curando anche i tuoi limiti.`,
+        v: `Sanare la ferita dell'abbandono non sempre significa riconciliarti con chi ti è mancato; a volte è fare pace con te e la tua storia. Puoi curare dalla compassione senza negare il danno, o prendere distanza senza colpevolizzarti. Non c'è un'unica risposta giusta. Lavorare questo in terapia —a volte con approcci come l'EMDR— aiuta a lasciare il peso che non era tuo.` },
+      { n: 7, q: `Il decesso di un genitore`,
+        a: `Perdere un padre o una madre è uno dei lutti più profondi: se ne va chi ci ha dato la vita e, con lui, una parte della nostra storia e del nostro senso di rifugio. Non c'è un modo "giusto" né un tempo esatto per il lutto. Permettiti di sentire tutto ciò che arriva —tristezza, sollievo, colpa, vuoto— senza giudicarti.`,
+        v: `Se la sua partenza è arrivata dopo una lunga malattia, accanto al dolore può comparire sollievo, e poi colpa per averlo provato: è umano e non ti rende senza cuore. Hai una sezione Lutto dove troverai più accompagnamento per questo processo. E se il dolore diventa troppo, non devi attraversarlo da solo. Scrivimi.` }
     ],
-    closing: `Se senti il peso della cura o emozioni difficili da reggere, anche tu meriti accompagnamento. Sono qui.`
+    closing: `Prendersi cura di chi si è preso cura di noi, sostenerlo, sanare ferite o dirgli addio sono processi che smuovono l'anima, e non devi attraversarli da solo. Se senti il peso della cura o emozioni difficili da reggere, anche tu meriti accompagnamento. Sono qui.`
   },
   amistades: {
     title: `Amicizie`, tag: `Amicizie che nutrono`,

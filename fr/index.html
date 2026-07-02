@@ -1021,18 +1021,32 @@ const TOPICS = {
   },
   'padres-mayores': {
     title: `Parents âgés`, parent: 'padres', tag: `Prendre soin de qui a pris soin de nous`,
-    intro: `Accompagner un parent qui vieillit remue beaucoup de choses : amour, fatigue, culpabilité, rôles qui changent. Prendre soin avec amour, cela inclut aussi prendre soin de toi.`,
-    blocks: [
-      { h: `Pour les accompagner`, list: [
-        `Respecte leur autonomie et leurs décisions tant que c'est possible ; vieillir n'est pas perdre sa dignité.`,
-        `Sois patient avec les nouveaux rythmes : souvent ils ont juste besoin d'être écoutés.`,
-        `Parlez à temps des sujets importants, avec calme et tendresse.` ] },
-      { h: `Pour prendre soin de toi`, list: [
-        `Demande et partage l'aide : le soin ne devrait pas reposer sur une seule personne.`,
-        `Pose des limites sans culpabilité ; t'épuiser n'aide personne.`,
-        `Donne-toi la permission de faire le deuil des changements, même s'ils sont encore là.` ] }
+    intro: `Accompagner un parent qui vieillit remue beaucoup de choses : amour, fatigue, culpabilité, rôles qui s'inversent. Cela peut impliquer de le soutenir, de le soigner dans la maladie, de traverser un diagnostic difficile ou, à un moment, de lui dire adieu. Prendre soin avec amour inclut aussi prendre soin de toi. Choisis ce que tu vis.`,
+    accTitle: `Ce que tu peux traverser`,
+    accordion: [
+      { n: 1, q: `Accompagner son autonomie et son rythme`,
+        a: `Vieillir n'est pas perdre sa dignité. Respecte son autonomie et ses décisions tant que possible, sois patient avec les nouveaux rythmes —souvent il a juste besoin d'être écouté— et parlez à temps des sujets importants, avec calme et tendresse. Accompagner, ce n'est pas décider à sa place, mais marcher à ses côtés.`,
+        v: `Parfois, à force de prendre soin, on le traite comme s'il ne pouvait plus rien, et cela le blesse. Soutenir sa dignité —le laisser choisir, donner son avis, faire ce qu'il peut encore— est l'une des formes les plus profondes d'amour à cette étape. Prends soin de lui sans lui ôter la place d'adulte qu'il reste.` },
+      { n: 2, q: `Quand il tombe malade ou qu'une blessure le limite`,
+        a: `Voir un parent fort devenir fragile à cause d'une maladie ou d'une blessure fait mal et bouleverse. Surgit l'impuissance de ne pas pouvoir tout « réparer » et, parfois, la surcharge des tâches de soin. Organise les soutiens (médicaux, familiaux, réseaux), informe-toi sur son état et, surtout, autorise-toi à ressentir : tu n'as pas à être fort tout le temps.`,
+        v: `Le corps qui t'a porté enfant a maintenant besoin que tu le soutiennes, et cela remue l'âme. Il est normal de ressentir tristesse, peur, voire colère face à la situation ; cela ne fait pas de toi une mauvaise fille ou un mauvais fils. Demander de l'aide pour le soin n'est pas lui faire défaut : c'est mieux prendre soin, plus longtemps, sans te briser.` },
+      { n: 3, q: `Recevoir un diagnostic difficile (Alzheimer, démence, handicap)`,
+        a: `Un diagnostic comme Alzheimer, une démence ou un handicap change la carte de toute la famille. Il apporte souvent un deuil anticipé : tu commences à dire adieu peu à peu à qui il fut, alors qu'il est encore là. Informe-toi sur la maladie, construis un réseau de soutien et cherche un accompagnement professionnel ; personne ne devrait porter cela seul.`,
+        v: `Dans des maladies comme la démence, il est douloureux d'être oublié, de voir son caractère changer, de voir la relation se transformer. Rappelle-toi que la personne est toujours là, autrement, et que tu restes son enfant même si elle ne te reconnaît plus. Prendre soin de ta propre douleur dans ce processus n'est pas de l'égoisme : c'est ce qui te permet de continuer à être là.` },
+      { n: 4, q: `Soutenir un parent financièrement`,
+        a: `Quand un parent se retrouve au chômage, part à la retraite avec peu ou ne peut plus générer de revenus, ce sont souvent les enfants qui le soutiennent. C'est un acte d'amour, mais aussi une charge réelle qu'il vaut mieux organiser clairement : ce que tu peux donner sans te noyer, comment répartir entre frères et sœurs s'il y en a, et comment en parler sans blesser la dignité de personne.`,
+        v: `Soutenir financièrement qui t'a élevé peut venir avec fierté et, en même temps, avec pression, fatigue ou rancune silencieuse, et tout cela peut coexister. Poser des chiffres et des limites clairs ne fait pas de toi un mauvais enfant ; cela te protège d'une usure silencieuse. Aider par amour ne veut pas dire le faire jusqu'à te vider, toi et ta propre famille.` },
+      { n: 5, q: `La fatigue de l'aidant et le burn-out`,
+        a: `Être l'enfant ou le proche qui prend soin —ou celui qui soutient tout— épuise. Le stress prolongé peut devenir aigu et mener au burn-out de l'aidant : épuisement profond, irritabilité, insomnie, culpabilité, sensation de ne plus pouvoir. Ce n'est ni faiblesse ni manque d'amour : c'est le signe que tu te donnes sans te reconstituer. Demande et répartis l'aide ; le soin ne devrait pas reposer sur une seule personne.`,
+        v: `Tu ne peux pas bien prendre soin depuis un réservoir vide. Poser des limites sans culpabilité, te reposer et accepter du soutien ne fait pas de toi un moins bon aidant ; cela te rend durable. Prendre soin de toi n'enlève rien au soin de ton parent : cela le garantit, car un aidant brisé ne peut soutenir personne. Toi aussi, tu mérites d'être pris en charge.` },
+      { n: 6, q: `Guérir les blessures d'abandon à l'âge adulte`,
+        a: `Parfois le parent qui a aujourd'hui besoin de soin est le même qui n'a pas été là, qui a abandonné ou blessé. Prendre soin de lui peut rouvrir de vieilles blessures et t'emplir de sentiments contradictoires : devoir, colère, peine, culpabilité. Tout cela est valide. Tu n'es pas obligé de ressentir ce que tu « devrais » ; tu peux choisir, en conscience, combien et comment accompagner, en soignant aussi tes limites.`,
+        v: `Guérir la blessure d'abandon ne signifie pas toujours te réconcilier avec qui t'a manqué ; parfois, c'est faire la paix avec toi et ton histoire. Tu peux prendre soin par compassion sans nier le mal, ou garder tes distances sans te culpabiliser. Il n'y a pas une seule bonne réponse. Travailler cela en thérapie —parfois avec des approches comme l'EMDR— aide à lâcher le poids qui n'était pas le tien.` },
+      { n: 7, q: `Le décès d'un parent`,
+        a: `Perdre un père ou une mère est l'un des deuils les plus profonds : s'en va qui nous a donné la vie et, avec lui, une part de notre propre histoire et de notre sentiment de refuge. Il n'y a pas de façon « correcte » ni de délai exact pour le deuil. Autorise-toi à ressentir tout ce qui vient —tristesse, soulagement, culpabilité, vide— sans te juger.`,
+        v: `Si son départ est venu après une longue maladie, à côté de la douleur peut surgir un soulagement, puis la culpabilité de le ressentir : c'est humain et cela ne te rend pas sans cœur. Tu as une section Deuil où tu trouveras plus d'accompagnement pour ce processus. Et si la douleur devient trop lourde, tu n'as pas à la traverser seul. Écris-moi.` }
     ],
-    closing: `Si tu sens le poids du soin ou des émotions difficiles à tenir, toi aussi tu mérites d'être accompagné. Je suis là.`
+    closing: `Prendre soin de qui a pris soin de nous, le soutenir, guérir des blessures ou lui dire adieu sont des processus qui remuent l'âme, et tu n'as pas à les traverser seul. Si tu sens le poids du soin ou des émotions difficiles à porter, toi aussi tu mérites d'être accompagné. Je suis là.`
   },
   amistades: {
     title: `Amitiés`, tag: `Des amitiés qui nourrissent`,
