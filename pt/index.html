@@ -952,7 +952,12 @@ const TOPICS = {
   },
   pareja: {
     title: `Relações de casal`, tag: `Ser uma equipe, não rivais`,
-    intro: `Uma relação saudável não é uma sem problemas, mas uma em que ambos se sentem uma equipe diante deles. O objetivo não é vencer o outro, mas resolver juntos: não é "você contra mim", é "nós contra o problema". Aqui compartilho ideias e analogias para cuidar do vínculo.`,
+    intro: `Uma relação saudável não é uma sem problemas, mas uma em que ambos se sentem uma equipe diante deles. Aqui você encontrará ferramentas para construir o vínculo e também para atravessar os momentos difíceis. Escolha o tema que está vivendo.`,
+    children: ['pareja-fundamentos', 'pareja-metas', 'pareja-distancia', 'pareja-confianza', 'pareja-celos', 'pareja-control', 'pareja-infidelidad', 'pareja-divorcio']
+  },
+  'pareja-fundamentos': {
+    title: `Construir um nós saudável`, parent: 'pareja', tag: `As bases do vínculo`,
+    intro: `O objetivo não é vencer o outro, mas resolver juntos: não é você contra mim, é nós contra o problema. Aqui compartilho ideias e analogias para cuidar do vínculo.`,
     accTitle: `Chaves para construir um nós`,
     accordion: [
       { n: 1, q: `Ser uma equipe: nós contra o problema`,
@@ -975,6 +980,137 @@ const TOPICS = {
         v: `Por isso as linguagens do amor e o tanque andam juntos: dar muito do material errado não enche de verdade. Pergunte ao seu parceiro o que o faz sentir amado e encha-o disso. E conte também do que você precisa: ninguém adivinha o combustível certo. Um tanque cheio do material certo sustenta a relação até nos dias difíceis.` }
     ],
     closing: `Se você sente que o mesmo conflito se repete, que brigam como rivais em vez de como equipe, ou que os tanques de ambos estão vazios, a terapia de casal pode ajudá-los a se reencontrar. Escreva-me.`
+  },
+  'pareja-metas': {
+    title: `Metas e sonhos opostos`, parent: 'pareja', tag: `Quando cada um quer algo diferente`,
+    intro: `Quando duas pessoas compartilham a vida, suas metas e sonhos nem sempre coincidem. Que um queira uma coisa e o outro o contrário gera frustração e discussões, sobretudo quando cada um sente que cumprir seu sonho implica renunciar ao do outro. Aqui vão chaves para navegar as metas opostas sem romper o vínculo.`,
+    accTitle: `Metas próprias e metas compartilhadas`,
+    accordion: [
+      { n: 1, q: `Ter sonhos diferentes não é uma traição`,
+        a: `Que cada um tenha metas próprias, mesmo opostas, é saudável e humano; não significa que deixaram de se amar nem que a relação vai mal. O problema geralmente não é a diferença em si, mas tratá-la como uma batalha de quem ganha, onde para um cumprir o seu o outro tem que renunciar.`,
+        v: `Apaixonar-se não é fundir-se em uma só pessoa com os mesmos desejos. Vocês podem se amar profundamente e ainda assim querer coisas diferentes. Quando você deixa de ver o sonho do outro como uma ameaça ao seu, abre-se espaço para se acompanharem em vez de competir.` },
+      { n: 2, q: `De competir a fazer espaço para os dois`,
+        a: `Em vez de impor sua meta ou renunciar a ela com ressentimento, busquem juntos uma terceira opção: negociar, se revezar, integrar ambos os sonhos ou encontrar um meio-termo criativo. A pergunta deixa de ser o seu ou o meu e passa a ser como fazemos espaço para os dois.`,
+        v: `Muitas discussões não são sobre o tema em si, mas sobre sentir que o outro não leva em conta o que a gente quer. Sentir-se ouvido e considerado baixa a frustração, mesmo que nem tudo se resolva de uma vez. Às vezes o acordo é hoje por você, amanhã por mim.` },
+      { n: 3, q: `Quando de fato não coincidem`,
+        a: `Há metas difíceis de conciliar (ter filhos ou não, onde morar, uma grande mudança de vida). Falar delas com honestidade e a tempo —não evitá-las até que explodam— é um ato de respeito mútuo. Às vezes um caminho se encontra; outras, a diferença é real e dói, e também merece ser olhada com verdade.`,
+        v: `Adiar essas conversas por medo de brigar só acumula frustração. Colocá-las na mesa, com ajuda se preciso, permite decidir a partir da clareza e não do reproche. A terapia de casal ajuda a falar do difícil sem que vire uma guerra.` }
+    ],
+    closing: `Se as metas opostas viraram uma fonte constante de discussões ou distância, posso acompanhá-los a encontrar acordos que cuidem de ambos. Escreva-me.`
+  },
+  'pareja-distancia': {
+    title: `Quando o de fora distancia`, parent: 'pareja', tag: `Pouco tempo juntos e distância emocional`,
+    intro: `Às vezes o problema não é um conflito, mas a vida em si: o trabalho, os estudos, a família, o dinheiro ou os filhos tomam mais tempo do que o dedicado ao casal, e pouco a pouco aparece o distanciamento, primeiro físico e depois emocional. Reconhecê-lo a tempo permite reconectar.`,
+    accTitle: `Reconectar no meio da vida`,
+    accordion: [
+      { n: 1, q: `O desgaste do pouco tempo juntos`,
+        a: `Quando as obrigações externas devoram a agenda, o casal costuma ficar por último na lista. Não é falta de amor, é falta de tempo e energia; mas, sustentado no tempo, esse descuido esfria o vínculo. O urgente acaba deslocando o importante.`,
+        v: `Ninguém planeja se distanciar: acontece aos poucos, em cada hoje não posso, estou muito cansado. Perceber não é para se culpar, mas para escolher de novo. O vínculo, como uma planta, precisa de rega constante, não só nas crises.` },
+      { n: 2, q: `Do distanciamento físico ao emocional`,
+        a: `Quando deixam de compartilhar tempo, carinho e conversa, é fácil começar a se sentir como dois desconhecidos que convivem. A distância física (menos abraços, menos intimidade) costuma vir acompanhada de distância emocional: deixam de se confidenciar, de se buscar, de se sentir equipe.`,
+        v: `Sentir que vivemos como colegas de casa é um sinal de alerta, não uma sentença. Muitos casais acreditam que se desapaixonaram quando na verdade só se desconectaram. E o que se desconecta, com intenção, pode voltar a se conectar.` },
+      { n: 3, q: `Reservar tempo para o nós`,
+        a: `Assim como você agenda o trabalho, agende seu parceiro: momentos protegidos, mesmo pequenos, só para vocês dois. Não é preciso tempo perfeito nem grandes planos; é preciso presença real, sem telas nem pendências no meio. A qualidade pesa mais que a quantidade.`,
+        v: `Um café sem pressa, uma caminhada, uma conversa sem distrações: os pequenos rituais sustentam a proximidade mais que as grandes ocasiões. Priorizar o casal não tira do resto da vida; devolve a ambos o lugar seguro de onde enfrentar todo o resto.` }
+    ],
+    closing: `Se você sente que a vida foi os distanciando e já não sabem como se reencontrar, a terapia de casal pode ajudá-los a reconstruir a proximidade. Escreva-me.`
+  },
+  'pareja-confianza': {
+    title: `Confiança e perda de confiança`, parent: 'pareja', tag: `O alicerce que sustenta o vínculo`,
+    intro: `A confiança é o alicerce sobre o qual se constrói uma relação segura. Quando está, tudo flui com mais calma; quando se rompe, até o pequeno vira motivo de dúvida. Aqui falamos de como se cuida, como se fere e se é possível reconstruí-la.`,
+    accTitle: `Cuidar e reconstruir a confiança`,
+    accordion: [
+      { n: 1, q: `A confiança é a base de tudo`,
+        a: `Confiar é poder se mostrar vulnerável sabendo que o outro cuida de você. Constrói-se com coerência: quando o que digo e o que faço coincidem, quando cumpro o que prometo, quando posso contar com você. É uma casa que se levanta tijolo a tijolo, com pequenos atos constantes.`,
+        v: `A confiança não se exige, se ganha e se oferece diariamente. Não nasce de grandes declarações, mas de milhares de gestos cotidianos de cuidado e honestidade. Quando existe, a relação vira um lugar de descanso; sem ela, tudo custa o dobro.` },
+      { n: 2, q: `Quando a confiança se rompe`,
+        a: `Uma mentira, uma traição ou até uma série de decepções podem quebrar a confiança. Quando isso acontece, aparecem a hipervigilância, a dúvida constante e o medo de sair machucado de novo. É uma dor real que precisa ser reconhecida, não minimizada com um vai, supera isso.`,
+        v: `Perder a confiança não é exagerar nem ser desconfiado sem motivo: é uma ferida. Quem a rompeu pode sentir a tentação de apressar o perdão, mas a confiança não se restaura por decreto. Sarar leva tempo, e esse tempo também é parte da reparação.` },
+      { n: 3, q: `Reconstruir a confiança (se ambos quiserem)`,
+        a: `Reconstruir é possível, mas requer duas coisas: de quem feriu, transparência sustentada, paciência e atos que respaldem as palavras; de quem foi ferido, a disposição de se abrir de novo aos poucos, sem usar a ferida como arma permanente. É um processo lento, de confiança que se ganha de novo dia a dia.`,
+        v: `Nem sempre se consegue, e tudo bem reconhecer isso. Mas muitos casais saem de uma ruptura de confiança mais fortes, se ambos se comprometem de verdade. A terapia ajuda para que esse processo não fique preso no reproche e avance rumo à reparação. Escreva-me.` }
+    ],
+    closing: `Se a confiança entre vocês se feriu e querem tentar reconstruí-la, posso acompanhá-los nesse processo com cuidado para ambos. Escreva-me.`
+  },
+  'pareja-celos': {
+    title: `O ciúme`, parent: 'pareja', tag: `Quando a insegurança fala`,
+    intro: `Sentir ciúme às vezes é humano, mas quando vira constante ou intenso, desgasta a relação e quem o sente. Quase sempre, por trás do ciúme há medo e insegurança mais que amor. Aqui falamos de como entendê-lo e o que fazer com ele.`,
+    accTitle: `Entender e manejar o ciúme`,
+    accordion: [
+      { n: 1, q: `Ciúme: quando a insegurança fala`,
+        a: `O ciúme costuma nascer do medo de perder o outro, da própria insegurança ou de feridas antigas, mais que de um perigo real. Se me deixam, não valho, com certeza há alguém melhor: essas vozes internas se projetam no parceiro. Entender de onde vêm é o primeiro passo para que deixem de mandar.`,
+        v: `Sentir ciúme não te faz má pessoa; é uma emoção, e as emoções não se escolhem. O que você pode escolher é o que faz com elas. Olhá-las com honestidade —isto é sobre meu parceiro ou sobre meu medo?— tira muito peso e abre a porta para trabalhá-las.` },
+      { n: 2, q: `Ciúme que fere vs. cuidado saudável`,
+        a: `Há uma diferença entre expressar uma insegurança com honestidade e controlar, revisar o telefone, interrogar ou limitar a vida do outro. O segundo não é amor nem cuidado: erode a confiança e sufoca a relação. O ciúme, sem trabalho, vira uma prisão para ambos.`,
+        v: `Às vezes se confunde o controle com a intensidade do amor (se sente ciúme, é que me ama). Mas o amor saudável dá liberdade e confiança, não vigilância. Se o ciúme te leva a controlar, ou se na sua relação te controlam, é um sinal para parar e olhar com cuidado.` },
+      { n: 3, q: `O que fazer com o ciúme`,
+        a: `Em vez de agir o ciúme (revisar, reclamar, controlar), nomeie-o e trabalhe-o: fortaleça sua autoestima, comunique sua insegurança sem acusar (sinto-me inseguro quando...), e construa acordos de transparência saudáveis, não impostos. Se o ciúme vem de feridas profundas, a terapia ajuda a sará-las.`,
+        v: `Um vínculo não se sustenta com vigilância, mas com confiança construída. Trabalhar seu ciúme é um presente para você e para sua relação: devolve-lhe a calma e devolve ao vínculo o seu ar. Você não tem que ficar preso nesse sofrimento. Escreva-me.` }
+    ],
+    closing: `Se o ciúme te consome ou está ferindo sua relação, podemos trabalhá-lo juntos, desde a raiz. Escreva-me.`
+  },
+  'pareja-control': {
+    title: `O controle no casal`, parent: 'pareja', tag: `O amor dá liberdade, não vigilância`,
+    intro: `O controle no casal costuma se disfarçar de amor ou preocupação, mas no fundo sufoca e fere. Reconhecê-lo —quer você o exerça, quer o esteja vivendo— é o primeiro passo para recuperar liberdade e respeito no vínculo.`,
+    accTitle: `Reconhecer e transformar o controle`,
+    accordion: [
+      { n: 1, q: `O controle não é amor`,
+        a: `Querer decidir com quem seu parceiro fala, como se veste, aonde vai, ou revisar as mensagens dele não é cuidado: é controle. O amor saudável confia e dá liberdade; o controle nasce do medo e da insegurança, e vai apagando a identidade do outro aos poucos.`,
+        v: `É fácil confundir faço isso porque me importo com você com controlar. Mas o cuidado soma opções e o controle as tira. Se seus gestos de amor limitam a liberdade do outro, vale a pena olhá-los de frente: cuidar nunca deveria parecer uma jaula.` },
+      { n: 2, q: `Sinais de uma relação controladora`,
+        a: `Alguns sinais: isolar você de seus amigos ou família, revisar seu telefone, ciúme extremo, decidir por você, fazer você se sentir culpado por suas decisões, ou vigiar seus gastos e seus tempos. No começo pode parecer intensidade amorosa; com o tempo, vira uma perda de liberdade e de si mesmo.`,
+        v: `Viver controlado desgasta a autoestima e faz duvidar da própria percepção. Se você sente que anda pisando em ovos para não incomodar, ou que foi se apagando, escute-se: isso não é amor saudável. Reconhecê-lo não é trair o outro, é começar a cuidar de você.` },
+      { n: 3, q: `Recuperar a liberdade e o respeito`,
+        a: `Uma relação saudável se sustenta na confiança e na liberdade de ambos, não na vigilância. Se é você quem controla, trabalhar o medo e a insegurança por trás é chave; se te controlam, pôr limites e buscar apoio é um ato de autocuidado. O controle, quando escala, pode se transformar em violência.`,
+        v: `Quando o controle inclui ameaças, humilhação, isolamento ou medo, já não é só um problema de casal: é violência, e você merece ajuda e proteção. Na seção Temas sensíveis e de risco você encontrará orientação sobre violência no relacionamento. Você não está sozinho nisto. Escreva-me.` }
+    ],
+    closing: `Se o controle está presente na sua relação —de um lado ou de outro— podemos trabalhá-lo para recuperar o respeito e a liberdade. E se há violência, buscar ajuda a tempo protege o seu bem-estar. Escreva-me.`
+  },
+  'pareja-infidelidad': {
+    title: `A infidelidade`, parent: 'pareja', tag: `Uma ferida com diferentes níveis`,
+    intro: `A infidelidade é uma das feridas mais profundas de uma relação, e nem todas são iguais: existem diferentes níveis, de comportamentos que faltam ao respeito ao abandono por outra família. Reconhecer do que falamos ajuda a entender a dor e a decidir com mais clareza. Aqui a abordamos com respeito e sem julgamento.`,
+    accTitle: `Os níveis da infidelidade`,
+    accordion: [
+      { n: 1, q: `Primeiro nível: comunicação ou comportamento inadequado`,
+        a: `É a infidelidade mais sutil: conversas inadequadas por redes sociais, flertes, mensagens que se escondem, ou comportamentos que faltam ao respeito ao parceiro e aos acordos do casal, mesmo sem contato físico. Às vezes se minimiza (não aconteceu nada), mas rompe sim a confiança e o compromisso.`,
+        v: `Que não tenha acontecido nada físico não significa que não doa nem que não seja uma traição ao que foi acordado. Esses comportamentos costumam ser um sinal de que algo no vínculo precisa ser olhado. Falar disso a tempo, com honestidade, pode evitar que escale e abre a possibilidade de reparar.` },
+      { n: 2, q: `Segundo nível: intimidade com uma terceira pessoa`,
+        a: `Aqui há uma relação de intimidade —física ou sexual— com alguém fora do casal. É uma das traições que mais dói, porque toca a confiança, a exclusividade acordada e a própria autoestima. Provoca uma dor intensa, muitas vezes comparável a um luto, com raiva, confusão e perguntas sem fim.`,
+        v: `Se você está atravessando isto, o que sente —devastação, raiva, vontade de entender— é completamente válido. Não há uma única resposta certa sobre ficar ou ir; é uma decisão profundamente pessoal. Dê-se tempo e acompanhamento para decidir a partir de você, e não só a partir da dor do momento.` },
+      { n: 3, q: `Terceiro nível: infidelidade e abandono por outra família`,
+        a: `É a ruptura mais extrema: uma vida dupla ou o abandono da relação por outra pessoa ou até outra família. À dor da traição soma-se a do abandono, o desmoronamento de um projeto de vida e, muitas vezes, consequências práticas (filhos, lar, economia) que golpeiam tudo de uma vez.`,
+        v: `Esse tipo de perda é um luto enorme, e você precisa se sustentar e sustentar o que é seu. Não foi culpa sua que o outro escolhesse ir embora assim. Aos poucos você poderá reconstruir sua vida e seu senso de valor, mesmo que hoje pareça impossível. Você não tem que atravessar isto sozinho. Escreva-me.` },
+      { n: 4, q: `Uma gravidez fruto de uma infidelidade`,
+        a: `Quando de uma infidelidade resulta uma gravidez, a dor fica ainda mais complexa: misturam-se a traição, a irrupção de um terceiro permanente na história, e decisões difíceis que afetam várias pessoas, incluindo um filho que chega no meio de tudo. É uma das situações mais mobilizadoras que um casal pode viver.`,
+        v: `Diante de algo assim, é normal se sentir sobrecarregado e não saber o que fazer; não há respostas fáceis nem rápidas. Você merece um espaço seguro para processar o impacto, ordenar suas emoções e tomar decisões sem pressão. Acompanhá-lo nesse processo pode fazer uma grande diferença. Escreva-me.` },
+      { n: 5, q: `Dá para reconstruir depois de uma infidelidade?`,
+        a: `Às vezes sim e às vezes não, e ambas as respostas são válidas. Reconstruir requer que quem foi infiel assuma responsabilidade real, que haja transparência total e verdadeiro arrependimento, e que ambos queiram reparar o vínculo, não só evitar a separação. Outras vezes, o mais saudável é soltar. Não há uma fórmula única.`,
+        v: `Reconstruir não é fazer de conta que nada aconteceu, mas criar, se ambos quiserem, uma relação nova sobre bases mais honestas. A terapia de casal ajuda a percorrer esse caminho —ou a se separar com o menor dano possível se essa for a decisão. O importante é que você decida a partir de você, não do medo nem da culpa.` }
+    ],
+    closing: `Se você está atravessando uma infidelidade —do nível que for— não tem que decidir nem sarar sozinho. Posso acompanhá-lo a processar a dor e a escolher seu caminho com clareza. Escreva-me.`
+  },
+  'pareja-divorcio': {
+    title: `O divórcio`, parent: 'pareja', tag: `Fechar um ciclo e reconstruir-se`,
+    intro: `O divórcio é o fim de um projeto de vida compartilhado, e mexe muitíssimo: dor, alívio, medo, culpa, incerteza. Além do luto emocional, traz decisões práticas difíceis. Aqui acompanhamos tanto o do coração quanto o da vida cotidiana.`,
+    accTitle: `Atravessar o divórcio`,
+    accordion: [
+      { n: 1, q: `A decisão e o luto pós-divórcio`,
+        a: `Separar-se quase nunca é uma decisão fácil, e mesmo quando é a mais saudável, dói. O divórcio abre um luto: despede-se não só da pessoa, mas do projeto, da rotina, da identidade de casal e do que se sonhou. Sentir tristeza, alívio, raiva e medo, às vezes tudo de uma vez, é parte do processo.`,
+        v: `O luto pós-divórcio é real e merece o seu tempo. Não se apresse a estar bem nem se julgue pelo que sente. Reconstruir a vida depois de uma separação é possível, e muitas pessoas encontram, com o tempo, uma versão mais livre e autêntica de si mesmas. Escreva-me.` },
+      { n: 2, q: `A divisão de bens`,
+        a: `Repartir o material —a casa, as economias, as coisas construídas juntos— pode virar uma enorme fonte de conflito, sobretudo quando a dor se mistura ao econômico. Buscar acordos com clareza e, quando possível, com mediação, evita que a separação vire uma guerra que desgaste ainda mais.`,
+        v: `Às vezes a briga pelos bens é, no fundo, uma forma de tramitar a raiva ou a dor. Separar o emocional do prático ajuda a decidir com mais calma e menos desgaste. Cuidar do seu bem-estar nesse processo também é cuidar do seu futuro.` },
+      { n: 3, q: `Os filhos no divórcio`,
+        a: `Quando há filhos, o mais importante é protegê-los do conflito: não pô-los no meio, não falar mal do outro pai diante deles, e dar-lhes a certeza de que o amor de ambos os pais por eles não muda. Um divórcio bem acompanhado dói menos que uma convivência cheia de conflito.`,
+        v: `As crianças não precisam de pais juntos a qualquer custo; precisam de pais em paz, mesmo separados. Sustentar uma criação colaborativa, mesmo que custe, é o maior presente que podem dar-lhes. E cuidar do seu próprio processo permite acompanhá-los melhor.` },
+      { n: 4, q: `Os animais de estimação`,
+        a: `Para muitos casais, os animais são parte da família, e decidir com quem ficam —ou como compartilhá-los— também gera dor e conflito. Priorizar o bem-estar do animal e chegar a acordos claros, sem usá-lo como moeda de troca emocional, ajuda a tornar a separação mais saudável para todos.`,
+        v: `Não é só um cachorro ou só um gato: o vínculo com um animal é real, e sua perda no divórcio também pode se sentir como um luto. Tratar o tema com respeito, e não como uma arma, honra esse carinho e evita feridas desnecessárias.` },
+      { n: 5, q: `Reconstruir-se depois do divórcio`,
+        a: `Depois do divórcio vem um tempo de reconstrução: reencontrar-se, redescobrir quem você é fora do casal, remontar sua vida cotidiana e, aos poucos, voltar a olhar para a frente. Não é preciso se apressar; cada um tem seu ritmo para sarar e voltar a florescer.`,
+        v: `Um divórcio não é um fracasso: é o fechamento de um ciclo que já não podia se sustentar. Muitas pessoas descobrem, depois, uma vida mais fiel a si mesmas. Se o processo se sente pesado demais, acompanhá-lo em terapia pode ajudá-lo a atravessá-lo com mais rede e menos solidão. Escreva-me.` }
+    ],
+    closing: `Se você está atravessando um divórcio ou a decisão de se separar, posso acompanhá-lo tanto no luto quanto nas decisões difíceis do processo. Você não tem que fazer isso sozinho. Escreva-me.`
   },
   padres: {
     title: `Pais e filhos`, tag: `Criar e acompanhar com presença`,
