@@ -803,6 +803,26 @@
 const BOOKING_API = "";
 
 /* ============================================================================
+   CALENDARIO CAPSICOV — La app lee tu calendario para bloquear las horas que
+   ya tienen pacientes y no ofrecerlas para agendar.
+     - CALENDAR_ID: tu calendario CAPSICOV (ya está puesto; solo cambió el
+       nombre, el ID es el mismo de antes).
+     - CALENDAR_API_KEY: pega aquí una clave de API de Google con la
+       "Google Calendar API" activada, y pon el calendario CAPSICOV como
+       PÚBLICO (Configuración del calendario → "Hacer disponible al público").
+       Mientras esté vacía, la app muestra tu horario habitual SIN leer el
+       calendario (no bloquea nada). Restringe la clave a tu dominio.
+   Cualquier evento del calendario cuyo título contenga estas palabras —o sus
+   variantes, sin importar mayúsculas ni acentos— BLOQUEA esa hora: paciente,
+   sesión, atención, prueba psicométrica, PAI, cita, consulta, terapia,
+   evaluación, valoración, caso. La app relee el calendario como máximo una
+   vez por hora, así que refleja tus cambios en un plazo de una hora.
+   ============================================================================ */
+const CALENDAR_ID = "bea3e1fd21b905353477b997ed78fb06665324e6abcba117c1b75aa913ac05a5@group.calendar.google.com";
+const CALENDAR_API_KEY = "";
+const BOOKING_BLOCK_WORDS = ["pacient", "sesion", "atencion", "psicomet", "prueba", "cita", "consulta", "terapia", "evaluac", "valorac", "caso", "pai"];
+
+/* ============================================================================
    CONTADOR DE APERTURAS — cuántas veces se ha abierto la app (prestigio /
    prueba social). Para que el total sea GLOBAL (sumando a todas las personas),
    pega aquí la misma URL /exec del Apps Script (puede ser la de BOOKING_API).
@@ -2771,7 +2791,8 @@ class Component extends DCLogic {
 
   async _loadSlots() {
     if (this._localMode) {
-      this._slots = this._localSlots();
+      this._bkBody.innerHTML = '<div class="bk-msg">…</div>';
+      this._slots = await this._calFilter(this._localSlots());
       if (!this._slots.length) {
         this._bkBody.innerHTML = '<div class="bk-msg">Nu există intervale disponibile în perioada apropiată.<br>Scrie-mi pe WhatsApp și ne organizăm.</div>';
         return;
@@ -2819,6 +2840,60 @@ class Component extends DCLogic {
       });
     }
     return out;
+  }
+
+  // ¿El título de un evento indica un paciente/sesión y por tanto bloquea la hora?
+  _isBlockingTitle(title) {
+    const t = this._wsNorm(title || '');
+    if (!t) return false;
+    if (/\bpai\b/.test(t)) return true;
+    return BOOKING_BLOCK_WORDS.some((w) => w !== 'pai' && t.indexOf(w) >= 0);
+  }
+
+  // Lee el calendario CAPSICOV (máx. 1 vez por hora) y devuelve los rangos
+  // [inicioMs, finMs] ocupados por pacientes. Sin clave o si falla, devuelve [].
+  async _calFetchBusy() {
+    if (typeof CALENDAR_API_KEY !== 'string' || !CALENDAR_API_KEY || !CALENDAR_ID) return [];
+    const now = Date.now();
+    if (this._calBusy && this._calBusyAt && (now - this._calBusyAt) < 3600000) return this._calBusy;
+    try {
+      const timeMin = new Date(now - 3600000).toISOString();
+      const timeMax = new Date(now + 23 * 86400000).toISOString();
+      const url = 'https://www.googleapis.com/calendar/v3/calendars/' + encodeURIComponent(CALENDAR_ID)
+        + '/events?key=' + encodeURIComponent(CALENDAR_API_KEY)
+        + '&singleEvents=true&orderBy=startTime&maxResults=2500'
+        + '&timeMin=' + encodeURIComponent(timeMin) + '&timeMax=' + encodeURIComponent(timeMax);
+      const r = await fetch(url);
+      if (!r.ok) return this._calBusy || [];
+      const data = await r.json();
+      const busy = [];
+      (data.items || []).forEach((ev) => {
+        if (ev.status === 'cancelled') return;
+        if (!this._isBlockingTitle(ev.summary)) return;
+        const st = ev.start || {}, en = ev.end || {};
+        let s, e;
+        if (st.dateTime) { s = new Date(st.dateTime).getTime(); e = new Date(en.dateTime || st.dateTime).getTime(); }
+        else if (st.date) { s = new Date(st.date + 'T00:00:00-06:00').getTime(); e = new Date((en.date || st.date) + 'T00:00:00-06:00').getTime(); }
+        else return;
+        if (e > s) busy.push([s, e]);
+      });
+      this._calBusy = busy; this._calBusyAt = now;
+      return busy;
+    } catch (x) { return this._calBusy || []; }
+  }
+
+  // Quita de la lista de horarios los que chocan con un evento de paciente.
+  async _calFilter(slots) {
+    try {
+      const busy = await this._calFetchBusy();
+      if (busy && busy.length) {
+        return slots.filter((iso) => {
+          const t0 = new Date(iso).getTime(), t1 = t0 + 3600000;
+          return !busy.some((b) => t0 < b[1] && t1 > b[0]);
+        });
+      }
+    } catch (x) {}
+    return slots;
   }
 
   _whatsappBook(iso) {

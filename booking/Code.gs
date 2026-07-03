@@ -32,7 +32,7 @@
  */
 
 // ======================= CONFIGURACIÓN =======================
-// Calendario "Rachel" (donde están tus bloques "CAPSICOV Verónica").
+// Tu calendario CAPSICOV (antes se llamaba "Rachel"; el ID no cambió).
 var RACHEL_CAL = 'bea3e1fd21b905353477b997ed78fb06665324e6abcba117c1b75aa913ac05a5@group.calendar.google.com';
 
 // Palabra que identifica tus bloques de disponibilidad por su título.
@@ -43,7 +43,7 @@ var AVAIL_KEYWORD = 'CAPSICOV';
 // NO aparecerá disponible en el sitio —aunque el título también diga
 // "CAPSICOV"—. La comparación ignora mayúsculas y acentos
 // (p. ej. "Evaluacion" y "Evaluación" se tratan igual).
-var BLOCK_KEYWORDS = ['paciente', 'caso', 'evaluacion', 'pai', 'prueba psicometrica'];
+var BLOCK_KEYWORDS = ['paciente', 'sesion', 'atencion', 'caso', 'evaluacion', 'valoracion', 'pai', 'prueba psicometrica', 'cita', 'consulta', 'terapia'];
 
 var SLOT_MIN     = 60;   // duración de cada cita (minutos)
 var DAYS_AHEAD   = 21;   // cuántos días hacia adelante se ofrecen
