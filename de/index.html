@@ -2058,7 +2058,7 @@ const EMERG = {
   CH:['112',''], AT:['112',''], NL:['112',''], BE:['112',''], SE:['112',''], NO:['112',''],
   DK:['112',''], FI:['112',''], PL:['112',''], GR:['112',''], RO:['112',''], NZ:['111','']
 };
-const T_EMERG = { danger: 'Wenn du in unmittelbarer Gefahr bist', call: 'ruf an unter', help: 'Hilfetelefon: ', local: 'deine örtliche Notrufnummer' };
+const T_EMERG = { ask: 'Aus welchem Land besuchst du uns?', pick: 'Wähle dein Land', emerg: 'Notruf:', danger: 'Wenn du in unmittelbarer Gefahr bist', call: 'ruf an unter', help: 'Hilfetelefon: ', local: 'deine örtliche Notrufnummer' };
 
 class Component extends DCLogic {
   canvasRef = React.createRef();
@@ -2247,6 +2247,8 @@ class Component extends DCLogic {
     const back = host.querySelector('[data-back]');
     if (back) back.onclick = () => { const tp = TOPICS[key]; if (tp.parent) this.openTopic(tp.parent); else if (this._topicOrigin === 'wellness') this.goPage('inicio', 'wellness'); else if (tp.backPage) this.goPage(tp.backPage); else this.goPage('inicio', 'wellness'); };
     host.querySelectorAll('[data-go]').forEach((c) => { c.onclick = () => this.openTopic(c.getAttribute('data-go')); });
+    const _ec = host.querySelector('[data-emerg-country]');
+    if (_ec) { if (this._cc && EMERG[this._cc]) { _ec.value = this._cc; this._emergShow(host, this._cc); } _ec.onchange = () => this._emergShow(host, _ec.value); }
     const book = host.querySelector('[data-book]'); if (book) book.onclick = () => this.openBooking(key);
     const yt = host.querySelector('[data-yt-btn]'); if (yt) yt.onclick = () => { const u = (YOUTUBE[key] || '').trim() || (YOUTUBE.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
     const sp = host.querySelector('[data-sp-btn]'); if (sp) sp.onclick = () => { const u = (SPOTIFY[key] || '').trim() || (SPOTIFY.channel || '').trim(); if (u) window.open(u, '_blank', 'noopener'); };
@@ -2268,9 +2270,38 @@ class Component extends DCLogic {
   _emergHTML() {
     const e = EMERG[this._cc] || null;
     let txt;
-    if (e && e[0]) txt = T_EMERG.danger + ', ' + T_EMERG.call + ' ' + e[0] + (e[1] ? (' \u00b7 ' + T_EMERG.help + ' ' + e[1]) : '') + '.';
+    if (e && e[0]) txt = T_EMERG.danger + ', ' + T_EMERG.call + ' ' + e[0] + (e[1] ? (' · ' + T_EMERG.help + ' ' + e[1]) : '') + '.';
     else txt = T_EMERG.danger + ', ' + T_EMERG.call + ' ' + T_EMERG.local + '.';
-    return '<div style="margin-bottom:22px;padding:12px 16px;border-radius:10px;background:rgba(176,0,32,0.16);border:1px solid rgba(255,120,120,0.55);color:#ffd9d3;font-size:13.5px;line-height:1.5;">\u26a0\ufe0f ' + txt + '</div>';
+    let h = '<div style="margin-bottom:14px;padding:12px 16px;border-radius:10px;background:rgba(176,0,32,0.16);border:1px solid rgba(255,120,120,0.55);color:#ffd9d3;font-size:13.5px;line-height:1.5;">⚠️ ' + txt + '</div>';
+    h += '<details class="dr-acc" style="margin:0 0 22px;border:1px solid rgba(255,120,120,0.45);border-radius:12px;background:rgba(176,0,32,0.08);overflow:hidden;">'
+      + '<summary style="cursor:pointer;padding:13px 16px;display:flex;align-items:center;gap:10px;font-family:Manrope,sans-serif;font-size:14px;color:#ffd9d3;">🌍 <span style="flex:1;">' + (T_EMERG.ask || '') + '</span><span class="dr-caret" style="color:#ffb0a8;font-size:12px;transition:transform .2s;">▾</span></summary>'
+      + '<div style="padding:4px 16px 16px;">'
+      + '<select data-emerg-country style="width:100%;box-sizing:border-box;padding:11px 14px;border-radius:10px;background:#0D1B2A;border:1px solid rgba(255,120,120,0.5);color:#FAF8F5;font-family:Manrope,sans-serif;font-size:14.5px;">'
+      + '<option value="">' + (T_EMERG.pick || '') + '</option>' + this._emergOptions()
+      + '</select>'
+      + '<div data-emerg-out style="margin-top:12px;"></div>'
+      + '</div></details>';
+    return h;
+  }
+  _emergName(cc) {
+    let dn = null;
+    try { dn = new Intl.DisplayNames([this._lang || 'es'], { type: 'region' }); } catch (x) {}
+    let name = cc; try { if (dn) name = dn.of(cc) || cc; } catch (x) {}
+    return name;
+  }
+  _emergFlag(cc) { return cc.replace(/[A-Z]/g, (ch) => String.fromCodePoint(127397 + ch.charCodeAt(0))); }
+  _emergOptions() {
+    const rows = Object.keys(EMERG).map((cc) => ({ cc: cc, name: this._emergName(cc), flag: this._emergFlag(cc) }));
+    rows.sort((a, b) => a.name.localeCompare(b.name, this._lang || 'es'));
+    return rows.map((r) => '<option value="' + r.cc + '">' + r.flag + ' ' + r.name + '</option>').join('');
+  }
+  _emergShow(host, cc) {
+    const out = host.querySelector('[data-emerg-out]'); if (!out) return;
+    const e = EMERG[cc];
+    if (!e) { out.innerHTML = ''; return; }
+    out.innerHTML = '<div style="padding:12px 14px;border-radius:10px;background:rgba(176,0,32,0.14);border:1px solid rgba(255,120,120,0.4);color:#ffd9d3;font-size:14px;line-height:1.65;">'
+      + '<div style="font-weight:600;margin-bottom:4px;">' + this._emergFlag(cc) + ' ' + this._emergName(cc) + '</div>'
+      + '<div>' + (T_EMERG.emerg || '') + ' <strong>' + e[0] + '</strong>' + (e[1] ? (' · ' + T_EMERG.help + ' <strong>' + e[1] + '</strong>') : '') + '</div></div>';
   }
 
   _topicHTML(key) {
