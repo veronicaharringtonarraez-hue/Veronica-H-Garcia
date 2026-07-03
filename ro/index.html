@@ -2939,7 +2939,7 @@ class Component extends DCLogic {
       + '<label class="bk-l">E-mail<input class="bk-i" id="bk-email" type="email" autocomplete="email"></label>'
       + '<label class="bk-l">WhatsApp / telefon<input class="bk-i" id="bk-phone" autocomplete="tel"></label>'
       + '<label class="bk-l">Motivul (opțional)<textarea class="bk-i" id="bk-note" rows="2">' + noteVal + '</textarea></label>'
-      + '<button class="bk-confirm">Confirmă programarea</button>'
+      + '<button class="bk-confirm">Solicită programarea</button>'
       + '<div class="bk-err"></div>';
     this._bkBody.querySelector('.bk-back').addEventListener('click', () => this._renderDays());
     this._bkBody.querySelector('.bk-confirm').addEventListener('click', () => this._submit(iso));
@@ -2951,7 +2951,7 @@ class Component extends DCLogic {
     const err = this._bkBody.querySelector('.bk-err');
     if (!name || !email) { err.textContent = 'Completează numele și e-mailul tău.'; return; }
     const btn = this._bkBody.querySelector('.bk-confirm');
-    btn.disabled = true; btn.textContent = 'Se programează…';
+    btn.disabled = true; btn.textContent = 'Se trimite…';
     try {
       const r = await fetch(BOOKING_API, {
         method: 'POST',
@@ -2960,14 +2960,14 @@ class Component extends DCLogic {
       });
       const data = await r.json();
       if (data.ok) {
-        this._bkBody.innerHTML = '<div class="bk-ok">✓ Programare confirmată!<span>Vei primi o invitație pe e-mail. Pe curând.</span></div>';
+        this._bkBody.innerHTML = '<div class="bk-ok">✓ Cerere trimisă!<span>Verónica îți va confirma ședința și vei primi un e-mail de confirmare.</span></div>';
       } else {
         err.textContent = data.error || 'Acest interval a fost deja rezervat, alege altul.';
-        btn.disabled = false; btn.textContent = 'Confirmă programarea';
+        btn.disabled = false; btn.textContent = 'Solicită programarea';
       }
     } catch (e) {
       err.textContent = 'Programarea nu a reușit, încearcă din nou.';
-      btn.disabled = false; btn.textContent = 'Confirmă programarea';
+      btn.disabled = false; btn.textContent = 'Solicită programarea';
     }
   }
 

@@ -2940,7 +2940,7 @@ class Component extends DCLogic {
       + '<label class="bk-l">Email<input class="bk-i" id="bk-email" type="email" autocomplete="email"></label>'
       + '<label class="bk-l">WhatsApp / telefono<input class="bk-i" id="bk-phone" autocomplete="tel"></label>'
       + '<label class="bk-l">Motivo (facoltativo)<textarea class="bk-i" id="bk-note" rows="2">' + noteVal + '</textarea></label>'
-      + '<button class="bk-confirm">Conferma appuntamento</button>'
+      + '<button class="bk-confirm">Richiedi appuntamento</button>'
       + '<div class="bk-err"></div>';
     this._bkBody.querySelector('.bk-back').addEventListener('click', () => this._renderDays());
     this._bkBody.querySelector('.bk-confirm').addEventListener('click', () => this._submit(iso));
@@ -2952,7 +2952,7 @@ class Component extends DCLogic {
     const err = this._bkBody.querySelector('.bk-err');
     if (!name || !email) { err.textContent = 'Inserisci il tuo nome e la tua email.'; return; }
     const btn = this._bkBody.querySelector('.bk-confirm');
-    btn.disabled = true; btn.textContent = 'Agendando…';
+    btn.disabled = true; btn.textContent = 'Invio…';
     try {
       const r = await fetch(BOOKING_API, {
         method: 'POST',
@@ -2961,7 +2961,7 @@ class Component extends DCLogic {
       });
       const data = await r.json();
       if (data.ok) {
-        this._bkBody.innerHTML = '<div class="bk-ok">✓ Appuntamento confermato!<span>Riceverai un invito via email. A presto.</span></div>';
+        this._bkBody.innerHTML = '<div class="bk-ok">✓ Richiesta inviata!<span>Verónica confermerà la tua seduta e riceverai una email di conferma.</span></div>';
       } else {
         err.textContent = data.error || 'Questo orario non è più disponibile. Scegline un altro.';
         btn.disabled = false; btn.textContent = 'Confirmar cita';

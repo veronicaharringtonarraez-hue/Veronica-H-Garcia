@@ -3115,7 +3115,7 @@ class Component extends DCLogic {
       + '<label class="bk-l">Correo<input class="bk-i" id="bk-email" type="email" autocomplete="email"></label>'
       + '<label class="bk-l">WhatsApp / teléfono<input class="bk-i" id="bk-phone" autocomplete="tel"></label>'
       + '<label class="bk-l">Motivo (opcional)<textarea class="bk-i" id="bk-note" rows="2">' + noteVal + '</textarea></label>'
-      + '<button class="bk-confirm">Confirmar cita</button>'
+      + '<button class="bk-confirm">Solicitar cita</button>'
       + '<div class="bk-err"></div>';
     this._bkBody.querySelector('.bk-back').addEventListener('click', () => this._renderDays());
     this._bkBody.querySelector('.bk-confirm').addEventListener('click', () => this._submit(iso));
@@ -3127,7 +3127,7 @@ class Component extends DCLogic {
     const err = this._bkBody.querySelector('.bk-err');
     if (!name || !email) { err.textContent = 'Por favor completa tu nombre y correo.'; return; }
     const btn = this._bkBody.querySelector('.bk-confirm');
-    btn.disabled = true; btn.textContent = 'Agendando…';
+    btn.disabled = true; btn.textContent = 'Enviando…';
     try {
       const r = await fetch(BOOKING_API, {
         method: 'POST',
@@ -3136,14 +3136,14 @@ class Component extends DCLogic {
       });
       const data = await r.json();
       if (data.ok) {
-        this._bkBody.innerHTML = '<div class="bk-ok">✓ ¡Cita confirmada!<span>Te llegará la invitación a tu correo. Nos vemos pronto.</span></div>';
+        this._bkBody.innerHTML = '<div class="bk-ok">✓ ¡Solicitud enviada!<span>Verónica confirmará tu sesión y te llegará un correo de confirmación.</span></div>';
       } else {
         err.textContent = data.error || 'Ese horario ya no está disponible. Elige otro.';
-        btn.disabled = false; btn.textContent = 'Confirmar cita';
+        btn.disabled = false; btn.textContent = 'Solicitar cita';
       }
     } catch (e) {
       err.textContent = 'No se pudo agendar. Intenta de nuevo.';
-      btn.disabled = false; btn.textContent = 'Confirmar cita';
+      btn.disabled = false; btn.textContent = 'Solicitar cita';
     }
   }
 

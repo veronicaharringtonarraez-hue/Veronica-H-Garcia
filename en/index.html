@@ -2940,7 +2940,7 @@ class Component extends DCLogic {
       + '<label class="bk-l">Email<input class="bk-i" id="bk-email" type="email" autocomplete="email"></label>'
       + '<label class="bk-l">WhatsApp / phone<input class="bk-i" id="bk-phone" autocomplete="tel"></label>'
       + '<label class="bk-l">Reason (optional)<textarea class="bk-i" id="bk-note" rows="2">' + noteVal + '</textarea></label>'
-      + '<button class="bk-confirm">Confirm appointment</button>'
+      + '<button class="bk-confirm">Request appointment</button>'
       + '<div class="bk-err"></div>';
     this._bkBody.querySelector('.bk-back').addEventListener('click', () => this._renderDays());
     this._bkBody.querySelector('.bk-confirm').addEventListener('click', () => this._submit(iso));
@@ -2952,7 +2952,7 @@ class Component extends DCLogic {
     const err = this._bkBody.querySelector('.bk-err');
     if (!name || !email) { err.textContent = 'Please enter your name and email.'; return; }
     const btn = this._bkBody.querySelector('.bk-confirm');
-    btn.disabled = true; btn.textContent = 'Booking…';
+    btn.disabled = true; btn.textContent = 'Sending…';
     try {
       const r = await fetch(BOOKING_API, {
         method: 'POST',
@@ -2961,14 +2961,14 @@ class Component extends DCLogic {
       });
       const data = await r.json();
       if (data.ok) {
-        this._bkBody.innerHTML = '<div class="bk-ok">✓ Appointment confirmed!<span>You will receive the invitation by email. See you soon.</span></div>';
+        this._bkBody.innerHTML = '<div class="bk-ok">✓ Request sent!<span>Verónica will confirm your session and you will receive a confirmation email.</span></div>';
       } else {
         err.textContent = data.error || 'That time is no longer available. Please choose another.';
-        btn.disabled = false; btn.textContent = 'Confirm appointment';
+        btn.disabled = false; btn.textContent = 'Request appointment';
       }
     } catch (e) {
       err.textContent = 'Booking failed. Please try again.';
-      btn.disabled = false; btn.textContent = 'Confirm appointment';
+      btn.disabled = false; btn.textContent = 'Request appointment';
     }
   }
 

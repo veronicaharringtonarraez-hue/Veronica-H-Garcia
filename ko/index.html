@@ -2939,7 +2939,7 @@ class Component extends DCLogic {
       + '<label class="bk-l">이메일<input class="bk-i" id="bk-email" type="email" autocomplete="email"></label>'
       + '<label class="bk-l">WhatsApp / 전화<input class="bk-i" id="bk-phone" autocomplete="tel"></label>'
       + '<label class="bk-l">용건(선택)<textarea class="bk-i" id="bk-note" rows="2">' + noteVal + '</textarea></label>'
-      + '<button class="bk-confirm">예약 확정</button>'
+      + '<button class="bk-confirm">예약 요청</button>'
       + '<div class="bk-err"></div>';
     this._bkBody.querySelector('.bk-back').addEventListener('click', () => this._renderDays());
     this._bkBody.querySelector('.bk-confirm').addEventListener('click', () => this._submit(iso));
@@ -2951,7 +2951,7 @@ class Component extends DCLogic {
     const err = this._bkBody.querySelector('.bk-err');
     if (!name || !email) { err.textContent = '이름과 이메일을 입력해 주세요.'; return; }
     const btn = this._bkBody.querySelector('.bk-confirm');
-    btn.disabled = true; btn.textContent = '예약 중…';
+    btn.disabled = true; btn.textContent = '보내는 중…';
     try {
       const r = await fetch(BOOKING_API, {
         method: 'POST',
@@ -2960,7 +2960,7 @@ class Component extends DCLogic {
       });
       const data = await r.json();
       if (data.ok) {
-        this._bkBody.innerHTML = '<div class="bk-ok">✓ 예약이 확정되었어요!<span>이메일 초대장을 받게 돼요. 곧 만나요.</span></div>';
+        this._bkBody.innerHTML = '<div class="bk-ok">✓ 요청을 보냈어요!<span>Verónica가 세션을 확정하면 확인 이메일을 받게 돼요.</span></div>';
       } else {
         err.textContent = data.error || '이 시간은 이미 예약되었어요. 다른 시간을 선택해 주세요.';
         btn.disabled = false; btn.textContent = 'Confirmar cita';

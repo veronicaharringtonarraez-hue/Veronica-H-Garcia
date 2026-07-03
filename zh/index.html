@@ -2939,7 +2939,7 @@ class Component extends DCLogic {
       + '<label class="bk-l">邮箱<input class="bk-i" id="bk-email" type="email" autocomplete="email"></label>'
       + '<label class="bk-l">WhatsApp / 电话<input class="bk-i" id="bk-phone" autocomplete="tel"></label>'
       + '<label class="bk-l">事由（可选）<textarea class="bk-i" id="bk-note" rows="2">' + noteVal + '</textarea></label>'
-      + '<button class="bk-confirm">确认预约</button>'
+      + '<button class="bk-confirm">申请预约</button>'
       + '<div class="bk-err"></div>';
     this._bkBody.querySelector('.bk-back').addEventListener('click', () => this._renderDays());
     this._bkBody.querySelector('.bk-confirm').addEventListener('click', () => this._submit(iso));
@@ -2951,7 +2951,7 @@ class Component extends DCLogic {
     const err = this._bkBody.querySelector('.bk-err');
     if (!name || !email) { err.textContent = '请填写你的姓名和邮箱。'; return; }
     const btn = this._bkBody.querySelector('.bk-confirm');
-    btn.disabled = true; btn.textContent = '预约中…';
+    btn.disabled = true; btn.textContent = '发送中…';
     try {
       const r = await fetch(BOOKING_API, {
         method: 'POST',
@@ -2960,7 +2960,7 @@ class Component extends DCLogic {
       });
       const data = await r.json();
       if (data.ok) {
-        this._bkBody.innerHTML = '<div class="bk-ok">✓ 预约已确认！<span>你将收到邮件邀请。很快见。</span></div>';
+        this._bkBody.innerHTML = '<div class="bk-ok">✓ 申请已发送！<span>Verónica 会确认你的咨询，你将收到确认邮件。</span></div>';
       } else {
         err.textContent = data.error || '该时间已被预约，请另选一个。';
         btn.disabled = false; btn.textContent = 'Confirmar cita';
