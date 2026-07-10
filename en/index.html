@@ -191,6 +191,7 @@
         <div data-yt="claridad" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Mental clarity</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="equilibrio" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Balance in a busy life</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="mindfulness" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Mindfulness</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
+        <div data-yt="alimentacion" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Mindful eating</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; grid-column:1/-1; margin-top:22px; margin-bottom:2px; display:flex; align-items:center; gap:12px;"><span style="font-family:'Manrope',sans-serif; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(212,160,23,0.9); font-weight:600; white-space:nowrap;">Personal growth</span><span style="flex:1; height:1px; background:rgba(212,160,23,0.22);"></span></div>
         <div data-yt="autoestima" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Self-esteem</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
         <div data-yt="resiliencia" onClick="{{ openTopic }}" data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; padding:20px 12px; border-radius:16px; background:rgba(250,248,245,0.03); border:1px solid rgba(250,248,245,0.08); text-align:center; cursor:pointer;" style-hover="background:rgba(212,160,23,0.10); border-color:rgba(212,160,23,0.4);"><div style="font-family:'Spectral',serif; font-size:15px; color:#FAF8F5; margin-bottom:5px;">Resilience</div><div style="font-size:10.5px; color:rgba(212,160,23,0.7); letter-spacing:0.08em;">View tools</div></div>
@@ -1998,6 +1999,32 @@ const TOPICS = {
     ],
     closing: `If you want to learn to use mindfulness to calm anxiety, rumination, or stress, I'll help you integrate it into your life. Write to me.`
   },
+  alimentacion: {
+    title: `Mindful eating`, tag: `Eating with presence, listening to your body`,
+    intro: `Mindful eating is learning to eat while paying full attention to what you eat and to what your body tells you. Our brain needs to notice what we're eating and the point at which we already feel good; when we eat fast, distracted, or on autopilot, those signals get lost and it's easy to go past our capacity. It's not a diet or a list of forbidden foods: it's making peace with the act of eating and learning to trust your body again.`,
+    accTitle: `How to practice it`,
+    accordion: [
+      { n: 1, q: `Recognizing hunger and fullness`,
+        a: `Before eating, ask yourself on a scale of 1 to 10 how hungry you are; and while you eat, ask again. The idea is to start with real hunger (not starving) and to stop around the point where you feel satisfied and comfortable, not stuffed. That “I'm okay” point exists, but you only hear it if you go slowly.`,
+        v: `Your body has been telling you about hunger and fullness your whole life; maybe you learned to ignore it out of rush, diets, or outside rules. Listening again isn't failing: it's reconnecting with a wisdom that was always there.` },
+      { n: 2, q: `Eating without distractions`,
+        a: `The brain needs to register the food to know how much and what you ate. If you eat in front of a screen, working, or checking your phone, your attention is elsewhere and those signals arrive blurry: you eat more, enjoy less, and afterward don't feel like you “ate.” Turn off the screen, sit at the table, and give the meal its own moment.`,
+        v: `It's not that you have “little willpower”: it's that the brain can't attend to a thousand stimuli at once and also register well what you eat. By removing the noise, you're not demanding more of yourself; you're giving your body back the information it needed.` },
+      { n: 3, q: `The five senses in every bite`,
+        a: `Before eating, look at your plate: the colors, the shape. Smell its aroma. As you bring the bite to your mouth, notice the texture, the temperature, how the flavor changes as you chew. Chew slowly and set your utensils down between bites. Eating with your senses lets the brain receive the right signals about what you're eating, without getting confused by all the surrounding noise.`,
+        v: `When you truly savor, you often discover that less food leaves you just as satisfied, because you're finally enjoying instead of just filling up. Eating slowly isn't wasting time: it's how pleasure and fullness catch up with your mind.` },
+      { n: 4, q: `Not exceeding your capacity`,
+        a: `The fullness signal takes a few minutes to travel from the stomach to the brain. That's why, if you eat very fast, you overshoot before you notice. Eating slowly and attentively gives that signal time to arrive, so you can stop at just the right point, without feeling heavy or guilty.`,
+        v: `Leaving food on the plate or saving some for later isn't waste or a lack of discipline: it's respecting what your body already asked for. Listening to your “I'm good now” is an act of care, not deprivation.` },
+      { n: 5, q: `Physical hunger and emotional hunger`,
+        a: `Not all hunger comes from the stomach. Emotional hunger shows up suddenly, asks for something very specific (almost always sweet or “a treat”), and doesn't ease even if you eat, because what it wants isn't food: it's relief. Physical hunger comes on gradually, is satisfied by different foods, and stops when you're full. Before eating on impulse, pause and ask yourself: am I hungry, or am I feeling something?`,
+        v: `Realizing that you sometimes eat to soothe anxiety, sadness, or boredom isn't to judge yourself, but to care for yourself better. Food comforts for a while, but the emotion is still there; and that emotion also deserves to be heard and tended to.` },
+      { n: 6, q: `Starting today, with kindness`,
+        a: `You don't have to do it perfectly or at every meal. Choose one meal a day to make mindful: no screens, seated, savoring slowly, and checking your hunger. If one day you forget or overeat, don't punish yourself: you return at the next meal, just as in mindfulness you return to the breath.`,
+        v: `Mindful eating isn't about eating “perfectly,” but about no longer fighting with food and with your body. Every bite with presence is a small act of reconciliation with yourself. Going slowly is also moving forward.` }
+    ],
+    closing: `Learning to eat with awareness can transform your relationship with food and with your body, without diets or guilt. If you'd like me to walk with you through this process, write to me.`
+  },
 
   proposito: {
     title: `Life purpose`, tag: `Rediscovering the why`,
@@ -2291,6 +2318,36 @@ const TOPICS = {
     ],
     closing: `If you self-harm or someone you love does, you don't have to face it alone or with shame. I can accompany you with all the care you deserve. And if there's risk to life, seek emergency help immediately.`
   },
+  'trastornos-alimentarios': {
+    parent: 'sensibles',
+    title: `Eating disorders`, tag: `When food stops being about food`,
+    intro: `Sometimes the relationship with food gets altered and stops being about hunger: it becomes a way to control, to punish oneself, or to soothe a pain that comes from somewhere else. Eating disorders often go hand in hand with depression and anxiety, and they are serious forms of suffering —not whims or a lack of willpower— that deserve help and zero shame. If you recognize yourself here, or recognize someone you love, this is a good moment to reach out for support.`,
+    accTitle: `Understanding and seeking help`,
+    accordion: [
+      { n: 1, q: `When food stops being about food`,
+        a: `In an eating disorder, eating (or not eating) becomes the language used to express emotional pain: anxiety, emptiness, a need for control, self-demand, rejection of one's own body. Food turns into the ground where a battle is fought that is really internal. That's why it isn't solved just by “eating well” or “with willpower”: you have to tend to what lies underneath.`,
+        v: `If this is happening to you, I want you to know something: it's not vanity or a whim. It's a way of holding a distress that grew too big. You don't have to be ashamed; you have the right to be helped.` },
+      { n: 2, q: `The depression and anxiety underneath`,
+        a: `Eating disorders almost never come alone: very often they live alongside depression, anxiety, trauma, or a badly wounded self-esteem. Sometimes the eating disorder is the visible tip of a sadness or an anguish that couldn't be named. Treating only the food without looking at those emotions leaves the wound open.`,
+        v: `Tending to what you feel isn't a detour from the problem: it's going straight to its root. You deserve to be helped to heal the food and also the pain that sustains it.` },
+      { n: 3, q: `Anorexia`,
+        a: `In anorexia there's a severe restriction of food and an intense fear of gaining weight, along with a distorted body image: the person sees themselves as overweight even when dangerously thin. There are usually extreme control behaviors (counting calories, excessive exercise, weighing themselves many times). It's a disorder with a real risk to life, and the sooner help is sought, the better the outlook.`,
+        v: `Behind anorexia there's almost always a person very demanding of themselves who feels that only by controlling their body do they control something of their life. It's not weakness or stubbornness: it's suffering, and it can be treated.` },
+      { n: 4, q: `Bulimia`,
+        a: `In bulimia there are episodes of bingeing (eating a lot in a short time, with a sense of loss of control) followed by behaviors to compensate: self-induced vomiting, laxatives, fasting, or extreme exercise, loaded with guilt. The person may have a normal weight, which often means it goes unnoticed for a long time while the suffering and physical harm advance in secret.`,
+        v: `The cycle of bingeing and guilt is exhausting and lonely, and it doesn't mean you “have no control”: it means you're trapped in something stronger than you. Asking for help breaks the secret, and breaking the secret is the beginning of relief.` },
+      { n: 5, q: `Binge eating disorder and other forms`,
+        a: `Binge eating disorder consists of recurrent episodes of eating compulsively, with loss of control and distress, but without bulimia's compensatory behaviors; it usually comes with a lot of guilt. There are other forms, like orthorexia (an obsession with eating “pure” or “perfect”) or emotional eating that becomes constant. They all share one root: food used to cover an emotion that finds no other way out.`,
+        v: `Putting a name to what's happening to you isn't labeling yourself: it's ceasing to feel that “something is wrong with you” and understanding that it's something with an explanation and a treatment. Naming the pain is the first step to letting it go.` },
+      { n: 6, q: `Warning signs`,
+        a: `Pay attention if these appear: excessive worry about weight, food, or the body; skipping meals, eating in secret, or disappearing after eating; going to the bathroom right after finishing; rigid rituals around food; excessive exercise; abrupt weight changes; isolation, irritability, or sadness. In someone you love, the most important sign is the secrecy and shame around food.`,
+        v: `If you recognize several of these signs in yourself or someone close, don't let it pass thinking “it will go away.” The sooner help is sought, the simpler and less painful the way back.` },
+      { n: 7, q: `Asking for help isn't overreacting`,
+        a: `Eating disorders can be treated, and with professional support people recover. The ideal is an approach that cares for the body (medical and nutritional) and the emotional core (psychological) at the same time. If there's severe malnutrition, fainting, or thoughts of not wanting to keep living, it's an emergency: activate the emergency protocol (your country's numbers are above). You don't have to do it alone.`,
+        v: `You don't need to “be bad enough” to deserve help. If food makes you suffer, that's already reason enough. Taking the step of asking for support is the most courageous and most loving thing you can do for yourself. Write to me.` }
+    ],
+    closing: `Healing your relationship with food is possible, and you don't have to do it alone or in shame. I can accompany you with all the care you deserve. As a gentle first step, I want to leave you this tool to reconnect with your body from a place of calm:<div data-go="alimentacion" role="button" tabindex="0" style="display:flex;align-items:center;gap:14px;margin-top:16px;padding:18px 20px;border-radius:16px;background:rgba(122,168,116,0.12);border:1px solid rgba(122,168,116,0.45);cursor:pointer;"><span style="font-size:26px;line-height:1;">🍃</span><span style="flex:1;"><span style="display:block;font-family:Spectral,serif;font-size:17px;color:#FAF8F5;margin-bottom:3px;">Go to “Mindful eating”</span><span style="display:block;font-size:13px;line-height:1.5;color:rgba(250,248,245,0.68);">Relearn to notice your hunger, your fullness, and flavor, bite by bite, without diets or punishment.</span></span><span style="color:#9BC49B;font-size:18px;flex:0 0 auto;">→</span></div>`
+  },
 
   emergencia: {
     parent: 'sensibles',
@@ -2315,7 +2372,7 @@ const TOPICS = {
     title: `Sensitive & high-risk topics`, tag: `You're not alone here: asking for help is the first step`,
     intro: `These are delicate topics that can stir up a lot. If you or someone close to you is going through them, here you'll find tools and support. Before continuing, please read this message calmly.`,
     notice: `<strong style="color:#F4D06F;">If you or a loved one show one or more of these symptoms or this distress, reach out to the appropriate support service.</strong> If there’s a risk to life —yours or someone close— activate the wellness protocol and call emergency services right away (your country’s number appears above).<br><br>I want to tell you something from the heart: <strong>you are an important person</strong>, and your life —and the lives of those you love— matters greatly. Pain can make everything look like there’s no way out, but there is, and you don’t have to find it alone. <strong>The first step, and the bravest, is to accept help.</strong> Asking for it doesn’t make you weak: it makes you human. You’re still in time, and you deserve to receive the care you need.`,
-    children: ['ideacion', 'duelo-complicado', 'violencia', 'crisis', 'autolesiones', 'emergencia'],
+    children: ['ideacion', 'duelo-complicado', 'violencia', 'crisis', 'autolesiones', 'trastornos-alimentarios', 'emergencia'],
     closing: `You don’t have to choose the "right topic" or know where to start. Write to me and we’ll look at it together, calmly and without judgment.`
   },
 
@@ -2678,7 +2735,7 @@ class Component extends DCLogic {
     const backLabel = (d.parent && TOPICS[d.parent]) ? ('← Back to ' + TOPICS[d.parent].title) : (this._topicOrigin === 'wellness') ? '← Back to the Wellness Center' : (d.backName ? ('← Back to ' + d.backName) : '← Back to the Wellness Center');
     let h = '';
     h += '<button data-back style="background:transparent;border:1px solid rgba(212,160,23,0.4);color:#EADBC8;font-family:Manrope,sans-serif;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;margin-bottom:28px;">' + backLabel + '</button>';
-    if (key.indexOf('violencia') === 0 || key.indexOf('crisis') === 0 || key.indexOf('ideacion') === 0 || key.indexOf('sensibles') === 0 || key.indexOf('emergencia') === 0 || key.indexOf('autolesiones') === 0 || key.indexOf('duelo-complicado') === 0) h += this._emergHTML();
+    if (key.indexOf('violencia') === 0 || key.indexOf('crisis') === 0 || key.indexOf('ideacion') === 0 || key.indexOf('sensibles') === 0 || key.indexOf('emergencia') === 0 || key.indexOf('autolesiones') === 0 || key.indexOf('duelo-complicado') === 0 || key.indexOf('trastornos-alimentarios') === 0) h += this._emergHTML();
     h += '<div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(212,160,23,0.85);font-weight:600;">Wellness Center</div>';
     h += '<h2 style="font-family:Spectral,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.1;margin:12px 0 6px;color:#FAF8F5;">' + d.title + '</h2>';
     if (d.tag) h += '<p style="font-family:Spectral,serif;font-style:italic;font-size:19px;color:#D4A017;margin-bottom:20px;">' + d.tag + '</p>';
