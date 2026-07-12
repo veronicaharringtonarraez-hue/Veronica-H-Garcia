@@ -1007,7 +1007,36 @@ const TOPICS = {
   pareja: {
     title: 'Relaciones de pareja', tag: 'Ser un equipo, no rivales',
     intro: 'Una relación sana no es una sin problemas, sino una donde ambos se sienten un equipo frente a ellos. Aquí encontrarás herramientas para construir el vínculo y también para atravesar los momentos difíciles. Elige el tema que estás viviendo.',
-    children: ['pareja-fundamentos', 'pareja-metas', 'pareja-distancia', 'pareja-confianza', 'pareja-celos', 'pareja-control', 'pareja-infidelidad', 'pareja-divorcio']
+    children: ['pareja-noviazgo', 'pareja-fundamentos', 'pareja-metas', 'pareja-distancia', 'pareja-confianza', 'pareja-celos', 'pareja-control', 'pareja-infidelidad', 'pareja-divorcio']
+  },
+  'pareja-noviazgo': {
+    title: 'Noviazgo', parent: 'pareja', tag: 'Un pastel se hornea por etapas, no se apura',
+    intro: 'El noviazgo es como hornear un pastel: tiene etapas, y ninguna se puede saltar ni apurar. Primero se reúnen los materiales, luego se hace la masa, después va al horno, se espera a que esté listo y, al final, se decora. Este recorrido te invita a ubicar en qué nivel está tu relación —sin correr, sin fingir que un pastel crudo ya está listo— y a recordar dos cosas: que no puedes exigirle a alguien que tenga el sabor que tú querías, ni empeñarte en comer un pastel de nueces siendo alérgico.',
+    accTitle: 'Los niveles del pastel',
+    accordion: [
+      { n: 1, q: 'Los materiales',
+        a: `Todo pastel empieza reuniendo sus ingredientes. En el noviazgo, los materiales son las bases: los valores, la honestidad, el respeto mutuo, la atracción, las ganas reales de construir algo. Es la etapa de conocerse y ver con qué se está horneando. Si los ingredientes son de mala calidad o faltan los esenciales, ninguna técnica salvará el pastel más adelante.`,
+        v: `Vale la pena mirar bien lo que estás mezclando antes de encender el horno. No se trata de exigir un ingrediente perfecto, sino de reconocer si lo esencial está: respeto, confianza, cuidado. Un buen pastel no se sostiene sobre materiales que en el fondo sabías que no servían.` },
+      { n: 2, q: 'La masa',
+        a: `Cuando los ingredientes se combinan, se forma la masa: la relación empieza a tomar forma. Se integran dos vidas, dos rutinas, dos familias, y aparecen los primeros roces naturales de mezclarlo todo. La masa se trabaja con paciencia y manos suaves; si la fuerzas de más o de menos, no cuaja. Es normal que en esta etapa algo se sienta pegajoso o disparejo: apenas se está uniendo.`,
+        v: `Los primeros desacuerdos no significan que el pastel esté arruinado; significan que la masa aún se está formando. Amasar juntos —con calma, sin apretar de más— es parte de que la mezcla quede pareja. Date permiso de que esta etapa sea imperfecta.` },
+      { n: 3, q: 'En el horno',
+        a: `Aquí llega el calor: el tiempo, las pruebas, las dificultades que cocinan y transforman el vínculo. El calor asusta, pero no es el enemigo: es justo lo que convierte una masa blanda en un pastel firme. La clave es no abrir el horno antes de tiempo —por miedo, por prisa o por presión— porque un pastel que se saca a medio cocer se desmorona.`,
+        v: `Muchas parejas sacan el pastel antes de tiempo, asustadas por el calor de un momento difícil, y se pierden justo la etapa donde el vínculo se estaba cuajando. Atravesar el calor juntos, con paciencia, es lo que da consistencia. Confía en el proceso: lo que hoy parece que se derrite, se está firmando por dentro.` },
+      { n: 4, q: 'Listo',
+        a: `Después del horno, el pastel cuaja: la relación se vuelve firme y madura. Ya no es una masa que se deshace al tocarla; hay consistencia, confianza, compromiso, una base que se sostiene sola. Saber reconocer cuándo un pastel está listo —y cuándo todavía no— evita tanto apurar lo que aún está crudo como dudar de lo que ya está firme.`,
+        v: `Un pastel listo se sostiene solo; no necesitas apretarlo con las manos para que no se caiga. Si tu relación te da paz y firmeza en lugar de tener que sostenerla a la fuerza todo el tiempo, es señal de que cuajó. Y si aún se siente líquida por dentro, quizá solo necesita más horno, no más decoración.` },
+      { n: 5, q: 'Decorado',
+        a: `Al final llega el decorado: los detalles hermosos, el compromiso, la celebración, formalizar y adornar lo construido. Pero el decorado adorna lo que ya está firme, no lo reemplaza. Un pastel crudo por dentro, por más glaseado y flores que le pongas por fuera, se derrumba. Cuidado con las relaciones que empiezan por el decorado —la fiesta, las apariencias, las promesas grandes— sin haber horneado el vínculo.`,
+        v: `El decorado es precioso cuando corona un pastel bien hecho; es una trampa cuando se usa para tapar que por dentro está sin cocinar. Disfruta los detalles y las celebraciones, pero recuerda que sostienen menos de lo que parece: lo que de verdad aguanta es lo que se horneó con tiempo.` },
+      { n: 6, q: 'No exijas que otros sean del sabor que tú quieres',
+        a: `Cada persona tiene su propio sabor, y elegir a alguien es elegir su sabor real, no el que imaginas que tendría si cambiara. Empeñarte en transformar a tu pareja en otro sabor —más dulce, menos intenso, como aquel otro pastel— termina en frustración para ambos: tú nunca quedas satisfecho y el otro nunca se siente suficiente.`,
+        v: `Amar no es rehornear a alguien hasta que quede a tu gusto; es elegir un sabor que de verdad disfrutas tal como es. Si el sabor de fondo no te gusta, el problema no es que "le falte azúcar": es que quizá no era tu pastel. Y está bien; hay un sabor hecho para ti, sin que nadie tenga que fingir ser otro.` },
+      { n: 7, q: 'No comas pastel de nueces siendo alérgico',
+        a: `Hay pasteles preciosos y deliciosos para otros que a ti, sencillamente, te hacen daño. Empeñarte en comer lo que te intoxica —por más que lo desees, por más perfecto que se vea, por más que a todos les encante— no es amor, es lastimarte. Reconocer tu "alergia" (eso que en esa relación te enferma, te apaga o te lastima) y soltarlo es un acto de amor propio, no un fracaso.`,
+        v: `No todo lo que se ve dulce te conviene. A veces lo más sano y valiente es decir "este pastel no es para mí", aunque a otros les parezca el mejor del mundo. No te quedes comiendo algo que te hace daño solo porque se ve rico o porque ya empezaste el bocado: tu bienestar vale más que terminar el plato.` }
+    ],
+    closing: 'Ubicar en qué nivel está tu relación te ayuda a cuidarla sin apurarla ni fingir que ya está lista. Si sientes que tu pastel se atora en el horno, que quieres cambiar el sabor del otro, o que te empeñas en comer algo que te hace daño, podemos verlo juntos con calma. Escríbeme.'
   },
   'pareja-fundamentos': {
     title: 'Construir un nosotros sano', parent: 'pareja', tag: 'Las bases del vínculo',
