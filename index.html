@@ -2865,7 +2865,8 @@ class Component extends DCLogic {
     this._showPage('tema');
     this._setActiveNav('');
     try { history.replaceState(null, '', '#bienestar-' + key); } catch (e) {}
-    window.scrollTo({ top: 0, behavior: 'auto' });
+    window.scrollTo(0, 0);
+    requestAnimationFrame(() => window.scrollTo(0, 0));
   };
 
   _detectCountry() {
